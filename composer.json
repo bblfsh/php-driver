@@ -17,8 +17,17 @@
         }
     ],
     "autoload": {
+        "psr-4": {
+          "AstExtractor\\": "src/AstExtractor/",
+          "FixturesGenerator\\": "fixturesGenerator/"
+        }
     },
     "require": {
-        "php": ">=7.0"
+        "php": ">=7.0",
+        "nikic/php-parser": "3.0.4",
+        "rybakit/msgpack": "0.2.1"
+    },
+    "require-dev": {
+        "phpmd/phpmd" : "@stable"
     }
 }

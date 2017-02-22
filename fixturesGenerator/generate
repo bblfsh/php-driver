@@ -1,0 +1,14 @@
+#!/usr/bin/php
+<?php
+
+use FixturesGenerator\Generator;
+
+require_once 'vendor/autoload.php';
+
+$quantity = $argv[1];
+if ($quantity !== null && !is_numeric($quantity)) {
+    echo sprintf("quantity argument must be numeric, '%s' passed", $quantity);
+    exit(1);
+}
+
+Generator::generate($quantity);
