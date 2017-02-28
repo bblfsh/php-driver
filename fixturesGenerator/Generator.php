@@ -2,6 +2,8 @@
 
 namespace FixturesGenerator;
 
+use AstExtractor\Encoder\Json;
+
 class Generator
 {
     private const SLEEP_SEC = 0;
@@ -80,7 +82,8 @@ class Generator
 
     private static function encode($input)
     {
-        return msgpack_pack($input);
+        return Json::encode($input) . PHP_EOL;
+        //return msgpack_pack($input) . PHP_EOL;
     }
 
     private static function getRequest($id, string $name, string $content)

@@ -25,7 +25,8 @@ class Command
     {
         $stdin = fopen('php://stdin', 'rb');
 
-        $unpacker = new Msgpack($stdin);
+        //$unpacker = new Msgpack($stdin);
+        $unpacker = new Json($stdin);
         while (!feof($stdin)) {
             //echo PHP_EOL . PHP_EOL;
             $requests = self::logTime("readNext", function () use ($unpacker) {return $unpacker->next();});
@@ -42,6 +43,7 @@ class Command
                     //var_dump($request);
                     continue;
                 }
+
                 echo sprintf("REQUEST %d/%d: '%s'%s", $i, $count, $request['name'], PHP_EOL);
                 if (!$this->process($request['content'])) {
                     echo sprintf("Error processing!!%s", PHP_EOL);

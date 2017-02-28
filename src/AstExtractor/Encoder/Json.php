@@ -7,6 +7,23 @@ class Json implements Interfaces\EncoderDecoder
     private const ENCODING_OPTS = JSON_FORCE_OBJECT | JSON_UNESCAPED_UNICODE;
     private const MAX_DEPTH = 1024;
 
+    private $reader;
+
+    /**
+     * Json constructor.
+     * The passed $reader will be set as "blocker", so reads will block the process till a new value is read
+     * @param $reader
+     * @throws \Exception
+     */
+    public function __construct($reader)
+    {
+        if ($reader === false || !stream_set_blocking($reader, true)) {
+            throw new \Exception('No proper reader passed');
+        }
+
+        $this->reader = $reader;
+    }
+
     /**
      * encode returns a string json representation of the passed $input
      * @param array $input
@@ -42,7 +59,7 @@ class Json implements Interfaces\EncoderDecoder
      */
     public static function decode(string $input)
     {
-        $decoded = json_decode($input);
+        $decoded = json_decode($input, true);
         if (!$decoded) {
             return sprintf('{"error": "Error#%s, %s"}', json_last_error(), json_last_error_msg());
         }
@@ -85,6 +102,14 @@ class Json implements Interfaces\EncoderDecoder
      */
     public function next()
     {
-        // TODO: Implement next() method.
+        while (!feof($this->reader) && $read = fgets($this->reader)) {
+            if ($read === false) {
+                throw new \Exception('Error reading from passed stream');
+            }
+
+            if (trim($read)==="") continue;
+
+            return [self::decode($read)];
+        }
     }
 }
