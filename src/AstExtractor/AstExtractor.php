@@ -3,7 +3,7 @@
 /*
  * Part of bblfsh project
  */
-namespace AstExtractor\Extractor;
+namespace AstExtractor;
 
 use PhpParser\ParserFactory;
 use PhpParser\Lexer;
@@ -18,14 +18,14 @@ use PhpParser\Node;
  * @license  GPL https://github.com/bblfsh
  * @link     https://github.com/bblfsh
  */
-class Extractor
+class AstExtractor
 {
     public const LEXER_CONF = ['usedAttributes' => []];
     public const PARSER_VERSION = ParserFactory::PREFER_PHP7;
 
     public $lexer;
     public $parser;
-    
+
     /**
      * Returns a new Extractor
      */
@@ -38,7 +38,7 @@ class Extractor
     /**
      * Returns the AST
      *
-     * @param string $code Source code to analyze 
+     * @param string $code Source code to analyze
      *
      * @throws \Exception in case it happens a parsing exception
      * @return Node[]|null Array of statements (or null if the 'throwOnError'

@@ -2,9 +2,13 @@
 
 namespace AstExtractor\Command;
 
-use AstExtractor\Encoder\Json;
-use AstExtractor\Encoder\Msgpack;
-use AstExtractor\Extractor\Extractor;
+use AstExtractor\Formatter\BaseFormatter;
+use AstExtractor\Formatter\Json;
+use AstExtractor\Formatter\Msgpack;
+use AstExtractor\AstExtractor;
+use AstExtractor\Request;
+use AstExtractor\Response;
+use AstExtractor\Exception\Fatal;
 
 class Command
 {
@@ -12,68 +16,63 @@ class Command
 
     public function __construct()
     {
-        $this->extractor = new Extractor();
+        $this->extractor = new AstExtractor();
     }
 
-    public static function run()
+    public static function run($argv)
     {
         $command = new Command();
-        $command->init();
+
+        $stdin = fopen('php://stdin', 'rb');
+        $stdout = fopen('php://stdout', 'ab');
+
+        if (isset($argv[1]) && $argv[1] == BaseFormatter::MSGPACK) {
+            $formatter = new Msgpack($stdin);
+        } else {
+            $formatter = new Json($stdin);
+        }
+
+        $command->init($formatter, $stdin, $stdout);
     }
 
-    private function init()
+    private function init(BaseFormatter $formatter, $stdin, $stdout)
     {
-        $stdin = fopen('php://stdin', 'rb');
-
-        //$unpacker = new Msgpack($stdin);
-        $unpacker = new Json($stdin);
         while (!feof($stdin)) {
-            //echo PHP_EOL . PHP_EOL;
-            $requests = self::logTime("readNext", function () use ($unpacker) {return $unpacker->next();});
-            if ($requests === null) {
+            $requests = [];
+            try {
+                //echo PHP_EOL . PHP_EOL;
+                $requests = self::logTime(
+                    "readNext", function () use ($formatter) {return $formatter->readNext();}
+                );
+            } catch (\Exception $e) {
+                //TODO: encapsulate $e in this new Fatal
+                self::writeErr(null, new Fatal('Wrong request format'), $stdout, $formatter);
                 continue;
             }
 
-            $count = count($requests);
-            foreach ($requests as $i => $request) {
-                if ($request == 10) continue;
+            if (!is_array($requests)) {
+                continue;
+            }
 
-                if (!isset($request['content']) || !isset($request['name'])) {
-                    echo sprintf("wrong request%s", PHP_EOL);
-                    //var_dump($request);
+            foreach ($requests as $i => $rawReq) {
+                $request = null;
+                try {
+                    //var_dump($rawReq);
+                    $request = Request::fromArray($rawReq);
+                    $ast = $this->extractor->getAst($request->content);
+                    $response = $request->answer($ast);
+                    self::write($response, $stdout, $formatter);
+                } catch (\Exception $e) {
+                    //var_dump("exception");
+                    //var_dump($e);
+                    //var_dump($e->getTraceAsString());
+                    self::writeErr($request, $e, $stdout, $formatter);
                     continue;
-                }
-
-                echo sprintf("REQUEST %d/%d: '%s'%s", $i, $count, $request['name'], PHP_EOL);
-                if (!$this->process($request['content'])) {
-                    echo sprintf("Error processing!!%s", PHP_EOL);
-                    return false;
                 }
             }
         }
 
         fclose($stdin);
-
-        //echo sprintf("%sFINISH!!%s", PHP_EOL, PHP_EOL);
-        return true;
-    }
-
-    private function process(string $code)
-    {
-        $ast = $this->extractor->getAst($code);
-        $msgPack = self::logTime("Msgpack encode", function () use ($ast) {return Msgpack::encode($ast);});
-        $msgJson = self::logTime("Json encode", function () use ($ast) {return Json::encode($ast);});
-
-        //echo PHP_EOL;
-        //var_dump("AST:", $ast);
-        //echo PHP_EOL;
-        //var_dump("Msgpack:", strlen($msgPack));
-        //var_dump($msgPack);
-        echo $msgPack;
-        echo PHP_EOL;
-        //var_dump("Json:", strlen($msgJson));
-        //var_dump($msgJson);
-        //echo $msgJson.PHP_EOL;
 
         return true;
     }
@@ -91,5 +90,39 @@ class Command
     private static function round($v)
     {
         return round($v, 2);
+    }
+
+    public static function write(Response $response, $stdout, BaseFormatter $encoder)
+    {
+        $output = self::logTime("encoding", function () use ($encoder, $response) {
+            return $encoder->encode($response->toArray()) . PHP_EOL . PHP_EOL;
+        });
+        //var_dump("Json:", strlen($msgJson));
+        //var_dump($msgJson);
+        //echo $output;
+        fwrite($stdout, $output);
+    }
+
+    public static function writeErr(Request $request = null, \Exception $e, $stdout, BaseFormatter $encoder) {
+        if ($request === null) {
+            $response = Response::fromError($e);
+        } else {
+            $response = $request->answer(null);
+            $response->status = self::getStatus($e->getCode());
+        }
+
+        self::write($response, $stdout, $encoder);
+    }
+
+    public static function getStatus($statusCode)
+    {
+        switch ($statusCode) {
+            case BaseFailure::ERROR:
+                return Response::STATUS_ERROR;
+            case BaseFailure::FATAL:
+                return Response::STATUS_FATAL;
+        }
+
+        return Response::STATUS_OK;
     }
 }

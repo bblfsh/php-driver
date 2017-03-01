@@ -1,0 +1,26 @@
+#!/usr/bin/php
+<?php
+
+use AstExtractor\Formatter\BaseFormatter;
+use AstExtractor\Formatter\Msgpack;
+use AstExtractor\Formatter\Json;
+
+require_once 'vendor/autoload.php';
+
+$stdin = fopen('php://stdin', 'rb');
+stream_set_blocking($stdin, true);
+if ($stdin === false) {
+    var_dump("FAIL!!");
+    exit(1);
+}
+
+$formatter = isset($argv[1]) && $argv[1] == BaseFormatter::MSGPACK ? new Msgpack($stdin) : new Json($stdin);
+while (!feof($stdin)) {
+    $msg = $formatter->readNext();
+    echo json_encode($msg, JSON_PRETTY_PRINT | JSON_FORCE_OBJECT | JSON_UNESCAPED_UNICODE) . PHP_EOL . PHP_EOL;
+}
+
+fclose($stdin);
+var_dump("FINISH!!");
+
+

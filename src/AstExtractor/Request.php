@@ -1,6 +1,8 @@
 <?php
 
-namespace FixturesGenerator;
+namespace AstExtractor;
+
+use AstExtractor\Exception\Fatal;
 
 class Request
 {
@@ -35,6 +37,26 @@ class Request
         $this->content = $content;
     }
 
+    public static function fromArray($request) {
+        if (!is_array($request) ||
+            !isset($request['id']) ||
+            !isset($request['name']) ||
+            !isset($request['action']) ||
+            !isset($request['content'])
+        ) {
+            throw new Fatal('Wrong request format');
+        }
+
+        return new self(
+            $request['id'],
+            $request['name'],
+            $request['action'],
+            $request['language'] ? $request['language'] : null,
+            $request['language_version'] ? $request['language_version'] : null,
+            $request['content']
+        );
+    }
+
     public function toArray()
     {
         return [
@@ -45,5 +67,13 @@ class Request
             "language_version" => $this->language_version,
             "content" => $this->content
         ];
+    }
+
+    public function answer(array $ast)
+    {
+        $response = Response::fromRequest($this, $ast);
+        $response->ast = $ast;
+
+        return $response;
     }
 }

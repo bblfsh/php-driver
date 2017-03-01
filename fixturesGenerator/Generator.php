@@ -2,10 +2,15 @@
 
 namespace FixturesGenerator;
 
-use AstExtractor\Encoder\Json;
+use AstExtractor\Formatter\BaseFormatter;
+use AstExtractor\Request;
+use AstExtractor\Formatter\Msgpack;
+use AstExtractor\Formatter\Json;
 
 class Generator
 {
+    public $formatter;
+
     private const SLEEP_SEC = 0;
 
     private const EXAMPLE_1 = '<?php echo "hello";';
@@ -43,26 +48,44 @@ class Generator
             $d = new strangeChars("\xfe");
         ?>';
 
+    public function __construct(BaseFormatter $formatter)
+    {
+        $this->formatter = $formatter;
+    }
 
+    public static function run($argv)
+    {
+        $quantity = isset($argv[1]) ? $argv[1] : 1;
+        if ($quantity !== null && !is_numeric($quantity)) {
+            echo sprintf("quantity argument must be numeric, '%s' passed", $quantity);
+            exit(1);
+        }
 
-    public static function generate($count = 1)
+        $t = tmpfile();
+        $formatter = isset($argv[2]) && $argv[2] == BaseFormatter::MSGPACK ? new Msgpack($t) : new Json($t);
+
+        $command = new self($formatter);
+        $command->generate($quantity);
+    }
+
+    public function generate($count = 1)
     {
         if (!(boolean)$count--) return;
         echo
-            self::encode(Generator::getRequest(10000001, 'FILE_HELLO', Generator::EXAMPLE_1)) .
-            self::encode(Generator::getRequest(10000002, 'FILE_BYE', Generator::EXAMPLE_2));
+            $this->encode(Generator::getRequest(10000001, 'FILE_HELLO', Generator::EXAMPLE_1)) .
+            $this->encode(Generator::getRequest(10000002, 'FILE_BYE', Generator::EXAMPLE_2));
 
         if (!(boolean)$count--) return;
         sleep(Generator::SLEEP_SEC);
-        echo self::encode(Generator::getRequest(10000003, 'FILE_HELLO_WORLD', Generator::EXAMPLE_3));
+        echo $this->encode(Generator::getRequest(10000003, 'FILE_HELLO_WORLD', Generator::EXAMPLE_3));
 
         if (!(boolean)$count--) return;
         sleep(Generator::SLEEP_SEC);
-        echo self::encode(Generator::getRequest(10000003, 'FILE_STRANGE_CHARS', Generator::EXAMPLE_4));
+        echo $this->encode(Generator::getRequest(10000003, 'FILE_STRANGE_CHARS', Generator::EXAMPLE_4));
 
         if (!(boolean)$count--) return;
         sleep(Generator::SLEEP_SEC);
-        echo self::encode(Generator::getRequest(10000003, 'FILE_STRANGE_CHARS', Generator::EXAMPLE_5));
+        echo $this->encode(Generator::getRequest(10000003, 'FILE_STRANGE_CHARS', Generator::EXAMPLE_5));
 
         //$globPattern = './tests/fixtures/WordPress__wp-includes__formatting.php';
         //$globPattern = './tests/fixtures/drupal__core__modules__migrate_drupal__tests__fixtures__drupal7.php';
@@ -70,7 +93,7 @@ class Generator
         foreach (glob($globPattern) as $i => $filePath) {
             if (!(boolean)$count--) return;
             sleep(Generator::SLEEP_SEC);
-            echo self::encode(
+            echo $this->encode(
                 Generator::getRequest(
                     $i + 10000004,
                     'FILE_' . $filePath,
@@ -80,10 +103,9 @@ class Generator
         }
     }
 
-    private static function encode($input)
+    private function encode($input)
     {
-        return Json::encode($input) . PHP_EOL;
-        //return msgpack_pack($input) . PHP_EOL;
+        return $this->formatter->encode($input) . PHP_EOL . PHP_EOL;
     }
 
     private static function getRequest($id, string $name, string $content)
