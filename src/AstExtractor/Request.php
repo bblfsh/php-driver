@@ -25,7 +25,7 @@ class Request
         $id,
         string $name,
         string $action,
-        string $lang,
+        string $lang = '',
         $version,
         string $content
     ) {
@@ -51,8 +51,8 @@ class Request
             $request['id'],
             $request['name'],
             $request['action'],
-            $request['language'] ? $request['language'] : null,
-            $request['language_version'] ? $request['language_version'] : null,
+            isset($request['language']) ? $request['language'] : '',
+            isset($request['language_version']) ? $request['language_version'] : null,
             $request['content']
         );
     }
