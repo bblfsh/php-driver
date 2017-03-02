@@ -92,7 +92,7 @@ class Command
         return round($v, 2);
     }
 
-    public static function write(Response $response, $stdout, BaseFormatter $encoder)
+    private static function write(Response $response, $stdout, BaseFormatter $encoder)
     {
         $output = self::logTime("encoding", function () use ($encoder, $response) {
             return $encoder->encode($response->toArray()) . PHP_EOL . PHP_EOL;
@@ -103,7 +103,7 @@ class Command
         fwrite($stdout, $output);
     }
 
-    public static function writeErr(Request $request = null, \Exception $e, $stdout, BaseFormatter $encoder) {
+    private static function writeErr(Request $request = null, \Exception $e, $stdout, BaseFormatter $encoder) {
         if ($request === null) {
             $response = Response::fromError($e);
         } else {

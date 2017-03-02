@@ -30,8 +30,7 @@ class RequestTest extends TestCase
      * @expectedException \AstExtractor\Exception\Fatal
      */
     public function testNewRequestFails(): void
-    {        var_dump('testNewRequestFails');
-
-        $req = Request::fromArray([]);
+    {
+        Request::fromArray([]);
     }
 }

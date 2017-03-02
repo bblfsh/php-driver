@@ -1,5 +1,4 @@
 <?php
 
-$loader = require 'vendor/autoload.php';
+$loader = require __DIR__.'/../vendor/autoload.php';
 $loader->add('AstExtractor\Test', __DIR__);
-var_dump(11111);

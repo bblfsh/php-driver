@@ -3,7 +3,6 @@
 namespace AstExtractor;
 
 use AstExtractor\Exception\BaseFailure;
-use PhpParser\Node;
 
 class Response
 {
