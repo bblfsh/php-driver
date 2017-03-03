@@ -1,13 +1,17 @@
--include .sdk/Makefile
+build-native-internal:
+	echo "build-native-internal > not implemented"
 
-$(if $(filter true,$(sdkloaded)),,$(error You must install bblfsh-sdk))
+test-native-internal:
+	echo "test-native-internal > not implemented"
 
 test-native:
 	cd native; \
-	echo "not implemented"
+	echo "test-native > not implemented"
 
 build-native:
 	cd native; \
-	echo "not implemented"
+	echo "build-native > not implemented"
 	echo -e "#!/bin/bash\necho 'not implemented'" > $(BUILD_PATH)/native
 	chmod +x $(BUILD_PATH)/native
+
+include .sdk/Makefile
