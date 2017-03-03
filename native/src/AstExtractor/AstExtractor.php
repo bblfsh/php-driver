@@ -20,7 +20,7 @@ use PhpParser\Node;
  */
 class AstExtractor
 {
-    public const LEXER_CONF = ['usedAttributes' => []];
+    public const LEXER_CONF = [/*'usedAttributes' => []*/];
     public const PARSER_VERSION = ParserFactory::PREFER_PHP7;
 
     public $lexer;

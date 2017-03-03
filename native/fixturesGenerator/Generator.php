@@ -111,12 +111,8 @@ class Generator
     private static function getRequest($id, string $name, string $content)
     {
         return (new Request(
-            $id,
-            $name,
-            Request::ACTION_PARSE_AST,
-            Request::LANG_PHP,
-            Request::PHP_7,
-            $content
+            $content,
+            $name
         ))->toArray();
     }
 }

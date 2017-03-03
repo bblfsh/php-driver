@@ -6,14 +6,8 @@ use AstExtractor\Exception\Fatal;
 
 class Request
 {
-    public $id;
     public $name;
-    public $action;
-    public $language;
-    public $language_version;
     public $content;
-
-    public const ACTION_PARSE_AST = "ParseAST";
 
     public const LANG_PHP = "PHP";
 
@@ -22,50 +16,31 @@ class Request
     public const PHP_7 = 7;
 
     public function __construct(
-        $id,
-        string $name,
-        string $action,
-        string $lang = '',
-        $version,
-        string $content
+        string $content,
+        $name = null
     ) {
-        $this->id = $id;
-        $this->name = $name;
-        $this->action = $action;
-        $this->language = $lang;
-        $this->language_version = $version;
         $this->content = $content;
+        if ($name !== null) {
+            $this->name = $name;
+        }
     }
 
     public static function fromArray($request) {
-        if (!is_array($request) ||
-            !isset($request['id']) ||
-            !isset($request['name']) ||
-            !isset($request['action']) ||
-            !isset($request['content'])
-        ) {
+        if (!is_array($request) || !isset($request['content'])) {
             throw new Fatal('Wrong request format');
         }
 
         return new self(
-            $request['id'],
-            $request['name'],
-            $request['action'],
-            isset($request['language']) ? $request['language'] : '',
-            isset($request['language_version']) ? $request['language_version'] : null,
-            $request['content']
+            $request['content'],
+            $request['metadata']['name'] ??  null
         );
     }
 
     public function toArray()
     {
         return [
-            "id" => $this->id,
-            "name" => $this->name,
-            "action" => $this->action,
-            "language" => $this->language,
-            "language_version" => $this->language_version,
-            "content" => $this->content
+            "content" => $this->content,
+            "metadata" => ["name" => $this->name,],
         ];
     }
 

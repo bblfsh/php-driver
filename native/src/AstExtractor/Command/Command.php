@@ -95,7 +95,7 @@ class Command
     private static function write(Response $response, $stdout, BaseFormatter $encoder)
     {
         $output = self::logTime("encoding", function () use ($encoder, $response) {
-            return $encoder->encode($response->toArray()) . PHP_EOL . PHP_EOL;
+            return $encoder->encode($response->toArray()) . PHP_EOL /*. PHP_EOL*/;
         });
         //var_dump("Json:", strlen($msgJson));
         //var_dump($msgJson);
