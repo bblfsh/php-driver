@@ -2,6 +2,7 @@
 
 namespace AstExtractor\Formatter;
 
+use AstExtractor\Exception\BaseFailure;
 use AstExtractor\Exception\Fatal;
 
 class Json extends BaseFormatter
@@ -54,7 +55,11 @@ class Json extends BaseFormatter
      */
     public function readNext()
     {
-        while (!feof($this->reader) && $read = fgets($this->reader)) {
+        if (!$this->isReaderOpened()) {
+            throw new BaseFailure(BaseFailure::EOF, 'End of reader reached');
+        }
+
+        while ($this->isReaderOpened() && $read = fgets($this->reader)) {
             if ($read === false) {
                 throw new Fatal('Error reading from passed stream');
             }
@@ -65,6 +70,8 @@ class Json extends BaseFormatter
 
             return [self::decode($read)];
         }
+
+        throw new BaseFailure(BaseFailure::EOF, 'End of reader reached');
     }
 
     /**

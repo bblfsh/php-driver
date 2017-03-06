@@ -48,7 +48,7 @@ class Response
     {
         $response = new self([], null);
         $response->errors = [$error->getMessage()];
-        $response->status = SELF::STATUS_ERROR;
+        $response->status = self::getStatus($error->getCode());
 
         return $response;
     }
@@ -61,5 +61,17 @@ class Response
             'status' => $this->status,
             'errors' => $this->errors
         ];
+    }
+
+    public static function getStatus($statusCode)
+    {
+        switch ($statusCode) {
+            case BaseFailure::ERROR:
+                return self::STATUS_ERROR;
+            case BaseFailure::FATAL:
+                return self::STATUS_FATAL;
+        }
+
+        return Response::STATUS_OK;
     }
 }

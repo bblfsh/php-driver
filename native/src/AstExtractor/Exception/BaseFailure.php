@@ -2,10 +2,12 @@
 
 namespace AstExtractor\Exception;
 
-abstract class BaseFailure extends \Exception
+class BaseFailure extends \Exception
 {
     public const ERROR = 1;
     public const FATAL = 2;
+
+    public const EOF = -1;
 
     public function __construct($type, string $msg, ...$values)
     {

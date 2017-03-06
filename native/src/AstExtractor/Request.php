@@ -44,8 +44,11 @@ class Request
         ];
     }
 
-    public function answer(array $ast)
+    public function answer($ast)
     {
+        if (!is_array($ast)) {
+            throw new Fatal('No ast parsed');
+        }
         $response = Response::fromRequest($this, $ast);
         $response->ast = $ast;
 

@@ -58,4 +58,12 @@ abstract class BaseFormatter
 
         $this->reader = $reader;
     }
+
+    /**
+     * isReaderOpened returns true if the underlying reader is readable
+     * @return bool
+     */
+    protected function isReaderOpened() {
+        return is_resource($this->reader) && !feof($this->reader);
+    }
 }

@@ -2,13 +2,13 @@
 
 namespace AstExtractor\Command;
 
+use AstExtractor\Exception\BaseFailure;
 use AstExtractor\Formatter\BaseFormatter;
 use AstExtractor\Formatter\Json;
 use AstExtractor\Formatter\Msgpack;
 use AstExtractor\AstExtractor;
 use AstExtractor\Request;
 use AstExtractor\Response;
-use AstExtractor\Exception\Fatal;
 
 class Command
 {
@@ -41,13 +41,8 @@ class Command
             $requests = [];
             try {
                 $requests = $formatter->readNext();
-            } catch (\Exception $e) {
-                //TODO: encapsulate $e in this new Fatal
-                self::writeErr(null, new Fatal('Wrong request format'), $stdout, $formatter);
-                continue;
-            }
-
-            if (!is_array($requests)) {
+            } catch (BaseFailure $e) {
+                self::writeErr(null, $e, $stdout, $formatter);
                 continue;
             }
 
@@ -59,6 +54,8 @@ class Command
                     $response = $request->answer($ast);
                     self::write($response, $stdout, $formatter);
                 } catch (\Exception $e) {
+                    //TODO: catch different exceptions
+                    //  Request::fromArray -> wrong request
                     self::writeErr($request, $e, $stdout, $formatter);
                     continue;
                 }
@@ -80,22 +77,11 @@ class Command
         if ($request === null) {
             $response = Response::fromError($e);
         } else {
-            $response = $request->answer(null);
-            $response->status = self::getStatus($e->getCode());
+            $response = $request->answer([]);
+            $response->errors = [$e];
+            $response->status = Response::getStatus($e->getCode());
         }
 
         self::write($response, $stdout, $encoder);
-    }
-
-    public static function getStatus($statusCode)
-    {
-        switch ($statusCode) {
-            case BaseFailure::ERROR:
-                return Response::STATUS_ERROR;
-            case BaseFailure::FATAL:
-                return Response::STATUS_FATAL;
-        }
-
-        return Response::STATUS_OK;
     }
 }
