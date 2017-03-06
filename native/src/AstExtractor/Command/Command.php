@@ -16,7 +16,7 @@ class Command
 
     public function __construct()
     {
-        $this->extractor = new AstExtractor();
+        $this->extractor = new AstExtractor(AstExtractor::LEXER_CONF_VERBOSE);
     }
 
     public static function run($argv)

@@ -5,6 +5,7 @@
  */
 namespace AstExtractor;
 
+use AstExtractor\Exception\Error;
 use PhpParser\ParserFactory;
 use PhpParser\Lexer;
 use PhpParser\Node;
@@ -20,7 +21,17 @@ use PhpParser\Node;
  */
 class AstExtractor
 {
-    public const LEXER_CONF = [/*'usedAttributes' => []*/];
+    public const LEXER_CONF_SIMPLIFIED = 1;
+    public const LEXER_CONF_VERBOSE = 2;
+    private const LEXER_CONFS = [
+        self::LEXER_CONF_SIMPLIFIED => ['usedAttributes' => []],
+        self::LEXER_CONF_VERBOSE => ['usedAttributes' => [
+            'comments',
+            'startLine', 'endLine',
+            'startTokenPos', 'endTokenPos',
+            'startFilePos', 'endFilePos'
+        ]],
+    ];
     public const PARSER_VERSION = ParserFactory::PREFER_PHP7;
 
     public $lexer;
@@ -29,9 +40,9 @@ class AstExtractor
     /**
      * Returns a new Extractor
      */
-    public function __construct()
+    public function __construct(int $conf)
     {
-        $this->lexer = new Lexer(self::LEXER_CONF);
+        $this->lexer = new Lexer(self::LEXER_CONFS[$conf]);
         $this->parser = (new ParserFactory)->create(self::PARSER_VERSION, $this->lexer);
     }
 
@@ -46,7 +57,11 @@ class AstExtractor
      */
     public function getAst($code)
     {
-        return $this->parser->parse($code);
+        try {
+            return $this->parser->parse($code);
+        } catch (\Exception $e) {
+            throw new Error($e->getMessage());
+        }
     }
 }
 
