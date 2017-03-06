@@ -8,10 +8,10 @@ use AstExtractor\Exception\Fatal;
 class Json extends BaseFormatter
 {
     /**
-     * ENCODING_OPTS forces encoding to "return always an object"
-     *   and "encode multibyte Unicode characters literally"
+     * ENCODING_OPTS forces encoding to "encode multibyte Unicode characters literally"
+     *  and "substitute some unencodable values instead of failing"
      */
-    private const ENCODING_OPTS = JSON_FORCE_OBJECT | JSON_UNESCAPED_UNICODE;
+    private const ENCODING_FALLBACK_OPTS = JSON_UNESCAPED_UNICODE | JSON_PARTIAL_OUTPUT_ON_ERROR;
 
     /**
      * DECODE_USING_ASSOC_ARRAY is true if the decode value will be represented by an
@@ -20,14 +20,19 @@ class Json extends BaseFormatter
     private const DECODE_USING_ASSOC_ARRAY = true;
 
     /**
+     * MAX_DEPTH is the max allowed depth for encoding json structures
+     */
+    private const MAX_DEPTH = 512;
+
+    /**
      * @inheritdoc
      */
     public function encode(array $input)
     {
-        $encode = json_encode($input, self::ENCODING_OPTS);
+        $encode = json_encode($input, 0, self::MAX_DEPTH);
         if (!$encode && json_last_error() === JSON_ERROR_UTF8) {
             self::utf8_encode_recursive($input);
-            $encode = json_encode($input, self::ENCODING_OPTS);
+            $encode = json_encode($input, self::ENCODING_FALLBACK_OPTS, self::MAX_DEPTH);
         }
 
         if (!$encode) {
