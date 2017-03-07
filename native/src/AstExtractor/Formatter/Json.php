@@ -27,12 +27,12 @@ class Json extends BaseFormatter
     /**
      * @inheritdoc
      */
-    public function encode(array $input)
+    public function encode(array $message)
     {
-        $encode = json_encode($input, 0, self::MAX_DEPTH);
+        $encode = json_encode($message, 0, self::MAX_DEPTH);
         if (!$encode && json_last_error() === JSON_ERROR_UTF8) {
-            self::utf8_encode_recursive($input);
-            $encode = json_encode($input, self::ENCODING_FALLBACK_OPTS, self::MAX_DEPTH);
+            self::utf8_encode_recursive($message);
+            $encode = json_encode($message, self::ENCODING_FALLBACK_OPTS, self::MAX_DEPTH);
         }
 
         if (!$encode) {
@@ -73,7 +73,7 @@ class Json extends BaseFormatter
                 continue;
             }
 
-            return [self::decode($read)];
+            return self::decode($read);
         }
 
         throw new BaseFailure(BaseFailure::EOF, 'End of reader reached');

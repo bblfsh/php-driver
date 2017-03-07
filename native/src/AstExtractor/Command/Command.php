@@ -3,75 +3,45 @@
 namespace AstExtractor\Command;
 
 use AstExtractor\Exception\BaseFailure;
-use AstExtractor\Formatter\BaseFormatter;
-use AstExtractor\Formatter\Json;
-use AstExtractor\Formatter\Msgpack;
 use AstExtractor\AstExtractor;
+use AstExtractor\Formatter\Json;
 
 class Command
 {
     private $extractor;
+    private $io;
 
     public function __construct()
     {
+        $formatter = new Json();
+        $this->io = new IO($formatter);
         $this->extractor = new AstExtractor(AstExtractor::LEXER_CONF_VERBOSE);
     }
 
-    public static function run($argv)
+    public static function run(array $argv)
     {
-        $command = new Command();
-        $stdin = fopen('php://stdin', 'rb');
-        $stdout = fopen('php://stdout', 'ab');
-        $command->init(new Json($stdin), $stdin, $stdout);
+        return (new Command())->init();
     }
 
-    private function init(BaseFormatter $formatter, $stdin, $stdout)
+    private function init()
     {
-        while (!feof($stdin)) {
-            $requests = [];
+        $request = null;
+        while ($this->io->isAvailable()) {
             try {
-                $requests = $formatter->readNext();
+                $request = $this->io->nextRequest();
+                $ast = $this->extractor->getAst($request->content);
+                $response = $request->answer($ast);
+                $this->io->write($response);
             } catch (BaseFailure $e) {
-                self::writeErr(null, $e, $stdout, $formatter);
+                //TODO: separate in error types
+                if ($e->getCode() === BaseFailure::EOF) {
+                    return true;
+                }
+                $this->io->writeErr($request, $e);
                 continue;
             }
-
-            foreach ($requests as $i => $rawReq) {
-                $request = null;
-                try {
-                    $request = Request::fromArray($rawReq);
-                    $ast = $this->extractor->getAst($request->content);
-                    $response = $request->answer($ast);
-                    self::write($response, $stdout, $formatter);
-                } catch (\Exception $e) {
-                    //TODO: catch different exceptions
-                    //  Request::fromArray -> wrong request
-                    self::writeErr($request, $e, $stdout, $formatter);
-                    continue;
-                }
-            }
         }
-
-        fclose($stdin);
 
         return true;
-    }
-
-    private static function write(Response $response, $stdout, BaseFormatter $encoder)
-    {
-        $output = $encoder->encode($response->toArray()) . PHP_EOL /*. PHP_EOL*/;
-        fwrite($stdout, $output);
-    }
-
-    private static function writeErr(Request $request = null, \Exception $e, $stdout, BaseFormatter $encoder) {
-        if ($request === null) {
-            $response = Response::fromError($e);
-        } else {
-            $response = $request->answer([]);
-            $response->errors = [$e];
-            $response->status = Response::getStatus($e->getCode());
-        }
-
-        self::write($response, $stdout, $encoder);
     }
 }

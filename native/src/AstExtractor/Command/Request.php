@@ -19,7 +19,8 @@ class Request
         }
     }
 
-    public static function fromArray($request) {
+    public static function fromArray($request)
+    {
         if (!is_array($request) || !isset($request['content'])) {
             throw new Fatal('Wrong request format');
         }

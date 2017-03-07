@@ -19,14 +19,15 @@ class BaseFormatterTest extends TestCase
     /**
      * @expectedException \AstExtractor\Exception\Fatal
      */
-    public function testInvalidConstruction(): void
+    public function testInvalidReader(): void
     {
-        $formatter = new SerialFormatter(null);
+        $formatter = new SerialFormatter();
+        $formatter->setReader(null);
     }
 }
 
 class SerialFormatter extends BaseFormatter
 {
-    public function encode(array $input){return '';}
+    public function encode(array $message){return '';}
     public function decode(string $input){return [];}
 }

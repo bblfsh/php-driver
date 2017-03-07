@@ -2,6 +2,7 @@
 
 namespace AstExtractor\Formatter;
 
+use AstExtractor\Command\IO;
 use AstExtractor\Exception\Fatal;
 
 /**
@@ -21,7 +22,7 @@ abstract class BaseFormatter
      * @throws \Exception if the encoding could not be made
      * @return string
      */
-    public abstract function encode(array $input);
+    public abstract function encode(array $message);
 
     /**
      * decode returns the decode value given a string representation.
@@ -45,12 +46,17 @@ abstract class BaseFormatter
 
     /**
      * BaseFormatter constructor.
+     */
+    public function __construct(){}
+
+    /**
+     * readFrom configure the BaseFormater to use the passed reader
      * The passed $reader will be set as "blocker", so each read will block the
      *   process till a new value is read.
      * @param $reader
      * @throws \Exception
      */
-    public function __construct($reader)
+    public function setReader($reader)
     {
         if (!is_resource($reader) || !stream_set_blocking($reader, true)) {
             throw new Fatal('The formatter needs a valid reader, but wrong passed.');
@@ -64,6 +70,6 @@ abstract class BaseFormatter
      * @return bool
      */
     protected function isReaderOpened() {
-        return is_resource($this->reader) && !feof($this->reader);
+        return IO::isOpened($this->reader);
     }
 }

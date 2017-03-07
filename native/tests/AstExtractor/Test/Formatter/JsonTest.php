@@ -165,6 +165,8 @@ class JsonTest extends TestCase
             $stream = tmpfile();
         }
 
-        return new Json($stream);
+        $jsonFormatter = new Json();
+        $jsonFormatter->setReader($stream);
+        return $jsonFormatter;
     }
 }
