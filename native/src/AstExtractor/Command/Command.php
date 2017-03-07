@@ -22,17 +22,9 @@ class Command
     public static function run($argv)
     {
         $command = new Command();
-
         $stdin = fopen('php://stdin', 'rb');
         $stdout = fopen('php://stdout', 'ab');
-
-        if (isset($argv[1]) && $argv[1] == BaseFormatter::MSGPACK) {
-            $formatter = new Msgpack($stdin);
-        } else {
-            $formatter = new Json($stdin);
-        }
-
-        $command->init($formatter, $stdin, $stdout);
+        $command->init(new Json($stdin), $stdin, $stdout);
     }
 
     private function init(BaseFormatter $formatter, $stdin, $stdout)
