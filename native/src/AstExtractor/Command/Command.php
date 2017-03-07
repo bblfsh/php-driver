@@ -7,8 +7,6 @@ use AstExtractor\Formatter\BaseFormatter;
 use AstExtractor\Formatter\Json;
 use AstExtractor\Formatter\Msgpack;
 use AstExtractor\AstExtractor;
-use AstExtractor\Request;
-use AstExtractor\Response;
 
 class Command
 {

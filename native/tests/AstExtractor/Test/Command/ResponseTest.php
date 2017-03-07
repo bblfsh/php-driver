@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace AstExtractor\Test;
+namespace AstExtractor\Test\Command;
 
+use PHPUnit\Framework\TestCase;
 use AstExtractor\Exception\Error;
 use AstExtractor\Exception\Fatal;
-use AstExtractor\Request;
-use AstExtractor\Response;
-use PHPUnit\Framework\TestCase;
+use AstExtractor\Command\Request;
+use AstExtractor\Command\Response;
 
 class ResponseTest extends TestCase
 {

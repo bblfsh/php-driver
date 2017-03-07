@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace AstExtractor\Test;
+namespace AstExtractor\Test\Command;
 
-use AstExtractor\Response;
 use PHPUnit\Framework\TestCase;
-use AstExtractor\Request;
+use AstExtractor\Command\Request;
+use AstExtractor\Command\Response;
 
 class RequestTest extends TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace AstExtractor;
+namespace AstExtractor\Command;
 
 use AstExtractor\Exception\BaseFailure;
 

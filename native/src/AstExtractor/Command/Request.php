@@ -1,6 +1,6 @@
 <?php
 
-namespace AstExtractor;
+namespace AstExtractor\Command;
 
 use AstExtractor\Exception\Fatal;
 
@@ -8,12 +8,6 @@ class Request
 {
     public $name;
     public $content;
-
-    public const LANG_PHP = "PHP";
-
-    public const PHP_5 = 5;
-    public const PHP_6 = 6;
-    public const PHP_7 = 7;
 
     public function __construct(
         string $content,
