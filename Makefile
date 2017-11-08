@@ -1,17 +1,12 @@
-build-native-internal:
-	echo "build-native-internal > not implemented"
-
 test-native-internal:
+	composer.phar install
 	echo "test-native-internal > not implemented"
 
-test-native:
-	cd native; \
-	echo "test-native > not implemented"
+build-native-internal:
+	cp -rf native $(BUILD_PATH)/src
+	cd $(BUILD_PATH)/src && composer.phar install
 
-build-native:
-	cd native; \
-	echo "build-native > not implemented"
-	echo -e "#!/bin/bash\necho 'not implemented'" > $(BUILD_PATH)/native
-	chmod +x $(BUILD_PATH)/native
+	rm $(BUILD_PATH)/bin/native || true
+	ln -s /opt/driver/src/ast $(BUILD_PATH)/bin/native
 
 include .sdk/Makefile
