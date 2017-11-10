@@ -47,7 +47,7 @@ class JsonTest extends TestCase
         $jsonFormatter = self::getJsonStreamFormatter($string);
 
         //A: should succeed
-        $this->assertEquals([self::DECODED_OK], $jsonFormatter->readNext());
+        $this->assertEquals(self::DECODED_OK, $jsonFormatter->readNext());
 
         //C: should throw a Fatal
         try {
@@ -57,7 +57,7 @@ class JsonTest extends TestCase
         }
 
         //D: should succeed
-        $this->assertEquals([["b"=>99]], $jsonFormatter->readNext());
+        $this->assertEquals(["b"=>99], $jsonFormatter->readNext());
 
         //E: should throw a Fatal
         try {
@@ -67,7 +67,7 @@ class JsonTest extends TestCase
         }
 
         //F: should succeed
-        $this->assertEquals([["b"=>99]], $jsonFormatter->readNext());
+        $this->assertEquals(["b"=>99], $jsonFormatter->readNext());
 
         //END
         try {
