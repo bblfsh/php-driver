@@ -1,7 +1,7 @@
 package normalizer
 
 import (
-	"github.com/bblfsh/sdk/uast/transformer/positioner"
+	"gopkg.in/bblfsh/sdk.v1/uast/transformer/positioner"
 	"gopkg.in/bblfsh/sdk.v1/uast"
 	. "gopkg.in/bblfsh/sdk.v1/uast/ann"
 	"gopkg.in/bblfsh/sdk.v1/uast/transformer"
