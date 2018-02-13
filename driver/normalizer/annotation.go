@@ -3,7 +3,7 @@ package normalizer
 import (
 	"errors"
 
-	"github.com/bblfsh/python-driver/driver/normalizer/pyast"
+	"github.com/bblfsh/php-driver/driver/normalizer/phpast"
 
 	"gopkg.in/bblfsh/sdk.v1/uast/transformer/positioner"
 	"gopkg.in/bblfsh/sdk.v1/uast"
@@ -25,6 +25,5 @@ var Transformers = []transformer.Tranformer{
 // https://godoc.org/gopkg.in/bblfsh/sdk.v1/uast/ann
 var AnnotationRules = On(Any).Self(
 	On(Not(phpast.File)).Error(errors.New("root must be uast.File")),
-	On(phpast.File).Roles(uast.File, uast.Module).Descendants(
-	)
+	On(phpast.File).Roles(uast.File, uast.Module).Descendants(),
 )
