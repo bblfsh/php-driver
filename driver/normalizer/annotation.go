@@ -1,6 +1,10 @@
 package normalizer
 
 import (
+	"errors"
+
+	"github.com/bblfsh/python-driver/driver/normalizer/pyast"
+
 	"gopkg.in/bblfsh/sdk.v1/uast/transformer/positioner"
 	"gopkg.in/bblfsh/sdk.v1/uast"
 	. "gopkg.in/bblfsh/sdk.v1/uast/ann"
@@ -19,4 +23,8 @@ var Transformers = []transformer.Tranformer{
 // AnnotationRules describes how a UAST should be annotated with `uast.Role`.
 //
 // https://godoc.org/gopkg.in/bblfsh/sdk.v1/uast/ann
-var AnnotationRules = On(Any).Roles(uast.File)
+var AnnotationRules = On(Any).Self(
+	On(Not(phpast.File)).Error(errors.New("root must be uast.File")),
+	On(phpast.File).Roles(uast.File, uast.Module).Descendants(
+	)
+)
