@@ -1,6 +1,6 @@
 <?php
 
-if      ($a) {}
+if      ($a) { $x = 1;}
 elseif  ($b) {}
 elseif  ($c) {}
 else         {}

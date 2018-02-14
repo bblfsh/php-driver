@@ -6,7 +6,7 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,For,Incomplete
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 30
 .  .  .  .  Line: 4
@@ -23,7 +23,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Noop,Comment
 .  .  .  .  .  TOKEN "// foreach on variable
 "
 .  .  .  .  .  StartPosition: {
@@ -41,7 +41,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 39
@@ -58,7 +58,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Iterator
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 45
@@ -77,7 +77,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,For,Incomplete
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 53
 .  .  .  .  Line: 5
@@ -94,7 +94,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 62
@@ -111,7 +111,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Iterator
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 69
@@ -130,7 +130,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,For,Incomplete
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 76
 .  .  .  .  Line: 6
@@ -147,7 +147,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 85
@@ -164,7 +164,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 91
@@ -181,7 +181,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Iterator
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 97
@@ -200,7 +200,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,For,Incomplete
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 104
 .  .  .  .  Line: 7
@@ -217,7 +217,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 113
@@ -234,7 +234,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 119
@@ -251,7 +251,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Iterator
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 126
@@ -270,7 +270,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  4: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,For,Incomplete
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 133
 .  .  .  .  Line: 8
@@ -287,7 +287,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 142
@@ -304,7 +304,8 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_List {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Call,List,Iterator
+.  .  .  .  .  TOKEN "list"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 148
 .  .  .  .  .  .  Line: 8
@@ -320,7 +321,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_ArrayItem {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,List,Entry
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 153
 .  .  .  .  .  .  .  .  Line: 8
@@ -337,7 +338,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 153
@@ -356,7 +357,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_ArrayItem {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,List,Entry
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 157
 .  .  .  .  .  .  .  .  Line: 8
@@ -373,7 +374,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 157
@@ -396,7 +397,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  5: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,For,Incomplete
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 165
 .  .  .  .  Line: 9
@@ -413,7 +414,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 174
@@ -430,7 +431,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 180
@@ -447,7 +448,8 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_List {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Call,List,Iterator
+.  .  .  .  .  TOKEN "list"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 186
 .  .  .  .  .  .  Line: 9
@@ -466,7 +468,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  6: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,For,Incomplete
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 205
 .  .  .  .  Line: 10
@@ -483,7 +485,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Array {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Literal,List
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 214
 .  .  .  .  .  .  Line: 10
@@ -499,7 +501,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Iterator
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 225
@@ -518,7 +520,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  7: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,For,Incomplete
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 232
 .  .  .  .  Line: 11
@@ -535,7 +537,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 241
@@ -552,7 +554,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Iterator
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 247

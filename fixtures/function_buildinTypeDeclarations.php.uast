@@ -6,7 +6,7 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Stmt_Function {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Function,Declaration
 .  .  .  TOKEN "test"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 6
@@ -19,13 +19,13 @@ File {
 .  .  .  .  Col: 85
 .  .  .  }
 .  .  .  Properties: {
+.  .  .  .  Stmt_Function.returnType: void
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: children
-.  .  .  .  returnType: void
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Param {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 20
@@ -45,7 +45,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Param {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 29
@@ -65,7 +65,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Param {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 37
@@ -85,7 +85,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Param {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument
 .  .  .  .  .  TOKEN "d"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 47
@@ -105,7 +105,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: Param {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument
 .  .  .  .  .  TOKEN "e"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 58
@@ -125,7 +125,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: Param {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument
 .  .  .  .  .  TOKEN "f"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 71
@@ -142,6 +142,13 @@ File {
 .  .  .  .  .  .  internalRole: params
 .  .  .  .  .  .  type: object
 .  .  .  .  .  .  variadic: false
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  6: Stmt_Function.returnType {
+.  .  .  .  .  Roles: Return,Type
+.  .  .  .  .  TOKEN "void"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  promotedPropertyString: true
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

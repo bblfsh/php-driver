@@ -6,7 +6,7 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Expr_BinaryOp_Greater {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Binary,Operator,Relational,GreaterThan
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -22,7 +22,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 7
@@ -39,7 +39,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Right
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 12
@@ -58,7 +58,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Expr_BinaryOp_Smaller {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Binary,Operator,Relational,LessThan
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 16
 .  .  .  .  Line: 4
@@ -74,7 +74,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 16
@@ -91,7 +91,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Right
 .  .  .  .  .  TOKEN "d"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 21
@@ -110,7 +110,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: Expr_BinaryOp_SmallerOrEqual {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Binary,Operator,Relational,LessThanOrEqual
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 25
 .  .  .  .  Line: 5
@@ -126,7 +126,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  TOKEN "e"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 25
@@ -143,7 +143,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Right
 .  .  .  .  .  TOKEN "f"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 31
@@ -162,7 +162,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: Expr_BinaryOp_GreaterOrEqual {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Binary,Operator,Relational,GreaterThanOrEqual
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 35
 .  .  .  .  Line: 6
@@ -178,7 +178,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  TOKEN "g"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 35
@@ -195,7 +195,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Right
 .  .  .  .  .  TOKEN "h"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 41
@@ -214,7 +214,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  4: Expr_BinaryOp_Equal {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Binary,Operator,Relational,Equal
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 45
 .  .  .  .  Line: 7
@@ -230,7 +230,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  TOKEN "i"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 45
@@ -247,7 +247,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Right
 .  .  .  .  .  TOKEN "j"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 51
@@ -266,7 +266,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  5: Expr_BinaryOp_Identical {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Binary,Operator,Relational,Identical
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 55
 .  .  .  .  Line: 8
@@ -282,7 +282,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  TOKEN "k"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 55
@@ -299,7 +299,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Right
 .  .  .  .  .  TOKEN "l"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 62
@@ -318,7 +318,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  6: Expr_BinaryOp_NotEqual {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Binary,Operator,Relational,Not,Equal
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 66
 .  .  .  .  Line: 9
@@ -334,7 +334,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  TOKEN "m"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 66
@@ -351,7 +351,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Right
 .  .  .  .  .  TOKEN "n"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 72
@@ -370,7 +370,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  7: Expr_BinaryOp_NotEqual {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Binary,Operator,Relational,Not,Equal
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 76
 .  .  .  .  Line: 10
@@ -386,7 +386,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  TOKEN "o"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 76
@@ -403,7 +403,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Right
 .  .  .  .  .  TOKEN "p"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 82
@@ -422,7 +422,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  8: Expr_BinaryOp_NotIdentical {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Binary,Operator,Relational,Not,Identical
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 86
 .  .  .  .  Line: 11
@@ -438,7 +438,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  TOKEN "r"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 86
@@ -455,7 +455,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Right
 .  .  .  .  .  TOKEN "s"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 93
@@ -474,7 +474,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  9: Expr_BinaryOp_Spaceship {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Binary,Operator,Relational,GreaterThanOrEqual,LessThanOrEqual
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 97
 .  .  .  .  Line: 12
@@ -490,7 +490,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  TOKEN "t"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 97
@@ -507,7 +507,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Right
 .  .  .  .  .  TOKEN "u"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 104

@@ -6,7 +6,7 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Stmt_Class {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,Declaration,Type
 .  .  .  TOKEN "Foo"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
@@ -25,7 +25,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Stmt_ClassConst {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Type,Variable,Incomplete
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 23
 .  .  .  .  .  .  Line: 4
@@ -42,7 +42,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Const {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Variable,Incomplete
 .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 29
@@ -59,7 +59,8 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Scalar_LNumber {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 33
 .  .  .  .  .  .  .  .  .  .  Line: 4
@@ -72,7 +73,6 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  value: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
@@ -80,7 +80,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Stmt_ClassConst {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Type,Variable,Incomplete
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 40
 .  .  .  .  .  .  Line: 5
@@ -97,7 +97,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Const {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Variable,Incomplete
 .  .  .  .  .  .  .  TOKEN "B"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 53
@@ -114,7 +114,8 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Scalar_LNumber {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  TOKEN "2"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 57
 .  .  .  .  .  .  .  .  .  .  Line: 5
@@ -127,7 +128,6 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  value: 2
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
@@ -135,7 +135,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Stmt_ClassConst {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Type,Variable,Incomplete
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 64
 .  .  .  .  .  .  Line: 6
@@ -152,7 +152,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Const {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Variable,Incomplete
 .  .  .  .  .  .  .  TOKEN "C"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 80
@@ -169,7 +169,8 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Scalar_LNumber {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  TOKEN "3"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 84
 .  .  .  .  .  .  .  .  .  .  Line: 6
@@ -182,7 +183,6 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  value: 3
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
@@ -190,7 +190,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Stmt_ClassConst {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Type,Variable,Incomplete
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 91
 .  .  .  .  .  .  Line: 7
@@ -207,7 +207,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Const {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Variable,Incomplete
 .  .  .  .  .  .  .  TOKEN "D"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 105
@@ -224,7 +224,8 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Scalar_LNumber {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  TOKEN "4"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 109
 .  .  .  .  .  .  .  .  .  .  Line: 7
@@ -237,7 +238,6 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  value: 4
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }

@@ -6,7 +6,7 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Stmt_For {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,For
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -22,7 +22,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Assign {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Assignment,For,Initialization
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 12
 .  .  .  .  .  .  Line: 3
@@ -38,7 +38,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  .  .  TOKEN "i"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 12
@@ -55,7 +55,8 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Right,Expression,Literal,Number
+.  .  .  .  .  .  .  TOKEN "0"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 17
 .  .  .  .  .  .  .  .  Line: 3
@@ -68,13 +69,12 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  .  .  .  value: 0
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_BinaryOp_Smaller {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Condition,Expression,Binary,Operator,Relational,LessThan,For
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 20
 .  .  .  .  .  .  Line: 3
@@ -90,7 +90,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  .  .  TOKEN "i"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 20
@@ -107,7 +107,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable,Right
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 25
@@ -126,7 +126,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_PreInc {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Unary,Increment,For,Update
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 29
 .  .  .  .  .  .  Line: 3
@@ -142,7 +142,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "i"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 31
@@ -163,7 +163,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Stmt_For {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,For
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 38
 .  .  .  .  Line: 4
@@ -179,7 +179,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Expression,For,Initialization
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 43
@@ -196,7 +196,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Expression,For,Initialization
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 47
@@ -213,7 +213,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Condition,For
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 51
@@ -230,7 +230,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Condition,For
 .  .  .  .  .  TOKEN "d"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 55
@@ -247,7 +247,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Expression,For,Update
 .  .  .  .  .  TOKEN "e"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 59
@@ -264,7 +264,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Expression,For,Update
 .  .  .  .  .  TOKEN "f"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 63
@@ -283,7 +283,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: Stmt_For {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,For
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 70
 .  .  .  .  Line: 5
@@ -299,7 +299,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: Stmt_For {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,For
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 82
 .  .  .  .  Line: 6

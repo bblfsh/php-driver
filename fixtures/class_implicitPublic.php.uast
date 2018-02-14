@@ -6,7 +6,7 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Stmt_Class {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,Declaration,Type
 .  .  .  TOKEN "A"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
@@ -25,7 +25,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Stmt_Property {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Type,Variable,Incomplete
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 30
 .  .  .  .  .  .  Line: 4
@@ -43,7 +43,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Stmt_PropertyProperty {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Type,Variable,Incomplete
 .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 34
@@ -62,7 +62,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Stmt_Property {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Type,Variable,Incomplete
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 42
 .  .  .  .  .  .  Line: 5
@@ -80,7 +80,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Stmt_PropertyProperty {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Type,Variable,Incomplete
 .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 49
@@ -99,7 +99,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Type,Function
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 57
@@ -119,7 +119,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Type,Function
 .  .  .  .  .  TOKEN "d"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 84
@@ -139,7 +139,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Type,Function
 .  .  .  .  .  TOKEN "e"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 110
@@ -159,7 +159,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Type,Function
 .  .  .  .  .  TOKEN "f"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 137
@@ -179,7 +179,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Type,Function
 .  .  .  .  .  TOKEN "g"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 170

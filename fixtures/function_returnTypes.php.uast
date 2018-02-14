@@ -6,7 +6,7 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Stmt_Function {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Function,Declaration
 .  .  .  TOKEN "test1"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
@@ -24,7 +24,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Function {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Function,Declaration
 .  .  .  TOKEN "test2"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 27
@@ -37,13 +37,22 @@ File {
 .  .  .  .  Col: 27
 .  .  .  }
 .  .  .  Properties: {
+.  .  .  .  Stmt_Function.returnType: array
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: children
-.  .  .  .  returnType: array
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Stmt_Function.returnType {
+.  .  .  .  .  Roles: Return,Type
+.  .  .  .  .  TOKEN "array"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  promotedPropertyString: true
+.  .  .  .  .  }
+.  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: Stmt_Function {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Function,Declaration
 .  .  .  TOKEN "test3"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 55
@@ -56,13 +65,22 @@ File {
 .  .  .  .  Col: 30
 .  .  .  }
 .  .  .  Properties: {
+.  .  .  .  Stmt_Function.returnType: callable
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: children
-.  .  .  .  returnType: callable
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Stmt_Function.returnType {
+.  .  .  .  .  Roles: Return,Type
+.  .  .  .  .  TOKEN "callable"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  promotedPropertyString: true
+.  .  .  .  .  }
+.  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  3: Stmt_Function {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Function,Declaration
 .  .  .  TOKEN "test4"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 86
@@ -80,7 +98,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Name {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  TOKEN "Foo\Bar"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 105

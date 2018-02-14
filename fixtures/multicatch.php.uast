@@ -6,7 +6,7 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Stmt_TryCatch {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,Try
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 6
 .  .  .  .  Line: 2
@@ -22,7 +22,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Expression,Body
 .  .  .  .  .  TOKEN "x"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 16
@@ -39,7 +39,8 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Stmt_Catch {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Catch
+.  .  .  .  .  TOKEN "e1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 22
 .  .  .  .  .  .  Line: 4
@@ -52,11 +53,10 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: catches
-.  .  .  .  .  .  var: e1
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Catch,Type
 .  .  .  .  .  .  .  TOKEN "X"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 29
@@ -73,7 +73,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Catch,Type
 .  .  .  .  .  .  .  TOKEN "Y"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 31
@@ -90,7 +90,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable,Expression,Body
 .  .  .  .  .  .  .  TOKEN "y"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 44
@@ -109,7 +109,8 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Stmt_Catch {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Catch
+.  .  .  .  .  TOKEN "e2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 50
 .  .  .  .  .  .  Line: 6
@@ -122,11 +123,10 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: catches
-.  .  .  .  .  .  var: e2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Name_FullyQualified {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Variable,Incomplete,Catch,Type
 .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 57
@@ -143,7 +143,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Catch,Type
 .  .  .  .  .  .  .  TOKEN "B\C"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 60
@@ -160,7 +160,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable,Expression,Body
 .  .  .  .  .  .  .  TOKEN "z"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 75

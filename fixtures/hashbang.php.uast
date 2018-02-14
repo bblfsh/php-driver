@@ -6,7 +6,9 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Stmt_InlineHTML {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: String,Literal,Incomplete
+.  .  .  TOKEN "#!/usr/bin/env php
+"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
 .  .  .  .  Line: 1
@@ -19,12 +21,11 @@ File {
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  value: #!/usr/bin/env php
-
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Echo {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,Call
+.  .  .  TOKEN "echo"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 26
 .  .  .  .  Line: 4
@@ -40,7 +41,8 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  TOKEN "foobar"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 31
 .  .  .  .  .  .  Line: 4
@@ -53,13 +55,14 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: exprs
-.  .  .  .  .  .  value: foobar
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: Stmt_InlineHTML {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: String,Literal,Incomplete
+.  .  .  TOKEN "#!/usr/bin/env php
+"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 45
 .  .  .  .  Line: 7
@@ -72,8 +75,6 @@ File {
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
-.  .  .  .  value: #!/usr/bin/env php
-
 .  .  .  }
 .  .  }
 .  }

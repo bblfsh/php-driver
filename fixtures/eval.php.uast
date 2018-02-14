@@ -6,7 +6,8 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Expr_Eval {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Call
+.  .  .  TOKEN "eval"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -22,7 +23,8 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  TOKEN "1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 12
 .  .  .  .  .  .  Line: 3
@@ -35,7 +37,6 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  .  value: 1
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

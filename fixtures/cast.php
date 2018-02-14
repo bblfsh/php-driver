@@ -1,11 +1,12 @@
 <?php
-
-$a = (boolean)1;
-$b = (int)1;
-$c = (float)1;
-$d = (string)1;
-$e = (array)1;
-$f = (object)1;
-$g = (unset)1;
-$h = (binary)1;
-
+(array)   $a;
+(bool)    $a;
+(boolean) $a;
+(real)    $a;
+(double)  $a;
+(float)   $a;
+(int)     $a;
+(integer) $a;
+(object)  $a;
+(string)  $a;
+(unset)   $a;

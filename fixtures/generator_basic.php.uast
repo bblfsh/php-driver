@@ -6,7 +6,7 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Stmt_Function {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Function,Declaration
 .  .  .  TOKEN "gen"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
@@ -24,7 +24,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Return,Incomplete
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 46
 .  .  .  .  .  .  Line: 5
@@ -40,7 +40,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Noop,Comment
 .  .  .  .  .  .  .  TOKEN "// statements
 "
 .  .  .  .  .  .  .  StartPosition: {
@@ -60,7 +60,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Yield {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Return,Incomplete
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 57
 .  .  .  .  .  .  Line: 6
@@ -76,7 +76,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "value"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 63
@@ -95,7 +95,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Yield {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Return,Incomplete
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 75
 .  .  .  .  .  .  Line: 7
@@ -111,7 +111,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "key"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 81
@@ -128,7 +128,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "value"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 89
@@ -147,7 +147,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Expr_Assign {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Assignment
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 121
 .  .  .  .  .  .  Line: 10
@@ -163,7 +163,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Noop,Comment
 .  .  .  .  .  .  .  TOKEN "// expressions
 "
 .  .  .  .  .  .  .  StartPosition: {
@@ -181,7 +181,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  .  .  TOKEN "data"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 121
@@ -198,7 +198,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Noop,Comment
 .  .  .  .  .  .  .  .  .  TOKEN "// expressions
 "
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -218,7 +218,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Expr_Yield {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Return,Incomplete,Right
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 129
 .  .  .  .  .  .  .  .  Line: 10
@@ -236,7 +236,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: Expr_Assign {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Assignment
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 140
 .  .  .  .  .  .  Line: 11
@@ -252,7 +252,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  .  .  TOKEN "data"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 140
@@ -269,7 +269,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_Yield {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Return,Incomplete,Right
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 149
 .  .  .  .  .  .  .  .  Line: 11
@@ -285,7 +285,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  TOKEN "value"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 155
@@ -306,7 +306,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: Expr_Assign {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Assignment
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 168
 .  .  .  .  .  .  Line: 12
@@ -322,7 +322,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  .  .  TOKEN "data"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 168
@@ -339,7 +339,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_Yield {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Return,Incomplete,Right
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 177
 .  .  .  .  .  .  .  .  Line: 12
@@ -355,7 +355,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  TOKEN "key"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 183
@@ -372,7 +372,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  TOKEN "value"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 191
@@ -393,7 +393,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: Stmt_If {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Statement,If
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 268
 .  .  .  .  .  .  Line: 15
@@ -409,7 +409,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Noop,Comment
 .  .  .  .  .  .  .  TOKEN "// yield in language constructs with their own parentheses
 "
 .  .  .  .  .  .  .  StartPosition: {
@@ -427,7 +427,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_Yield {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Condition,Return,Incomplete
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 272
 .  .  .  .  .  .  .  .  Line: 15
@@ -443,7 +443,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 278
@@ -462,7 +462,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Stmt_ElseIf {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Statement,If,Else
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 285
 .  .  .  .  .  .  .  .  Line: 15
@@ -478,7 +478,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Condition,Return,Incomplete
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 293
 .  .  .  .  .  .  .  .  .  .  Line: 15
@@ -494,7 +494,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 299
@@ -517,7 +517,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: Stmt_If {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Statement,If
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 310
 .  .  .  .  .  .  Line: 16
@@ -533,7 +533,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Condition,Return,Incomplete
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 314
 .  .  .  .  .  .  .  .  Line: 16
@@ -549,7 +549,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 320
@@ -568,7 +568,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Stmt_ElseIf {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Statement,If,Else
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 327
 .  .  .  .  .  .  .  .  Line: 16
@@ -584,7 +584,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Condition,Return,Incomplete
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 335
 .  .  .  .  .  .  .  .  .  .  Line: 16
@@ -600,7 +600,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 341
@@ -623,7 +623,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  8: Stmt_While {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Statement,While
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 359
 .  .  .  .  .  .  Line: 17
@@ -639,7 +639,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Condition,Return,Incomplete
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 366
 .  .  .  .  .  .  .  .  Line: 17
@@ -655,7 +655,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 372
@@ -676,7 +676,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  9: Stmt_Do {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Statement,DoWhile
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 383
 .  .  .  .  .  .  Line: 18
@@ -692,7 +692,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Condition,Return,Incomplete
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 396
 .  .  .  .  .  .  .  .  Line: 18
@@ -708,7 +708,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 402
@@ -729,7 +729,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  10: Stmt_Switch {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Statement,Switch
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 413
 .  .  .  .  .  .  Line: 19
@@ -745,7 +745,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Condition,Return,Incomplete,Switch
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 421
 .  .  .  .  .  .  .  .  Line: 19
@@ -761,7 +761,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 427
@@ -782,7 +782,8 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  11: Expr_Exit {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Call
+.  .  .  .  .  TOKEN "exit"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 440
 .  .  .  .  .  .  Line: 20
@@ -798,7 +799,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Return,Incomplete
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 444
 .  .  .  .  .  .  .  .  Line: 20
@@ -814,7 +815,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 450
@@ -835,7 +836,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  12: Expr_FuncCall {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Call
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 493
 .  .  .  .  .  .  Line: 23
@@ -851,7 +852,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Noop,Comment
 .  .  .  .  .  .  .  TOKEN "// yield in function calls
 "
 .  .  .  .  .  .  .  StartPosition: {
@@ -869,7 +870,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Name
 .  .  .  .  .  .  .  TOKEN "func"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 493
@@ -886,7 +887,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Noop,Comment
 .  .  .  .  .  .  .  .  .  TOKEN "// yield in function calls
 "
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -906,7 +907,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Arg {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 498
 .  .  .  .  .  .  .  .  Line: 23
@@ -924,7 +925,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Return,Incomplete
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 498
 .  .  .  .  .  .  .  .  .  .  Line: 23
@@ -940,7 +941,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 504
@@ -963,7 +964,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  13: Expr_MethodCall {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Call,Identifier
 .  .  .  .  .  TOKEN "func"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 515
@@ -980,7 +981,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable,Receiver
 .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 515
@@ -997,7 +998,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Arg {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 526
 .  .  .  .  .  .  .  .  Line: 24
@@ -1015,7 +1016,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Return,Incomplete
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 526
 .  .  .  .  .  .  .  .  .  .  Line: 24
@@ -1031,7 +1032,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 532
@@ -1054,7 +1055,8 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  14: Expr_New {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Initialization,Call
+.  .  .  .  .  TOKEN "new"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 543
 .  .  .  .  .  .  Line: 25
@@ -1070,7 +1072,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Qualified,Type
 .  .  .  .  .  .  .  TOKEN "Foo"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 547
@@ -1087,7 +1089,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Arg {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 551
 .  .  .  .  .  .  .  .  Line: 25
@@ -1105,7 +1107,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Return,Incomplete
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 551
 .  .  .  .  .  .  .  .  .  .  Line: 25
@@ -1121,7 +1123,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 557
@@ -1144,7 +1146,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  15: Expr_YieldFrom {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Return,Incomplete
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 569
 .  .  .  .  .  .  Line: 27
@@ -1160,7 +1162,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 580
@@ -1179,7 +1181,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  16: Expr_BinaryOp_LogicalAnd {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Binary,Operator,Boolean,And
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 590
 .  .  .  .  .  .  Line: 28
@@ -1195,7 +1197,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_YieldFrom {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Return,Incomplete,Left
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 590
 .  .  .  .  .  .  .  .  Line: 28
@@ -1211,7 +1213,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 601
@@ -1230,7 +1232,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_YieldFrom {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Return,Incomplete,Right
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 610
 .  .  .  .  .  .  .  .  Line: 28
@@ -1246,7 +1248,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  TOKEN "bar"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 621
@@ -1267,7 +1269,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  17: Expr_YieldFrom {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Return,Incomplete
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 631
 .  .  .  .  .  .  Line: 29
@@ -1283,7 +1285,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_BinaryOp_Plus {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Operator,Add
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 642
 .  .  .  .  .  .  .  .  Line: 29
@@ -1299,7 +1301,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable,Left
 .  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 642
@@ -1316,7 +1318,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable,Right
 .  .  .  .  .  .  .  .  .  TOKEN "bar"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 649

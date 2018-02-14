@@ -6,7 +6,8 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Expr_New {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Initialization,Call
+.  .  .  TOKEN "new"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -22,7 +23,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Stmt_Class {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Declaration,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 11
 .  .  .  .  .  .  Line: 3
@@ -40,7 +41,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Stmt_ClassMethod {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Body,Type,Function
 .  .  .  .  .  .  .  TOKEN "test"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 23
@@ -64,7 +65,8 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Expr_New {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Initialization,Call
+.  .  .  TOKEN "new"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 52
 .  .  .  .  Line: 6
@@ -80,7 +82,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Stmt_Class {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Declaration,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 56
 .  .  .  .  .  .  Line: 6
@@ -98,7 +100,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Base
 .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 70
@@ -115,7 +117,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Implements
 .  .  .  .  .  .  .  TOKEN "B"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 83
@@ -132,7 +134,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Implements
 .  .  .  .  .  .  .  TOKEN "C"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 86
@@ -153,7 +155,8 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: Expr_New {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Initialization,Call
+.  .  .  TOKEN "new"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 92
 .  .  .  .  Line: 7
@@ -169,7 +172,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Stmt_Class {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Declaration,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 96
 .  .  .  .  .  .  Line: 7
@@ -187,7 +190,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Stmt_Property {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Body,Type,Variable,Incomplete
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 110
 .  .  .  .  .  .  .  .  Line: 8
@@ -205,7 +208,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Stmt_PropertyProperty {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Type,Variable,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 117
@@ -228,7 +231,8 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: Expr_New {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Initialization,Call
+.  .  .  TOKEN "new"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 126
 .  .  .  .  Line: 10
@@ -244,7 +248,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Stmt_Class {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Declaration,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 130
 .  .  .  .  .  .  Line: 10
@@ -262,7 +266,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Base
 .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 152
@@ -279,7 +283,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Stmt_TraitUse {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Body,Base
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 160
 .  .  .  .  .  .  .  .  Line: 11
@@ -295,7 +299,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "T"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 164
@@ -316,7 +320,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Arg {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 136
 .  .  .  .  .  .  Line: 10
@@ -334,7 +338,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 136
@@ -353,7 +357,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Arg {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 140
 .  .  .  .  .  .  Line: 10
@@ -371,7 +375,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 140
@@ -392,7 +396,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  4: Stmt_Class {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,Declaration,Type
 .  .  .  TOKEN "A"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 171
@@ -411,7 +415,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Type,Function
 .  .  .  .  .  TOKEN "test"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 185
@@ -431,7 +435,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Stmt_Return {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Body,Statement,Return
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 218
 .  .  .  .  .  .  .  .  Line: 16
@@ -447,7 +451,8 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_New {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Expression,Initialization,Call
+.  .  .  .  .  .  .  .  .  TOKEN "new"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 225
 .  .  .  .  .  .  .  .  .  .  Line: 16
@@ -463,7 +468,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Stmt_Class {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Declaration,Type
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 229
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 16
@@ -481,7 +486,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Base
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 250
@@ -498,7 +503,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: Stmt_ClassConst {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Body,Type,Variable,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 266
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 17
@@ -515,7 +520,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Const {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Variable,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 272
@@ -532,7 +537,8 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "B"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 276
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 17
@@ -545,7 +551,6 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  value: B
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
@@ -555,7 +560,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: Arg {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 235
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 16
@@ -573,7 +578,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "this"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 235

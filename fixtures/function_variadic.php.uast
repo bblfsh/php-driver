@@ -6,7 +6,7 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Stmt_Function {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Function,Declaration
 .  .  .  TOKEN "test"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 6
@@ -24,7 +24,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Param {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 20
@@ -43,7 +43,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Param {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument,ArgsList
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 24
@@ -64,7 +64,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Function {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Function,Declaration
 .  .  .  TOKEN "test"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 35
@@ -82,7 +82,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Param {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 49
@@ -101,7 +101,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Param {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument,Incomplete,ArgsList
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 53
@@ -122,7 +122,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: Stmt_Function {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Function,Declaration
 .  .  .  TOKEN "test"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 65
@@ -140,7 +140,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Param {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 79
@@ -159,7 +159,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Param {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument,ArgsList
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 83
@@ -178,7 +178,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "Type"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 83
@@ -199,7 +199,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: Stmt_Function {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Function,Declaration
 .  .  .  TOKEN "test"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 99
@@ -217,7 +217,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Param {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 113
@@ -236,7 +236,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Param {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument,Incomplete,ArgsList
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 117
@@ -255,7 +255,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "Type"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 117

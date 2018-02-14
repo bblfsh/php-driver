@@ -6,7 +6,7 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Stmt_Class {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,Declaration,Type
 .  .  .  TOKEN "foo"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
@@ -25,7 +25,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Expr_FuncCall {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,Call
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 20
 .  .  .  .  Line: 4
@@ -41,7 +41,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Name {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Identifier,Function,Name
 .  .  .  .  .  TOKEN "class_alias"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 20
@@ -58,7 +58,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Arg {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 32
 .  .  .  .  .  .  Line: 4
@@ -76,7 +76,8 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 32
 .  .  .  .  .  .  .  .  Line: 4
@@ -89,13 +90,12 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  value: foo
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Arg {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Argument
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 39
 .  .  .  .  .  .  Line: 4
@@ -113,7 +113,8 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  TOKEN "bar"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 39
 .  .  .  .  .  .  .  .  Line: 4
@@ -126,7 +127,6 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  value: bar
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }

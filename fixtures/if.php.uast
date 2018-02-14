@@ -6,14 +6,14 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Stmt_If {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,If
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 69
+.  .  .  .  Offset: 77
 .  .  .  .  Line: 6
 .  .  .  .  Col: 15
 .  .  .  }
@@ -22,7 +22,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Condition
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 16
@@ -38,50 +38,102 @@ File {
 .  .  .  .  .  .  internalRole: cond
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Stmt_ElseIf {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  1: Expr_Assign {
+.  .  .  .  .  Roles: Expression,Body,Assignment
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 23
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  Offset: 22
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 16
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 37
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  Offset: 27
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 21
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: elseifs
+.  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
-.  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  Roles: Identifier,Variable,Left
+.  .  .  .  .  .  .  TOKEN "x"
 .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 10
+.  .  .  .  .  .  .  .  Offset: 22
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 16
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 33
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  .  .  Offset: 23
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 17
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: cond
+.  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Scalar_LNumber {
+.  .  .  .  .  .  .  Roles: Right,Expression,Literal,Number
+.  .  .  .  .  .  .  TOKEN "1"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 27
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 21
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 27
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 21
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Stmt_ElseIf {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,If,Else
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 39
+.  .  .  .  .  .  Offset: 31
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 45
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 15
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: elseifs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Expr_Variable {
+.  .  .  .  .  .  .  Roles: Identifier,Variable,Condition
+.  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 40
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 10
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 41
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: cond
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: Stmt_ElseIf {
+.  .  .  .  .  Roles: Statement,If,Else
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 47
 .  .  .  .  .  .  Line: 5
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 53
+.  .  .  .  .  .  Offset: 61
 .  .  .  .  .  .  Line: 5
 .  .  .  .  .  .  Col: 15
 .  .  .  .  .  }
@@ -90,15 +142,15 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable,Condition
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 48
+.  .  .  .  .  .  .  .  Offset: 56
 .  .  .  .  .  .  .  .  Line: 5
 .  .  .  .  .  .  .  .  Col: 10
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 49
+.  .  .  .  .  .  .  .  Offset: 57
 .  .  .  .  .  .  .  .  Line: 5
 .  .  .  .  .  .  .  .  Col: 11
 .  .  .  .  .  .  .  }
@@ -108,15 +160,15 @@ File {
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  3: Stmt_Else {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  4: Stmt_Else {
+.  .  .  .  .  Roles: Statement,Else
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 55
+.  .  .  .  .  .  Offset: 63
 .  .  .  .  .  .  Line: 6
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 69
+.  .  .  .  .  .  Offset: 77
 .  .  .  .  .  .  Line: 6
 .  .  .  .  .  .  Col: 15
 .  .  .  .  .  }
@@ -127,14 +179,14 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Stmt_If {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,If
 .  .  .  StartPosition: {
-.  .  .  .  Offset: 72
+.  .  .  .  Offset: 80
 .  .  .  .  Line: 8
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 81
+.  .  .  .  Offset: 89
 .  .  .  .  Line: 8
 .  .  .  .  Col: 10
 .  .  .  }
@@ -143,15 +195,15 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Condition
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 76
+.  .  .  .  .  .  Offset: 84
 .  .  .  .  .  .  Line: 8
 .  .  .  .  .  .  Col: 5
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 77
+.  .  .  .  .  .  Offset: 85
 .  .  .  .  .  .  Line: 8
 .  .  .  .  .  .  Col: 6
 .  .  .  .  .  }
@@ -162,14 +214,14 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: Stmt_If {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,If
 .  .  .  StartPosition: {
-.  .  .  .  Offset: 100
+.  .  .  .  Offset: 108
 .  .  .  .  Line: 10
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 161
+.  .  .  .  Offset: 169
 .  .  .  .  Line: 14
 .  .  .  .  Col: 6
 .  .  .  }
@@ -178,16 +230,16 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Noop,Comment
 .  .  .  .  .  TOKEN "// without else
 "
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 83
+.  .  .  .  .  .  Offset: 91
 .  .  .  .  .  .  Line: 8
 .  .  .  .  .  .  Col: 12
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 99
+.  .  .  .  .  .  Offset: 107
 .  .  .  .  .  .  Line: 9
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
@@ -196,15 +248,15 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Condition
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 109
+.  .  .  .  .  .  Offset: 117
 .  .  .  .  .  .  Line: 10
 .  .  .  .  .  .  Col: 10
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 110
+.  .  .  .  .  .  Offset: 118
 .  .  .  .  .  .  Line: 10
 .  .  .  .  .  .  Col: 11
 .  .  .  .  .  }
@@ -213,14 +265,14 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Stmt_ElseIf {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,If,Else
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 114
+.  .  .  .  .  .  Offset: 122
 .  .  .  .  .  .  Line: 11
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 126
+.  .  .  .  .  .  Offset: 134
 .  .  .  .  .  .  Line: 11
 .  .  .  .  .  .  Col: 13
 .  .  .  .  .  }
@@ -229,15 +281,15 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable,Condition
 .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 123
+.  .  .  .  .  .  .  .  Offset: 131
 .  .  .  .  .  .  .  .  Line: 11
 .  .  .  .  .  .  .  .  Col: 10
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 124
+.  .  .  .  .  .  .  .  Offset: 132
 .  .  .  .  .  .  .  .  Line: 11
 .  .  .  .  .  .  .  .  Col: 11
 .  .  .  .  .  .  .  }
@@ -248,14 +300,14 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Stmt_ElseIf {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,If,Else
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 128
+.  .  .  .  .  .  Offset: 136
 .  .  .  .  .  .  Line: 12
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 140
+.  .  .  .  .  .  Offset: 148
 .  .  .  .  .  .  Line: 12
 .  .  .  .  .  .  Col: 13
 .  .  .  .  .  }
@@ -264,15 +316,15 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier,Variable,Condition
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 137
+.  .  .  .  .  .  .  .  Offset: 145
 .  .  .  .  .  .  .  .  Line: 12
 .  .  .  .  .  .  .  .  Col: 10
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 138
+.  .  .  .  .  .  .  .  Offset: 146
 .  .  .  .  .  .  .  .  Line: 12
 .  .  .  .  .  .  .  .  Col: 11
 .  .  .  .  .  .  .  }
@@ -283,14 +335,14 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: Stmt_Else {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Statement,Else
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 142
+.  .  .  .  .  .  Offset: 150
 .  .  .  .  .  .  Line: 13
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 154
+.  .  .  .  .  .  Offset: 162
 .  .  .  .  .  .  Line: 13
 .  .  .  .  .  .  Col: 13
 .  .  .  .  .  }
@@ -301,14 +353,14 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: Stmt_If {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,If
 .  .  .  StartPosition: {
-.  .  .  .  Offset: 164
+.  .  .  .  Offset: 172
 .  .  .  .  Line: 16
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 178
+.  .  .  .  Offset: 186
 .  .  .  .  Line: 16
 .  .  .  .  Col: 15
 .  .  .  }
@@ -317,15 +369,15 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Variable,Condition
 .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 168
+.  .  .  .  .  .  Offset: 176
 .  .  .  .  .  .  Line: 16
 .  .  .  .  .  .  Col: 5
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 169
+.  .  .  .  .  .  Offset: 177
 .  .  .  .  .  .  Line: 16
 .  .  .  .  .  .  Col: 6
 .  .  .  .  .  }
@@ -336,22 +388,22 @@ File {
 .  .  .  }
 .  .  }
 .  .  4: Stmt_Nop {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Noop
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Noop,Comment
 .  .  .  .  .  TOKEN "// without else
 "
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 180
+.  .  .  .  .  .  Offset: 188
 .  .  .  .  .  .  Line: 16
 .  .  .  .  .  .  Col: 17
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 196
+.  .  .  .  .  .  Offset: 204
 .  .  .  .  .  .  Line: 17
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }

@@ -6,7 +6,7 @@ File {
 .  Roles: File,Module
 .  Children: {
 .  .  0: Stmt_Namespace {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Block
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -22,7 +22,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Name {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  TOKEN "Foo\Bar"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 17
@@ -39,7 +39,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_ConstFetch {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Variable,Incomplete
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 26
 .  .  .  .  .  .  Line: 4
@@ -55,7 +55,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 26
@@ -76,7 +76,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Namespace {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Block
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 32
 .  .  .  .  Line: 6
@@ -92,7 +92,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Name {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  TOKEN "Bar"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 42
@@ -109,7 +109,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_ConstFetch {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Body,Variable,Incomplete
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 47
 .  .  .  .  .  .  Line: 7
@@ -125,7 +125,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "bar"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 47
