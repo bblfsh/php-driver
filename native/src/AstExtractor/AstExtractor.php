@@ -47,7 +47,8 @@ class AstExtractor
     }
 
     /**
-     * Returns the AST
+     * Returns the AST. Node kinds can be read here:
+     * https://github.com/nikic/php-ast#ast-node-kinds
      *
      * @param string $code Source code to analyze
      *

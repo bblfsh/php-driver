@@ -17,10 +17,30 @@ var ToNode = &uast.ObjectToNode{
 	OffsetKey:       "attributes.startFilePos",
 	EndLineKey:      "attributes.endLine",
 	EndColumnKey:    "attributes.endTokenPos",
-	EndOffsetKey:    "attributes.endFilePos",
+	SyntheticTokens: map[string]string{
+		"Expr_Clone":      "clone",
+		"Expr_Empty":      "empty",
+		"Expr_Isset":      "isset",
+		"Stmt_Echo":       "echo",
+		"Stmt_Print":      "print",
+		"Stmt_Unset":      "unset",
+		"Expr_Eval":       "eval",
+		"Expr_Exit":       "exit",
+		"Expr_Instanceof": "instanceof",
+		"Expr_List":       "list",
+		"Expr_New":        "new",
+	},
+	EndOffsetKey: "attributes.endFilePos",
 	TokenKeys: map[string]bool{
-		"name": true,
-		"text": true, // for comments
+		"name":    true,
+		"text":    true, // for comments
+		"value":   true, // Scalars
+		"var":     true, // catch list
+		"key":     true, // declare
+		"newName": true, // trait alias
+	},
+	PromotedPropertyStrings: map[string]map[string]bool{
+		"Stmt_Function": {"returnType": true},
 	},
 	// PHP AST includes a map called attributes with several properties, should
 	// be ignored, otherwise fake nodes are created.
@@ -42,8 +62,11 @@ var ToNode = &uast.ObjectToNode{
 		// Sometimes, if the name includes namespaces, it's given as an array in
 		// several parts. The parts are imploded into the name key.
 		if parts, ok := n["parts"].([]interface{}); ok {
-			n["name"] = sliceInterfaceToString(parts, "\\")
-			delete(n, "parts")
+			deleteParts := false
+			n["name"], deleteParts = sliceInterfaceToString(parts, "\\")
+			if deleteParts {
+				delete(n, "parts")
+			}
 		}
 
 		// Positions in comments don't follow the same schema as the other
@@ -60,11 +83,15 @@ var ToNode = &uast.ObjectToNode{
 	},
 }
 
-func sliceInterfaceToString(s []interface{}, sep string) string {
+func sliceInterfaceToString(s []interface{}, sep string) (string, bool) {
+	deleteParts := false
 	l := make([]string, len(s))
 	for i, v := range s {
-		l[i] = v.(string)
+		if part, ok := v.(string); ok {
+			l[i] = part
+			deleteParts = true
+		}
 	}
 
-	return strings.Join(l, sep)
+	return strings.Join(l, sep), deleteParts
 }

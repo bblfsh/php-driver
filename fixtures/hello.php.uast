@@ -3,10 +3,11 @@ Language:  php
 Errors: 
 UAST: 
 File {
-.  Roles: File
+.  Roles: File,Module
 .  Children: {
 .  .  0: Stmt_Echo {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,Call
+.  .  .  TOKEN "echo"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 46
 .  .  .  .  Line: 3
@@ -22,7 +23,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Noop,Comment
 .  .  .  .  .  TOKEN "// this is a simple hello world example
 "
 .  .  .  .  .  StartPosition: {
@@ -40,7 +41,8 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Scalar_String {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  TOKEN "Hello World!"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 51
 .  .  .  .  .  .  Line: 3
@@ -53,7 +55,6 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: exprs
-.  .  .  .  .  .  value: Hello World!
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
