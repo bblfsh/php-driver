@@ -79,6 +79,25 @@ var ToNode = &uast.ObjectToNode{
 			delete(n, "line")
 		}
 
+		// Remove //, /*...*/ and /**..*/ from comment nodes
+		if t, ok := n["nodeType"]; ok {
+			if t == "Comment" {
+				if text, ok := n["text"].(string); ok {
+					if strings.HasPrefix(text, "//") {
+						n["text"] = text[2:];
+					} else if strings.HasPrefix(text, "/*") {
+						n["text"] = text[2:len(text)-2]
+					}
+				}
+			} else if t == "Comment_Doc" {
+				if text, ok := n["text"].(string); ok {
+					if strings.HasPrefix(text, "/**") {
+						n["text"] = text[3:len(text)-2]
+					}
+				}
+			}
+		}
+
 		return nil
 	},
 }
