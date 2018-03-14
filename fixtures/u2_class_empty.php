@@ -1,2 +1,2 @@
 <?php
-class A {}
+class tetscls1 {}

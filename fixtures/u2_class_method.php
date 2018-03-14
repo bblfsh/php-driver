@@ -1,6 +1,4 @@
 <?php
-class A {
-    function method1() {
-        $a = 1;
-    }
+class testfnc1 {
+    function testfnc1() {}
 }

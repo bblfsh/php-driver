@@ -1,2 +1,0 @@
-<?php
-function func1(){}

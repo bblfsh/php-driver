@@ -1,2 +1,0 @@
-<?php
-final class A {}

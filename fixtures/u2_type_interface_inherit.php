@@ -1,5 +1,5 @@
 <?php
 interface A {}
 interface B {}
-interface C extends A {}
-interface D extends A, B {}
+interface testiface1 extends A {}
+interface testiface2 extends A, B {}
