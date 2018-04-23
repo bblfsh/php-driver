@@ -5,7 +5,7 @@ UAST:
  {
 .  Children: {
 .  .  0: Expr_Ternary {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,If
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Unannotated
@@ -41,7 +41,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Else,Identifier,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: else
 .  .  .  .  .  .  name: c
@@ -62,7 +62,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Then,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: if
 .  .  .  .  .  .  name: b
@@ -85,7 +85,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  1: Expr_Ternary {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,If
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Unannotated
@@ -121,7 +121,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Else,Identifier,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: else
 .  .  .  .  .  .  name: c
@@ -144,7 +144,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  2: Expr_Ternary {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,If
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Unannotated
@@ -159,7 +159,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Ternary {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,If
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: cond
 .  .  .  .  .  }
@@ -198,7 +198,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  Roles: Else,Identifier,Variable
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: else
 .  .  .  .  .  .  .  .  name: c
@@ -219,7 +219,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  Roles: Identifier,Then,Variable
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: if
 .  .  .  .  .  .  .  .  name: b
@@ -242,7 +242,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Else,Identifier,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: else
 .  .  .  .  .  .  name: e
@@ -263,7 +263,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Then,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: if
 .  .  .  .  .  .  name: d
@@ -286,7 +286,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  3: Expr_Ternary {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,If
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Unannotated
@@ -322,7 +322,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Ternary {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Else,Expression,If
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: else
 .  .  .  .  .  }
@@ -361,7 +361,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  Roles: Else,Identifier,Variable
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: else
 .  .  .  .  .  .  .  .  name: e
@@ -382,7 +382,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  Roles: Identifier,Then,Variable
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: if
 .  .  .  .  .  .  .  .  name: d
@@ -405,7 +405,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Then,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: if
 .  .  .  .  .  .  name: b
@@ -587,7 +587,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  6: Expr_Ternary {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,If
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Unannotated
@@ -664,7 +664,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Else,Identifier,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: else
 .  .  .  .  .  .  name: d
@@ -685,7 +685,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Then,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: if
 .  .  .  .  .  .  name: c

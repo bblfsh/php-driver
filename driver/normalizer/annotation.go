@@ -34,11 +34,12 @@ func annotateTypeToken(typ, token string, roles ...role.Role) Mapping {
 
 // XXX
 //var someAssignOp = Or(phpast.AssignOpPlus,
-			//phpast.AssignOpMinus,
-			//phpast.AssignOpMul,
-			//phpast.AssignOpDiv,
-			//phpast.AssignOpMod)
+//phpast.AssignOpMinus,
+//phpast.AssignOpMul,
+//phpast.AssignOpDiv,
+//phpast.AssignOpMod)
 
+// FIXME XXX: also migrate the callbacks in tonode.go
 var Annotations = []Mapping{
 	ObjectToNode{
 		InternalTypeKey: "nodeType",
@@ -56,14 +57,14 @@ var Annotations = []Mapping{
 
 	AnnotateType(php.File, nil, role.File),
 
-	// XXX
-	//On(phpast.Name).Roles(uast.Expression, uast.Identifier).Self(
-		//On(HasInternalRole("class")).Roles(uast.Qualified),
-	//),
+	AnnotateType(php.Name, ObjRoles{
+		"class": {role.Qualified},
+	}, role.Expression, role.Identifier),
 
+	// XXX
 	//On(Or(phpast.Assign, someAssignOp)).Roles(uast.Expression, uast.Assignment).Children(
-		//On(HasInternalRole("var")).Roles(uast.Left),
-		//On(HasInternalRole("expr")).Roles(uast.Right),
+	//On(HasInternalRole("var")).Roles(uast.Left),
+	//On(HasInternalRole("expr")).Roles(uast.Right),
 	//),
 
 	// __CLASS__ and similar constants. Also mising a Const role in the UAST.
@@ -93,7 +94,8 @@ var Annotations = []Mapping{
 	AnnotateType(php.Unset, nil, role.Expression, role.Call),
 	AnnotateType(php.PropertyFetch, nil, role.Expression, role.Map, role.Identifier, role.Entry, role.Value),
 
-	//On(HasInternalRole("stmts")).Roles(role.Expression, role.Body), // XXX
+	// XXX
+	//On(HasInternalRole("stmts")).Roles(role.Expression, role.Body),
 	// no static in UAST
 	AnnotateType(php.StaticPropertyFetch, nil, role.Expression, role.Map, role.Identifier,
 		role.Entry, role.Value, role.Incomplete),
@@ -113,10 +115,10 @@ var Annotations = []Mapping{
 	AnnotateType(php.Closure, nil, role.Function, role.Declaration, role.Expression, role.Anonymous),
 	AnnotateType(php.ClosureUse, nil, role.Visibility, role.Incomplete),
 	AnnotateType(php.Coalesce, nil, role.Expression, role.Incomplete),
-	// XXX
-	//AnnotateType(HasInternalRole("cond")).Roles(u.Condition, nil, ),
-	//AnnotateType(Or(php.Use, phpast.UseUse, nil, role.Alias),
-	//AnnotateType(Or(php.Yield, phpast.YieldFrom, nil, role.Return, role.Incomplete),
+	AnnotateType(php.Use, nil, role.Alias),
+	AnnotateType(php.UseUse, nil, role.Alias),
+	AnnotateType(php.Yield, nil, role.Return, role.Incomplete),
+	AnnotateType(php.YieldFrom, nil, role.Return, role.Incomplete),
 
 	// Control flow
 	AnnotateType(php.Break, nil, role.Statement, role.Break),
@@ -195,8 +197,8 @@ var Annotations = []Mapping{
 	// Scalars
 	AnnotateType(php.ScalarString, nil, role.Expression, role.Literal, role.String),
 
-	// XXX
-	//On(Or(phpast.ScalarLNumber, phpast.ScalarDNumber)).Roles(uast.Expression, uast.Literal, uast.Number),
+	AnnotateType(php.ScalarLNumber, nil, role.Expression, role.Literal, role.Number),
+	AnnotateType(php.ScalarDNumber, nil, role.Expression, role.Literal, role.Number),
 
 	// Casts... no Cast in the UAST
 	AnnotateType(php.CastArray, nil, role.Expression, role.List, role.Incomplete),
@@ -209,32 +211,35 @@ var Annotations = []Mapping{
 
 	// TryCatch
 	AnnotateType(php.TryCatch, nil, role.Statement, role.Try),
-	//On(phpast.Catch).Roles(uast.Statement, uast.Catch).Children(
-		//On(HasInternalRole("types")).Roles(uast.Catch, uast.Type),
-	//),
+	AnnotateType(php.Catch, ObjRoles{
+		"types": {role.Catch, role.Type},
+	}, role.Catch, role.Type),
+
 	AnnotateType(php.Finally, nil, role.Statement, role.Finally),
 
 	// Class
-	AnnotateType(php.Class, nil, role.Statement, role.Declaration, role.Type),
-	//On(HasInternalRole("extends")).Roles(uast.Base),
-	//On(HasInternalRole("implements")).Roles(uast.Implements),
+	AnnotateType(php.Class, ObjRoles{
+		"extends":    {role.Base},
+		"implements": {role.Implements},
+	}, role.Statement, role.Declaration, role.Type),
 
 	// FIXME: php-parser doesn't give Visibility information (public, private, etc)
 	// no const in UAST
 	AnnotateType(php.ClassConst, nil, role.Type, role.Variable, role.Incomplete),
+
 	// no member role in UAST
-	// XXX
-	//AnnotateType(Or(php.Property, phpast.PropertyProperty, nil, role.Type, role.Variable, role.Incomplete),
+	AnnotateType(php.Property, nil, role.Type, role.Variable, role.Incomplete),
+	AnnotateType(php.PropertyProperty, nil, role.Type, role.Variable, role.Incomplete),
 
 	// ditto
 	AnnotateType(php.ClassMethod, nil, role.Type, role.Function),
 
 	// If + Ternary
-	// XXX
-	//On(phpast.Ternary).Roles(uast.Expression, uast.If).Children(
-		//On(HasInternalRole("if")).Roles(uast.Then),
-		//On(HasInternalRole("else")).Roles(uast.Else),
-	//),
+	AnnotateType(php.Ternary, ObjRoles{
+		"if":   {role.Then},
+		"else": {role.Else},
+	}, role.Expression, role.If),
+
 	AnnotateType(php.If, nil, role.Statement, role.If),
 	AnnotateType(php.ElseIf, nil, role.Statement, role.If, role.Else),
 	AnnotateType(php.Else, nil, role.Statement, role.Else),
@@ -242,9 +247,9 @@ var Annotations = []Mapping{
 	// Declare, we interpret it as an assignment-ish
 	// XXX
 	//On(phpast.Declare).Roles(uast.Expression, uast.Assignment, uast.Incomplete).Children(
-		//On(HasInternalRole("declares")).Roles(uast.Identifier, uast.Left).Children(
-			//On(HasInternalRole("value")).Roles(uast.Right),
-		//),
+	//On(HasInternalRole("declares")).Roles(uast.Identifier, uast.Left).Children(
+	//On(HasInternalRole("value")).Roles(uast.Right),
+	//),
 	//),
 
 	// While and DoWhile
@@ -256,83 +261,82 @@ var Annotations = []Mapping{
 	AnnotateType(php.EncapsedStringPart, nil, role.Expression, role.Identifier, role.Value),
 
 	// For
-	// XXX
-	//On(phpast.For).Roles(uast.Statement, uast.For).Children(
-		//On(HasInternalRole("init")).Roles(uast.Expression, uast.For, uast.Initialization),
-		//On(HasInternalRole("cond")).Roles(uast.For), // Condition role added elsewhere
-		//On(HasInternalRole("loop")).Roles(uast.Expression, uast.For, uast.Update),
-	//),
+	AnnotateType(php.For, ObjRoles{
+		"init": {role.Expression, role.For, role.Initialization},
+		"cond": {role.For, role.Condition},
+		"loop": {role.Expression, role.For, role.Update},
+	}, role.Statement, role.For),
 
 	// Foreach
-	// XXX
-	//On(phpast.Foreach).Roles(uast.Statement, uast.For, uast.Incomplete).Children(
-		//On(HasInternalRole("valueVar")).Roles(uast.Iterator),
-	//),
+	AnnotateType(php.Foreach, ObjRoles{
+		"valueVar": {role.Iterator},
+	}, role.Statement, role.For, role.Incomplete),
 
 	// FuncCalls, StaticCalls and MethodCalls
-	// XXX
-	//On(phpast.FuncCall).Roles(uast.Expression, uast.Call).Children(
-		//On(HasInternalRole("name")).Roles(uast.Function, uast.Name),
-	//),
-	//On(phpast.StaticCall).Roles(uast.Expression, uast.Call, uast.Identifier).Children(
-		//On(HasInternalRole("class")).Roles(uast.Type, uast.Receiver),
-	//),
-	//On(phpast.MethodCall).Roles(uast.Expression, uast.Call, uast.Identifier).Children(
-		//On(HasInternalRole("var")).Roles(uast.Receiver, uast.Receiver, uast.Identifier),
-	//),
+	AnnotateType(php.FuncCall, ObjRoles{
+		"name": {role.Function, role.Name},
+	}, role.Expression, role.Call),
+
+	AnnotateType(php.StaticCall, ObjRoles{
+		"class": {role.Type, role.Receiver},
+	}, role.Expression, role.Call, role.Identifier),
+
+	AnnotateType(php.MethodCall, ObjRoles{
+		"var": {role.Receiver, role.Identifier},
+	}, role.Expression, role.Call, role.Identifier),
 
 	// Function declarations
 	// XXX
 	//On(phpast.Function).Roles(uast.Function, uast.Declaration).Children(
-		//On(phpast.Param).Self(
-			//// No reference/value in the UAST
-			//On(HasProperty("byRef", "true")).Roles(uast.Incomplete),
-			//On(HasProperty("variadic", "true")).Roles(uast.ArgsList),
-		//).Children(
-			//On(HasInternalRole("default")).Roles(uast.Default),
-		//),
-		//On(phpast.FunctionReturn).Roles(uast.Return, uast.Type),
+	//On(phpast.Param).Self(
+	//// No reference/value in the UAST
+	//On(HasProperty("byRef", "true")).Roles(uast.Incomplete),
+	//On(HasProperty("variadic", "true")).Roles(uast.ArgsList),
+	//).Children(
+	//On(HasInternalRole("default")).Roles(uast.Default),
+	//),
+	//On(phpast.FunctionReturn).Roles(uast.Return, uast.Type),
 	//),
 
 	// Include and require
 	// XXX
 	//On(phpast.Include).Roles(uast.Import).Children(
-		//On(Any).Roles(uast.Import, uast.Pathname),
+	//On(Any).Roles(uast.Import, uast.Pathname),
 	//),
 
 	// Instanceof
 	// XXX
 	//On(phpast.Instanceof).Roles(uast.Expression, uast.Call).Children(
-		//On(Any).Roles(uast.Argument),
-		//On(HasInternalRole("class")).Roles(uast.Type),
+	//On(Any).Roles(uast.Argument),
+	//On(HasInternalRole("class")).Roles(uast.Type),
 	//),
 
 	// Interface
-	// XXX
-	//On(phpast.Interface).Roles(uast.Type, uast.Declaration).Children(
-		//On(HasInternalRole("extends")).Roles(uast.Type, uast.Base),
-	//),
+	AnnotateType(php.Interface, ObjRoles{
+		"extends": {role.Receiver, role.Identifier},
+	}, role.Type, role.Declaration),
 
 	// Traits
 	AnnotateType(php.Trait, nil, role.Type, role.Declaration),
 	AnnotateType(php.TraitUse, nil, role.Base),
-	AnnotateType(php.TraitPrecedence, nil, role.Base, role.Alias, role.Incomplete),
-	//AnnotateType(HasInternalRole("insteadof")).Roles(role.Alias, role.Incomplete),
+	AnnotateType(php.TraitPrecedence, ObjRoles{
+		"insteadof": {role.Alias, role.Incomplete},
+	}, role.Base, role.Alias, role.Incomplete),
 
 	// New
-	// XXX
-	//On(php.New, nil, role.Expression, role.Initialization, role.Call).Children(
-		//On(HasInternalRole("class")).Roles(uast.Type),
-	//),
+	AnnotateType(php.New, ObjRoles{
+		"class": {role.Type},
+	}, role.Expression, role.Initialization, role.Call),
 
 	// Switch
+	AnnotateType(php.Switch, ObjRoles{
+		"cond": {role.Switch, role.Condition},
+	}, role.Statement, role.Switch),
+
 	// XXX
-	//On(phpast.Switch).Roles(uast.Statement, uast.Switch).Children(
-		//On(HasInternalRole("cond")).Roles(uast.Switch),
-	//),
 	//On(phpast.Case).Roles(uast.Statement, uast.Case).Self(
-		//On(Not(HasChild(HasInternalRole("cond")))).Roles(uast.Default),
+	//On(Not(HasChild(HasInternalRole("cond")))).Roles(uast.Default),
 	//).Children(
-		//On(HasInternalRole("cond")).Roles(uast.Case),
+	//On(HasInternalRole("cond")).Roles(uast.Case),
 	//),
 }

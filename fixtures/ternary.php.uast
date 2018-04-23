@@ -18,7 +18,7 @@ Expr_Assign {
 .  .  .  }
 .  .  }
 .  .  1: Expr_Ternary {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Expression,If
 .  .  .  Properties: {
 .  .  .  .  internalRole: expr
 .  .  .  }
@@ -36,7 +36,7 @@ Expr_Assign {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Literal,Number
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: cond
 .  .  .  .  .  .  value: 1
@@ -58,7 +58,7 @@ Expr_Assign {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Scalar_LNumber {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Else,Expression,Literal,Number
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: else
 .  .  .  .  .  .  value: 0
@@ -80,7 +80,7 @@ Expr_Assign {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Scalar_LNumber {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Expression,Literal,Number,Then
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: if
 .  .  .  .  .  .  value: 1
