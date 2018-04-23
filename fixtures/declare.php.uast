@@ -2,57 +2,62 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+ {
 .  Children: {
 .  .  0: Stmt_Declare {
-.  .  .  Roles: Expression,Assignment,Incomplete
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 7
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 22
-.  .  .  .  Line: 3
-.  .  .  .  Col: 16
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
+.  .  .  Roles: Unannotated
 .  .  .  Children: {
-.  .  .  .  0: Stmt_DeclareDeclare {
-.  .  .  .  .  Roles: Identifier,Left
-.  .  .  .  .  TOKEN "X"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 16
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 10
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  endFilePos: 22
+.  .  .  .  .  .  endLine: 3
+.  .  .  .  .  .  endTokenPos: 9
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 7
+.  .  .  .  .  .  startLine: 3
+.  .  .  .  .  .  startTokenPos: 2
 .  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 20
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 14
-.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_DeclareDeclare {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: declares
+.  .  .  .  .  .  key: X
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String,Right
-.  .  .  .  .  .  .  TOKEN "Y"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 18
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 20
+.  .  .  .  .  .  .  .  endLine: 3
+.  .  .  .  .  .  .  .  endTokenPos: 7
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 16
+.  .  .  .  .  .  .  .  startLine: 3
+.  .  .  .  .  .  .  .  startTokenPos: 5
 .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 20
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Scalar_String {
+.  .  .  .  .  .  .  Roles: Expression,Literal,String
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  value: Y
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  endFilePos: 20
+.  .  .  .  .  .  .  .  .  .  endLine: 3
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 7
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  .  .  .  startFilePos: 18
+.  .  .  .  .  .  .  .  .  .  startLine: 3
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 7
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -60,89 +65,102 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Declare {
-.  .  .  Roles: Expression,Assignment,Incomplete
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 25
-.  .  .  .  Line: 5
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 49
-.  .  .  .  Line: 5
-.  .  .  .  Col: 25
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
+.  .  .  Roles: Unannotated
 .  .  .  Children: {
-.  .  .  .  0: Stmt_DeclareDeclare {
-.  .  .  .  .  Roles: Identifier,Left
-.  .  .  .  .  TOKEN "A"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 34
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 10
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  endFilePos: 49
+.  .  .  .  .  .  endLine: 5
+.  .  .  .  .  .  endTokenPos: 25
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 25
+.  .  .  .  .  .  startLine: 5
+.  .  .  .  .  .  startTokenPos: 11
 .  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 38
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 14
-.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_DeclareDeclare {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: declares
+.  .  .  .  .  .  key: A
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String,Right
-.  .  .  .  .  .  .  TOKEN "B"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 36
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 38
+.  .  .  .  .  .  .  .  endLine: 5
+.  .  .  .  .  .  .  .  endTokenPos: 16
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 34
+.  .  .  .  .  .  .  .  startLine: 5
+.  .  .  .  .  .  .  .  startTokenPos: 14
 .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 38
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Scalar_String {
+.  .  .  .  .  .  .  Roles: Expression,Literal,String
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  value: B
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  endFilePos: 38
+.  .  .  .  .  .  .  .  .  .  endLine: 5
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 16
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  .  .  .  startFilePos: 36
+.  .  .  .  .  .  .  .  .  .  startLine: 5
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 16
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Stmt_DeclareDeclare {
-.  .  .  .  .  Roles: Identifier,Left
-.  .  .  .  .  TOKEN "C"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 41
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 17
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 45
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 21
-.  .  .  .  .  }
+.  .  .  .  2: Stmt_DeclareDeclare {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: declares
+.  .  .  .  .  .  key: C
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String,Right
-.  .  .  .  .  .  .  TOKEN "D"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 43
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 19
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 45
+.  .  .  .  .  .  .  .  endLine: 5
+.  .  .  .  .  .  .  .  endTokenPos: 21
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 41
+.  .  .  .  .  .  .  .  startLine: 5
+.  .  .  .  .  .  .  .  startTokenPos: 19
 .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 45
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 21
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Scalar_String {
+.  .  .  .  .  .  .  Roles: Expression,Literal,String
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  value: D
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  endFilePos: 45
+.  .  .  .  .  .  .  .  .  .  endLine: 5
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 21
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  .  .  .  startFilePos: 43
+.  .  .  .  .  .  .  .  .  .  startLine: 5
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 21
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -150,89 +168,102 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: Stmt_Declare {
-.  .  .  Roles: Expression,Assignment,Incomplete
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 52
-.  .  .  .  Line: 7
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 86
-.  .  .  .  Line: 8
-.  .  .  .  Col: 11
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
+.  .  .  Roles: Unannotated
 .  .  .  Children: {
-.  .  .  .  0: Stmt_DeclareDeclare {
-.  .  .  .  .  Roles: Identifier,Left
-.  .  .  .  .  TOKEN "A"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 61
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 10
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  endFilePos: 86
+.  .  .  .  .  .  endLine: 8
+.  .  .  .  .  .  endTokenPos: 42
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 52
+.  .  .  .  .  .  startLine: 7
+.  .  .  .  .  .  startTokenPos: 27
 .  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 65
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 14
-.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_DeclareDeclare {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: declares
+.  .  .  .  .  .  key: A
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String,Right
-.  .  .  .  .  .  .  TOKEN "B"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 63
-.  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 65
+.  .  .  .  .  .  .  .  endLine: 7
+.  .  .  .  .  .  .  .  endTokenPos: 32
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 61
+.  .  .  .  .  .  .  .  startLine: 7
+.  .  .  .  .  .  .  .  startTokenPos: 30
 .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 65
-.  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Scalar_String {
+.  .  .  .  .  .  .  Roles: Expression,Literal,String
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  value: B
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  endFilePos: 65
+.  .  .  .  .  .  .  .  .  .  endLine: 7
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 32
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  .  .  .  startFilePos: 63
+.  .  .  .  .  .  .  .  .  .  startLine: 7
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 32
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Stmt_DeclareDeclare {
-.  .  .  .  .  Roles: Identifier,Left
-.  .  .  .  .  TOKEN "C"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 68
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 17
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 72
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 21
-.  .  .  .  .  }
+.  .  .  .  2: Stmt_DeclareDeclare {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: declares
+.  .  .  .  .  .  key: C
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String,Right
-.  .  .  .  .  .  .  TOKEN "D"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 70
-.  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 19
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 72
+.  .  .  .  .  .  .  .  endLine: 7
+.  .  .  .  .  .  .  .  endTokenPos: 37
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 68
+.  .  .  .  .  .  .  .  startLine: 7
+.  .  .  .  .  .  .  .  startTokenPos: 35
 .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 72
-.  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 21
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Scalar_String {
+.  .  .  .  .  .  .  Roles: Expression,Literal,String
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  value: D
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  endFilePos: 72
+.  .  .  .  .  .  .  .  .  .  endLine: 7
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 37
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  .  .  .  startFilePos: 70
+.  .  .  .  .  .  .  .  .  .  startLine: 7
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 37
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }

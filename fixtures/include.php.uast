@@ -2,113 +2,130 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+ {
 .  Children: {
 .  .  0: Expr_Include {
-.  .  .  Roles: Import
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 7
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 24
-.  .  .  .  Line: 3
-.  .  .  .  Col: 18
-.  .  .  }
+.  .  .  Roles: Unannotated
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  type: 1
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
-.  .  .  .  .  TOKEN "pok.php"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 15
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 9
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  endFilePos: 24
+.  .  .  .  .  .  endLine: 3
+.  .  .  .  .  .  endTokenPos: 5
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 7
+.  .  .  .  .  .  startLine: 3
+.  .  .  .  .  .  startTokenPos: 2
 .  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 23
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 17
-.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Scalar_String {
+.  .  .  .  .  Roles: Expression,Literal,String
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  .  value: pok.php
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 23
+.  .  .  .  .  .  .  .  endLine: 3
+.  .  .  .  .  .  .  .  endTokenPos: 4
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 2
+.  .  .  .  .  .  .  .  startFilePos: 15
+.  .  .  .  .  .  .  .  startLine: 3
+.  .  .  .  .  .  .  .  startTokenPos: 4
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Expr_Include {
-.  .  .  Roles: Import
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 27
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 44
-.  .  .  .  Line: 4
-.  .  .  .  Col: 18
-.  .  .  }
+.  .  .  Roles: Unannotated
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  type: 3
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
-.  .  .  .  .  TOKEN "foo.php"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 35
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 9
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  endFilePos: 44
+.  .  .  .  .  .  endLine: 4
+.  .  .  .  .  .  endTokenPos: 11
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 27
+.  .  .  .  .  .  startLine: 4
+.  .  .  .  .  .  startTokenPos: 8
 .  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 43
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 17
-.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Scalar_String {
+.  .  .  .  .  Roles: Expression,Literal,String
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  .  value: foo.php
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 43
+.  .  .  .  .  .  .  .  endLine: 4
+.  .  .  .  .  .  .  .  endTokenPos: 10
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 2
+.  .  .  .  .  .  .  .  startFilePos: 35
+.  .  .  .  .  .  .  .  startLine: 4
+.  .  .  .  .  .  .  .  startTokenPos: 10
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: Expr_Include {
-.  .  .  Roles: Import
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 47
-.  .  .  .  Line: 5
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 69
-.  .  .  .  Line: 5
-.  .  .  .  Col: 23
-.  .  .  }
+.  .  .  Roles: Unannotated
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  type: 4
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
-.  .  .  .  .  TOKEN "bar.php"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 60
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 14
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  endFilePos: 69
+.  .  .  .  .  .  endLine: 5
+.  .  .  .  .  .  endTokenPos: 17
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 47
+.  .  .  .  .  .  startLine: 5
+.  .  .  .  .  .  startTokenPos: 14
 .  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 68
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 22
-.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Scalar_String {
+.  .  .  .  .  Roles: Expression,Literal,String
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  .  value: bar.php
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 68
+.  .  .  .  .  .  .  .  endLine: 5
+.  .  .  .  .  .  .  .  endTokenPos: 16
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 2
+.  .  .  .  .  .  .  .  startFilePos: 60
+.  .  .  .  .  .  .  .  startLine: 5
+.  .  .  .  .  .  .  .  startTokenPos: 16
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

@@ -2,233 +2,240 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+ {
 .  Children: {
 .  .  0: Expr_BinaryOp_BooleanAnd {
-.  .  .  Roles: Expression,Binary,Operator,Boolean,And
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 22
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 29
-.  .  .  .  Line: 4
-.  .  .  .  Col: 8
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
+.  .  .  Roles: And,Binary,Boolean,Expression,Operator
 .  .  .  Children: {
-.  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Noop,Comment
-.  .  .  .  .  TOKEN " boolean ops
-"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 7
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 22
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
+.  .  .  .  .  .  endFilePos: 29
+.  .  .  .  .  .  endLine: 4
+.  .  .  .  .  .  endTokenPos: 7
 .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "a"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 22
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 23
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  startFilePos: 22
+.  .  .  .  .  .  startLine: 4
+.  .  .  .  .  .  startTokenPos: 3
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  Roles: Noop,Comment
-.  .  .  .  .  .  .  TOKEN " boolean ops
-"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 7
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 22
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  filePos: 7
+.  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  line: 3
+.  .  .  .  .  .  .  .  text: // boolean ops
+
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  name: a
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 23
+.  .  .  .  .  .  .  .  endLine: 4
+.  .  .  .  .  .  .  .  endTokenPos: 3
 .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 22
+.  .  .  .  .  .  .  .  startLine: 4
+.  .  .  .  .  .  .  .  startTokenPos: 3
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Comment {
+.  .  .  .  .  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  filePos: 7
+.  .  .  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  .  .  line: 3
+.  .  .  .  .  .  .  .  .  .  text: // boolean ops
+
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  TOKEN "b"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 28
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 7
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 29
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 8
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  name: b
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 29
+.  .  .  .  .  .  .  .  endLine: 4
+.  .  .  .  .  .  .  .  endTokenPos: 7
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 28
+.  .  .  .  .  .  .  .  startLine: 4
+.  .  .  .  .  .  .  .  startTokenPos: 7
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Expr_BinaryOp_BooleanOr {
-.  .  .  Roles: Expression,Binary,Operator,Boolean,Or
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 32
-.  .  .  .  Line: 5
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 39
-.  .  .  .  Line: 5
-.  .  .  .  Col: 8
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
+.  .  .  Roles: Binary,Boolean,Expression,Operator,Or
 .  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "a"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 33
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  endFilePos: 39
+.  .  .  .  .  .  endLine: 5
+.  .  .  .  .  .  endTokenPos: 14
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 32
+.  .  .  .  .  .  startLine: 5
+.  .  .  .  .  .  startTokenPos: 10
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  TOKEN "b"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 38
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 7
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  name: a
 .  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 39
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 8
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 33
+.  .  .  .  .  .  .  .  endLine: 5
+.  .  .  .  .  .  .  .  endTokenPos: 10
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 32
+.  .  .  .  .  .  .  .  startLine: 5
+.  .  .  .  .  .  .  .  startTokenPos: 10
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  name: b
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 39
+.  .  .  .  .  .  .  .  endLine: 5
+.  .  .  .  .  .  .  .  endTokenPos: 14
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 38
+.  .  .  .  .  .  .  .  startLine: 5
+.  .  .  .  .  .  .  .  startTokenPos: 14
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: Expr_BooleanNot {
-.  .  .  Roles: Expression,Operator,Boolean,Not
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 42
-.  .  .  .  Line: 6
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 44
-.  .  .  .  Line: 6
-.  .  .  .  Col: 3
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
+.  .  .  Roles: Boolean,Expression,Not,Operator
 .  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  endFilePos: 44
+.  .  .  .  .  .  endLine: 6
+.  .  .  .  .  .  endTokenPos: 18
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 42
+.  .  .  .  .  .  startLine: 6
+.  .  .  .  .  .  startTokenPos: 17
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "a"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 43
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 44
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 3
-.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  .  name: a
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 44
+.  .  .  .  .  .  .  .  endLine: 6
+.  .  .  .  .  .  .  .  endTokenPos: 18
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 43
+.  .  .  .  .  .  .  .  startLine: 6
+.  .  .  .  .  .  .  .  startTokenPos: 18
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  3: Expr_BooleanNot {
-.  .  .  Roles: Expression,Operator,Boolean,Not
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 47
-.  .  .  .  Line: 7
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 50
-.  .  .  .  Line: 7
-.  .  .  .  Col: 4
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
+.  .  .  Roles: Boolean,Expression,Not,Operator
 .  .  .  Children: {
-.  .  .  .  0: Expr_BooleanNot {
-.  .  .  .  .  Roles: Expression,Operator,Boolean,Not
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 48
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 2
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  endFilePos: 50
+.  .  .  .  .  .  endLine: 7
+.  .  .  .  .  .  endTokenPos: 23
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 47
+.  .  .  .  .  .  startLine: 7
+.  .  .  .  .  .  startTokenPos: 21
 .  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 50
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 4
-.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_BooleanNot {
+.  .  .  .  .  Roles: Boolean,Expression,Not,Operator
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Variable {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 50
+.  .  .  .  .  .  .  .  endLine: 7
+.  .  .  .  .  .  .  .  endTokenPos: 23
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 48
+.  .  .  .  .  .  .  .  startLine: 7
+.  .  .  .  .  .  .  .  startTokenPos: 22
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 49
-.  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 3
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 50
-.  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 4
-.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  .  .  .  name: a
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  endFilePos: 50
+.  .  .  .  .  .  .  .  .  .  endLine: 7
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 23
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  startFilePos: 49
+.  .  .  .  .  .  .  .  .  .  startLine: 7
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 23
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -236,371 +243,377 @@ File {
 .  .  .  }
 .  .  }
 .  .  4: Expr_BinaryOp_LogicalAnd {
-.  .  .  Roles: Expression,Binary,Operator,Boolean,And
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 69
-.  .  .  .  Line: 10
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 77
-.  .  .  .  Line: 10
-.  .  .  .  Col: 9
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
+.  .  .  Roles: Unannotated
 .  .  .  Children: {
-.  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Noop,Comment
-.  .  .  .  .  TOKEN " logical ops
-"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 54
-.  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 69
-.  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
+.  .  .  .  .  .  endFilePos: 77
+.  .  .  .  .  .  endLine: 10
+.  .  .  .  .  .  endTokenPos: 31
 .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "a"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 69
-.  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 70
-.  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  startFilePos: 69
+.  .  .  .  .  .  startLine: 10
+.  .  .  .  .  .  startTokenPos: 27
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  Roles: Noop,Comment
-.  .  .  .  .  .  .  TOKEN " logical ops
-"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 54
-.  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 69
-.  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  filePos: 54
+.  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  line: 9
+.  .  .  .  .  .  .  .  text: // logical ops
+
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  name: a
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 70
+.  .  .  .  .  .  .  .  endLine: 10
+.  .  .  .  .  .  .  .  endTokenPos: 27
 .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 69
+.  .  .  .  .  .  .  .  startLine: 10
+.  .  .  .  .  .  .  .  startTokenPos: 27
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Comment {
+.  .  .  .  .  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  filePos: 54
+.  .  .  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  .  .  line: 9
+.  .  .  .  .  .  .  .  .  .  text: // logical ops
+
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  TOKEN "b"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 76
-.  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 8
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 77
-.  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 9
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  name: b
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 77
+.  .  .  .  .  .  .  .  endLine: 10
+.  .  .  .  .  .  .  .  endTokenPos: 31
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 76
+.  .  .  .  .  .  .  .  startLine: 10
+.  .  .  .  .  .  .  .  startTokenPos: 31
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  5: Expr_BinaryOp_LogicalOr {
-.  .  .  Roles: Expression,Binary,Operator,Boolean,Or
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 80
-.  .  .  .  Line: 11
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 87
-.  .  .  .  Line: 11
-.  .  .  .  Col: 8
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
+.  .  .  Roles: Unannotated
 .  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "a"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 80
-.  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 81
-.  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  endFilePos: 87
+.  .  .  .  .  .  endLine: 11
+.  .  .  .  .  .  endTokenPos: 38
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 80
+.  .  .  .  .  .  startLine: 11
+.  .  .  .  .  .  startTokenPos: 34
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  TOKEN "b"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 86
-.  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  Col: 7
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  name: a
 .  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 87
-.  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  Col: 8
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 81
+.  .  .  .  .  .  .  .  endLine: 11
+.  .  .  .  .  .  .  .  endTokenPos: 34
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 80
+.  .  .  .  .  .  .  .  startLine: 11
+.  .  .  .  .  .  .  .  startTokenPos: 34
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  name: b
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 87
+.  .  .  .  .  .  .  .  endLine: 11
+.  .  .  .  .  .  .  .  endTokenPos: 38
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 86
+.  .  .  .  .  .  .  .  startLine: 11
+.  .  .  .  .  .  .  .  startTokenPos: 38
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  6: Expr_BinaryOp_LogicalXor {
-.  .  .  Roles: Expression,Binary,Operator,Boolean,Xor
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 90
-.  .  .  .  Line: 12
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 98
-.  .  .  .  Line: 12
-.  .  .  .  Col: 9
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
+.  .  .  Roles: Unannotated
 .  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "a"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 90
-.  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 91
-.  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  endFilePos: 98
+.  .  .  .  .  .  endLine: 12
+.  .  .  .  .  .  endTokenPos: 45
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 90
+.  .  .  .  .  .  startLine: 12
+.  .  .  .  .  .  startTokenPos: 41
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  TOKEN "b"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 97
-.  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  Col: 8
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  name: a
 .  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 98
-.  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  Col: 9
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 91
+.  .  .  .  .  .  .  .  endLine: 12
+.  .  .  .  .  .  .  .  endTokenPos: 41
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 90
+.  .  .  .  .  .  .  .  startLine: 12
+.  .  .  .  .  .  .  .  startTokenPos: 41
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  name: b
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 98
+.  .  .  .  .  .  .  .  endLine: 12
+.  .  .  .  .  .  .  .  endTokenPos: 45
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 97
+.  .  .  .  .  .  .  .  startLine: 12
+.  .  .  .  .  .  .  .  startTokenPos: 45
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  7: Expr_BinaryOp_BooleanOr {
-.  .  .  Roles: Expression,Binary,Operator,Boolean,Or
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 116
-.  .  .  .  Line: 15
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 135
-.  .  .  .  Line: 15
-.  .  .  .  Col: 20
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
+.  .  .  Roles: Binary,Boolean,Expression,Operator,Or
 .  .  .  Children: {
-.  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Noop,Comment
-.  .  .  .  .  TOKEN " precedence
-"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 102
-.  .  .  .  .  .  Line: 14
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 116
-.  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
+.  .  .  .  .  .  endFilePos: 135
+.  .  .  .  .  .  endLine: 15
+.  .  .  .  .  .  endTokenPos: 61
 .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 116
+.  .  .  .  .  .  startLine: 15
+.  .  .  .  .  .  startTokenPos: 49
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Comment {
+.  .  .  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  filePos: 102
+.  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  line: 14
+.  .  .  .  .  .  .  .  text: // precedence
+
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_BinaryOp_BooleanAnd {
-.  .  .  .  .  Roles: Left,Expression,Binary,Operator,Boolean,And
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 116
-.  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 123
-.  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  Col: 8
-.  .  .  .  .  }
+.  .  .  .  .  Roles: And,Binary,Boolean,Expression,Operator
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: left
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  Roles: Noop,Comment
-.  .  .  .  .  .  .  TOKEN " precedence
-"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 102
-.  .  .  .  .  .  .  .  Line: 14
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 116
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 123
+.  .  .  .  .  .  .  .  endLine: 15
+.  .  .  .  .  .  .  .  endTokenPos: 53
 .  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 116
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 117
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 2
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  .  .  startFilePos: 116
+.  .  .  .  .  .  .  .  startLine: 15
+.  .  .  .  .  .  .  .  startTokenPos: 49
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  .  .  Roles: Noop,Comment
-.  .  .  .  .  .  .  .  .  TOKEN " precedence
-"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 102
-.  .  .  .  .  .  .  .  .  .  Line: 14
-.  .  .  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 116
-.  .  .  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  filePos: 102
+.  .  .  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  .  .  line: 14
+.  .  .  .  .  .  .  .  .  .  text: // precedence
+
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Expr_Variable {
+.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  .  .  name: a
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  endFilePos: 117
+.  .  .  .  .  .  .  .  .  .  endLine: 15
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 49
 .  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  startFilePos: 116
+.  .  .  .  .  .  .  .  .  .  startLine: 15
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 49
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: Comment {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  filePos: 102
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  .  .  .  .  line: 14
+.  .  .  .  .  .  .  .  .  .  .  .  text: // precedence
+
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 122
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 7
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 123
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 8
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  .  .  name: b
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  endFilePos: 123
+.  .  .  .  .  .  .  .  .  .  endLine: 15
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 53
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  startFilePos: 122
+.  .  .  .  .  .  .  .  .  .  startLine: 15
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 53
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_BinaryOp_BooleanAnd {
-.  .  .  .  .  Roles: Right,Expression,Binary,Operator,Boolean,And
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 128
-.  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  Col: 13
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 135
-.  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  Col: 20
-.  .  .  .  .  }
+.  .  .  .  .  Roles: And,Binary,Boolean,Expression,Operator
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: right
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  .  .  TOKEN "c"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 128
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 129
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  .  .  endFilePos: 135
+.  .  .  .  .  .  .  .  endLine: 15
+.  .  .  .  .  .  .  .  endTokenPos: 61
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 128
+.  .  .  .  .  .  .  .  startLine: 15
+.  .  .  .  .  .  .  .  startTokenPos: 57
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  .  .  TOKEN "d"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 134
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 19
+.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  .  .  name: c
 .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 135
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 20
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  endFilePos: 129
+.  .  .  .  .  .  .  .  .  .  endLine: 15
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 57
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  startFilePos: 128
+.  .  .  .  .  .  .  .  .  .  startLine: 15
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 57
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: Expr_Variable {
+.  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  .  .  name: d
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  endFilePos: 135
+.  .  .  .  .  .  .  .  .  .  endLine: 15
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 61
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  startFilePos: 134
+.  .  .  .  .  .  .  .  .  .  startLine: 15
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 61
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -608,208 +621,240 @@ File {
 .  .  .  }
 .  .  }
 .  .  8: Expr_BinaryOp_BooleanAnd {
-.  .  .  Roles: Expression,Binary,Operator,Boolean,And
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 138
-.  .  .  .  Line: 16
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 159
-.  .  .  .  Line: 16
-.  .  .  .  Col: 22
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
+.  .  .  Roles: And,Binary,Boolean,Expression,Operator
 .  .  .  Children: {
-.  .  .  .  0: Expr_BinaryOp_BooleanAnd {
-.  .  .  .  .  Roles: Left,Expression,Binary,Operator,Boolean,And
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 138
-.  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  Col: 1
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  endFilePos: 159
+.  .  .  .  .  .  endLine: 16
+.  .  .  .  .  .  endTokenPos: 78
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 138
+.  .  .  .  .  .  startLine: 16
+.  .  .  .  .  .  startTokenPos: 64
 .  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 153
-.  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  Col: 16
-.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_BinaryOp_BooleanAnd {
+.  .  .  .  .  Roles: And,Binary,Boolean,Expression,Operator
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: left
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 138
-.  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 139
-.  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  Col: 2
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  .  .  endFilePos: 153
+.  .  .  .  .  .  .  .  endLine: 16
+.  .  .  .  .  .  .  .  endTokenPos: 74
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 138
+.  .  .  .  .  .  .  .  startLine: 16
+.  .  .  .  .  .  .  .  startTokenPos: 64
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  1: Expr_BinaryOp_BooleanOr {
-.  .  .  .  .  .  .  Roles: Right,Expression,Binary,Operator,Boolean,Or
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 145
-.  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  Col: 8
+.  .  .  .  .  .  1: Expr_Variable {
+.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  .  .  name: a
 .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 152
-.  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  endFilePos: 139
+.  .  .  .  .  .  .  .  .  .  endLine: 16
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 64
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  startFilePos: 138
+.  .  .  .  .  .  .  .  .  .  startLine: 16
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 64
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: Expr_BinaryOp_BooleanOr {
+.  .  .  .  .  .  .  Roles: Binary,Boolean,Expression,Operator,Or
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: right
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 145
-.  .  .  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  .  .  Col: 8
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 146
-.  .  .  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  .  .  Col: 9
-.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  .  .  .  .  endFilePos: 152
+.  .  .  .  .  .  .  .  .  .  endLine: 16
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 73
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  startFilePos: 145
+.  .  .  .  .  .  .  .  .  .  startLine: 16
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 69
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  .  .  .  .  TOKEN "c"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 151
-.  .  .  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  .  .  Col: 14
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  .  .  .  .  name: b
 .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 152
-.  .  .  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  endFilePos: 146
+.  .  .  .  .  .  .  .  .  .  .  .  endLine: 16
+.  .  .  .  .  .  .  .  .  .  .  .  endTokenPos: 69
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  .  .  startFilePos: 145
+.  .  .  .  .  .  .  .  .  .  .  .  startLine: 16
+.  .  .  .  .  .  .  .  .  .  .  .  startTokenPos: 69
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: Expr_Variable {
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  .  .  .  .  name: c
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  endFilePos: 152
+.  .  .  .  .  .  .  .  .  .  .  .  endLine: 16
+.  .  .  .  .  .  .  .  .  .  .  .  endTokenPos: 73
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  .  .  startFilePos: 151
+.  .  .  .  .  .  .  .  .  .  .  .  startLine: 16
+.  .  .  .  .  .  .  .  .  .  .  .  startTokenPos: 73
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  TOKEN "d"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 158
-.  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  Col: 21
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 159
-.  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  Col: 22
-.  .  .  .  .  }
+.  .  .  .  2: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  name: d
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 159
+.  .  .  .  .  .  .  .  endLine: 16
+.  .  .  .  .  .  .  .  endTokenPos: 78
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 158
+.  .  .  .  .  .  .  .  startLine: 16
+.  .  .  .  .  .  .  .  startTokenPos: 78
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  9: Expr_Assign {
-.  .  .  Roles: Expression,Assignment
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 163
-.  .  .  .  Line: 18
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 175
-.  .  .  .  Line: 18
-.  .  .  .  Col: 13
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
+.  .  .  Roles: Unannotated
 .  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "a"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 163
-.  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 164
-.  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  endFilePos: 175
+.  .  .  .  .  .  endLine: 18
+.  .  .  .  .  .  endTokenPos: 89
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 163
+.  .  .  .  .  .  startLine: 18
+.  .  .  .  .  .  startTokenPos: 81
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_BinaryOp_BooleanOr {
-.  .  .  .  .  Roles: Right,Expression,Binary,Operator,Boolean,Or
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 168
-.  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  Col: 6
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 175
-.  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  Col: 13
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Binary,Boolean,Expression,Operator,Or
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 168
-.  .  .  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  .  .  Col: 6
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 169
-.  .  .  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  .  .  Col: 7
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  .  .  endFilePos: 175
+.  .  .  .  .  .  .  .  endLine: 18
+.  .  .  .  .  .  .  .  endTokenPos: 89
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 168
+.  .  .  .  .  .  .  .  startLine: 18
+.  .  .  .  .  .  .  .  startTokenPos: 85
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  .  .  TOKEN "c"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 174
-.  .  .  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  .  .  name: b
 .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 175
-.  .  .  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  endFilePos: 169
+.  .  .  .  .  .  .  .  .  .  endLine: 18
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 85
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  startFilePos: 168
+.  .  .  .  .  .  .  .  .  .  startLine: 18
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 85
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: Expr_Variable {
+.  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  .  .  name: c
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  endFilePos: 175
+.  .  .  .  .  .  .  .  .  .  endLine: 18
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 89
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  startFilePos: 174
+.  .  .  .  .  .  .  .  .  .  startLine: 18
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 89
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  name: a
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 164
+.  .  .  .  .  .  .  .  endLine: 18
+.  .  .  .  .  .  .  .  endTokenPos: 81
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 163
+.  .  .  .  .  .  .  .  startLine: 18
+.  .  .  .  .  .  .  .  startTokenPos: 81
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -817,88 +862,101 @@ File {
 .  .  .  }
 .  .  }
 .  .  10: Expr_BinaryOp_LogicalOr {
-.  .  .  Roles: Expression,Binary,Operator,Boolean,Or
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 178
-.  .  .  .  Line: 19
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 190
-.  .  .  .  Line: 19
-.  .  .  .  Col: 13
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
+.  .  .  Roles: Unannotated
 .  .  .  Children: {
-.  .  .  .  0: Expr_Assign {
-.  .  .  .  .  Roles: Expression,Assignment,Left
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 178
-.  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  Col: 1
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  endFilePos: 190
+.  .  .  .  .  .  endLine: 19
+.  .  .  .  .  .  endTokenPos: 100
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 178
+.  .  .  .  .  .  startLine: 19
+.  .  .  .  .  .  startTokenPos: 92
 .  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 184
-.  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  Col: 7
-.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Assign {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: left
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 178
-.  .  .  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 179
-.  .  .  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  .  .  Col: 2
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  .  endFilePos: 184
+.  .  .  .  .  .  .  .  endLine: 19
+.  .  .  .  .  .  .  .  endTokenPos: 96
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 178
+.  .  .  .  .  .  .  .  startLine: 19
+.  .  .  .  .  .  .  .  startTokenPos: 92
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 183
-.  .  .  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  .  .  Col: 6
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 184
-.  .  .  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  .  .  Col: 7
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  .  .  .  name: b
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  endFilePos: 184
+.  .  .  .  .  .  .  .  .  .  endLine: 19
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 96
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  startFilePos: 183
+.  .  .  .  .  .  .  .  .  .  startLine: 19
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 96
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: Expr_Variable {
+.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  .  name: a
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  endFilePos: 179
+.  .  .  .  .  .  .  .  .  .  endLine: 19
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 92
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  startFilePos: 178
+.  .  .  .  .  .  .  .  .  .  startLine: 19
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 92
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  TOKEN "c"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 189
-.  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  Col: 12
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 190
-.  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  Col: 13
-.  .  .  .  .  }
+.  .  .  .  2: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  name: c
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  endFilePos: 190
+.  .  .  .  .  .  .  .  endLine: 19
+.  .  .  .  .  .  .  .  endTokenPos: 100
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 189
+.  .  .  .  .  .  .  .  startLine: 19
+.  .  .  .  .  .  .  .  startTokenPos: 100
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

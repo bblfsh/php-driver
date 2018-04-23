@@ -2,40 +2,38 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Expr_Print {
+.  Roles: Call,Statement
 .  Children: {
-.  .  0: Expr_Print {
-.  .  .  Roles: Statement,Call
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 13
-.  .  .  .  Line: 2
-.  .  .  .  Col: 8
-.  .  .  }
+.  .  0:  {
+.  .  .  Roles: Unannotated
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  endFilePos: 13
+.  .  .  .  endLine: 2
+.  .  .  .  endTokenPos: 3
+.  .  .  .  internalRole: attributes
+.  .  .  .  startFilePos: 6
+.  .  .  .  startLine: 2
+.  .  .  .  startTokenPos: 1
+.  .  .  }
+.  .  }
+.  .  1: Expr_Variable {
+.  .  .  Roles: Identifier,Variable
+.  .  .  Properties: {
+.  .  .  .  internalRole: expr
+.  .  .  .  name: a
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "a"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 12
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 7
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 13
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 8
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  .  endFilePos: 13
+.  .  .  .  .  .  endLine: 2
+.  .  .  .  .  .  endTokenPos: 3
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 12
+.  .  .  .  .  .  startLine: 2
+.  .  .  .  .  .  startTokenPos: 3
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

@@ -2,75 +2,80 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Stmt_Interface {
+.  Roles: Unannotated
+.  Properties: {
+.  .  name: testiface1
+.  }
 .  Children: {
-.  .  0: Stmt_Interface {
-.  .  .  Roles: Type,Declaration
-.  .  .  TOKEN "testiface1"
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 61
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
-.  .  .  }
+.  .  0:  {
+.  .  .  Roles: Unannotated
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  endFilePos: 61
+.  .  .  .  endLine: 4
+.  .  .  .  endTokenPos: 16
+.  .  .  .  internalRole: attributes
+.  .  .  .  startFilePos: 6
+.  .  .  .  startLine: 2
+.  .  .  .  startTokenPos: 1
+.  .  .  }
+.  .  }
+.  .  1: Stmt_ClassConst {
+.  .  .  Roles: Incomplete,Type,Variable
+.  .  .  Properties: {
+.  .  .  .  flags: 0
+.  .  .  .  internalRole: stmts
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_ClassConst {
-.  .  .  .  .  Roles: Expression,Body,Type,Variable,Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 33
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 59
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 31
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  flags: 0
-.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  .  endFilePos: 59
+.  .  .  .  .  .  endLine: 3
+.  .  .  .  .  .  endTokenPos: 14
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 33
+.  .  .  .  .  .  startLine: 3
+.  .  .  .  .  .  startTokenPos: 7
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Const {
+.  .  .  .  .  Roles: Expression,Incomplete,Variable
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: consts
+.  .  .  .  .  .  name: b
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Const {
-.  .  .  .  .  .  .  Roles: Expression,Variable,Incomplete
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 39
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 11
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 58
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 30
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: consts
+.  .  .  .  .  .  .  .  endFilePos: 58
+.  .  .  .  .  .  .  .  endLine: 3
+.  .  .  .  .  .  .  .  endTokenPos: 13
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  startFilePos: 39
+.  .  .  .  .  .  .  .  startLine: 3
+.  .  .  .  .  .  .  .  startTokenPos: 9
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Scalar_String {
+.  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  value: class constant
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  .  .  TOKEN "class constant"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 43
-.  .  .  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  .  .  Col: 15
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 58
-.  .  .  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  .  .  Col: 30
-.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  .  .  endFilePos: 58
+.  .  .  .  .  .  .  .  .  .  endLine: 3
+.  .  .  .  .  .  .  .  .  .  endTokenPos: 13
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  .  .  .  startFilePos: 43
+.  .  .  .  .  .  .  .  .  .  startLine: 3
+.  .  .  .  .  .  .  .  .  .  startTokenPos: 13
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }

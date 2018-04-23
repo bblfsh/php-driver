@@ -2,44 +2,44 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Stmt_Interface {
+.  Roles: Unannotated
+.  Properties: {
+.  .  name: testiface1
+.  }
 .  Children: {
-.  .  0: Stmt_Interface {
-.  .  .  Roles: Type,Declaration
-.  .  .  TOKEN "testiface1"
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 54
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
-.  .  .  }
+.  .  0:  {
+.  .  .  Roles: Unannotated
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  endFilePos: 54
+.  .  .  .  endLine: 4
+.  .  .  .  endTokenPos: 14
+.  .  .  .  internalRole: attributes
+.  .  .  .  startFilePos: 6
+.  .  .  .  startLine: 2
+.  .  .  .  startTokenPos: 1
+.  .  .  }
+.  .  }
+.  .  1: Stmt_ClassMethod {
+.  .  .  Roles: Function,Type
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  flags: 0
+.  .  .  .  internalRole: stmts
+.  .  .  .  name: testfnc1
+.  .  .  .  type: 0
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "testfnc1"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 33
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 52
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 24
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 0
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 0
+.  .  .  .  .  .  endFilePos: 52
+.  .  .  .  .  .  endLine: 3
+.  .  .  .  .  .  endTokenPos: 12
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 33
+.  .  .  .  .  .  startLine: 3
+.  .  .  .  .  .  startTokenPos: 7
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

@@ -2,66 +2,70 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Stmt_Class {
+.  Roles: Declaration,Statement,Type
+.  Properties: {
+.  .  flags: 16
+.  .  name: A
+.  .  type: 16
+.  }
 .  Children: {
-.  .  0: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "A"
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 7
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 87
-.  .  .  .  Line: 6
-.  .  .  .  Col: 1
-.  .  .  }
+.  .  0:  {
+.  .  .  Roles: Unannotated
 .  .  .  Properties: {
-.  .  .  .  flags: 16
-.  .  .  .  internalRole: children
-.  .  .  .  type: 16
+.  .  .  .  endFilePos: 87
+.  .  .  .  endLine: 6
+.  .  .  .  endTokenPos: 32
+.  .  .  .  internalRole: attributes
+.  .  .  .  startFilePos: 7
+.  .  .  .  startLine: 3
+.  .  .  .  startTokenPos: 2
+.  .  .  }
+.  .  }
+.  .  1: Stmt_ClassMethod {
+.  .  .  Roles: Function,Type
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  flags: 1
+.  .  .  .  internalRole: stmts
+.  .  .  .  name: a
+.  .  .  .  type: 1
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "a"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 30
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 51
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 26
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 1
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 1
+.  .  .  .  .  .  endFilePos: 51
+.  .  .  .  .  .  endLine: 4
+.  .  .  .  .  .  endTokenPos: 19
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 30
+.  .  .  .  .  .  startLine: 4
+.  .  .  .  .  .  startTokenPos: 10
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "b"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 57
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 85
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 33
-.  .  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  2: Stmt_ClassMethod {
+.  .  .  Roles: Function,Type
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  flags: 17
+.  .  .  .  internalRole: stmts
+.  .  .  .  name: b
+.  .  .  .  type: 17
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 17
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 17
+.  .  .  .  .  .  endFilePos: 85
+.  .  .  .  .  .  endLine: 5
+.  .  .  .  .  .  endTokenPos: 30
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 57
+.  .  .  .  .  .  startLine: 5
+.  .  .  .  .  .  startTokenPos: 21
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

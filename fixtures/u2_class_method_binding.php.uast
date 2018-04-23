@@ -2,46 +2,46 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Stmt_Class {
+.  Roles: Declaration,Statement,Type
+.  Properties: {
+.  .  flags: 0
+.  .  name: A
+.  .  type: 0
+.  }
 .  Children: {
-.  .  0: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "A"
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 49
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
-.  .  .  }
+.  .  0:  {
+.  .  .  Roles: Unannotated
 .  .  .  Properties: {
-.  .  .  .  flags: 0
-.  .  .  .  internalRole: children
-.  .  .  .  type: 0
+.  .  .  .  endFilePos: 49
+.  .  .  .  endLine: 4
+.  .  .  .  endTokenPos: 18
+.  .  .  .  internalRole: attributes
+.  .  .  .  startFilePos: 6
+.  .  .  .  startLine: 2
+.  .  .  .  startTokenPos: 1
+.  .  .  }
+.  .  }
+.  .  1: Stmt_ClassMethod {
+.  .  .  Roles: Function,Type
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  flags: 8
+.  .  .  .  internalRole: stmts
+.  .  .  .  name: method1
+.  .  .  .  type: 8
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "method1"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 20
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 47
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 32
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 8
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 8
+.  .  .  .  .  .  endFilePos: 47
+.  .  .  .  .  .  endLine: 3
+.  .  .  .  .  .  endTokenPos: 16
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  startFilePos: 20
+.  .  .  .  .  .  startLine: 3
+.  .  .  .  .  .  startTokenPos: 7
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

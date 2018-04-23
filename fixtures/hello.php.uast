@@ -2,59 +2,51 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Stmt_Echo {
+.  Roles: Call,Statement
 .  Children: {
-.  .  0: Stmt_Echo {
-.  .  .  Roles: Statement,Call
-.  .  .  TOKEN "echo"
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 46
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 65
-.  .  .  .  Line: 3
-.  .  .  .  Col: 20
-.  .  .  }
+.  .  0:  {
+.  .  .  Roles: Unannotated
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  endFilePos: 65
+.  .  .  .  endLine: 3
+.  .  .  .  endTokenPos: 5
+.  .  .  .  internalRole: attributes
+.  .  .  .  startFilePos: 46
+.  .  .  .  startLine: 3
+.  .  .  .  startTokenPos: 2
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Noop,Comment
-.  .  .  .  .  TOKEN " this is a simple hello world example
-"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 6
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 46
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  filePos: 6
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  line: 2
+.  .  .  .  .  .  text: // this is a simple hello world example
+
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  TOKEN "Hello World!"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 51
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 6
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 64
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 19
-.  .  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: Scalar_String {
+.  .  .  Roles: Expression,Literal,String
+.  .  .  Properties: {
+.  .  .  .  internalRole: exprs
+.  .  .  .  value: Hello World!
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: exprs
+.  .  .  .  .  .  endFilePos: 64
+.  .  .  .  .  .  endLine: 3
+.  .  .  .  .  .  endTokenPos: 4
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  kind: 2
+.  .  .  .  .  .  startFilePos: 51
+.  .  .  .  .  .  startLine: 3
+.  .  .  .  .  .  startTokenPos: 4
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
