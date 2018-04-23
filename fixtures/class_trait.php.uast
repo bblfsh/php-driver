@@ -2,12 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_Trait {
-.  .  .  Roles: Type,Declaration
-.  .  .  TOKEN "A"
+.  .  .  Roles: Declaration,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -22,9 +21,15 @@ File {
 .  .  .  .  internalRole: children
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "a"
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "A"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Function,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 21
 .  .  .  .  .  .  Line: 4
@@ -41,12 +46,20 @@ File {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  .  type: 1
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "B"
+.  .  .  Roles: Declaration,Statement,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 47
 .  .  .  .  Line: 7
@@ -63,8 +76,15 @@ File {
 .  .  .  .  type: 0
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_TraitUse {
-.  .  .  .  .  Roles: Expression,Body,Base
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "B"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_TraitUse {
+.  .  .  .  .  Roles: Base,Body,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 61
 .  .  .  .  .  .  Line: 8
@@ -98,8 +118,8 @@ File {
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Stmt_TraitUse {
-.  .  .  .  .  Roles: Expression,Body,Base
+.  .  .  .  2: Stmt_TraitUse {
+.  .  .  .  .  Roles: Base,Body,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 72
 .  .  .  .  .  .  Line: 9
@@ -132,7 +152,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Stmt_TraitUseAdaptation_Alias {
-.  .  .  .  .  .  .  Roles: Statement,Alias
+.  .  .  .  .  .  .  Roles: Alias,Statement
 .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 88
@@ -151,7 +171,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Stmt_TraitUseAdaptation_Alias {
-.  .  .  .  .  .  .  Roles: Statement,Alias
+.  .  .  .  .  .  .  Roles: Alias,Statement
 .  .  .  .  .  .  .  TOKEN "d"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 114
@@ -169,7 +189,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: Stmt_TraitUseAdaptation_Alias {
-.  .  .  .  .  .  .  Roles: Statement,Alias
+.  .  .  .  .  .  .  Roles: Alias,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 130
 .  .  .  .  .  .  .  .  Line: 12
@@ -188,8 +208,8 @@ File {
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  2: Stmt_TraitUse {
-.  .  .  .  .  Roles: Expression,Body,Base
+.  .  .  .  3: Stmt_TraitUse {
+.  .  .  .  .  Roles: Base,Body,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 154
 .  .  .  .  .  .  Line: 14
@@ -256,7 +276,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  3: Stmt_TraitUseAdaptation_Precedence {
-.  .  .  .  .  .  .  Roles: Base,Alias,Incomplete
+.  .  .  .  .  .  .  Roles: Alias,Base,Incomplete
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 176
 .  .  .  .  .  .  .  .  Line: 15
@@ -290,7 +310,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Alias,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Alias,Expression,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "F"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 191
@@ -307,7 +327,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Alias,Incomplete
+.  .  .  .  .  .  .  .  .  Roles: Alias,Expression,Identifier,Incomplete
 .  .  .  .  .  .  .  .  .  TOKEN "G"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 194
@@ -326,7 +346,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  4: Stmt_TraitUseAdaptation_Alias {
-.  .  .  .  .  .  .  Roles: Statement,Alias
+.  .  .  .  .  .  .  Roles: Alias,Statement
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 205
@@ -364,7 +384,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  5: Stmt_TraitUseAdaptation_Alias {
-.  .  .  .  .  .  .  Roles: Statement,Alias
+.  .  .  .  .  .  .  Roles: Alias,Statement
 .  .  .  .  .  .  .  TOKEN "e"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 234
@@ -401,7 +421,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  6: Stmt_TraitUseAdaptation_Alias {
-.  .  .  .  .  .  .  Roles: Statement,Alias
+.  .  .  .  .  .  .  Roles: Alias,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 253
 .  .  .  .  .  .  .  .  Line: 18

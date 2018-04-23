@@ -2,12 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "testcls1"
+.  .  .  Roles: Declaration,Statement,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 6
 .  .  .  .  Line: 2
@@ -24,8 +23,15 @@ File {
 .  .  .  .  type: 0
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_Property {
-.  .  .  .  .  Roles: Expression,Body,Type,Variable,Incomplete
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "testcls1"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_Property {
+.  .  .  .  .  Roles: Body,Incomplete,Type,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 27
 .  .  .  .  .  .  Line: 3
@@ -43,8 +49,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Stmt_PropertyProperty {
-.  .  .  .  .  .  .  Roles: Type,Variable,Incomplete
-.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Roles: Incomplete,Type,Variable
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 34
 .  .  .  .  .  .  .  .  Line: 3
@@ -58,11 +63,20 @@ File {
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: props
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Stmt_ClassConst {
-.  .  .  .  .  Roles: Expression,Body,Type,Variable,Incomplete
+.  .  .  .  2: Stmt_ClassConst {
+.  .  .  .  .  Roles: Body,Incomplete,Type,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 42
 .  .  .  .  .  .  Line: 4
@@ -79,8 +93,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Const {
-.  .  .  .  .  .  .  Roles: Expression,Variable,Incomplete
-.  .  .  .  .  .  .  TOKEN "CLASS_CONSTANT"
+.  .  .  .  .  .  .  Roles: Expression,Incomplete,Variable
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 55
 .  .  .  .  .  .  .  .  Line: 4
@@ -95,7 +108,14 @@ File {
 .  .  .  .  .  .  .  .  internalRole: consts
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Scalar_LNumber {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "CLASS_CONSTANT"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Scalar_LNumber {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
 .  .  .  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  .  .  StartPosition: {

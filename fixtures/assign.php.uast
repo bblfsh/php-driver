@@ -2,11 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Expr_Assign {
-.  .  .  Roles: Expression,Assignment
+.  .  .  Roles: Assignment,Expression
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -22,8 +22,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "a"
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 7
 .  .  .  .  .  .  Line: 3
@@ -37,9 +36,18 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  Roles: Right,Expression,Literal,Number
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 12
@@ -58,7 +66,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Expr_AssignOp_Plus {
-.  .  .  Roles: Expression,Assignment,Operator,Add
+.  .  .  Roles: Add,Assignment,Expression,Operator
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 15
 .  .  .  .  Line: 4
@@ -74,8 +82,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "b"
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 15
 .  .  .  .  .  .  Line: 4
@@ -89,9 +96,18 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  Roles: Right,Expression,Literal,Number
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 21
@@ -110,7 +126,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: Expr_AssignOp_Minus {
-.  .  .  Roles: Expression,Assignment,Operator,Substract
+.  .  .  Roles: Assignment,Expression,Operator,Substract
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 24
 .  .  .  .  Line: 5
@@ -126,8 +142,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "c"
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 24
 .  .  .  .  .  .  Line: 5
@@ -141,9 +156,18 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "c"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  Roles: Right,Expression,Literal,Number
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 30
@@ -162,7 +186,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: Expr_AssignOp_Mul {
-.  .  .  Roles: Expression,Assignment,Operator,Multiply
+.  .  .  Roles: Assignment,Expression,Multiply,Operator
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 33
 .  .  .  .  Line: 6
@@ -178,8 +202,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "d"
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 33
 .  .  .  .  .  .  Line: 6
@@ -193,9 +216,18 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "d"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  Roles: Right,Expression,Literal,Number
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 39
@@ -214,7 +246,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  4: Expr_AssignOp_Div {
-.  .  .  Roles: Expression,Assignment,Operator,Divide
+.  .  .  Roles: Assignment,Divide,Expression,Operator
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 42
 .  .  .  .  Line: 7
@@ -230,8 +262,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "f"
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 42
 .  .  .  .  .  .  Line: 7
@@ -245,9 +276,18 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "f"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  Roles: Right,Expression,Literal,Number
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 48
@@ -266,7 +306,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  5: Expr_AssignOp_Mod {
-.  .  .  Roles: Expression,Assignment,Operator,Modulo
+.  .  .  Roles: Assignment,Expression,Modulo,Operator
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 51
 .  .  .  .  Line: 8
@@ -282,8 +322,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "g"
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 51
 .  .  .  .  .  .  Line: 8
@@ -297,9 +336,18 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "g"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  Roles: Right,Expression,Literal,Number
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 57

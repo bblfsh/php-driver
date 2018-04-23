@@ -2,11 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -23,7 +23,6 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 8
 .  .  .  .  .  .  Line: 3
@@ -37,11 +36,20 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 13
 .  .  .  .  Line: 4
@@ -57,8 +65,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_PropertyFetch {
-.  .  .  .  .  Roles: Expression,Map,Identifier,Entry,Value
-.  .  .  .  .  TOKEN "B"
+.  .  .  .  .  Roles: Entry,Expression,Identifier,Map,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 14
 .  .  .  .  .  .  Line: 4
@@ -73,9 +80,15 @@ File {
 .  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Variable {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "B"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 14
 .  .  .  .  .  .  .  .  Line: 4
@@ -89,13 +102,22 @@ File {
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 22
 .  .  .  .  Line: 5
@@ -111,7 +133,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Expression,List,Value,Entry
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 23
 .  .  .  .  .  .  Line: 5
@@ -128,7 +150,6 @@ File {
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 23
 .  .  .  .  .  .  .  .  Line: 5
@@ -141,6 +162,15 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_String {
@@ -165,7 +195,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 31
 .  .  .  .  Line: 6
@@ -181,7 +211,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Expression,List,Value,Entry
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 32
 .  .  .  .  .  .  Line: 6
@@ -198,7 +228,6 @@ File {
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 32
 .  .  .  .  .  .  .  .  Line: 6
@@ -211,6 +240,15 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_LNumber {
@@ -235,7 +273,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  4: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 40
 .  .  .  .  Line: 7
@@ -251,7 +289,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Expression,List,Value,Entry
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 41
 .  .  .  .  .  .  Line: 7
@@ -268,7 +306,6 @@ File {
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 41
 .  .  .  .  .  .  .  .  Line: 7
@@ -281,6 +318,15 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_LNumber {
@@ -305,7 +351,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  5: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 52
 .  .  .  .  Line: 8
@@ -321,7 +367,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Expression,List,Value,Entry
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 53
 .  .  .  .  .  .  Line: 8
@@ -338,7 +384,6 @@ File {
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 53
 .  .  .  .  .  .  .  .  Line: 8
@@ -351,6 +396,15 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_String {
@@ -375,7 +429,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  6: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 79
 .  .  .  .  Line: 9
@@ -391,7 +445,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Expression,List,Value,Entry
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 80
 .  .  .  .  .  .  Line: 9
@@ -408,7 +462,6 @@ File {
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 80
 .  .  .  .  .  .  .  .  Line: 9
@@ -421,6 +474,15 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_String {
@@ -445,7 +507,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  7: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 90
 .  .  .  .  Line: 10
@@ -461,7 +523,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Expression,List,Value,Entry
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 91
 .  .  .  .  .  .  Line: 10
@@ -478,7 +540,6 @@ File {
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 91
 .  .  .  .  .  .  .  .  Line: 10
@@ -491,6 +552,15 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_String {
@@ -515,7 +585,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  8: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 101
 .  .  .  .  Line: 11
@@ -531,7 +601,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Expression,List,Value,Entry
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 102
 .  .  .  .  .  .  Line: 11
@@ -548,7 +618,6 @@ File {
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 102
 .  .  .  .  .  .  .  .  Line: 11
@@ -561,6 +630,15 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_String {
@@ -585,7 +663,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  9: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 112
 .  .  .  .  Line: 12
@@ -601,7 +679,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Expression,List,Value,Entry
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 113
 .  .  .  .  .  .  Line: 12
@@ -618,7 +696,6 @@ File {
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 113
 .  .  .  .  .  .  .  .  Line: 12
@@ -632,10 +709,18 @@ File {
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "B"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 116
 .  .  .  .  .  .  .  .  Line: 12
@@ -649,13 +734,22 @@ File {
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: dim
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "B"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  10: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 122
 .  .  .  .  Line: 13
@@ -672,7 +766,6 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 124
 .  .  .  .  .  .  Line: 13
@@ -686,11 +779,20 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  11: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 130
 .  .  .  .  Line: 14
@@ -706,7 +808,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Expression,List,Value,Entry
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 132
 .  .  .  .  .  .  Line: 14
@@ -723,7 +825,6 @@ File {
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 132
 .  .  .  .  .  .  .  .  Line: 14
@@ -736,6 +837,15 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_String {
@@ -760,7 +870,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  12: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 143
 .  .  .  .  Line: 15
@@ -777,7 +887,6 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 144
 .  .  .  .  .  .  Line: 15
@@ -791,11 +900,20 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  13: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 151
 .  .  .  .  Line: 16
@@ -811,7 +929,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Expression,List,Value,Entry
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 152
 .  .  .  .  .  .  Line: 16
@@ -828,7 +946,6 @@ File {
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 152
 .  .  .  .  .  .  .  .  Line: 16
@@ -841,6 +958,15 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_String {
@@ -865,7 +991,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  14: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 164
 .  .  .  .  Line: 17
@@ -898,7 +1024,6 @@ File {
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 167
 .  .  .  .  .  .  .  .  Line: 17
@@ -912,14 +1037,22 @@ File {
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: name
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  15: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
-.  .  .  TOKEN "\\"
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 173
 .  .  .  .  Line: 18
@@ -953,7 +1086,6 @@ File {
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 176
 .  .  .  .  .  .  Line: 18
@@ -966,6 +1098,15 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Scalar_EncapsedStringPart {
@@ -988,8 +1129,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  16: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
-.  .  .  TOKEN "\\"
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 182
 .  .  .  .  Line: 19
@@ -1023,7 +1163,6 @@ File {
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 186
 .  .  .  .  .  .  Line: 19
@@ -1036,6 +1175,15 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Scalar_EncapsedStringPart {
@@ -1058,8 +1206,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  17: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
-.  .  .  TOKEN "\"
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 193
 .  .  .  .  Line: 20
@@ -1093,7 +1240,6 @@ File {
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 197
 .  .  .  .  .  .  Line: 20
@@ -1107,12 +1253,20 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  18: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
-.  .  .  TOKEN "\\"
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 203
 .  .  .  .  Line: 21
@@ -1146,7 +1300,6 @@ File {
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 208
 .  .  .  .  .  .  Line: 21
@@ -1159,6 +1312,15 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Scalar_EncapsedStringPart {
@@ -1181,8 +1343,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  19: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
-.  .  .  TOKEN "\"
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 215
 .  .  .  .  Line: 22
@@ -1215,7 +1376,6 @@ File {
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 217
 .  .  .  .  .  .  .  .  Line: 22
@@ -1228,6 +1388,15 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -1252,8 +1421,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  20: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
-.  .  .  TOKEN "\"
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 227
 .  .  .  .  Line: 23
@@ -1286,7 +1454,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Expression,List,Value,Entry
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 229
 .  .  .  .  .  .  Line: 23
@@ -1303,7 +1471,6 @@ File {
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 229
 .  .  .  .  .  .  .  .  Line: 23
@@ -1316,6 +1483,15 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_String {
@@ -1340,8 +1516,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  21: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
-.  .  .  TOKEN "\\"
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 237
 .  .  .  .  Line: 24
@@ -1375,7 +1550,6 @@ File {
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "B"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 240
 .  .  .  .  .  .  Line: 24
@@ -1388,6 +1562,15 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "B"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Scalar_EncapsedStringPart {
@@ -1410,7 +1593,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  22: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 247
 .  .  .  .  Line: 25
@@ -1427,7 +1610,6 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 249
 .  .  .  .  .  .  Line: 25
@@ -1441,11 +1623,20 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  23: Scalar_Encapsed {
-.  .  .  Roles: Expression,Literal,String,Incomplete
+.  .  .  Roles: Expression,Incomplete,Literal,String
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 254
 .  .  .  .  Line: 26
@@ -1462,7 +1653,6 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 256
 .  .  .  .  .  .  Line: 26
@@ -1475,6 +1665,15 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

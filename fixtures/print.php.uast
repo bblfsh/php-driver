@@ -2,11 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Expr_Print {
-.  .  .  Roles: Statement,Call
+.  .  .  Roles: Call,Statement
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 6
 .  .  .  .  Line: 2
@@ -23,7 +23,6 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 12
 .  .  .  .  .  .  Line: 2
@@ -36,6 +35,15 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

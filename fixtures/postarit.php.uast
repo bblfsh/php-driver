@@ -2,11 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Expr_PostInc {
-.  .  .  Roles: Expression,Unary,Increment,Postfix
+.  .  .  Roles: Expression,Increment,Postfix,Unary
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -23,7 +23,6 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 7
 .  .  .  .  .  .  Line: 3
@@ -37,11 +36,20 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Expr_PostDec {
-.  .  .  Roles: Expression,Unary,Decrement,Postfix
+.  .  .  Roles: Decrement,Expression,Postfix,Unary
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 13
 .  .  .  .  Line: 4
@@ -58,7 +66,6 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 13
 .  .  .  .  .  .  Line: 4
@@ -72,11 +79,20 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: Expr_PreInc {
-.  .  .  Roles: Expression,Unary,Increment
+.  .  .  Roles: Expression,Increment,Unary
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 19
 .  .  .  .  Line: 5
@@ -93,7 +109,6 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 21
 .  .  .  .  .  .  Line: 5
@@ -107,11 +122,20 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  3: Expr_PreDec {
-.  .  .  Roles: Expression,Unary,Decrement
+.  .  .  Roles: Decrement,Expression,Unary
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 25
 .  .  .  .  Line: 6
@@ -128,7 +152,6 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 27
 .  .  .  .  .  .  Line: 6
@@ -141,6 +164,15 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

@@ -2,12 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "testcls1"
+.  .  .  Roles: Declaration,Statement,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 6
 .  .  .  .  Line: 2
@@ -24,9 +23,15 @@ File {
 .  .  .  .  type: 0
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "testfnc1"
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "testcls1"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Body,Function,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 27
 .  .  .  .  .  .  Line: 3
@@ -44,8 +49,15 @@ File {
 .  .  .  .  .  .  type: 0
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Assign {
-.  .  .  .  .  .  .  Roles: Expression,Body,Assignment
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "testfnc1"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Expr_Assign {
+.  .  .  .  .  .  .  Roles: Assignment,Expression
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 57
 .  .  .  .  .  .  .  .  Line: 4
@@ -61,8 +73,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_PropertyFetch {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Map,Identifier,Entry,Value,Left
-.  .  .  .  .  .  .  .  .  TOKEN "member"
+.  .  .  .  .  .  .  .  .  Roles: Entry,Expression,Identifier,Left,Map,Value
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 57
 .  .  .  .  .  .  .  .  .  .  Line: 4
@@ -77,9 +88,15 @@ File {
 .  .  .  .  .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Expr_Variable {
+.  .  .  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "member"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: Expr_Variable {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "this"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 57
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 4
@@ -93,11 +110,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "this"
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  .  .  .  .  Roles: Right,Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 73

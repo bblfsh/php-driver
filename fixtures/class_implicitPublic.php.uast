@@ -2,12 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "A"
+.  .  .  Roles: Declaration,Statement,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -24,8 +23,15 @@ File {
 .  .  .  .  type: 16
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_Property {
-.  .  .  .  .  Roles: Expression,Body,Type,Variable,Incomplete
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "A"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_Property {
+.  .  .  .  .  Roles: Body,Incomplete,Type,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 30
 .  .  .  .  .  .  Line: 4
@@ -43,8 +49,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Stmt_PropertyProperty {
-.  .  .  .  .  .  .  Roles: Type,Variable,Incomplete
-.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Roles: Incomplete,Type,Variable
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 34
 .  .  .  .  .  .  .  .  Line: 4
@@ -58,11 +63,20 @@ File {
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: props
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Stmt_Property {
-.  .  .  .  .  Roles: Expression,Body,Type,Variable,Incomplete
+.  .  .  .  2: Stmt_Property {
+.  .  .  .  .  Roles: Body,Incomplete,Type,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 42
 .  .  .  .  .  .  Line: 5
@@ -80,8 +94,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Stmt_PropertyProperty {
-.  .  .  .  .  .  .  Roles: Type,Variable,Incomplete
-.  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  Roles: Incomplete,Type,Variable
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 49
 .  .  .  .  .  .  .  .  Line: 5
@@ -95,12 +108,20 @@ File {
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: props
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  2: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "c"
+.  .  .  .  3: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Body,Function,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 57
 .  .  .  .  .  .  Line: 6
@@ -117,10 +138,18 @@ File {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  .  type: 16
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "c"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  3: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "d"
+.  .  .  .  4: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Body,Function,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 84
 .  .  .  .  .  .  Line: 7
@@ -137,10 +166,18 @@ File {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  .  type: 32
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "d"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  4: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "e"
+.  .  .  .  5: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Body,Function,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 110
 .  .  .  .  .  .  Line: 8
@@ -157,10 +194,18 @@ File {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  .  type: 8
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "e"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  5: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "f"
+.  .  .  .  6: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Body,Function,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 137
 .  .  .  .  .  .  Line: 9
@@ -177,10 +222,18 @@ File {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  .  type: 40
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "f"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  6: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "g"
+.  .  .  .  7: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Body,Function,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 170
 .  .  .  .  .  .  Line: 10
@@ -196,6 +249,15 @@ File {
 .  .  .  .  .  .  flags: 0
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  .  type: 0
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "g"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

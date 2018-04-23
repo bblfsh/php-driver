@@ -2,12 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "testcls1"
+.  .  .  Roles: Declaration,Statement,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 6
 .  .  .  .  Line: 2
@@ -24,9 +23,15 @@ File {
 .  .  .  .  type: 0
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "testfnc1"
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "testcls1"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Body,Function,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 27
 .  .  .  .  .  .  Line: 3
@@ -43,10 +48,18 @@ File {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  .  type: 32
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "testfnc1"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "testfnc2"
+.  .  .  .  2: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Body,Function,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 60
 .  .  .  .  .  .  Line: 4
@@ -63,10 +76,18 @@ File {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  .  type: 4
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "testfnc2"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  2: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "testfnc3"
+.  .  .  .  3: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Body,Function,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 95
 .  .  .  .  .  .  Line: 5
@@ -83,10 +104,18 @@ File {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  .  type: 2
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "testfnc3"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  3: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "testfnc4"
+.  .  .  .  4: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Body,Function,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 132
 .  .  .  .  .  .  Line: 6
@@ -103,12 +132,20 @@ File {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  .  type: 1
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "testfnc4"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "testcls2"
+.  .  .  Roles: Declaration,Statement,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 165
 .  .  .  .  Line: 9
@@ -125,9 +162,15 @@ File {
 .  .  .  .  type: 16
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "testfnc5"
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "testcls2"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Body,Function,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 195
 .  .  .  .  .  .  Line: 10
@@ -143,6 +186,15 @@ File {
 .  .  .  .  .  .  flags: 16
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  .  type: 16
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "testfnc5"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

@@ -2,12 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_Unset {
-.  .  .  Roles: Expression,Call
-.  .  .  TOKEN "unset"
+.  .  .  Roles: Call,Expression
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -24,7 +23,6 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 13
 .  .  .  .  .  .  Line: 3
@@ -38,12 +36,20 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: vars
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Unset {
-.  .  .  Roles: Expression,Call
-.  .  .  TOKEN "unset"
+.  .  .  Roles: Call,Expression
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 18
 .  .  .  .  Line: 4
@@ -60,7 +66,6 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 24
 .  .  .  .  .  .  Line: 4
@@ -74,10 +79,18 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: vars
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 28
 .  .  .  .  .  .  Line: 4
@@ -90,6 +103,15 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: vars
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "c"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

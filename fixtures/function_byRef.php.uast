@@ -2,12 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_Function {
-.  .  .  Roles: Function,Declaration
-.  .  .  TOKEN "a"
+.  .  .  Roles: Declaration,Function
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -23,9 +22,20 @@ File {
 .  .  .  .  internalRole: children
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Param {
+.  .  .  .  0: Function.returnType {
+.  .  .  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: returnType
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Function.body {
+.  .  .  .  .  Roles: Body,Declaration,Function
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Param {
 .  .  .  .  .  Roles: Argument,Incomplete
-.  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 18
 .  .  .  .  .  .  Line: 3
@@ -41,12 +51,20 @@ File {
 .  .  .  .  .  .  internalRole: params
 .  .  .  .  .  .  variadic: false
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Function {
-.  .  .  Roles: Function,Declaration
-.  .  .  TOKEN "a"
+.  .  .  Roles: Declaration,Function
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 26
 .  .  .  .  Line: 4
@@ -62,9 +80,20 @@ File {
 .  .  .  .  internalRole: children
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Param {
+.  .  .  .  0: Function.returnType {
+.  .  .  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: returnType
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Function.body {
+.  .  .  .  .  Roles: Body,Declaration,Function
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Param {
 .  .  .  .  .  Roles: Argument
-.  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 38
 .  .  .  .  .  .  Line: 4
@@ -79,6 +108,15 @@ File {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: params
 .  .  .  .  .  .  variadic: false
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

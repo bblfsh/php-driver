@@ -2,11 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_If {
-.  .  .  Roles: Statement,If
+.  .  .  Roles: If,Statement
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -22,8 +22,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Condition
-.  .  .  .  .  TOKEN "a"
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 11
 .  .  .  .  .  .  Line: 3
@@ -37,10 +36,18 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: cond
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Expression,Body
-.  .  .  .  .  TOKEN "A"
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 15
 .  .  .  .  .  .  Line: 3
@@ -54,9 +61,18 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Stmt_ElseIf {
-.  .  .  .  .  Roles: Statement,If,Else
+.  .  .  .  .  Roles: Else,If,Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 19
 .  .  .  .  .  .  Line: 4
@@ -72,8 +88,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable,Condition
-.  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 27
 .  .  .  .  .  .  .  .  Line: 4
@@ -87,10 +102,18 @@ File {
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: cond
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable,Expression,Body
-.  .  .  .  .  .  .  TOKEN "B"
+.  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 31
 .  .  .  .  .  .  .  .  Line: 4
@@ -104,11 +127,20 @@ File {
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "B"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Stmt_Else {
-.  .  .  .  .  Roles: Statement,Else
+.  .  .  .  .  Roles: Else,Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 35
 .  .  .  .  .  .  Line: 5
@@ -124,8 +156,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable,Expression,Body
-.  .  .  .  .  .  .  TOKEN "C"
+.  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 40
 .  .  .  .  .  .  .  .  Line: 5
@@ -139,13 +170,22 @@ File {
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "C"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Stmt_For {
-.  .  .  Roles: Statement,For
+.  .  .  Roles: For,Statement
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 45
 .  .  .  .  Line: 7
@@ -161,8 +201,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Expression,Body
-.  .  .  .  .  TOKEN "foo"
+.  .  .  .  .  Roles: Body,For,Identifier,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 54
 .  .  .  .  .  .  Line: 7
@@ -176,11 +215,20 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "foo"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: Stmt_Foreach {
-.  .  .  Roles: Statement,For,Incomplete
+.  .  .  Roles: For,Incomplete,Statement
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 61
 .  .  .  .  Line: 9
@@ -198,7 +246,6 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 70
 .  .  .  .  .  .  Line: 9
@@ -212,10 +259,18 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Iterator
-.  .  .  .  .  TOKEN "b"
+.  .  .  .  .  Roles: Identifier,Iterator,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 76
 .  .  .  .  .  .  Line: 9
@@ -229,10 +284,18 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: valueVar
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Expression,Body
-.  .  .  .  .  TOKEN "AB"
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 80
 .  .  .  .  .  .  Line: 9
@@ -245,6 +308,15 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "AB"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -266,8 +338,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Condition
-.  .  .  .  .  TOKEN "a"
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 93
 .  .  .  .  .  .  Line: 11
@@ -281,10 +352,18 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: cond
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Expression,Body
-.  .  .  .  .  TOKEN "A"
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 97
 .  .  .  .  .  .  Line: 11
@@ -298,11 +377,20 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  4: Stmt_Do {
-.  .  .  Roles: Statement,DoWhile
+.  .  .  Roles: DoWhile,Statement
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 102
 .  .  .  .  Line: 13
@@ -318,8 +406,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Expression,Body
-.  .  .  .  .  TOKEN "A"
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 105
 .  .  .  .  .  .  Line: 13
@@ -333,10 +420,18 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Condition
-.  .  .  .  .  TOKEN "a"
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 116
 .  .  .  .  .  .  Line: 13
@@ -350,11 +445,20 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: cond
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  5: Stmt_Declare {
-.  .  .  Roles: Expression,Assignment,Incomplete
+.  .  .  Roles: Assignment,Expression,Incomplete
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 122
 .  .  .  .  Line: 15
@@ -387,7 +491,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String,Right
+.  .  .  .  .  .  .  Roles: Expression,Literal,Right,String
 .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 133
@@ -405,21 +509,37 @@ File {
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Expression,Body
-.  .  .  .  .  TOKEN "C"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 138
-.  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  Col: 17
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 139
-.  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  Col: 18
-.  .  .  .  .  }
+.  .  .  .  1: Declare.stmts {
+.  .  .  .  .  Roles: Assignment,Body
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Expr_Variable {
+.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 138
+.  .  .  .  .  .  .  .  Line: 15
+.  .  .  .  .  .  .  .  Col: 17
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 139
+.  .  .  .  .  .  .  .  Line: 15
+.  .  .  .  .  .  .  .  Col: 18
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "C"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

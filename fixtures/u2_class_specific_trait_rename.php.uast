@@ -2,12 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_Trait {
-.  .  .  Roles: Type,Declaration
-.  .  .  TOKEN "testtrait1"
+.  .  .  Roles: Declaration,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 6
 .  .  .  .  Line: 2
@@ -22,9 +21,15 @@ File {
 .  .  .  .  internalRole: children
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "testfnc1"
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "testtrait1"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Function,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 29
 .  .  .  .  .  .  Line: 3
@@ -41,12 +46,20 @@ File {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  .  type: 1
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "testfnc1"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "testcls1"
+.  .  .  Roles: Declaration,Statement,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 61
 .  .  .  .  Line: 5
@@ -63,8 +76,15 @@ File {
 .  .  .  .  type: 0
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_TraitUse {
-.  .  .  .  .  Roles: Expression,Body,Base
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "testcls1"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_TraitUse {
+.  .  .  .  .  Roles: Base,Body,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 82
 .  .  .  .  .  .  Line: 6
@@ -97,7 +117,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Stmt_TraitUseAdaptation_Alias {
-.  .  .  .  .  .  .  Roles: Statement,Alias
+.  .  .  .  .  .  .  Roles: Alias,Statement
 .  .  .  .  .  .  .  TOKEN "testfnc2"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 99

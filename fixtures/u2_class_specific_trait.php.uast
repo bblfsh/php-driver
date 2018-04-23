@@ -2,12 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_Trait {
-.  .  .  Roles: Type,Declaration
-.  .  .  TOKEN "testtrait1"
+.  .  .  Roles: Declaration,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 6
 .  .  .  .  Line: 2
@@ -21,10 +20,18 @@ File {
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "testtrait1"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
 .  .  1: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "testcls1"
+.  .  .  Roles: Declaration,Statement,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 26
 .  .  .  .  Line: 3
@@ -41,8 +48,15 @@ File {
 .  .  .  .  type: 0
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_TraitUse {
-.  .  .  .  .  Roles: Expression,Body,Base
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "testcls1"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_TraitUse {
+.  .  .  .  .  Roles: Base,Body,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 43
 .  .  .  .  .  .  Line: 3

@@ -2,12 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_Interface {
-.  .  .  Roles: Type,Declaration
-.  .  .  TOKEN "A"
+.  .  .  Roles: Declaration,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 6
 .  .  .  .  Line: 2
@@ -21,10 +20,18 @@ File {
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "A"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
 .  .  1: Stmt_Interface {
-.  .  .  Roles: Type,Declaration
-.  .  .  TOKEN "B"
+.  .  .  Roles: Declaration,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 21
 .  .  .  .  Line: 3
@@ -38,10 +45,18 @@ File {
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "B"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
 .  .  2: Stmt_Interface {
-.  .  .  Roles: Type,Declaration
-.  .  .  TOKEN "testiface1"
+.  .  .  Roles: Declaration,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 36
 .  .  .  .  Line: 4
@@ -57,7 +72,14 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier,Base,Type
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "testiface1"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Name {
+.  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 65
@@ -76,8 +98,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: Stmt_Interface {
-.  .  .  Roles: Type,Declaration
-.  .  .  TOKEN "testiface2"
+.  .  .  Roles: Declaration,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 70
 .  .  .  .  Line: 5
@@ -93,7 +114,14 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier,Base,Type
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "testiface2"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Name {
+.  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 99
@@ -109,8 +137,8 @@ File {
 .  .  .  .  .  .  internalRole: extends
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Name {
-.  .  .  .  .  Roles: Expression,Identifier,Base,Type
+.  .  .  .  2: Name {
+.  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  TOKEN "B"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 102

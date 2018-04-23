@@ -2,12 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "testcls1"
+.  .  .  Roles: Declaration,Statement,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 6
 .  .  .  .  Line: 2
@@ -25,6 +24,13 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "testcls1"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Name {
 .  .  .  .  .  Roles: Expression,Identifier,Implements
 .  .  .  .  .  TOKEN "testinterace1"
 .  .  .  .  .  StartPosition: {
@@ -44,8 +50,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "testcls2"
+.  .  .  Roles: Declaration,Statement,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 49
 .  .  .  .  Line: 3
@@ -63,6 +68,13 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "testcls2"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Name {
 .  .  .  .  .  Roles: Expression,Identifier,Implements
 .  .  .  .  .  TOKEN "testinterace2"
 .  .  .  .  .  StartPosition: {
@@ -79,7 +91,7 @@ File {
 .  .  .  .  .  .  internalRole: implements
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Name {
+.  .  .  .  2: Name {
 .  .  .  .  .  Roles: Expression,Identifier,Implements
 .  .  .  .  .  TOKEN "testinterface3"
 .  .  .  .  .  StartPosition: {

@@ -2,8 +2,8 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Expr_Include {
 .  .  .  Roles: Import
@@ -23,7 +23,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
+.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
 .  .  .  .  .  TOKEN "a.php"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 14
@@ -98,7 +98,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: Stmt_GroupUse {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Block,Incomplete
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 34
 .  .  .  .  Line: 3

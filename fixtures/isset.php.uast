@@ -2,12 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Expr_Isset {
-.  .  .  Roles: Expression,Call
-.  .  .  TOKEN "isset"
+.  .  .  Roles: Call,Expression
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -23,7 +22,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Expression,List,Value,Entry
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 13
 .  .  .  .  .  .  Line: 3
@@ -39,7 +38,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_BinaryOp_Plus {
-.  .  .  .  .  .  .  Roles: Expression,Operator,Add
+.  .  .  .  .  .  .  Roles: Add,Expression,Operator
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 14
 .  .  .  .  .  .  .  .  Line: 3
@@ -55,7 +54,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Array {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,List,Left
+.  .  .  .  .  .  .  .  .  Roles: Expression,Left,List,Literal
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 14
 .  .  .  .  .  .  .  .  .  .  Line: 3
@@ -71,7 +70,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Expr_ArrayItem {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,List,Entry
+.  .  .  .  .  .  .  .  .  .  .  Roles: Entry,Expression,List
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 15
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 3
@@ -107,7 +106,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: Expr_ArrayItem {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,List,Entry
+.  .  .  .  .  .  .  .  .  .  .  Roles: Entry,Expression,List
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 18
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 3
@@ -145,7 +144,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Expr_Array {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,List,Right
+.  .  .  .  .  .  .  .  .  Roles: Expression,List,Literal,Right
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 23
 .  .  .  .  .  .  .  .  .  .  Line: 3
@@ -184,8 +183,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Expr_Isset {
-.  .  .  Roles: Expression,Call
-.  .  .  TOKEN "isset"
+.  .  .  Roles: Call,Expression
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 32
 .  .  .  .  Line: 4
@@ -201,8 +199,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_PropertyFetch {
-.  .  .  .  .  Roles: Expression,Map,Identifier,Entry,Value
-.  .  .  .  .  TOKEN "a"
+.  .  .  .  .  Roles: Entry,Expression,Identifier,Map,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 38
 .  .  .  .  .  .  Line: 4
@@ -217,8 +214,15 @@ File {
 .  .  .  .  .  .  internalRole: vars
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Array {
-.  .  .  .  .  .  .  Roles: Expression,Literal,List
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Expr_Array {
+.  .  .  .  .  .  .  Roles: Expression,List,Literal
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 38
 .  .  .  .  .  .  .  .  Line: 4
@@ -234,7 +238,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_ArrayItem {
-.  .  .  .  .  .  .  .  .  Roles: Expression,List,Entry
+.  .  .  .  .  .  .  .  .  Roles: Entry,Expression,List
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 39
 .  .  .  .  .  .  .  .  .  .  Line: 4
@@ -293,8 +297,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: Expr_Isset {
-.  .  .  Roles: Expression,Call
-.  .  .  TOKEN "isset"
+.  .  .  Roles: Call,Expression
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 56
 .  .  .  .  Line: 5
@@ -310,8 +313,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_PropertyFetch {
-.  .  .  .  .  Roles: Expression,Map,Identifier,Entry,Value
-.  .  .  .  .  TOKEN "a"
+.  .  .  .  .  Roles: Entry,Expression,Identifier,Map,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 62
 .  .  .  .  .  .  Line: 5
@@ -326,7 +328,14 @@ File {
 .  .  .  .  .  .  internalRole: vars
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Scalar_String {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Scalar_String {
 .  .  .  .  .  .  .  Roles: Expression,Literal,String
 .  .  .  .  .  .  .  TOKEN "str"
 .  .  .  .  .  .  .  StartPosition: {

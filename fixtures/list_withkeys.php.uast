@@ -2,11 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Expr_Assign {
-.  .  .  Roles: Expression,Assignment
+.  .  .  Roles: Assignment,Expression
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -22,8 +22,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_List {
-.  .  .  .  .  Roles: Left,Call,List
-.  .  .  .  .  TOKEN "list"
+.  .  .  .  .  Roles: Call,Left,List
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 7
 .  .  .  .  .  .  Line: 3
@@ -39,7 +38,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_ArrayItem {
-.  .  .  .  .  .  .  Roles: Expression,List,Entry
+.  .  .  .  .  .  .  Roles: Entry,Expression,List
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 12
 .  .  .  .  .  .  .  .  Line: 3
@@ -74,7 +73,6 @@ File {
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Expr_Variable {
 .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 19
 .  .  .  .  .  .  .  .  .  .  Line: 3
@@ -88,13 +86,22 @@ File {
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: value
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Array {
-.  .  .  .  .  Roles: Expression,Literal,List,Right
+.  .  .  .  .  Roles: Expression,List,Literal,Right
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 25
 .  .  .  .  .  .  Line: 3
@@ -110,7 +117,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_ArrayItem {
-.  .  .  .  .  .  .  Roles: Expression,List,Entry
+.  .  .  .  .  .  .  Roles: Entry,Expression,List
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 26
 .  .  .  .  .  .  .  .  Line: 3
@@ -167,7 +174,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Expr_Assign {
-.  .  .  Roles: Expression,Assignment
+.  .  .  Roles: Assignment,Expression
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 39
 .  .  .  .  Line: 4
@@ -183,8 +190,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_List {
-.  .  .  .  .  Roles: Left,Call,List
-.  .  .  .  .  TOKEN "list"
+.  .  .  .  .  Roles: Call,Left,List
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 39
 .  .  .  .  .  .  Line: 4
@@ -200,7 +206,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_ArrayItem {
-.  .  .  .  .  .  .  Roles: Expression,List,Entry
+.  .  .  .  .  .  .  Roles: Entry,Expression,List
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 44
 .  .  .  .  .  .  .  .  Line: 4
@@ -235,7 +241,6 @@ File {
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Expr_List {
 .  .  .  .  .  .  .  .  .  Roles: Call,List
-.  .  .  .  .  .  .  .  .  TOKEN "list"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 51
 .  .  .  .  .  .  .  .  .  .  Line: 4
@@ -251,7 +256,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Expr_ArrayItem {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,List,Entry
+.  .  .  .  .  .  .  .  .  .  .  Roles: Entry,Expression,List
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 56
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 4
@@ -269,7 +274,6 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 56
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 4
@@ -283,10 +287,18 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: key
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: Expr_Variable {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 62
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 4
@@ -300,6 +312,15 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "c"
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
@@ -308,7 +329,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_ArrayItem {
-.  .  .  .  .  .  .  Roles: Expression,List,Entry
+.  .  .  .  .  .  .  Roles: Entry,Expression,List
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 67
 .  .  .  .  .  .  .  .  Line: 4
@@ -343,7 +364,6 @@ File {
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Expr_Variable {
 .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  .  .  TOKEN "e"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 74
 .  .  .  .  .  .  .  .  .  .  Line: 4
@@ -357,14 +377,22 @@ File {
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: value
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "e"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  TOKEN "x"
+.  .  .  .  .  Roles: Identifier,Right,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 80
 .  .  .  .  .  .  Line: 4
@@ -378,11 +406,20 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "x"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: Expr_Assign {
-.  .  .  Roles: Expression,Assignment
+.  .  .  Roles: Assignment,Expression
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 84
 .  .  .  .  Line: 5
@@ -398,8 +435,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_List {
-.  .  .  .  .  Roles: Left,Call,List
-.  .  .  .  .  TOKEN "list"
+.  .  .  .  .  Roles: Call,Left,List
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 84
 .  .  .  .  .  .  Line: 5
@@ -415,7 +451,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_ArrayItem {
-.  .  .  .  .  .  .  Roles: Expression,List,Entry
+.  .  .  .  .  .  .  Roles: Entry,Expression,List
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 89
 .  .  .  .  .  .  .  .  Line: 5
@@ -433,7 +469,6 @@ File {
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 89
 .  .  .  .  .  .  .  .  .  .  Line: 5
@@ -447,11 +482,20 @@ File {
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: value
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_ArrayItem {
-.  .  .  .  .  .  .  Roles: Expression,List,Entry
+.  .  .  .  .  .  .  Roles: Entry,Expression,List
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 93
 .  .  .  .  .  .  .  .  Line: 5
@@ -469,7 +513,6 @@ File {
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 93
 .  .  .  .  .  .  .  .  .  .  Line: 5
@@ -483,14 +526,22 @@ File {
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: value
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  TOKEN "c"
+.  .  .  .  .  Roles: Identifier,Right,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 99
 .  .  .  .  .  .  Line: 5
@@ -503,6 +554,15 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "c"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

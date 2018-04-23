@@ -2,12 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_Echo {
-.  .  .  Roles: Statement,Call
-.  .  .  TOKEN "echo"
+.  .  .  Roles: Call,Statement
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 46
 .  .  .  .  Line: 3
@@ -23,21 +22,16 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Noop,Comment
+.  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  TOKEN " this is a simple hello world example
 "
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 6
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 46
-.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 1
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Scalar_String {

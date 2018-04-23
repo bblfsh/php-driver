@@ -2,12 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Expr_StaticPropertyFetch {
-.  .  .  Roles: Expression,Map,Identifier,Entry,Value,Incomplete
-.  .  .  TOKEN "b"
+.  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 35
 .  .  .  .  Line: 4
@@ -22,26 +21,28 @@ File {
 .  .  .  .  internalRole: children
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Noop,Comment
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "b"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Comment {
+.  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  TOKEN " property name variations
 "
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 7
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 35
-.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 1
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Name {
-.  .  .  .  .  Roles: Expression,Identifier,Qualified
+.  .  .  .  2: Name {
+.  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 35
@@ -58,21 +59,16 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  Roles: Noop,Comment
+.  .  .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  .  .  TOKEN " property name variations
 "
 .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 7
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 35
-.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 1
 .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -80,7 +76,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Expr_StaticPropertyFetch {
-.  .  .  Roles: Expression,Map,Identifier,Entry,Value,Incomplete
+.  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 42
 .  .  .  .  Line: 5
@@ -96,7 +92,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier,Qualified
+.  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 42
@@ -114,7 +110,6 @@ File {
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 45
 .  .  .  .  .  .  Line: 5
@@ -128,11 +123,20 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: name
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: Expr_StaticPropertyFetch {
-.  .  .  Roles: Expression,Map,Identifier,Entry,Value,Incomplete
+.  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 50
 .  .  .  .  Line: 6
@@ -148,7 +152,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier,Qualified
+.  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 50
@@ -184,7 +188,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: Expr_ArrayDimFetch {
-.  .  .  Roles: Expression,List,Value,Entry
+.  .  .  Roles: Entry,Expression,List,Value
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 78
 .  .  .  .  Line: 9
@@ -200,26 +204,20 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Noop,Comment
+.  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  TOKEN " array access
 "
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 62
-.  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 78
-.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 1
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_StaticPropertyFetch {
-.  .  .  .  .  Roles: Expression,Map,Identifier,Entry,Value,Incomplete
-.  .  .  .  .  TOKEN "b"
+.  .  .  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 78
 .  .  .  .  .  .  Line: 9
@@ -234,26 +232,28 @@ File {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  Roles: Noop,Comment
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Comment {
+.  .  .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  .  .  TOKEN " array access
 "
 .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 62
-.  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 78
-.  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 1
 .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Qualified
+.  .  .  .  .  .  2: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 78
@@ -270,21 +270,16 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  .  .  Roles: Noop,Comment
+.  .  .  .  .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  .  .  .  .  TOKEN " array access
 "
 .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 62
-.  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 78
-.  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 1
 .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
@@ -311,7 +306,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  4: Expr_ArrayDimFetch {
-.  .  .  Roles: Expression,List,Value,Entry
+.  .  .  Roles: Entry,Expression,List,Value
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 90
 .  .  .  .  Line: 10
@@ -327,8 +322,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_StaticPropertyFetch {
-.  .  .  .  .  Roles: Expression,Map,Identifier,Entry,Value,Incomplete
-.  .  .  .  .  TOKEN "b"
+.  .  .  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 90
 .  .  .  .  .  .  Line: 10
@@ -344,7 +338,14 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Qualified
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 90

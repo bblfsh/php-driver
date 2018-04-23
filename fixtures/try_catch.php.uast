@@ -2,8 +2,8 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_TryCatch {
 .  .  .  Roles: Statement,Try
@@ -22,7 +22,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Expr_FuncCall {
-.  .  .  .  .  Roles: Expression,Body,Call
+.  .  .  .  .  Roles: Call,Expression
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 17
 .  .  .  .  .  .  Line: 4
@@ -38,7 +38,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Name
+.  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "doTry"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 17
@@ -57,7 +57,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Stmt_Catch {
-.  .  .  .  .  Roles: Statement,Catch
+.  .  .  .  .  Roles: Catch,Type
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 28
@@ -74,7 +74,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Catch,Type
+.  .  .  .  .  .  .  Roles: Catch,Expression,Identifier,Type
 .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 35
@@ -91,7 +91,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_FuncCall {
-.  .  .  .  .  .  .  Roles: Expression,Body,Call
+.  .  .  .  .  .  .  Roles: Body,Call,Catch,Expression
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 47
 .  .  .  .  .  .  .  .  Line: 6
@@ -107,7 +107,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Name
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "doCatchA"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 47
@@ -128,7 +128,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Stmt_Catch {
-.  .  .  .  .  Roles: Statement,Catch
+.  .  .  .  .  Roles: Catch,Type
 .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 61
@@ -145,7 +145,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Catch,Type
+.  .  .  .  .  .  .  Roles: Catch,Expression,Identifier,Type
 .  .  .  .  .  .  .  TOKEN "B"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 68
@@ -162,7 +162,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_FuncCall {
-.  .  .  .  .  .  .  Roles: Expression,Body,Call
+.  .  .  .  .  .  .  Roles: Body,Call,Catch,Expression
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 80
 .  .  .  .  .  .  .  .  Line: 8
@@ -178,7 +178,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Name
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "doCatchB"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 80
@@ -199,7 +199,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Stmt_Finally {
-.  .  .  .  .  Roles: Statement,Finally
+.  .  .  .  .  Roles: Finally,Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 94
 .  .  .  .  .  .  Line: 9
@@ -215,7 +215,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Expr_FuncCall {
-.  .  .  .  .  .  .  Roles: Expression,Body,Call
+.  .  .  .  .  .  .  Roles: Call,Expression
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 108
 .  .  .  .  .  .  .  .  Line: 10
@@ -231,7 +231,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Name
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "doFinally"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 108
@@ -270,25 +270,20 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Noop,Comment
+.  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  TOKEN " no finally
 "
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 124
-.  .  .  .  .  .  Line: 13
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 138
-.  .  .  .  .  .  Line: 14
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 1
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Stmt_Catch {
-.  .  .  .  .  Roles: Statement,Catch
+.  .  .  .  .  Roles: Catch,Type
 .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 146
@@ -305,7 +300,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Catch,Type
+.  .  .  .  .  .  .  Roles: Catch,Expression,Identifier,Type
 .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 153
@@ -342,25 +337,20 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Noop,Comment
+.  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  TOKEN " no catch
 "
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 164
-.  .  .  .  .  .  Line: 17
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 176
-.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 1
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Stmt_Finally {
-.  .  .  .  .  Roles: Statement,Finally
+.  .  .  .  .  Roles: Finally,Statement
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 184
 .  .  .  .  .  .  Line: 19
