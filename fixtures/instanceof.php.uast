@@ -3,10 +3,11 @@ Language:  php
 Errors: 
 UAST: 
 Expr_Instanceof {
-.  Roles: Unannotated
+.  Roles: Call,Expression
+.  TOKEN "instanceof"
 .  Children: {
 .  .  0:  {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Incomplete
 .  .  .  Properties: {
 .  .  .  .  endFilePos: 22
 .  .  .  .  endLine: 3
@@ -18,14 +19,14 @@ Expr_Instanceof {
 .  .  .  }
 .  .  }
 .  .  1: Expr_Variable {
-.  .  .  Roles: Identifier,Variable
+.  .  .  Roles: Argument,Call,Identifier,Type,Variable
 .  .  .  Properties: {
 .  .  .  .  internalRole: class
 .  .  .  .  name: b
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 22
 .  .  .  .  .  .  endLine: 3
@@ -39,14 +40,14 @@ Expr_Instanceof {
 .  .  .  }
 .  .  }
 .  .  2: Expr_Variable {
-.  .  .  Roles: Identifier,Variable
+.  .  .  Roles: Argument,Call,Identifier,Type,Variable
 .  .  .  Properties: {
 .  .  .  .  internalRole: expr
 .  .  .  .  name: a
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 8
 .  .  .  .  .  .  endLine: 3

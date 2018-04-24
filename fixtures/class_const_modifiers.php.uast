@@ -4,14 +4,14 @@ Errors:
 UAST: 
 Stmt_Class {
 .  Roles: Declaration,Statement,Type
+.  TOKEN "Foo"
 .  Properties: {
 .  .  flags: 0
-.  .  name: Foo
 .  .  type: 0
 .  }
 .  Children: {
 .  .  0:  {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Incomplete
 .  .  .  Properties: {
 .  .  .  .  endFilePos: 112
 .  .  .  .  endLine: 8
@@ -23,14 +23,14 @@ Stmt_Class {
 .  .  .  }
 .  .  }
 .  .  1: Stmt_ClassConst {
-.  .  .  Roles: Incomplete,Type,Variable
+.  .  .  Roles: Body,Incomplete,Type,Variable
 .  .  .  Properties: {
 .  .  .  .  flags: 0
 .  .  .  .  internalRole: stmts
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 34
 .  .  .  .  .  .  endLine: 4
@@ -49,7 +49,7 @@ Stmt_Class {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 33
 .  .  .  .  .  .  .  .  endLine: 4
@@ -68,7 +68,7 @@ Stmt_Class {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  endFilePos: 33
 .  .  .  .  .  .  .  .  .  .  endLine: 4
@@ -87,14 +87,14 @@ Stmt_Class {
 .  .  .  }
 .  .  }
 .  .  2: Stmt_ClassConst {
-.  .  .  Roles: Incomplete,Type,Variable
+.  .  .  Roles: Body,Incomplete,Type,Variable
 .  .  .  Properties: {
 .  .  .  .  flags: 1
 .  .  .  .  internalRole: stmts
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 58
 .  .  .  .  .  .  endLine: 5
@@ -113,7 +113,7 @@ Stmt_Class {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 57
 .  .  .  .  .  .  .  .  endLine: 5
@@ -132,7 +132,7 @@ Stmt_Class {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  endFilePos: 57
 .  .  .  .  .  .  .  .  .  .  endLine: 5
@@ -151,14 +151,14 @@ Stmt_Class {
 .  .  .  }
 .  .  }
 .  .  3: Stmt_ClassConst {
-.  .  .  Roles: Incomplete,Type,Variable
+.  .  .  Roles: Body,Incomplete,Type,Variable
 .  .  .  Properties: {
 .  .  .  .  flags: 2
 .  .  .  .  internalRole: stmts
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 85
 .  .  .  .  .  .  endLine: 6
@@ -177,7 +177,7 @@ Stmt_Class {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 84
 .  .  .  .  .  .  .  .  endLine: 6
@@ -196,7 +196,7 @@ Stmt_Class {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  endFilePos: 84
 .  .  .  .  .  .  .  .  .  .  endLine: 6
@@ -215,14 +215,14 @@ Stmt_Class {
 .  .  .  }
 .  .  }
 .  .  4: Stmt_ClassConst {
-.  .  .  Roles: Incomplete,Type,Variable
+.  .  .  Roles: Body,Incomplete,Type,Variable
 .  .  .  Properties: {
 .  .  .  .  flags: 4
 .  .  .  .  internalRole: stmts
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 110
 .  .  .  .  .  .  endLine: 7
@@ -241,7 +241,7 @@ Stmt_Class {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 109
 .  .  .  .  .  .  .  .  endLine: 7
@@ -260,7 +260,7 @@ Stmt_Class {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  endFilePos: 109
 .  .  .  .  .  .  .  .  .  .  endLine: 7

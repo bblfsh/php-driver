@@ -5,10 +5,10 @@ UAST:
  {
 .  Children: {
 .  .  0: Stmt_Declare {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Assignment,Expression,Incomplete
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 22
 .  .  .  .  .  .  endLine: 3
@@ -20,14 +20,14 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Stmt_DeclareDeclare {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Left
+.  .  .  .  .  TOKEN "X"
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: declares
-.  .  .  .  .  .  key: X
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 20
 .  .  .  .  .  .  .  .  endLine: 3
@@ -39,14 +39,14 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_String {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  Roles: Expression,Literal,Right,String
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: value
 .  .  .  .  .  .  .  .  value: Y
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  endFilePos: 20
 .  .  .  .  .  .  .  .  .  .  endLine: 3
@@ -62,13 +62,19 @@ UAST:
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
+.  .  .  .  2: Declare.stmts {
+.  .  .  .  .  Roles: Assignment,Body
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Declare {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Assignment,Expression,Incomplete
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 49
 .  .  .  .  .  .  endLine: 5
@@ -80,14 +86,14 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Stmt_DeclareDeclare {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Left
+.  .  .  .  .  TOKEN "A"
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: declares
-.  .  .  .  .  .  key: A
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 38
 .  .  .  .  .  .  .  .  endLine: 5
@@ -99,14 +105,14 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_String {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  Roles: Expression,Literal,Right,String
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: value
 .  .  .  .  .  .  .  .  value: B
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  endFilePos: 38
 .  .  .  .  .  .  .  .  .  .  endLine: 5
@@ -123,14 +129,14 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Stmt_DeclareDeclare {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Left
+.  .  .  .  .  TOKEN "C"
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: declares
-.  .  .  .  .  .  key: C
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 45
 .  .  .  .  .  .  .  .  endLine: 5
@@ -142,14 +148,14 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_String {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  Roles: Expression,Literal,Right,String
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: value
 .  .  .  .  .  .  .  .  value: D
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  endFilePos: 45
 .  .  .  .  .  .  .  .  .  .  endLine: 5
@@ -165,13 +171,19 @@ UAST:
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
+.  .  .  .  3: Declare.stmts {
+.  .  .  .  .  Roles: Assignment,Body
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: Stmt_Declare {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Assignment,Expression,Incomplete
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 86
 .  .  .  .  .  .  endLine: 8
@@ -183,14 +195,14 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Stmt_DeclareDeclare {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Left
+.  .  .  .  .  TOKEN "A"
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: declares
-.  .  .  .  .  .  key: A
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 65
 .  .  .  .  .  .  .  .  endLine: 7
@@ -202,14 +214,14 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_String {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  Roles: Expression,Literal,Right,String
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: value
 .  .  .  .  .  .  .  .  value: B
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  endFilePos: 65
 .  .  .  .  .  .  .  .  .  .  endLine: 7
@@ -226,14 +238,14 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Stmt_DeclareDeclare {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier,Left
+.  .  .  .  .  TOKEN "C"
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: declares
-.  .  .  .  .  .  key: C
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 72
 .  .  .  .  .  .  .  .  endLine: 7
@@ -245,14 +257,14 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_String {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  Roles: Expression,Literal,Right,String
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: value
 .  .  .  .  .  .  .  .  value: D
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  endFilePos: 72
 .  .  .  .  .  .  .  .  .  .  endLine: 7
@@ -266,6 +278,12 @@ UAST:
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: Declare.stmts {
+.  .  .  .  .  Roles: Assignment,Body
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

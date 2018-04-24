@@ -4,14 +4,14 @@ Errors:
 UAST: 
 Stmt_Class {
 .  Roles: Declaration,Statement,Type
+.  TOKEN "testcls1"
 .  Properties: {
 .  .  flags: 0
-.  .  name: testcls1
 .  .  type: 0
 .  }
 .  Children: {
 .  .  0:  {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Incomplete
 .  .  .  Properties: {
 .  .  .  .  endFilePos: 38
 .  .  .  .  endLine: 4
@@ -23,7 +23,7 @@ Stmt_Class {
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Property {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Body,Incomplete,Type,Variable
 .  .  .  Properties: {
 .  .  .  .  flags: 8
 .  .  .  .  internalRole: stmts
@@ -31,7 +31,7 @@ Stmt_Class {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 36
 .  .  .  .  .  .  endLine: 3
@@ -43,14 +43,14 @@ Stmt_Class {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Stmt_PropertyProperty {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete,Type,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: props
 .  .  .  .  .  .  name: a
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 35
 .  .  .  .  .  .  .  .  endLine: 3

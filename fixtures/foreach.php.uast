@@ -5,13 +5,13 @@ UAST:
  {
 .  Children: {
 .  .  0: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: For,Incomplete,Statement
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 51
 .  .  .  .  .  .  endLine: 4
@@ -42,7 +42,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 40
 .  .  .  .  .  .  .  .  endLine: 4
@@ -56,14 +56,14 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Iterator,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: valueVar
 .  .  .  .  .  .  name: b
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 46
 .  .  .  .  .  .  .  .  endLine: 4
@@ -79,13 +79,13 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: For,Incomplete,Statement
 .  .  .  Properties: {
 .  .  .  .  byRef: true
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 74
 .  .  .  .  .  .  endLine: 5
@@ -104,7 +104,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 63
 .  .  .  .  .  .  .  .  endLine: 5
@@ -118,14 +118,14 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Iterator,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: valueVar
 .  .  .  .  .  .  name: b
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 70
 .  .  .  .  .  .  .  .  endLine: 5
@@ -141,13 +141,13 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  2: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: For,Incomplete,Statement
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 102
 .  .  .  .  .  .  endLine: 6
@@ -166,7 +166,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 86
 .  .  .  .  .  .  .  .  endLine: 6
@@ -187,7 +187,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 92
 .  .  .  .  .  .  .  .  endLine: 6
@@ -201,14 +201,14 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Iterator,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: valueVar
 .  .  .  .  .  .  name: c
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 98
 .  .  .  .  .  .  .  .  endLine: 6
@@ -224,13 +224,13 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  3: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: For,Incomplete,Statement
 .  .  .  Properties: {
 .  .  .  .  byRef: true
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 131
 .  .  .  .  .  .  endLine: 7
@@ -249,7 +249,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 114
 .  .  .  .  .  .  .  .  endLine: 7
@@ -270,7 +270,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 120
 .  .  .  .  .  .  .  .  endLine: 7
@@ -284,14 +284,14 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Iterator,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: valueVar
 .  .  .  .  .  .  name: c
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 127
 .  .  .  .  .  .  .  .  endLine: 7
@@ -307,13 +307,13 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  4: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: For,Incomplete,Statement
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 163
 .  .  .  .  .  .  endLine: 8
@@ -332,7 +332,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 143
 .  .  .  .  .  .  .  .  endLine: 8
@@ -346,13 +346,13 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_List {
-.  .  .  .  .  Roles: Call,List
+.  .  .  .  .  Roles: Call,Iterator,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: valueVar
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 159
 .  .  .  .  .  .  .  .  endLine: 8
@@ -371,7 +371,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  endFilePos: 154
 .  .  .  .  .  .  .  .  .  .  endLine: 8
@@ -390,7 +390,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  endFilePos: 154
 .  .  .  .  .  .  .  .  .  .  .  .  endLine: 8
@@ -413,7 +413,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  endFilePos: 158
 .  .  .  .  .  .  .  .  .  .  endLine: 8
@@ -432,7 +432,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  endFilePos: 158
 .  .  .  .  .  .  .  .  .  .  .  .  endLine: 8
@@ -452,13 +452,13 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  5: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: For,Incomplete,Statement
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 203
 .  .  .  .  .  .  endLine: 9
@@ -477,7 +477,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 175
 .  .  .  .  .  .  .  .  endLine: 9
@@ -498,7 +498,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 181
 .  .  .  .  .  .  .  .  endLine: 9
@@ -512,13 +512,13 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Expr_List {
-.  .  .  .  .  Roles: Call,List
+.  .  .  .  .  Roles: Call,Iterator,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: valueVar
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 199
 .  .  .  .  .  .  .  .  endLine: 9
@@ -537,7 +537,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  endFilePos: 192
 .  .  .  .  .  .  .  .  .  .  endLine: 9
@@ -556,7 +556,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  endFilePos: 192
 .  .  .  .  .  .  .  .  .  .  .  .  endLine: 9
@@ -579,7 +579,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  endFilePos: 198
 .  .  .  .  .  .  .  .  .  .  endLine: 9
@@ -598,7 +598,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  endFilePos: 198
 .  .  .  .  .  .  .  .  .  .  .  .  endLine: 9
@@ -618,13 +618,13 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  6: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: For,Incomplete,Statement
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 230
 .  .  .  .  .  .  endLine: 10
@@ -642,7 +642,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 220
 .  .  .  .  .  .  .  .  endLine: 10
@@ -657,14 +657,14 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Iterator,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: valueVar
 .  .  .  .  .  .  name: b
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 226
 .  .  .  .  .  .  .  .  endLine: 10
@@ -680,13 +680,13 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  7: Stmt_Foreach {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: For,Incomplete,Statement
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 262
 .  .  .  .  .  .  endLine: 12
@@ -705,7 +705,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 242
 .  .  .  .  .  .  .  .  endLine: 11
@@ -719,14 +719,14 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Iterator,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: valueVar
 .  .  .  .  .  .  name: b
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 248
 .  .  .  .  .  .  .  .  endLine: 11

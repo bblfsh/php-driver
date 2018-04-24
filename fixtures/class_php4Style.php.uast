@@ -4,14 +4,14 @@ Errors:
 UAST: 
 Stmt_Class {
 .  Roles: Declaration,Statement,Type
+.  TOKEN "A"
 .  Properties: {
 .  .  flags: 0
-.  .  name: A
 .  .  type: 0
 .  }
 .  Children: {
 .  .  0:  {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Incomplete
 .  .  .  Properties: {
 .  .  .  .  endFilePos: 91
 .  .  .  .  endLine: 7
@@ -23,7 +23,7 @@ Stmt_Class {
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Property {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Body,Incomplete,Type,Variable
 .  .  .  Properties: {
 .  .  .  .  flags: 0
 .  .  .  .  internalRole: stmts
@@ -31,7 +31,7 @@ Stmt_Class {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 29
 .  .  .  .  .  .  endLine: 4
@@ -43,14 +43,14 @@ Stmt_Class {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Stmt_PropertyProperty {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete,Type,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: props
 .  .  .  .  .  .  name: foo
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  endFilePos: 28
 .  .  .  .  .  .  .  .  endLine: 4
@@ -66,7 +66,7 @@ Stmt_Class {
 .  .  .  }
 .  .  }
 .  .  2: Stmt_ClassMethod {
-.  .  .  Roles: Function,Type
+.  .  .  Roles: Body,Function,Type
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  flags: 0
@@ -76,7 +76,7 @@ Stmt_Class {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 51
 .  .  .  .  .  .  endLine: 5
@@ -90,7 +90,7 @@ Stmt_Class {
 .  .  .  }
 .  .  }
 .  .  3: Stmt_ClassMethod {
-.  .  .  Roles: Function,Type
+.  .  .  Roles: Body,Function,Type
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  flags: 24
@@ -100,7 +100,7 @@ Stmt_Class {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Incomplete
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  endFilePos: 89
 .  .  .  .  .  .  endLine: 6
