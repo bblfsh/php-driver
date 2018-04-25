@@ -382,7 +382,7 @@ var Annotations = []Mapping{
 		"cond": {role.Switch, role.Condition},
 	}, role.Statement, role.Switch),
 
-	// XXX
+	// XXX case
 	/*
 		On(phpast.Case).Roles(uast.Statement, uast.Case).Self(
 			On(Not(HasChild(HasInternalRole("cond")))).Roles(uast.Default),
