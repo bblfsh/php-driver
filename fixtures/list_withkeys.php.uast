@@ -5,7 +5,7 @@ UAST:
  {
 .  Children: {
 .  .  0: Expr_Assign {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Assignment,Expression
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Incomplete
@@ -20,7 +20,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Array {
-.  .  .  .  .  Roles: Expression,List,Literal
+.  .  .  .  .  Roles: Expression,List,Literal,Right
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  }
@@ -106,7 +106,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_List {
-.  .  .  .  .  Roles: Call,List
+.  .  .  .  .  Roles: Call,Left,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }
@@ -192,7 +192,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  1: Expr_Assign {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Assignment,Expression
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Incomplete
@@ -207,7 +207,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Right,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  name: x
@@ -228,7 +228,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_List {
-.  .  .  .  .  Roles: Call,List
+.  .  .  .  .  Roles: Call,Left,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }
@@ -440,7 +440,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  2: Expr_Assign {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Assignment,Expression
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Incomplete
@@ -455,7 +455,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Right,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  name: c
@@ -476,7 +476,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_List {
-.  .  .  .  .  Roles: Call,List
+.  .  .  .  .  Roles: Call,Left,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }

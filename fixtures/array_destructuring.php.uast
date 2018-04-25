@@ -5,7 +5,7 @@ UAST:
  {
 .  Children: {
 .  .  0: Expr_Assign {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Assignment,Expression
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Incomplete
@@ -20,7 +20,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Array {
-.  .  .  .  .  Roles: Expression,List,Literal
+.  .  .  .  .  Roles: Expression,List,Literal,Right
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  }
@@ -125,7 +125,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Array {
-.  .  .  .  .  Roles: Expression,List,Literal
+.  .  .  .  .  Roles: Expression,Left,List,Literal
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }
@@ -232,7 +232,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  1: Expr_Assign {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Assignment,Expression
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Incomplete
@@ -247,7 +247,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Right,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  name: foo
@@ -268,7 +268,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Array {
-.  .  .  .  .  Roles: Expression,List,Literal
+.  .  .  .  .  Roles: Expression,Left,List,Literal
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }
@@ -375,7 +375,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  2: Expr_Assign {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Assignment,Expression
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Incomplete
@@ -390,7 +390,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Right,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  name: bar
@@ -411,7 +411,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Array {
-.  .  .  .  .  Roles: Expression,List,Literal
+.  .  .  .  .  Roles: Expression,Left,List,Literal
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }
@@ -602,7 +602,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  3: Expr_Assign {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Assignment,Expression
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Incomplete
@@ -617,7 +617,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Right,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  name: baz
@@ -638,7 +638,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Array {
-.  .  .  .  .  Roles: Expression,List,Literal
+.  .  .  .  .  Roles: Expression,Left,List,Literal
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }

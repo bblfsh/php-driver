@@ -762,7 +762,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  9: Expr_Assign {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Assignment,Expression
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Incomplete
@@ -777,7 +777,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_BinaryOp_BooleanOr {
-.  .  .  .  .  Roles: Binary,Boolean,Expression,Operator,Or
+.  .  .  .  .  Roles: Binary,Boolean,Expression,Operator,Or,Right
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  }
@@ -839,7 +839,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  name: a
@@ -877,7 +877,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Assign {
-.  .  .  .  .  Roles: Left
+.  .  .  .  .  Roles: Assignment,Expression,Left
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: left
 .  .  .  .  .  }
@@ -895,7 +895,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  Roles: Identifier,Right,Variable
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  .  .  name: b
@@ -916,7 +916,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  .  .  name: a

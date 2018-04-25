@@ -82,7 +82,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Assign {
-.  .  .  .  .  Roles: Expression,For,Initialization
+.  .  .  .  .  Roles: Assignment,Expression,For,Initialization
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: init
 .  .  .  .  .  }
@@ -100,7 +100,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  .  .  value: 0
@@ -122,7 +122,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  .  .  name: i

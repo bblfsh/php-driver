@@ -143,7 +143,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: Expr_Assign {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Assignment,Expression
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  }
@@ -161,7 +161,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  .  .  value: 1
@@ -183,7 +183,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  .  .  name: x

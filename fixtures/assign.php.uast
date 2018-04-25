@@ -5,7 +5,7 @@ UAST:
  {
 .  Children: {
 .  .  0: Expr_Assign {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Assignment,Expression
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Incomplete
@@ -20,7 +20,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  value: 1
@@ -42,7 +42,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  name: a
@@ -65,7 +65,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  1: Expr_AssignOp_Plus {
-.  .  .  Roles: Add,Expression,Operator
+.  .  .  Roles: Add,Assignment,Expression,Operator
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Incomplete
@@ -80,7 +80,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  value: 1
@@ -102,7 +102,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  name: b
@@ -125,7 +125,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  2: Expr_AssignOp_Minus {
-.  .  .  Roles: Expression,Operator,Substract
+.  .  .  Roles: Assignment,Expression,Operator,Substract
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Incomplete
@@ -140,7 +140,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  value: 1
@@ -162,7 +162,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  name: c
@@ -185,7 +185,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  3: Expr_AssignOp_Mul {
-.  .  .  Roles: Expression,Multiply,Operator
+.  .  .  Roles: Assignment,Expression,Multiply,Operator
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Incomplete
@@ -200,7 +200,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  value: 1
@@ -222,7 +222,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  name: d
@@ -245,7 +245,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  4: Expr_AssignOp_Div {
-.  .  .  Roles: Divide,Expression,Operator
+.  .  .  Roles: Assignment,Divide,Expression,Operator
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Incomplete
@@ -260,7 +260,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  value: 1
@@ -282,7 +282,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  name: f
@@ -305,7 +305,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  5: Expr_AssignOp_Mod {
-.  .  .  Roles: Expression,Modulo,Operator
+.  .  .  Roles: Assignment,Expression,Modulo,Operator
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Incomplete
@@ -320,7 +320,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  value: 1
@@ -342,7 +342,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  name: g

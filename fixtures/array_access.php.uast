@@ -167,7 +167,7 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  2: Expr_Assign {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Assignment,Expression
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Incomplete
@@ -182,7 +182,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  Roles: Identifier,Right,Variable
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  name: b
@@ -203,7 +203,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Entry,Expression,List,Value
+.  .  .  .  .  Roles: Entry,Expression,Left,List,Value
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  }

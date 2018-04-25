@@ -45,7 +45,7 @@ Stmt_Class {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Assign {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Assignment,Expression
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  }
@@ -63,7 +63,7 @@ Stmt_Class {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  Roles: Expression,Literal,Number,Right
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  .  .  value: 1
@@ -85,7 +85,7 @@ Stmt_Class {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Expr_PropertyFetch {
-.  .  .  .  .  .  .  Roles: Entry,Expression,Identifier,Map,Value
+.  .  .  .  .  .  .  Roles: Entry,Expression,Identifier,Left,Map,Value
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  .  .  name: member

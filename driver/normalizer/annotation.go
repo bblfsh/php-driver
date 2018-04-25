@@ -16,7 +16,6 @@ var Native = Transformers([][]Transformer{
 		},
 	},
 	{Mappings(Annotations...)},
-	{Mappings(Unannotated())},
 	{RolesDedup()},
 }...)
 
@@ -43,20 +42,19 @@ func mapInternalProperty(key string, roles ...role.Role) Mapping {
 	)
 }
 
+func annAssign(typ string, opRoles ...role.Role) Mapping {
+	return AnnotateType(typ, ObjRoles{
+		"var": {role.Left},
+		"expr": {role.Right},
+	}, opRoles...)
+}
+
 // XXX Missing:
 // Callbacks from the ToNoder object.
-// AssignOps
-// Name with token "null" should get role "null".
+// Name with parts ["Null"] should get role.Null
 // Function declaration
 // Case
-// Review integration tests.
-
-// XXX
-//var someAssignOp = Or(phpast.AssignOpPlus,
-//phpast.AssignOpMinus,
-//phpast.AssignOpMul,
-//phpast.AssignOpDiv,
-//phpast.AssignOpMod)
+// Tokens
 
 // FIXME XXX: also migrate the callbacks in tonode.go
 var Annotations = []Mapping{
@@ -97,13 +95,12 @@ var Annotations = []Mapping{
 		"class": {role.Qualified},
 	}, role.Expression, role.Identifier),
 
-	// XXX
-	/*
-		On(Or(phpast.Assign, someAssignOp)).Roles(uast.Expression, uast.Assignment).Children(
-			On(HasInternalRole("var")).Roles(uast.Left),
-			On(HasInternalRole("expr")).Roles(uast.Right),
-		),
-	*/
+	annAssign(php.Assign, role.Expression, role.Assignment),
+	annAssign(php.AssignOpMinus, role.Expression, role.Assignment, role.Operator, role.Substract),
+	annAssign(php.AssignOpPlus, role.Expression, role.Assignment, role.Operator, role.Add),
+	annAssign(php.AssignOpMul, role.Expression, role.Assignment, role.Operator, role.Multiply),
+	annAssign(php.AssignOpDiv, role.Expression, role.Assignment, role.Operator, role.Divide),
+	annAssign(php.AssignOpMod, role.Expression, role.Assignment, role.Operator, role.Modulo),
 
 	// __CLASS__ and similar constants. Also mising a Const role in the UAST.
 	AnnotateType(php.ScalarMagicClass, nil, role.Expression, role.Literal, role.Incomplete),
@@ -165,7 +162,9 @@ var Annotations = []Mapping{
 	// no role role for goto target labels
 	AnnotateType(php.Label, nil, role.Statement, role.Goto, role.Incomplete),
 
-	// XXX
+	// XXX Implement this (native annotations were wrong too), must
+	// have the role.Null if has a parts key and the single element in the
+	// array is the string "NULL".
 	//AnnotateType(php.Name, nil, role(HasToken("null")).Roles(role.Null)),
 
 	// no Nullable/Optional in UAST

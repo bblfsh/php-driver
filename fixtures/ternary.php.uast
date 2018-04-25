@@ -3,7 +3,7 @@ Language:  php
 Errors: 
 UAST: 
 Expr_Assign {
-.  Roles: Unannotated
+.  Roles: Assignment,Expression
 .  Children: {
 .  .  0:  {
 .  .  .  Roles: Incomplete
@@ -18,7 +18,7 @@ Expr_Assign {
 .  .  .  }
 .  .  }
 .  .  1: Expr_Ternary {
-.  .  .  Roles: Expression,If
+.  .  .  Roles: Expression,If,Right
 .  .  .  Properties: {
 .  .  .  .  internalRole: expr
 .  .  .  }
@@ -104,7 +104,7 @@ Expr_Assign {
 .  .  .  }
 .  .  }
 .  .  2: Expr_Variable {
-.  .  .  Roles: Identifier,Variable
+.  .  .  Roles: Identifier,Left,Variable
 .  .  .  Properties: {
 .  .  .  .  internalRole: var
 .  .  .  .  name: a
