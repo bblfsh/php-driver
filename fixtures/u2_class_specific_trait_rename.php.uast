@@ -1,6 +1,128 @@
-Status:  fatal
+Status:  ok
 Language:  php
 Errors: 
- .  argument should be a node or a list, got: uast.String
 UAST: 
+ {
+.  Children: {
+.  .  0: Stmt_Trait {
+.  .  .  Roles: Declaration,Type
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 18
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  name: testtrait1
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Function,Type
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 16
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  flags: 1
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  .  name: testfnc1
+.  .  .  .  .  .  type: 1
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: Stmt_Class {
+.  .  .  Roles: Declaration,Statement,Type
+.  .  .  TOKEN "testcls1"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 20
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 7
+.  .  .  .  Col: 43
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  flags: 0
+.  .  .  .  type: 0
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Stmt_TraitUse {
+.  .  .  .  .  Roles: Base,Body,Type
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 26
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 41
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Stmt_TraitUseAdaptation_Alias {
+.  .  .  .  .  .  .  Roles: Alias,Statement
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 32
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 39
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: adaptations
+.  .  .  .  .  .  .  .  method: testfnc1
+.  .  .  .  .  .  .  .  newModifier: 2
+.  .  .  .  .  .  .  .  newName: testfnc2
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 28
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 28
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: traits
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  TOKEN "testtrait1"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
 

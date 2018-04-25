@@ -4,99 +4,83 @@ Errors:
 UAST: 
 Stmt_Do {
 .  Roles: DoWhile,Statement
+.  StartPosition: {
+.  .  Offset: 0
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 0
+.  .  Line: 5
+.  .  Col: 20
+.  }
 .  Children: {
-.  .  0:  {
-.  .  .  Roles: Incomplete
-.  .  .  Properties: {
-.  .  .  .  endFilePos: 36
-.  .  .  .  endLine: 5
-.  .  .  .  endTokenPos: 20
-.  .  .  .  internalRole: attributes
-.  .  .  .  startFilePos: 7
-.  .  .  .  startLine: 3
-.  .  .  .  startTokenPos: 2
-.  .  .  }
-.  .  }
-.  .  1: Expr_Variable {
+.  .  0: Expr_Variable {
 .  .  .  Roles: Identifier,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 18
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 18
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: cond
 .  .  .  .  name: a
 .  .  .  }
-.  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 34
-.  .  .  .  .  .  endLine: 5
-.  .  .  .  .  .  endTokenPos: 18
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 33
-.  .  .  .  .  .  startLine: 5
-.  .  .  .  .  .  startTokenPos: 18
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
 .  .  }
-.  .  2: Expr_Assign {
+.  .  1: Expr_Assign {
 .  .  .  Roles: Assignment,Expression
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 6
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 10
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: stmts
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 21
-.  .  .  .  .  .  endLine: 4
-.  .  .  .  .  .  endTokenPos: 10
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 16
-.  .  .  .  .  .  startLine: 4
-.  .  .  .  .  .  startTokenPos: 6
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Scalar_LNumber {
+.  .  .  .  0: Scalar_LNumber {
 .  .  .  .  .  Roles: Expression,Literal,Number,Right
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 10
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 10
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  .  kind: 10
 .  .  .  .  .  .  value: 1
 .  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 21
-.  .  .  .  .  .  .  .  endLine: 4
-.  .  .  .  .  .  .  .  endTokenPos: 10
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  kind: 10
-.  .  .  .  .  .  .  .  startFilePos: 21
-.  .  .  .  .  .  .  .  startLine: 4
-.  .  .  .  .  .  .  .  startTokenPos: 10
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  2: Expr_Variable {
+.  .  .  .  1: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Left,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  name: a
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 17
-.  .  .  .  .  .  .  .  endLine: 4
-.  .  .  .  .  .  .  .  endTokenPos: 6
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  startFilePos: 16
-.  .  .  .  .  .  .  .  startLine: 4
-.  .  .  .  .  .  .  .  startTokenPos: 6
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

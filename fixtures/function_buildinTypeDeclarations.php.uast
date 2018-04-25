@@ -3,27 +3,47 @@ Language:  php
 Errors: 
 UAST: 
 Stmt_Function {
-.  Roles: Unannotated
+.  Roles: Declaration,Function
+.  TOKEN "test"
+.  StartPosition: {
+.  .  Offset: 0
+.  .  Line: 2
+.  .  Col: 1
+.  }
+.  EndPosition: {
+.  .  Offset: 0
+.  .  Line: 2
+.  .  Col: 40
+.  }
 .  Properties: {
 .  .  byRef: false
-.  .  name: test
-.  .  returnType: void
 .  }
 .  Children: {
-.  .  0:  {
-.  .  .  Roles: Incomplete
+.  .  0: Function.returnType {
+.  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  TOKEN "void"
 .  .  .  Properties: {
-.  .  .  .  endFilePos: 90
-.  .  .  .  endLine: 2
-.  .  .  .  endTokenPos: 40
-.  .  .  .  internalRole: attributes
-.  .  .  .  startFilePos: 6
-.  .  .  .  startLine: 2
-.  .  .  .  startTokenPos: 1
+.  .  .  .  internalRole: returnType
 .  .  .  }
 .  .  }
-.  .  1: Param {
+.  .  1: Function.body {
+.  .  .  Roles: Body,Declaration,Function
+.  .  .  Properties: {
+.  .  .  .  internalRole: stmts
+.  .  .  }
+.  .  }
+.  .  2: Param {
 .  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 5
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 7
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: params
@@ -31,23 +51,19 @@ Stmt_Function {
 .  .  .  .  type: bool
 .  .  .  .  variadic: false
 .  .  .  }
-.  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 26
-.  .  .  .  .  .  endLine: 2
-.  .  .  .  .  .  endTokenPos: 7
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 20
-.  .  .  .  .  .  startLine: 2
-.  .  .  .  .  .  startTokenPos: 5
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
 .  .  }
-.  .  2: Param {
+.  .  3: Param {
 .  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 10
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 12
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: params
@@ -55,23 +71,19 @@ Stmt_Function {
 .  .  .  .  type: int
 .  .  .  .  variadic: false
 .  .  .  }
-.  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 34
-.  .  .  .  .  .  endLine: 2
-.  .  .  .  .  .  endTokenPos: 12
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 29
-.  .  .  .  .  .  startLine: 2
-.  .  .  .  .  .  startTokenPos: 10
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
 .  .  }
-.  .  3: Param {
+.  .  4: Param {
 .  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 15
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 17
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: params
@@ -79,23 +91,19 @@ Stmt_Function {
 .  .  .  .  type: float
 .  .  .  .  variadic: false
 .  .  .  }
-.  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 44
-.  .  .  .  .  .  endLine: 2
-.  .  .  .  .  .  endTokenPos: 17
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 37
-.  .  .  .  .  .  startLine: 2
-.  .  .  .  .  .  startTokenPos: 15
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
 .  .  }
-.  .  4: Param {
+.  .  5: Param {
 .  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 20
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 22
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: params
@@ -103,23 +111,19 @@ Stmt_Function {
 .  .  .  .  type: string
 .  .  .  .  variadic: false
 .  .  .  }
-.  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 55
-.  .  .  .  .  .  endLine: 2
-.  .  .  .  .  .  endTokenPos: 22
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 47
-.  .  .  .  .  .  startLine: 2
-.  .  .  .  .  .  startTokenPos: 20
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
 .  .  }
-.  .  5: Param {
+.  .  6: Param {
 .  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 25
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 27
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: params
@@ -127,43 +131,25 @@ Stmt_Function {
 .  .  .  .  type: iterable
 .  .  .  .  variadic: false
 .  .  .  }
-.  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 68
-.  .  .  .  .  .  endLine: 2
-.  .  .  .  .  .  endTokenPos: 27
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 58
-.  .  .  .  .  .  startLine: 2
-.  .  .  .  .  .  startTokenPos: 25
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
 .  .  }
-.  .  6: Param {
+.  .  7: Param {
 .  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 30
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 32
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: params
 .  .  .  .  name: f
 .  .  .  .  type: object
 .  .  .  .  variadic: false
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 79
-.  .  .  .  .  .  endLine: 2
-.  .  .  .  .  .  endTokenPos: 32
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 71
-.  .  .  .  .  .  startLine: 2
-.  .  .  .  .  .  startTokenPos: 30
-.  .  .  .  .  }
-.  .  .  .  }
 .  .  .  }
 .  .  }
 .  }

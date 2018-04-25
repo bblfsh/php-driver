@@ -5,89 +5,101 @@ UAST:
  {
 .  Children: {
 .  .  0: Stmt_Function {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration,Function
+.  .  .  TOKEN "a"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 11
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
-.  .  .  .  name: a
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
+.  .  .  .  0: Function.returnType {
+.  .  .  .  .  Roles: Declaration,Function,Return,Type
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 24
-.  .  .  .  .  .  endLine: 3
-.  .  .  .  .  .  endTokenPos: 11
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 7
-.  .  .  .  .  .  startLine: 3
-.  .  .  .  .  .  startTokenPos: 2
+.  .  .  .  .  .  internalRole: returnType
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Param {
+.  .  .  .  1: Function.body {
+.  .  .  .  .  Roles: Body,Declaration,Function
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Param {
 .  .  .  .  .  Roles: Argument
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: true
 .  .  .  .  .  .  internalRole: params
 .  .  .  .  .  .  name: b
 .  .  .  .  .  .  variadic: false
 .  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 20
-.  .  .  .  .  .  .  .  endLine: 3
-.  .  .  .  .  .  .  .  endTokenPos: 7
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  startFilePos: 18
-.  .  .  .  .  .  .  .  startLine: 3
-.  .  .  .  .  .  .  .  startTokenPos: 6
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Function {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration,Function
+.  .  .  TOKEN "a"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 13
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 22
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: true
-.  .  .  .  name: a
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
+.  .  .  .  0: Function.returnType {
+.  .  .  .  .  Roles: Declaration,Function,Return,Type
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 43
-.  .  .  .  .  .  endLine: 4
-.  .  .  .  .  .  endTokenPos: 22
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 26
-.  .  .  .  .  .  startLine: 4
-.  .  .  .  .  .  startTokenPos: 13
+.  .  .  .  .  .  internalRole: returnType
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Param {
+.  .  .  .  1: Function.body {
+.  .  .  .  .  Roles: Body,Declaration,Function
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Param {
 .  .  .  .  .  Roles: Argument
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 18
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 18
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: params
 .  .  .  .  .  .  name: b
 .  .  .  .  .  .  variadic: false
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 39
-.  .  .  .  .  .  .  .  endLine: 4
-.  .  .  .  .  .  .  .  endTokenPos: 18
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  startFilePos: 38
-.  .  .  .  .  .  .  .  startLine: 4
-.  .  .  .  .  .  .  .  startTokenPos: 18
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

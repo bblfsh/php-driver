@@ -1,6 +1,265 @@
-Status:  fatal
+Status:  ok
 Language:  php
 Errors: 
- .  argument should be a node or a list, got: uast.String
 UAST: 
+ {
+.  Children: {
+.  .  0: Expr_Variable {
+.  .  .  Roles: Identifier,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  name: a
+.  .  .  }
+.  .  }
+.  .  1: Expr_Variable {
+.  .  .  Roles: Identifier,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 5
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 8
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Scalar_String {
+.  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  value: a
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  2: Expr_Variable {
+.  .  .  Roles: Identifier,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 16
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Expr_FuncCall {
+.  .  .  .  .  Roles: Call,Expression
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 13
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 15
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Function,Name
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  TOKEN "foo"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  3: Expr_Variable {
+.  .  .  Roles: Identifier,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 6
+.  .  .  .  Col: 19
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 6
+.  .  .  .  Col: 20
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 19
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 20
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  name: a
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  4: Expr_Variable {
+.  .  .  Roles: Identifier,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 7
+.  .  .  .  Col: 23
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 7
+.  .  .  .  Col: 25
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 23
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 25
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Expr_Variable {
+.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 24
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 25
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  name: a
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  5: Expr_ArrayDimFetch {
+.  .  .  Roles: Entry,Expression,List,Value
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 8
+.  .  .  .  Col: 28
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 8
+.  .  .  .  Col: 32
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Scalar_String {
+.  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 31
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 31
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: dim
+.  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  value: b
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 28
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 29
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: var
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Expr_Variable {
+.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  Col: 28
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  Col: 29
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  name: a
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
 

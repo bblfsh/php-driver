@@ -1,6 +1,137 @@
-Status:  fatal
+Status:  ok
 Language:  php
 Errors: 
- .  argument should be a node or a list, got: uast.String
 UAST: 
+Stmt_Function {
+.  Roles: Declaration,Function
+.  TOKEN "test"
+.  StartPosition: {
+.  .  Offset: 0
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 0
+.  .  Line: 4
+.  .  Col: 25
+.  }
+.  Properties: {
+.  .  byRef: false
+.  }
+.  Children: {
+.  .  0: Function.returnType {
+.  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  Properties: {
+.  .  .  .  internalRole: returnType
+.  .  .  }
+.  .  }
+.  .  1: Function.body {
+.  .  .  Roles: Body,Declaration,Function
+.  .  .  Properties: {
+.  .  .  .  internalRole: stmts
+.  .  .  }
+.  .  }
+.  .  2: Param {
+.  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 6
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 9
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: bar
+.  .  .  .  variadic: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: NullableType {
+.  .  .  .  .  Roles: Incomplete,Type
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: type
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: type
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  TOKEN "Foo"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  3: Param {
+.  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 12
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 15
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: foo
+.  .  .  .  variadic: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: NullableType {
+.  .  .  .  .  Roles: Incomplete,Type
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 12
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 13
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: type
+.  .  .  .  .  .  type: string
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
 

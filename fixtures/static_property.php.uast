@@ -1,6 +1,475 @@
-Status:  fatal
+Status:  ok
 Language:  php
 Errors: 
- .  argument should be a node or a list, got: uast.String
 UAST: 
+ {
+.  Children: {
+.  .  0: Expr_StaticPropertyFetch {
+.  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 3
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  name: b
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: class
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: Expr_StaticPropertyFetch {
+.  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 6
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 8
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  name: b
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: class
+.  .  .  .  .  .  name: A
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  2: Expr_StaticPropertyFetch {
+.  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 13
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  name: b
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Scalar_String {
+.  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 11
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 11
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: class
+.  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  value: A
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  3: Expr_StaticPropertyFetch {
+.  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 16
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 24
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  name: b
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Expr_BinaryOp_Concat {
+.  .  .  .  .  Roles: Add,Binary,Expression,Incomplete,Operator
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 17
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 21
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: class
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Scalar_String {
+.  .  .  .  .  .  .  Roles: Expression,Left,Literal,String
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 17
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 17
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  .  value: A
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Scalar_String {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Right,String
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 21
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 21
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  .  value: 
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  4: Expr_StaticPropertyFetch {
+.  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 6
+.  .  .  .  Col: 27
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 6
+.  .  .  .  Col: 32
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  name: b
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Expr_ArrayDimFetch {
+.  .  .  .  .  Roles: Entry,Expression,List,Value
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 27
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 30
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: class
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Scalar_LNumber {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 29
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 29
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: dim
+.  .  .  .  .  .  .  .  kind: 10
+.  .  .  .  .  .  .  .  value: 0
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Scalar_String {
+.  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 27
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 27
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  .  value: A
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  5: Expr_StaticPropertyFetch {
+.  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 7
+.  .  .  .  Col: 35
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 7
+.  .  .  .  Col: 38
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 35
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 35
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: class
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 37
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 38
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  name: b
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  6: Expr_ArrayDimFetch {
+.  .  .  Roles: Entry,Expression,List,Value
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 8
+.  .  .  .  Col: 41
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 8
+.  .  .  .  Col: 47
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Scalar_LNumber {
+.  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 46
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 46
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: dim
+.  .  .  .  .  .  kind: 10
+.  .  .  .  .  .  value: 1
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_StaticPropertyFetch {
+.  .  .  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 41
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 44
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: var
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  Col: 41
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  Col: 41
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: class
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Expr_Variable {
+.  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  Col: 43
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  Col: 44
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  name: c
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  7: Expr_StaticPropertyFetch {
+.  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 9
+.  .  .  .  Col: 50
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 9
+.  .  .  .  Col: 54
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  name: b
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Expr_StaticPropertyFetch {
+.  .  .  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 50
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 52
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: class
+.  .  .  .  .  .  name: A
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  Col: 50
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  Col: 50
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: class
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
 

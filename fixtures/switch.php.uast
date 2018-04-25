@@ -5,187 +5,38 @@ UAST:
  {
 .  Children: {
 .  .  0: Stmt_Switch {
-.  .  .  Roles: Statement,Switch
+.  .  .  Roles: Switch
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 11
+.  .  .  .  Col: 42
+.  .  .  }
 .  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 120
-.  .  .  .  .  .  endLine: 11
-.  .  .  .  .  .  endTokenPos: 42
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 7
-.  .  .  .  .  .  startLine: 3
-.  .  .  .  .  .  startTokenPos: 2
+.  .  .  .  0: Stmt_Case {
+.  .  .  .  .  Roles: Case
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 10
 .  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Stmt_Case {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 23
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: cases
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 62
-.  .  .  .  .  .  .  .  endLine: 6
-.  .  .  .  .  .  .  .  endTokenPos: 23
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  startFilePos: 25
-.  .  .  .  .  .  .  .  startLine: 4
-.  .  .  .  .  .  .  .  startTokenPos: 10
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Number
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: cond
-.  .  .  .  .  .  .  .  value: 0
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  endFilePos: 30
-.  .  .  .  .  .  .  .  .  .  endLine: 4
-.  .  .  .  .  .  .  .  .  .  endTokenPos: 12
-.  .  .  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  .  .  kind: 10
-.  .  .  .  .  .  .  .  .  .  startFilePos: 30
-.  .  .  .  .  .  .  .  .  .  startLine: 4
-.  .  .  .  .  .  .  .  .  .  startTokenPos: 12
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  2: Expr_Assign {
-.  .  .  .  .  .  .  Roles: Assignment,Expression
+.  .  .  .  .  .  0: Stmt_Nop {
+.  .  .  .  .  .  .  Roles: Body,Noop
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  endFilePos: 46
-.  .  .  .  .  .  .  .  .  .  endLine: 5
-.  .  .  .  .  .  .  .  .  .  endTokenPos: 19
-.  .  .  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  .  .  startFilePos: 41
-.  .  .  .  .  .  .  .  .  .  startLine: 5
-.  .  .  .  .  .  .  .  .  .  startTokenPos: 15
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number,Right
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  .  .  .  .  .  value: 0
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  endFilePos: 46
-.  .  .  .  .  .  .  .  .  .  .  .  endLine: 5
-.  .  .  .  .  .  .  .  .  .  .  .  endTokenPos: 19
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  .  .  .  .  kind: 10
-.  .  .  .  .  .  .  .  .  .  .  .  startFilePos: 46
-.  .  .  .  .  .  .  .  .  .  .  .  startLine: 5
-.  .  .  .  .  .  .  .  .  .  .  .  startTokenPos: 19
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Identifier,Left,Variable
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: var
-.  .  .  .  .  .  .  .  .  .  name: x
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  endFilePos: 42
-.  .  .  .  .  .  .  .  .  .  .  .  endLine: 5
-.  .  .  .  .  .  .  .  .  .  .  .  endTokenPos: 15
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  .  .  .  .  startFilePos: 41
-.  .  .  .  .  .  .  .  .  .  .  .  startLine: 5
-.  .  .  .  .  .  .  .  .  .  .  .  startTokenPos: 15
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  3: Stmt_Break {
-.  .  .  .  .  .  .  Roles: Break,Statement
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  endFilePos: 62
-.  .  .  .  .  .  .  .  .  .  endLine: 6
-.  .  .  .  .  .  .  .  .  .  endTokenPos: 23
-.  .  .  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  .  .  startFilePos: 57
-.  .  .  .  .  .  .  .  .  .  startLine: 6
-.  .  .  .  .  .  .  .  .  .  startTokenPos: 22
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  4: Stmt_Nop {
-.  .  .  .  .  .  .  Roles: Noop
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  filePos: 68
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  .  .  .  .  line: 7
-.  .  .  .  .  .  .  .  .  .  .  .  text: // Comment
-
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Stmt_Case {
-.  .  .  .  .  Roles: Unannotated
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: cases
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 89
-.  .  .  .  .  .  .  .  endLine: 8
-.  .  .  .  .  .  .  .  endTokenPos: 30
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  startFilePos: 83
-.  .  .  .  .  .  .  .  startLine: 8
-.  .  .  .  .  .  .  .  startTokenPos: 27
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Comment {
@@ -201,269 +52,342 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  Roles: Condition,Expression,Literal,Number
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: cond
-.  .  .  .  .  .  .  .  value: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  endFilePos: 88
-.  .  .  .  .  .  .  .  .  .  endLine: 8
-.  .  .  .  .  .  .  .  .  .  endTokenPos: 29
-.  .  .  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  .  .  kind: 10
-.  .  .  .  .  .  .  .  .  .  startFilePos: 88
-.  .  .  .  .  .  .  .  .  .  startLine: 8
-.  .  .  .  .  .  .  .  .  .  startTokenPos: 29
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  kind: 10
+.  .  .  .  .  .  .  .  value: 0
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  3: Stmt_Case {
-.  .  .  .  .  Roles: Unannotated
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: cases
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 118
-.  .  .  .  .  .  .  .  endLine: 10
-.  .  .  .  .  .  .  .  endTokenPos: 40
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  startFilePos: 95
-.  .  .  .  .  .  .  .  startLine: 9
-.  .  .  .  .  .  .  .  startTokenPos: 32
+.  .  .  .  .  .  2: Expr_Assign {
+.  .  .  .  .  .  .  Roles: Assignment,Body,Expression
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Expr_Assign {
-.  .  .  .  .  .  .  Roles: Assignment,Expression
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 19
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  endFilePos: 117
-.  .  .  .  .  .  .  .  .  .  endLine: 10
-.  .  .  .  .  .  .  .  .  .  endTokenPos: 39
-.  .  .  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  .  .  startFilePos: 112
-.  .  .  .  .  .  .  .  .  .  startLine: 10
-.  .  .  .  .  .  .  .  .  .  startTokenPos: 35
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Scalar_LNumber {
+.  .  .  .  .  .  .  .  0: Scalar_LNumber {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number,Right
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 19
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 19
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  .  .  .  .  .  value: 1
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  endFilePos: 117
-.  .  .  .  .  .  .  .  .  .  .  .  endLine: 10
-.  .  .  .  .  .  .  .  .  .  .  .  endTokenPos: 39
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  .  .  .  .  kind: 10
-.  .  .  .  .  .  .  .  .  .  .  .  startFilePos: 117
-.  .  .  .  .  .  .  .  .  .  .  .  startLine: 10
-.  .  .  .  .  .  .  .  .  .  .  .  startTokenPos: 39
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  kind: 10
+.  .  .  .  .  .  .  .  .  .  value: 0
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: Expr_Variable {
+.  .  .  .  .  .  .  .  1: Expr_Variable {
 .  .  .  .  .  .  .  .  .  Roles: Identifier,Left,Variable
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  .  .  .  name: x
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  3: Stmt_Break {
+.  .  .  .  .  .  .  Roles: Body,Break,Statement
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 23
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_Case {
+.  .  .  .  .  Roles: Case
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 27
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 30
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: cases
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Comment {
+.  .  .  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  filePos: 68
+.  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  line: 7
+.  .  .  .  .  .  .  .  text: // Comment
+
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Scalar_LNumber {
+.  .  .  .  .  .  .  Roles: Condition,Expression,Literal,Number
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  Col: 29
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  Col: 29
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: cond
+.  .  .  .  .  .  .  .  kind: 10
+.  .  .  .  .  .  .  .  value: 1
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Stmt_Case {
+.  .  .  .  .  Roles: Case
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 32
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 40
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: cases
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Expr_Assign {
+.  .  .  .  .  .  .  Roles: Assignment,Body,Expression
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  Col: 35
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  Col: 39
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Scalar_LNumber {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number,Right
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  .  .  Col: 39
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  .  .  Col: 39
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  .  .  .  .  .  kind: 10
+.  .  .  .  .  .  .  .  .  .  value: 1
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Expr_Variable {
+.  .  .  .  .  .  .  .  .  Roles: Identifier,Left,Variable
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  .  .  Col: 35
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  .  .  Col: 35
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  .  .  .  .  name: y
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  endFilePos: 113
-.  .  .  .  .  .  .  .  .  .  .  .  endLine: 10
-.  .  .  .  .  .  .  .  .  .  .  .  endTokenPos: 35
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  .  .  .  .  startFilePos: 112
-.  .  .  .  .  .  .  .  .  .  .  .  startLine: 10
-.  .  .  .  .  .  .  .  .  .  .  .  startTokenPos: 35
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  4: Expr_Variable {
-.  .  .  .  .  Roles: Condition,Identifier,Switch,Variable
+.  .  .  .  3: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 5
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 5
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: cond
 .  .  .  .  .  .  name: a
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 16
-.  .  .  .  .  .  .  .  endLine: 3
-.  .  .  .  .  .  .  .  endTokenPos: 5
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  startFilePos: 15
-.  .  .  .  .  .  .  .  startLine: 3
-.  .  .  .  .  .  .  .  startTokenPos: 5
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Switch {
-.  .  .  Roles: Statement,Switch
+.  .  .  Roles: Switch
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 14
+.  .  .  .  Col: 45
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 15
+.  .  .  .  Col: 53
+.  .  .  }
 .  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 167
-.  .  .  .  .  .  endLine: 15
-.  .  .  .  .  .  endTokenPos: 53
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 145
-.  .  .  .  .  .  startLine: 14
-.  .  .  .  .  .  startTokenPos: 45
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  filePos: 123
-.  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  line: 13
-.  .  .  .  .  .  .  .  text: // alternative syntax
+.  .  .  .  .  .  filePos: 123
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  line: 13
+.  .  .  .  .  .  text: // alternative syntax
 
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Condition,Identifier,Switch,Variable
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 14
+.  .  .  .  .  .  Col: 48
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 14
+.  .  .  .  .  .  Col: 48
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: cond
 .  .  .  .  .  .  name: a
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 154
-.  .  .  .  .  .  .  .  endLine: 14
-.  .  .  .  .  .  .  .  endTokenPos: 48
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  startFilePos: 153
-.  .  .  .  .  .  .  .  startLine: 14
-.  .  .  .  .  .  .  .  startTokenPos: 48
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: Stmt_Switch {
-.  .  .  Roles: Statement,Switch
+.  .  .  Roles: Switch
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 18
+.  .  .  .  Col: 56
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 18
+.  .  .  .  Col: 66
+.  .  .  }
 .  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 207
-.  .  .  .  .  .  endLine: 18
-.  .  .  .  .  .  endTokenPos: 66
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 191
-.  .  .  .  .  .  startLine: 18
-.  .  .  .  .  .  startTokenPos: 56
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  filePos: 170
-.  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  line: 17
-.  .  .  .  .  .  .  .  text: // leading semicolon
+.  .  .  .  .  .  filePos: 170
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  line: 17
+.  .  .  .  .  .  text: // leading semicolon
 
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Condition,Identifier,Switch,Variable
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 59
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  Col: 59
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: cond
 .  .  .  .  .  .  name: a
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 200
-.  .  .  .  .  .  .  .  endLine: 18
-.  .  .  .  .  .  .  .  endTokenPos: 59
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  startFilePos: 199
-.  .  .  .  .  .  .  .  startLine: 18
-.  .  .  .  .  .  .  .  startTokenPos: 59
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  3: Stmt_Switch {
-.  .  .  Roles: Statement,Switch
+.  .  .  Roles: Switch
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 19
+.  .  .  .  Col: 68
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 19
+.  .  .  .  Col: 78
+.  .  .  }
 .  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 233
-.  .  .  .  .  .  endLine: 19
-.  .  .  .  .  .  endTokenPos: 78
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 209
-.  .  .  .  .  .  startLine: 19
-.  .  .  .  .  .  startTokenPos: 68
+.  .  .  .  0: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 19
+.  .  .  .  .  .  Col: 71
 .  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Condition,Identifier,Switch,Variable
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 19
+.  .  .  .  .  .  Col: 71
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: cond
 .  .  .  .  .  .  name: a
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 218
-.  .  .  .  .  .  .  .  endLine: 19
-.  .  .  .  .  .  .  .  endTokenPos: 71
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  startFilePos: 217
-.  .  .  .  .  .  .  .  startLine: 19
-.  .  .  .  .  .  .  .  startTokenPos: 71
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

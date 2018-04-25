@@ -6,8 +6,58 @@ import (
 	"gopkg.in/bblfsh/sdk.v1/uast"
 	"gopkg.in/bblfsh/sdk.v1/uast/role"
 	. "gopkg.in/bblfsh/sdk.v1/uast/transformer"
-	"gopkg.in/bblfsh/sdk.v1/uast/transformer/positioner"
+	//"gopkg.in/bblfsh/sdk.v1/uast/transformer/positioner"
 )
+
+// FIXME: not reversible, and can probably be done using annotations
+func reparentAttributes() TransformFunc {
+	return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
+		obj, ok := n.(uast.Object)
+		if !ok {
+			return n, false, nil
+		}
+
+		if attrs, ok := obj["attributes"]; ok {
+			props, ok := attrs.(uast.Object)
+			if !ok {
+				return n, false, nil
+			}
+
+			for k, v := range props {
+				obj[k] = v
+			}
+
+			delete(obj, "attributes")
+			return n, true, nil
+		}
+
+		return n, false, nil
+	})
+}
+
+// FIXME: not reversible
+func fixCommentPositions() TransformFunc {
+	return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
+		obj, ok := n.(uast.Object)
+		if !ok {
+			return n, false, nil
+		}
+
+		// Positions in comments don't follow the same schema as the other
+		// nodes, the position info is moved to the same place.
+		if pos, ok := obj["filePos"].Native().(float64); ok {
+			obj["startFilePos"] = uast.Int(pos)
+			obj["endFilePos"] = uast.Int(pos + float64(len(obj["text"].Native().(string))))
+			obj["startLine"] = obj["line"]
+			delete(obj, "filePos")
+			delete(obj, "line")
+
+			return n, true, nil
+		}
+
+		return n, false, nil
+	})
+}
 
 var Native = Transformers([][]Transformer{
 	{
@@ -15,12 +65,15 @@ var Native = Transformers([][]Transformer{
 			TopLevelIsRootNode: false,
 		},
 	},
+	{reparentAttributes()},
+	//{fixCommentPositions()},
 	{Mappings(Annotations...)},
 	{RolesDedup()},
 }...)
 
 var Code = []CodeTransformer{
-	positioner.NewFillOffsetFromLineCol(),
+	//positioner.NewFillOffsetFromLineCol(),
+	//positioner.NewFillLineColFromOffset(),
 }
 
 // FIXME: move to the SDK and remove from here and the python driver
@@ -44,17 +97,20 @@ func mapInternalProperty(key string, roles ...role.Role) Mapping {
 
 func annAssign(typ string, opRoles ...role.Role) Mapping {
 	return AnnotateType(typ, ObjRoles{
-		"var": {role.Left},
+		"var":  {role.Left},
 		"expr": {role.Right},
 	}, opRoles...)
 }
 
 // XXX Missing:
-// Callbacks from the ToNoder object.
-// Name with parts ["Null"] should get role.Null
-// Function declaration
-// Case
-// Tokens
+// - Investigate/fix the problem with positions. Check if the reparenting of attributes
+// can be done using annotations.
+// - Comments position fix.
+// - Add a root File node.
+// - Name with parts ["Null"] should get role.Null
+// - Add missing tokens
+// - Add Default switch role when cond == null
+// - Add Argument.[byRef|variadic] roles
 
 // FIXME XXX: also migrate the callbacks in tonode.go
 var Annotations = []Mapping{
@@ -62,14 +118,14 @@ var Annotations = []Mapping{
 		InternalTypeKey: "nodeType",
 	}.Mapping(),
 	ObjectToNode{
-		LineKey:   "attributes.startLine",
-		ColumnKey: "attributes.startTokenPos",
-		OffsetKey: "attributes.startFilePos",
+		LineKey:   "startLine",
+		ColumnKey: "startTokenPos",
+		OffsetKey: "startFilePos",
 	}.Mapping(),
 	ObjectToNode{
-		EndLineKey:   "attributes.endLine",
-		EndColumnKey: "attributes.endTokenPos",
-		EndOffsetKey: "attributes.endFilePos",
+		EndLineKey:   "endLine",
+		EndColumnKey: "endTokenPos",
+		EndOffsetKey: "endFilePos",
 	}.Mapping(),
 
 	// FIXME: remove this
@@ -88,6 +144,7 @@ var Annotations = []Mapping{
 	//mapInternalProperty("stmts", role.Expression, role.Body),
 	mapInternalProperty("left", role.Left),
 	mapInternalProperty("right", role.Right),
+	mapInternalProperty("default", role.Default),
 
 	AnnotateType(php.File, nil, role.File),
 
@@ -143,7 +200,6 @@ var Annotations = []Mapping{
 	AnnotateType(php.FullyQualified, nil, role.Expression, role.Variable, role.Incomplete),
 	AnnotateType(php.ClassConstFetch, nil, role.Expression, role.Type, role.Incomplete),
 	AnnotateType(php.Clone, nil, role.Expression, role.Call, role.Incomplete),
-	AnnotateType(php.Param, nil, role.Argument),
 	AnnotateType(php.Closure, nil, role.Function, role.Declaration, role.Expression, role.Anonymous),
 	AnnotateType(php.ClosureUse, nil, role.Visibility, role.Incomplete),
 	AnnotateType(php.Coalesce, nil, role.Expression, role.Incomplete),
@@ -334,19 +390,28 @@ var Annotations = []Mapping{
 	}, role.Expression, role.Call, role.Identifier),
 
 	// Function declarations
-	// XXX
-	/*
-		On(phpast.Function).Roles(uast.Function, uast.Declaration).Children(
-			On(phpast.Param).Self(
-				//// No reference/value in the UAST
-				On(HasProperty("byRef", "true")).Roles(uast.Incomplete),
-				On(HasProperty("variadic", "true")).Roles(uast.ArgsList),
-			).Children(
-					On(HasInternalRole("default")).Roles(uast.Default),
-			),
-			On(phpast.FunctionReturn).Roles(uast.Return, uast.Type),
-		),
-	*/
+	MapAST(php.Function, Obj{
+		"returnType": Var("returnType"),
+		"stmts":      Var("stmts"),
+		"name":       Var("name"),
+	}, Obj{
+		"returnType": Obj{
+			uast.KeyType:  String("Function.returnType"),
+			uast.KeyRoles: Roles(role.Function, role.Declaration, role.Return, role.Type),
+			uast.KeyToken: Var("returnType"),
+		},
+		"stmts": Obj{
+			uast.KeyType:  String("Function.body"),
+			uast.KeyRoles: Roles(role.Function, role.Declaration, role.Body),
+			"body":        Var("stmts"),
+		},
+		uast.KeyToken: Var("name"),
+	}, role.Function, role.Declaration),
+
+	// No reference role
+	// FIXME: byRef -> add role.Incomplete
+	//        variadic->add role.ArgsList
+	AnnotateType(php.Param, nil, role.Argument),
 
 	// Include and require
 	AnnotateType(php.Include, ObjRoles{
@@ -378,16 +443,11 @@ var Annotations = []Mapping{
 	}, role.Expression, role.Initialization, role.Call),
 
 	// Switch
-	AnnotateType(php.Switch, ObjRoles{
-		"cond": {role.Switch, role.Condition},
-	}, role.Statement, role.Switch),
-
-	// XXX case
-	/*
-		On(phpast.Case).Roles(uast.Statement, uast.Case).Self(
-			On(Not(HasChild(HasInternalRole("cond")))).Roles(uast.Default),
-		).Children(
-			On(HasInternalRole("cond")).Roles(uast.Case),
-		),
-	*/
+	AnnotateType(php.Switch, nil, role.Switch),
+	// FIXME: if cond == null add role "Default"
+	AnnotateTypeFields(php.Case, FieldRoles{
+		//"cond": {role.Condition},
+		"cond":  {Opt: true, Roles: role.Roles{role.Condition}},
+		"stmts": {Arr: true, Roles: role.Roles{role.Body}},
+	}, role.Case),
 }

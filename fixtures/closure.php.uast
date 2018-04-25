@@ -1,6 +1,336 @@
-Status:  fatal
+Status:  ok
 Language:  php
 Errors: 
- .  argument should be a node or a list, got: uast.String
 UAST: 
+ {
+.  Children: {
+.  .  0: Expr_Closure {
+.  .  .  Roles: Anonymous,Declaration,Expression,Function
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  static: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Param {
+.  .  .  .  .  Roles: Argument
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: a
+.  .  .  .  .  .  variadic: false
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  Col: 8
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  Col: 8
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  .  name: a
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: Expr_Closure {
+.  .  .  Roles: Anonymous,Declaration,Expression,Function
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 14
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 25
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  static: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Param {
+.  .  .  .  .  Roles: Argument
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 16
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 16
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: a
+.  .  .  .  .  .  variadic: false
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_ClosureUse {
+.  .  .  .  .  Roles: Incomplete,Visibility
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 21
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 21
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  internalRole: uses
+.  .  .  .  .  .  var: b
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  2: Expr_Closure {
+.  .  .  Roles: Anonymous,Declaration,Expression,Function
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 28
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 42
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  static: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Expr_ClosureUse {
+.  .  .  .  .  Roles: Incomplete,Visibility
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 34
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 34
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  internalRole: uses
+.  .  .  .  .  .  var: a
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_ClosureUse {
+.  .  .  .  .  Roles: Incomplete,Visibility
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 37
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 38
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  byRef: true
+.  .  .  .  .  .  internalRole: uses
+.  .  .  .  .  .  var: b
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  3: Expr_Closure {
+.  .  .  Roles: Anonymous,Declaration,Expression,Function
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 45
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 53
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: true
+.  .  .  .  static: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Param {
+.  .  .  .  .  Roles: Argument
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 49
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 49
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: a
+.  .  .  .  .  .  variadic: false
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  4: Expr_Closure {
+.  .  .  Roles: Anonymous,Declaration,Expression,Function
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 6
+.  .  .  .  Col: 56
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 6
+.  .  .  .  Col: 63
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  static: true
+.  .  .  }
+.  .  }
+.  .  5: Expr_Closure {
+.  .  .  Roles: Anonymous,Declaration,Expression,Function
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 7
+.  .  .  .  Col: 66
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 7
+.  .  .  .  Col: 76
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  returnType: array
+.  .  .  .  static: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Param {
+.  .  .  .  .  Roles: Argument
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 68
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 68
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: a
+.  .  .  .  .  .  variadic: false
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  6: Expr_Closure {
+.  .  .  Roles: Anonymous,Declaration,Expression,Function
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 8
+.  .  .  .  Col: 79
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 8
+.  .  .  .  Col: 96
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  static: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Name_FullyQualified {
+.  .  .  .  .  Roles: Expression,Incomplete,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 90
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 93
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: returnType
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  TOKEN "Foo"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  TOKEN "Bar"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_ClosureUse {
+.  .  .  .  .  Roles: Incomplete,Visibility
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 85
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 85
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  internalRole: uses
+.  .  .  .  .  .  var: a
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
 

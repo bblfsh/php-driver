@@ -3,22 +3,32 @@ Language:  php
 Errors: 
 UAST: 
 Stmt_Function {
-.  Roles: Unannotated
+.  Roles: Declaration,Function
+.  TOKEN "testfnc1"
+.  StartPosition: {
+.  .  Offset: 0
+.  .  Line: 2
+.  .  Col: 1
+.  }
+.  EndPosition: {
+.  .  Offset: 0
+.  .  Line: 2
+.  .  Col: 7
+.  }
 .  Properties: {
 .  .  byRef: false
-.  .  name: testfnc1
 .  }
 .  Children: {
-.  .  0:  {
-.  .  .  Roles: Incomplete
+.  .  0: Function.returnType {
+.  .  .  Roles: Declaration,Function,Return,Type
 .  .  .  Properties: {
-.  .  .  .  endFilePos: 26
-.  .  .  .  endLine: 2
-.  .  .  .  endTokenPos: 7
-.  .  .  .  internalRole: attributes
-.  .  .  .  startFilePos: 6
-.  .  .  .  startLine: 2
-.  .  .  .  startTokenPos: 1
+.  .  .  .  internalRole: returnType
+.  .  .  }
+.  .  }
+.  .  1: Function.body {
+.  .  .  Roles: Body,Declaration,Function
+.  .  .  Properties: {
+.  .  .  .  internalRole: stmts
 .  .  .  }
 .  .  }
 .  }

@@ -6,152 +6,134 @@ UAST:
 .  Children: {
 .  .  0: Expr_Variable {
 .  .  .  Roles: Identifier,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 7
+.  .  .  .  Col: 8
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 7
+.  .  .  .  Col: 8
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  name: var
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
+.  .  .  .  0: Comment_Doc {
+.  .  .  .  .  Roles: Comment,Documentation,Noop
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 56
-.  .  .  .  .  .  endLine: 7
-.  .  .  .  .  .  endTokenPos: 8
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 53
-.  .  .  .  .  .  startLine: 7
-.  .  .  .  .  .  startTokenPos: 8
+.  .  .  .  .  .  filePos: 7
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  line: 3
+.  .  .  .  .  .  text: /** doc 1 */
 .  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Comment_Doc {
-.  .  .  .  .  .  .  Roles: Comment,Documentation,Noop
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  filePos: 7
-.  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  line: 3
-.  .  .  .  .  .  .  .  text: /** doc 1 */
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Comment {
-.  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  filePos: 20
-.  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  line: 4
-.  .  .  .  .  .  .  .  text: /* foobar 1 */
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  2: Comment {
-.  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  filePos: 35
-.  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  line: 5
-.  .  .  .  .  .  .  .  text: // foo 1
+.  .  .  .  }
+.  .  .  .  1: Comment {
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  filePos: 20
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  line: 4
+.  .  .  .  .  .  text: /* foobar 1 */
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Comment {
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  filePos: 35
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  line: 5
+.  .  .  .  .  .  text: // foo 1
 
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  3: Comment {
-.  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  filePos: 44
-.  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  line: 6
-.  .  .  .  .  .  .  .  text: // bar 1
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: Comment {
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  filePos: 44
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  line: 6
+.  .  .  .  .  .  text: // bar 1
 
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Stmt_If {
 .  .  .  Roles: If,Statement
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 9
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 14
+.  .  .  .  Col: 26
+.  .  .  }
 .  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 135
-.  .  .  .  .  .  endLine: 14
-.  .  .  .  .  .  endTokenPos: 26
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 60
-.  .  .  .  .  .  startLine: 9
-.  .  .  .  .  .  startTokenPos: 11
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: cond
-.  .  .  .  .  .  name: cond
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 68
-.  .  .  .  .  .  .  .  endLine: 9
-.  .  .  .  .  .  .  .  endTokenPos: 14
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  startFilePos: 64
-.  .  .  .  .  .  .  .  startLine: 9
-.  .  .  .  .  .  .  .  startTokenPos: 14
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Stmt_Nop {
+.  .  .  .  0: Stmt_Nop {
 .  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
+.  .  .  .  .  .  0: Comment_Doc {
+.  .  .  .  .  .  .  Roles: Comment,Documentation,Noop
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Comment_Doc {
-.  .  .  .  .  .  .  .  .  Roles: Comment,Documentation,Noop
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  filePos: 77
-.  .  .  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  .  .  line: 10
-.  .  .  .  .  .  .  .  .  .  text: /** doc 2 */
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Comment {
-.  .  .  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  filePos: 94
-.  .  .  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  .  .  line: 11
-.  .  .  .  .  .  .  .  .  .  text: /* foobar 2 */
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: Comment {
-.  .  .  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  filePos: 113
-.  .  .  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  .  .  line: 12
-.  .  .  .  .  .  .  .  .  .  text: // foo 2
-
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  3: Comment {
-.  .  .  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  filePos: 126
-.  .  .  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  .  .  line: 13
-.  .  .  .  .  .  .  .  .  .  text: // bar 2
-
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  filePos: 77
+.  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  line: 10
+.  .  .  .  .  .  .  .  text: /** doc 2 */
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
+.  .  .  .  .  .  1: Comment {
+.  .  .  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  filePos: 94
+.  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  line: 11
+.  .  .  .  .  .  .  .  text: /* foobar 2 */
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: Comment {
+.  .  .  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  filePos: 113
+.  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  line: 12
+.  .  .  .  .  .  .  .  text: // foo 2
+
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  3: Comment {
+.  .  .  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  filePos: 126
+.  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  line: 13
+.  .  .  .  .  .  .  .  text: // bar 2
+
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 14
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 14
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: cond
+.  .  .  .  .  .  name: cond
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -159,50 +141,42 @@ UAST:
 .  .  2: Stmt_Nop {
 .  .  .  Roles: Noop
 .  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
+.  .  .  .  0: Comment_Doc {
+.  .  .  .  .  Roles: Comment,Documentation,Noop
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  filePos: 138
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  line: 16
+.  .  .  .  .  .  text: /** doc 3 */
 .  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Comment_Doc {
-.  .  .  .  .  .  .  Roles: Comment,Documentation,Noop
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  filePos: 138
-.  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  line: 16
-.  .  .  .  .  .  .  .  text: /** doc 3 */
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Comment {
-.  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  filePos: 151
-.  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  line: 17
-.  .  .  .  .  .  .  .  text: /* foobar 3 */
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  2: Comment {
-.  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  filePos: 166
-.  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  line: 18
-.  .  .  .  .  .  .  .  text: // foo 3
+.  .  .  .  }
+.  .  .  .  1: Comment {
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  filePos: 151
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  line: 17
+.  .  .  .  .  .  text: /* foobar 3 */
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Comment {
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  filePos: 166
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  line: 18
+.  .  .  .  .  .  text: // foo 3
 
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  3: Comment {
-.  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  filePos: 175
-.  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  line: 19
-.  .  .  .  .  .  .  .  text: // bar 3
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: Comment {
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  filePos: 175
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  line: 19
+.  .  .  .  .  .  text: // bar 3
 
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

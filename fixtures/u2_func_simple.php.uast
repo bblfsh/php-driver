@@ -3,169 +3,157 @@ Language:  php
 Errors: 
 UAST: 
 Stmt_Function {
-.  Roles: Unannotated
+.  Roles: Declaration,Function
+.  TOKEN "testfnc1"
+.  StartPosition: {
+.  .  Offset: 0
+.  .  Line: 2
+.  .  Col: 1
+.  }
+.  EndPosition: {
+.  .  Offset: 0
+.  .  Line: 5
+.  .  Col: 24
+.  }
 .  Properties: {
 .  .  byRef: false
-.  .  name: testfnc1
 .  }
 .  Children: {
-.  .  0:  {
-.  .  .  Roles: Incomplete
+.  .  0: Function.returnType {
+.  .  .  Roles: Declaration,Function,Return,Type
 .  .  .  Properties: {
-.  .  .  .  endFilePos: 59
-.  .  .  .  endLine: 5
-.  .  .  .  endTokenPos: 24
-.  .  .  .  internalRole: attributes
-.  .  .  .  startFilePos: 6
-.  .  .  .  startLine: 2
-.  .  .  .  startTokenPos: 1
+.  .  .  .  internalRole: returnType
 .  .  .  }
 .  .  }
 .  .  1: Param {
 .  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 5
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 5
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: params
 .  .  .  .  name: a
 .  .  .  .  variadic: false
 .  .  .  }
-.  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 25
-.  .  .  .  .  .  endLine: 2
-.  .  .  .  .  .  endTokenPos: 5
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 24
-.  .  .  .  .  .  startLine: 2
-.  .  .  .  .  .  startTokenPos: 5
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
 .  .  }
 .  .  2: Param {
 .  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 8
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 8
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: params
 .  .  .  .  name: b
 .  .  .  .  variadic: false
 .  .  .  }
-.  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 29
-.  .  .  .  .  .  endLine: 2
-.  .  .  .  .  .  endTokenPos: 8
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 28
-.  .  .  .  .  .  startLine: 2
-.  .  .  .  .  .  startTokenPos: 8
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
 .  .  }
-.  .  3: Expr_Assign {
-.  .  .  Roles: Assignment,Expression
+.  .  3: Function.body {
+.  .  .  Roles: Body,Declaration,Function
 .  .  .  Properties: {
 .  .  .  .  internalRole: stmts
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 42
-.  .  .  .  .  .  endLine: 3
-.  .  .  .  .  .  endTokenPos: 16
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 37
-.  .  .  .  .  .  startLine: 3
-.  .  .  .  .  .  startTokenPos: 12
+.  .  .  .  0: Expr_Assign {
+.  .  .  .  .  Roles: Assignment,Expression
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 12
 .  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  Roles: Expression,Literal,Number,Right
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 16
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  .  value: 1
+.  .  .  .  .  .  internalRole: body
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
+.  .  .  .  .  .  0: Scalar_LNumber {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Number,Right
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 16
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 16
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 42
-.  .  .  .  .  .  .  .  endLine: 3
-.  .  .  .  .  .  .  .  endTokenPos: 16
-.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  .  .  kind: 10
-.  .  .  .  .  .  .  .  startFilePos: 42
-.  .  .  .  .  .  .  .  startLine: 3
-.  .  .  .  .  .  .  .  startTokenPos: 16
+.  .  .  .  .  .  .  .  value: 1
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Expr_Variable {
+.  .  .  .  .  .  .  Roles: Identifier,Left,Variable
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  .  .  name: c
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Left,Variable
+.  .  .  .  1: Stmt_Return {
+.  .  .  .  .  Roles: Return,Statement
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 19
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 22
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: var
-.  .  .  .  .  .  name: c
+.  .  .  .  .  .  internalRole: body
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 38
-.  .  .  .  .  .  .  .  endLine: 3
-.  .  .  .  .  .  .  .  endTokenPos: 12
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  startFilePos: 37
-.  .  .  .  .  .  .  .  startLine: 3
-.  .  .  .  .  .  .  .  startTokenPos: 12
+.  .  .  .  .  .  0: Scalar_LNumber {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 21
 .  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  4: Stmt_Return {
-.  .  .  Roles: Return,Statement
-.  .  .  Properties: {
-.  .  .  .  internalRole: stmts
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 57
-.  .  .  .  .  .  endLine: 4
-.  .  .  .  .  .  endTokenPos: 22
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 49
-.  .  .  .  .  .  startLine: 4
-.  .  .  .  .  .  startTokenPos: 19
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  Roles: Expression,Literal,Number
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  .  value: 2
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 21
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 56
-.  .  .  .  .  .  .  .  endLine: 4
-.  .  .  .  .  .  .  .  endTokenPos: 21
-.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  .  .  .  kind: 10
-.  .  .  .  .  .  .  .  startFilePos: 56
-.  .  .  .  .  .  .  .  startLine: 4
-.  .  .  .  .  .  .  .  startTokenPos: 21
+.  .  .  .  .  .  .  .  value: 2
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }

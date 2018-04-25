@@ -1,6 +1,339 @@
-Status:  fatal
+Status:  ok
 Language:  php
 Errors: 
- .  argument should be a node or a list, got: uast.String
 UAST: 
+Stmt_Namespace {
+.  Roles: Block
+.  StartPosition: {
+.  .  Offset: 0
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 0
+.  .  Line: 3
+.  .  Col: 7
+.  }
+.  Properties: {
+.  .  kind: 1
+.  }
+.  Children: {
+.  .  0: Name {
+.  .  .  Roles: Unannotated
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 4
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 6
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: name
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  TOKEN "AstExtractor"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1:  {
+.  .  .  .  .  TOKEN "Exception"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: Stmt_Class {
+.  .  .  Roles: Unannotated
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 5
+.  .  .  .  Col: 9
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 11
+.  .  .  .  Col: 55
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  flags: 0
+.  .  .  .  internalRole: stmts
+.  .  .  .  name: Error
+.  .  .  .  type: 0
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 15
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 15
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: extends
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  TOKEN "BaseFailure"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Function,Type
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 19
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 53
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  flags: 1
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  .  name: __construct
+.  .  .  .  .  .  type: 1
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Param {
+.  .  .  .  .  .  .  Roles: Argument
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 25
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 27
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  .  .  name: msg
+.  .  .  .  .  .  .  .  type: string
+.  .  .  .  .  .  .  .  variadic: false
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Param {
+.  .  .  .  .  .  .  Roles: Argument
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 30
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 31
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  .  .  name: values
+.  .  .  .  .  .  .  .  variadic: true
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: Expr_StaticCall {
+.  .  .  .  .  .  .  Roles: Call,Expression,Identifier
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  Col: 36
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  Col: 50
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  .  .  .  name: __construct
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Arg {
+.  .  .  .  .  .  .  .  .  Roles: Argument
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  Col: 40
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  Col: 42
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  .  .  .  .  internalRole: args
+.  .  .  .  .  .  .  .  .  .  unpack: false
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: Expr_ClassConstFetch {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Incomplete,Type
+.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 40
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 42
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  .  .  .  .  name: ERROR
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 40
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 40
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: class
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "BaseFailure"
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Arg {
+.  .  .  .  .  .  .  .  .  Roles: Argument
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  Col: 45
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  Col: 45
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  .  .  .  .  internalRole: args
+.  .  .  .  .  .  .  .  .  .  unpack: false
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: Expr_Variable {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 45
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 45
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  .  .  .  .  name: msg
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: Arg {
+.  .  .  .  .  .  .  .  .  Roles: Argument
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  Col: 48
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  Col: 49
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  .  .  .  .  internalRole: args
+.  .  .  .  .  .  .  .  .  .  unpack: true
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: Expr_Variable {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 49
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 49
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  .  .  .  .  name: values
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  3: Name {
+.  .  .  .  .  .  .  .  .  Roles: Receiver,Type
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  Col: 36
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  Col: 36
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: class
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "parent"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
 

@@ -1,6 +1,94 @@
-Status:  fatal
+Status:  ok
 Language:  php
 Errors: 
- .  argument should be a node or a list, got: uast.String
 UAST: 
+Stmt_If {
+.  Roles: If,Statement
+.  StartPosition: {
+.  .  Offset: 0
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 0
+.  .  Line: 5
+.  .  Col: 19
+.  }
+.  Children: {
+.  .  0: Expr_ConstFetch {
+.  .  .  Roles: Expression,Incomplete,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 5
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 5
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: cond
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 5
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 5
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  TOKEN "true"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: Stmt_Function {
+.  .  .  Roles: Declaration,Function
+.  .  .  TOKEN "A"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 10
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 17
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: stmts
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Function.returnType {
+.  .  .  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: returnType
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Function.body {
+.  .  .  .  .  Roles: Body,Declaration,Function
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
 

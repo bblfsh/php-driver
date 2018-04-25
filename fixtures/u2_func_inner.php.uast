@@ -5,42 +5,64 @@ UAST:
  {
 .  Children: {
 .  .  0: Stmt_Function {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration,Function
+.  .  .  TOKEN "testfnc1"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 4
+.  .  .  .  Col: 17
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
-.  .  .  .  name: testfnc1
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
+.  .  .  .  0: Function.returnType {
+.  .  .  .  .  Roles: Declaration,Function,Return,Type
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 54
-.  .  .  .  .  .  endLine: 4
-.  .  .  .  .  .  endTokenPos: 17
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 6
-.  .  .  .  .  .  startLine: 2
-.  .  .  .  .  .  startTokenPos: 1
+.  .  .  .  .  .  internalRole: returnType
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Stmt_Function {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  1: Function.body {
+.  .  .  .  .  Roles: Body,Declaration,Function
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  name: testfnc2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
+.  .  .  .  .  .  0: Stmt_Function {
+.  .  .  .  .  .  .  Roles: Declaration,Function
+.  .  .  .  .  .  .  TOKEN "testfnc2"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 52
-.  .  .  .  .  .  .  .  endLine: 3
-.  .  .  .  .  .  .  .  endTokenPos: 15
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  startFilePos: 32
-.  .  .  .  .  .  .  .  startLine: 3
-.  .  .  .  .  .  .  .  startTokenPos: 9
+.  .  .  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  .  .  internalRole: body
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Function.returnType {
+.  .  .  .  .  .  .  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: returnType
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Function.body {
+.  .  .  .  .  .  .  .  .  Roles: Body,Declaration,Function
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -48,62 +70,96 @@ UAST:
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Function {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration,Function
+.  .  .  TOKEN "testfnc3"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 6
+.  .  .  .  Col: 19
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 10
+.  .  .  .  Col: 46
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
-.  .  .  .  name: testfnc3
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
+.  .  .  .  0: Function.returnType {
+.  .  .  .  .  Roles: Declaration,Function,Return,Type
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 142
-.  .  .  .  .  .  endLine: 10
-.  .  .  .  .  .  endTokenPos: 46
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  startFilePos: 57
-.  .  .  .  .  .  startLine: 6
-.  .  .  .  .  .  startTokenPos: 19
+.  .  .  .  .  .  internalRole: returnType
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Stmt_Function {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  1: Function.body {
+.  .  .  .  .  Roles: Body,Declaration,Function
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  name: testfnc4
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  endFilePos: 140
-.  .  .  .  .  .  .  .  endLine: 9
-.  .  .  .  .  .  .  .  endTokenPos: 44
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  startFilePos: 83
-.  .  .  .  .  .  .  .  startLine: 7
-.  .  .  .  .  .  .  .  startTokenPos: 27
+.  .  .  .  .  .  0: Stmt_Function {
+.  .  .  .  .  .  .  Roles: Declaration,Function
+.  .  .  .  .  .  .  TOKEN "testfnc4"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 27
 .  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Stmt_Function {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  Col: 44
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  .  .  name: testfnc5
+.  .  .  .  .  .  .  .  internalRole: body
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Incomplete
+.  .  .  .  .  .  .  .  0: Function.returnType {
+.  .  .  .  .  .  .  .  .  Roles: Declaration,Function,Return,Type
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  endFilePos: 134
-.  .  .  .  .  .  .  .  .  .  endLine: 8
-.  .  .  .  .  .  .  .  .  .  endTokenPos: 42
-.  .  .  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  .  .  startFilePos: 113
-.  .  .  .  .  .  .  .  .  .  startLine: 8
-.  .  .  .  .  .  .  .  .  .  startTokenPos: 35
+.  .  .  .  .  .  .  .  .  .  internalRole: returnType
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Function.body {
+.  .  .  .  .  .  .  .  .  Roles: Body,Declaration,Function
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: Stmt_Function {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Declaration,Function
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "testfnc5"
+.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 35
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  .  .  .  .  Col: 42
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: body
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: Function.returnType {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: returnType
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  1: Function.body {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Body,Declaration,Function
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }

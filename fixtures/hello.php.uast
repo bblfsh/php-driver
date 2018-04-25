@@ -4,51 +4,43 @@ Errors:
 UAST: 
 Stmt_Echo {
 .  Roles: Call,Statement
+.  StartPosition: {
+.  .  Offset: 0
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 0
+.  .  Line: 3
+.  .  Col: 5
+.  }
 .  Children: {
-.  .  0:  {
-.  .  .  Roles: Incomplete
+.  .  0: Comment {
+.  .  .  Roles: Comment,Noop
 .  .  .  Properties: {
-.  .  .  .  endFilePos: 65
-.  .  .  .  endLine: 3
-.  .  .  .  endTokenPos: 5
-.  .  .  .  internalRole: attributes
-.  .  .  .  startFilePos: 46
-.  .  .  .  startLine: 3
-.  .  .  .  startTokenPos: 2
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  filePos: 6
-.  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  line: 2
-.  .  .  .  .  .  text: // this is a simple hello world example
+.  .  .  .  filePos: 6
+.  .  .  .  internalRole: comments
+.  .  .  .  line: 2
+.  .  .  .  text: // this is a simple hello world example
 
-.  .  .  .  .  }
-.  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Scalar_String {
 .  .  .  Roles: Expression,Literal,String
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 4
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 3
+.  .  .  .  Col: 4
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: exprs
+.  .  .  .  kind: 2
 .  .  .  .  value: Hello World!
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  endFilePos: 64
-.  .  .  .  .  .  endLine: 3
-.  .  .  .  .  .  endTokenPos: 4
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  kind: 2
-.  .  .  .  .  .  startFilePos: 51
-.  .  .  .  .  .  startLine: 3
-.  .  .  .  .  .  startTokenPos: 4
-.  .  .  .  .  }
-.  .  .  .  }
 .  .  .  }
 .  .  }
 .  }
