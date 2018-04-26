@@ -120,9 +120,8 @@ func annAssign(typ string, opRoles ...role.Role) Mapping {
 // - Comments position fix.
 // - Comments remove /*[*] */
 // - Add a root File node.
-// - Add missing tokens
-// - Add roles based on key values:
-//		- Name with parts ["Null"] should get role.Null
+// - Add missing tokens (check the old tonoder ones)
+// - Names.parts doesn't work (check with the sdk test)
 
 var Annotations = []Mapping{
 
@@ -167,16 +166,47 @@ var Annotations = []Mapping{
 
 	// FIXME: remove this
 	mapInternalProperty("attributes", role.Noop),
-
 	mapInternalProperty("left", role.Left),
 	mapInternalProperty("right", role.Right),
 	mapInternalProperty("default", role.Default),
+	mapInternalProperty("parts", role.Identifier),
+	Map("x",
+			Part("other", Obj{
+				"parts": Obj{
+					"TOKEN": Var("token"),
+				},
+			}),
+			Part("other", Obj{
+				uast.KeyToken: Var("token"),
+				uast.KeyType: String("Name.parts"),
+				uast.KeyRoles: Roles(role.Identifier),
+			}),
+	),
 
 	AnnotateType(php.File, nil, role.File),
 
-	AnnotateType(php.Name, nil, role.Identifier),
+	// Name, the actual tokens are in the "parts" children
 	AnnotateType(php.Name, ObjRoles{
 		"class": {role.Qualified},
+	}, role.Expression, role.Identifier),
+
+	MapAST(php.Name, Obj{
+		"parts": Arr(String("NULL")),
+	}, Obj{
+		"parts": Obj{},
+	}, role.Expression, role.Null),
+
+	// FIXME: doesnt work
+	MapAST(php.Name, Obj{
+		"parts": Obj{
+			"TOKEN": Var("tk"),
+	},
+	}, Obj{
+		"parts": Obj{
+			uast.KeyToken: Var("tk"),
+			uast.KeyType: String("Parts.name"),
+			uast.KeyRoles: Roles(role.Identifier, role.Value),
+		},
 	}, role.Expression, role.Identifier),
 
 	annAssign(php.Assign, role.Expression, role.Assignment),
