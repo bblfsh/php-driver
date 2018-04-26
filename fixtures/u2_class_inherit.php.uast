@@ -4,34 +4,30 @@ Errors:
 UAST: 
 Stmt_Class {
 .  Roles: Unannotated
-.  StartPosition: {
-.  .  Offset: 0
-.  .  Line: 2
-.  .  Col: 1
-.  }
-.  EndPosition: {
-.  .  Offset: 0
-.  .  Line: 2
-.  .  Col: 10
-.  }
 .  Properties: {
 .  .  flags: 0
 .  .  name: testcls1
 .  .  type: 0
 .  }
 .  Children: {
-.  .  0: Name {
-.  .  .  Roles: Unannotated
+.  .  0:  {
+.  .  .  Roles: Incomplete
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
 .  .  .  .  Line: 2
-.  .  .  .  Col: 7
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 0
 .  .  .  .  Line: 2
-.  .  .  .  Col: 7
+.  .  .  .  Col: 10
 .  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Name {
+.  .  .  Roles: Unannotated
 .  .  .  Properties: {
 .  .  .  .  internalRole: extends
 .  .  .  }
@@ -40,6 +36,22 @@ Stmt_Class {
 .  .  .  .  .  TOKEN "testcls2"
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1:  {
+.  .  .  .  .  Roles: Incomplete
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

@@ -5,39 +5,53 @@ UAST:
 Stmt_Class {
 .  Roles: Declaration,Statement,Type
 .  TOKEN "A"
-.  StartPosition: {
-.  .  Offset: 0
-.  .  Line: 2
-.  .  Col: 1
-.  }
-.  EndPosition: {
-.  .  Offset: 0
-.  .  Line: 4
-.  .  Col: 18
-.  }
 .  Properties: {
 .  .  flags: 0
 .  .  type: 0
 .  }
 .  Children: {
-.  .  0: Stmt_ClassMethod {
-.  .  .  Roles: Body,Function,Type
+.  .  0:  {
+.  .  .  Roles: Incomplete
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
-.  .  .  .  Line: 3
-.  .  .  .  Col: 7
+.  .  .  .  Line: 2
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 0
-.  .  .  .  Line: 3
-.  .  .  .  Col: 16
+.  .  .  .  Line: 4
+.  .  .  .  Col: 18
 .  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Stmt_ClassMethod {
+.  .  .  Roles: Body,Function,Type
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  flags: 8
 .  .  .  .  internalRole: stmts
 .  .  .  .  name: method1
 .  .  .  .  type: 8
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Incomplete
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 16
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
 .  .  .  }
 .  .  }
 .  }

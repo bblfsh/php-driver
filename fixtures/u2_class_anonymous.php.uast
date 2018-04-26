@@ -4,23 +4,13 @@ Errors:
 UAST: 
 Expr_New {
 .  Roles: Call,Expression,Initialization
-.  StartPosition: {
-.  .  Offset: 0
-.  .  Line: 2
-.  .  Col: 1
-.  }
-.  EndPosition: {
-.  .  Offset: 0
-.  .  Line: 2
-.  .  Col: 6
-.  }
 .  Children: {
-.  .  0: Stmt_Class {
-.  .  .  Roles: Declaration,Statement,Type
+.  .  0:  {
+.  .  .  Roles: Incomplete
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
 .  .  .  .  Line: 2
-.  .  .  .  Col: 3
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 0
@@ -28,9 +18,33 @@ Expr_New {
 .  .  .  .  Col: 6
 .  .  .  }
 .  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Stmt_Class {
+.  .  .  Roles: Declaration,Statement,Type
+.  .  .  Properties: {
 .  .  .  .  flags: 0
 .  .  .  .  internalRole: class
 .  .  .  .  type: 0
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Incomplete
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 2
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
 .  .  .  }
 .  .  }
 .  }

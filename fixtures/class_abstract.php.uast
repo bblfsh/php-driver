@@ -5,33 +5,29 @@ UAST:
 Stmt_Class {
 .  Roles: Declaration,Statement,Type
 .  TOKEN "A"
-.  StartPosition: {
-.  .  Offset: 0
-.  .  Line: 3
-.  .  Col: 2
-.  }
-.  EndPosition: {
-.  .  Offset: 0
-.  .  Line: 6
-.  .  Col: 32
-.  }
 .  Properties: {
 .  .  flags: 16
 .  .  type: 16
 .  }
 .  Children: {
-.  .  0: Stmt_ClassMethod {
-.  .  .  Roles: Body,Function,Type
+.  .  0:  {
+.  .  .  Roles: Incomplete
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
-.  .  .  .  Line: 4
-.  .  .  .  Col: 10
+.  .  .  .  Line: 3
+.  .  .  .  Col: 2
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 0
-.  .  .  .  Line: 4
-.  .  .  .  Col: 19
+.  .  .  .  Line: 6
+.  .  .  .  Col: 32
 .  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Stmt_ClassMethod {
+.  .  .  Roles: Body,Function,Type
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  flags: 1
@@ -39,25 +35,51 @@ Stmt_Class {
 .  .  .  .  name: a
 .  .  .  .  type: 1
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Incomplete
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 10
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 19
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
-.  .  1: Stmt_ClassMethod {
+.  .  2: Stmt_ClassMethod {
 .  .  .  Roles: Body,Function,Type
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 5
-.  .  .  .  Col: 21
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 5
-.  .  .  .  Col: 30
-.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  flags: 17
 .  .  .  .  internalRole: stmts
 .  .  .  .  name: b
 .  .  .  .  type: 17
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Incomplete
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 21
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 30
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
 .  .  .  }
 .  .  }
 .  }

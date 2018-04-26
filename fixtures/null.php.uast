@@ -4,19 +4,9 @@ Errors:
 UAST: 
 Expr_ConstFetch {
 .  Roles: Expression,Incomplete,Variable
-.  StartPosition: {
-.  .  Offset: 0
-.  .  Line: 3
-.  .  Col: 2
-.  }
-.  EndPosition: {
-.  .  Offset: 0
-.  .  Line: 3
-.  .  Col: 2
-.  }
 .  Children: {
-.  .  0: Name {
-.  .  .  Roles: Unannotated
+.  .  0:  {
+.  .  .  Roles: Incomplete
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
 .  .  .  .  Line: 3
@@ -28,6 +18,12 @@ Expr_ConstFetch {
 .  .  .  .  Col: 2
 .  .  .  }
 .  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Name {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
 .  .  .  .  internalRole: name
 .  .  .  }
 .  .  .  Children: {
@@ -35,6 +31,22 @@ Expr_ConstFetch {
 .  .  .  .  .  TOKEN "NULL"
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1:  {
+.  .  .  .  .  Roles: Incomplete
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

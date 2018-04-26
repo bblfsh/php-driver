@@ -10,62 +10,62 @@ import (
 )
 
 // FIXME: not reversible, and can probably be done using annotations
-func reparentAttributes() TransformFunc {
-	return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
-		obj, ok := n.(uast.Object)
-		if !ok {
-			return n, false, nil
-		}
+//func reparentAttributes() TransformFunc {
+	//return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
+		//obj, ok := n.(uast.Object)
+		//if !ok {
+			//return n, false, nil
+		//}
 
-		if attrs, ok := obj["attributes"]; ok {
-			props, ok := attrs.(uast.Object)
-			if !ok {
-				return n, false, nil
-			}
+		//if attrs, ok := obj["attributes"]; ok {
+			//props, ok := attrs.(uast.Object)
+			//if !ok {
+				//return n, false, nil
+			//}
 
-			for k, v := range props {
-				obj[k] = v
-			}
+			//for k, v := range props {
+				//obj[k] = v
+			//}
 
-			delete(obj, "attributes")
-			return n, true, nil
-		}
+			//delete(obj, "attributes")
+			//return n, true, nil
+		//}
 
-		return n, false, nil
-	})
-}
+		//return n, false, nil
+	//})
+//}
 
 // FIXME: not reversible
-func fixCommentPositions() TransformFunc {
-	return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
-		obj, ok := n.(uast.Object)
-		if !ok {
-			return n, false, nil
-		}
+//func fixCommentPositions() TransformFunc {
+	//return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
+		//obj, ok := n.(uast.Object)
+		//if !ok {
+			//return n, false, nil
+		//}
 
-		// Positions in comments don't follow the same schema as the other
-		// nodes, the position info is moved to the same place.
-		if pos, ok := obj["filePos"].Native().(float64); ok {
-			obj["startFilePos"] = uast.Int(pos)
-			obj["endFilePos"] = uast.Int(pos + float64(len(obj["text"].Native().(string))))
-			obj["startLine"] = obj["line"]
-			delete(obj, "filePos")
-			delete(obj, "line")
+		//// Positions in comments don't follow the same schema as the other
+		//// nodes, the position info is moved to the same place.
+		//if pos, ok := obj["filePos"].Native().(float64); ok {
+			//obj["startFilePos"] = uast.Int(pos)
+			//obj["endFilePos"] = uast.Int(pos + float64(len(obj["text"].Native().(string))))
+			//obj["startLine"] = obj["line"]
+			//delete(obj, "filePos")
+			//delete(obj, "line")
 
-			return n, true, nil
-		}
+			//return n, true, nil
+		//}
 
-		return n, false, nil
-	})
-}
+		//return n, false, nil
+	//})
+//}
 
 var Native = Transformers([][]Transformer{
 	{
 		ResponseMetadata{
-			TopLevelIsRootNode: false,
+			TopLevelIsRootNode: true,
 		},
 	},
-	{reparentAttributes()},
+	//{reparentAttributes()},
 	//{fixCommentPositions()},
 	{Mappings(Annotations...)},
 	{RolesDedup()},
@@ -107,13 +107,42 @@ func annAssign(typ string, opRoles ...role.Role) Mapping {
 // can be done using annotations.
 // - Comments position fix.
 // - Add a root File node.
-// - Name with parts ["Null"] should get role.Null
 // - Add missing tokens
-// - Add Default switch role when cond == null
-// - Add Argument.[byRef|variadic] roles
+// - Add roles based on key values:
+//		- Name with parts ["Null"] should get role.Null
+//		- Add Default switch role when cond == null
+//		- Add Argument.[byRef|variadic] roles when == true
 
-// FIXME XXX: also migrate the callbacks in tonode.go
 var Annotations = []Mapping{
+
+	// The native AST puts positions and comments inside an "attribute" node. Here
+	// we reparent them to the current node.
+	// FIXME: doesn't work
+	// FIXME: remove /*[*]... */ and //
+	Map("x",
+		Part("root", Obj{
+			"attributes": Part("attrs", Fields{
+				{Name: "startLine", Op: Var("sline")},
+				{Name: "endLine", Op: Var("eline")},
+				{Name: "startTokenPos", Op: Var("stoken")},
+				{Name: "endTokenPos", Op: Var("etoken")},
+				{Name: "startFilePos", Op: Var("sfile")},
+				{Name: "endFilePos", Op: Var("efile")},
+				{Name: "comments", Op: Var("comments"), Optional: "comments_exists"},
+			}),
+		}),
+		Part("root", Fields{
+			{Name: "startLine", Op: Var("sline")},
+			{Name: "endLine", Op: Var("eline")},
+			{Name: "startTokenPos", Op: Var("stoken")},
+			{Name: "endTokenPos", Op: Var("etoken")},
+			{Name: "startFilePos", Op: Var("sfile")},
+			{Name: "endFilePos", Op: Var("efile")},
+			{Name: "comments", Op: Var("comments"), Optional: "comments_exists"},
+			{Name: "attributes", Op: Part("attrs", Obj{})},
+		}),
+	),
+
 	ObjectToNode{
 		InternalTypeKey: "nodeType",
 	}.Mapping(),
@@ -131,16 +160,6 @@ var Annotations = []Mapping{
 	// FIXME: remove this
 	mapInternalProperty("attributes", role.Incomplete),
 
-	// FIXME: doesnt work for stmts (neither with mapInternalProperty)
-	// check after other parts annotate this
-	Map("statements",
-		Part("m", Obj{
-			"stmts": ObjectRoles("stmts"),
-		}),
-		Part("m", Obj{
-			"stmts": ObjectRoles("stmts", role.Body),
-		}),
-	),
 	//mapInternalProperty("stmts", role.Expression, role.Body),
 	mapInternalProperty("left", role.Left),
 	mapInternalProperty("right", role.Right),
