@@ -6,27 +6,59 @@ UAST:
 .  Children: {
 .  .  0: Expr_StaticPropertyFetch {
 .  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 35
+.  .  .  .  Line: 4
+.  .  .  .  Col: 3
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 39
+.  .  .  .  Line: 4
+.  .  .  .  Col: 5
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  name: b
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Comment {
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  filePos: 7
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  line: 3
+.  .  .  .  .  .  text: // property name variations
+
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Name {
+.  .  .  .  .  Roles: Identifier
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Offset: 35
 .  .  .  .  .  .  Line: 4
 .  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Offset: 35
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  internalRole: class
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Comment {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Comment {
 .  .  .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  filePos: 7
@@ -36,46 +68,10 @@ UAST:
 
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Name {
-.  .  .  .  .  Roles: Unannotated
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: class
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  2:  {
 .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: parts
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 3
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 3
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  filePos: 7
-.  .  .  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  .  .  line: 3
-.  .  .  .  .  .  .  .  .  .  text: // property name variations
-
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -84,72 +80,72 @@ UAST:
 .  .  }
 .  .  1: Expr_StaticPropertyFetch {
 .  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 42
+.  .  .  .  Line: 5
+.  .  .  .  Col: 8
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 47
+.  .  .  .  Line: 5
+.  .  .  .  Col: 11
+.  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 8
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 11
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Name {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 42
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 8
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 42
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 8
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: class
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 8
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 8
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 45
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 10
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 47
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 11
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: name
 .  .  .  .  .  .  name: b
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 10
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 11
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  .  .  }
@@ -160,72 +156,72 @@ UAST:
 .  .  }
 .  .  2: Expr_StaticPropertyFetch {
 .  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 50
+.  .  .  .  Line: 6
+.  .  .  .  Col: 14
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 58
+.  .  .  .  Line: 6
+.  .  .  .  Col: 19
+.  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 14
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 19
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Name {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 50
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 14
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 50
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 14
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: class
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Scalar_String {
 .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 55
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 18
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 57
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 18
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: name
 .  .  .  .  .  .  value: b
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 18
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 18
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  .  .  .  kind: 1
@@ -237,24 +233,57 @@ UAST:
 .  .  }
 .  .  3: Expr_ArrayDimFetch {
 .  .  .  Roles: Entry,Expression,List,Value
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 78
+.  .  .  .  Line: 9
+.  .  .  .  Col: 23
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 87
+.  .  .  .  Line: 9
+.  .  .  .  Col: 28
+.  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Comment {
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  filePos: 62
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  line: 8
+.  .  .  .  .  .  text: // array access
+
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Expr_StaticPropertyFetch {
+.  .  .  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Offset: 78
 .  .  .  .  .  .  Line: 9
 .  .  .  .  .  .  Col: 23
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Offset: 82
 .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  Col: 28
+.  .  .  .  .  .  Col: 25
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  name: b
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Comment {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Comment {
 .  .  .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  filePos: 62
@@ -264,58 +293,29 @@ UAST:
 
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  .  value: c
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
+.  .  .  .  .  .  2: Name {
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  Col: 27
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  Col: 27
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  kind: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Expr_StaticPropertyFetch {
-.  .  .  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: var
-.  .  .  .  .  .  name: b
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Offset: 78
 .  .  .  .  .  .  .  .  Line: 9
 .  .  .  .  .  .  .  .  Col: 23
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Offset: 78
 .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  Col: 25
+.  .  .  .  .  .  .  .  Col: 23
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  internalRole: class
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Comment {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Comment {
 .  .  .  .  .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  filePos: 62
@@ -325,48 +325,38 @@ UAST:
 
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: class
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  2:  {
 .  .  .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1:  {
-.  .  .  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  Col: 23
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  Col: 23
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  filePos: 62
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  .  .  .  .  line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  text: // array access
-
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: Scalar_String {
+.  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 84
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 27
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 86
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 27
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: dim
+.  .  .  .  .  .  value: c
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -375,100 +365,100 @@ UAST:
 .  .  }
 .  .  4: Expr_ArrayDimFetch {
 .  .  .  Roles: Entry,Expression,List,Value
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 90
+.  .  .  .  Line: 10
+.  .  .  .  Col: 31
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 99
+.  .  .  .  Line: 10
+.  .  .  .  Col: 36
+.  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 31
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 36
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  .  value: c
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  Col: 35
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  Col: 35
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  kind: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Expr_StaticPropertyFetch {
+.  .  .  .  1: Expr_StaticPropertyFetch {
 .  .  .  .  .  Roles: Entry,Expression,Identifier,Incomplete,Map,Value
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 90
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 31
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 94
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 33
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
 .  .  .  .  .  .  name: b
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  Col: 31
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  Col: 33
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 90
+.  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  Col: 31
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 90
+.  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  Col: 31
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: class
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
 .  .  .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1:  {
-.  .  .  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  Col: 31
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  Col: 31
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Scalar_String {
+.  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 96
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 35
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 98
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 35
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: dim
+.  .  .  .  .  .  value: c
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }

@@ -5,29 +5,39 @@ UAST:
 Stmt_Class {
 .  Roles: Declaration,Statement,Type
 .  TOKEN "A"
+.  StartPosition: {
+.  .  Offset: 7
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 186
+.  .  Line: 11
+.  .  Col: 73
+.  }
 .  Properties: {
 .  .  flags: 16
 .  .  type: 16
 .  }
 .  Children: {
 .  .  0:  {
-.  .  .  Roles: Incomplete
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 3
-.  .  .  .  Col: 2
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 11
-.  .  .  .  Col: 73
-.  .  .  }
+.  .  .  Roles: Noop
 .  .  .  Properties: {
 .  .  .  .  internalRole: attributes
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Property {
 .  .  .  Roles: Body,Incomplete,Type,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 30
+.  .  .  .  Line: 4
+.  .  .  .  Col: 10
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 36
+.  .  .  .  Line: 4
+.  .  .  .  Col: 13
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  flags: 0
 .  .  .  .  internalRole: stmts
@@ -35,40 +45,30 @@ Stmt_Class {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 10
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 13
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Stmt_PropertyProperty {
 .  .  .  .  .  Roles: Incomplete,Type,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 34
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 12
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 35
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 12
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: props
 .  .  .  .  .  .  name: a
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 12
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 12
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  .  .  }
@@ -79,6 +79,16 @@ Stmt_Class {
 .  .  }
 .  .  2: Stmt_Property {
 .  .  .  Roles: Body,Incomplete,Type,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 42
+.  .  .  .  Line: 5
+.  .  .  .  Col: 15
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 51
+.  .  .  .  Line: 5
+.  .  .  .  Col: 18
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  flags: 8
 .  .  .  .  internalRole: stmts
@@ -86,40 +96,30 @@ Stmt_Class {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 15
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 18
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Stmt_PropertyProperty {
 .  .  .  .  .  Roles: Incomplete,Type,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 49
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 17
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 50
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 17
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: props
 .  .  .  .  .  .  name: b
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 17
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 17
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  .  .  }
@@ -130,6 +130,16 @@ Stmt_Class {
 .  .  }
 .  .  3: Stmt_ClassMethod {
 .  .  .  Roles: Body,Function,Type
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 57
+.  .  .  .  Line: 6
+.  .  .  .  Col: 20
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 78
+.  .  .  .  Line: 6
+.  .  .  .  Col: 27
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  flags: 16
@@ -139,17 +149,7 @@ Stmt_Class {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 20
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 27
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
@@ -158,6 +158,16 @@ Stmt_Class {
 .  .  }
 .  .  4: Stmt_ClassMethod {
 .  .  .  Roles: Body,Function,Type
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 84
+.  .  .  .  Line: 7
+.  .  .  .  Col: 29
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 104
+.  .  .  .  Line: 7
+.  .  .  .  Col: 38
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  flags: 32
@@ -167,17 +177,7 @@ Stmt_Class {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 29
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 38
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
@@ -186,6 +186,16 @@ Stmt_Class {
 .  .  }
 .  .  5: Stmt_ClassMethod {
 .  .  .  Roles: Body,Function,Type
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 110
+.  .  .  .  Line: 8
+.  .  .  .  Col: 40
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 131
+.  .  .  .  Line: 8
+.  .  .  .  Col: 49
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  flags: 8
@@ -195,17 +205,7 @@ Stmt_Class {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 40
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 49
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
@@ -214,6 +214,16 @@ Stmt_Class {
 .  .  }
 .  .  6: Stmt_ClassMethod {
 .  .  .  Roles: Body,Function,Type
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 137
+.  .  .  .  Line: 9
+.  .  .  .  Col: 51
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 164
+.  .  .  .  Line: 9
+.  .  .  .  Col: 62
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  flags: 40
@@ -223,17 +233,7 @@ Stmt_Class {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  Col: 51
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  Col: 62
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
@@ -242,6 +242,16 @@ Stmt_Class {
 .  .  }
 .  .  7: Stmt_ClassMethod {
 .  .  .  Roles: Body,Function,Type
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 170
+.  .  .  .  Line: 10
+.  .  .  .  Col: 64
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 184
+.  .  .  .  Line: 10
+.  .  .  .  Col: 71
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  flags: 0
@@ -251,17 +261,7 @@ Stmt_Class {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 64
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 71
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }

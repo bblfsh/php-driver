@@ -5,40 +5,50 @@ UAST:
 Stmt_Function {
 .  Roles: Declaration,Function
 .  TOKEN "a"
+.  StartPosition: {
+.  .  Offset: 7
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 52
+.  .  Line: 3
+.  .  Col: 25
+.  }
 .  Properties: {
 .  .  byRef: false
 .  }
 .  Children: {
-.  .  0: Function.returnType {
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Function.returnType {
 .  .  .  Roles: Declaration,Function,Return,Type
 .  .  .  Properties: {
 .  .  .  .  internalRole: returnType
 .  .  .  }
 .  .  }
-.  .  1: Function.body {
+.  .  2: Function.body {
 .  .  .  Roles: Body,Declaration,Function
 .  .  .  Properties: {
 .  .  .  .  internalRole: stmts
 .  .  .  }
 .  .  }
-.  .  2:  {
-.  .  .  Roles: Incomplete
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 3
-.  .  .  .  Col: 2
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 3
-.  .  .  .  Col: 25
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: attributes
-.  .  .  }
-.  .  }
 .  .  3: Param {
 .  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 18
+.  .  .  .  Line: 3
+.  .  .  .  Col: 6
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 19
+.  .  .  .  Line: 3
+.  .  .  .  Col: 6
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: params
@@ -47,17 +57,7 @@ Stmt_Function {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 6
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 6
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
@@ -66,6 +66,16 @@ Stmt_Function {
 .  .  }
 .  .  4: Param {
 .  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 22
+.  .  .  .  Line: 3
+.  .  .  .  Col: 9
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 29
+.  .  .  .  Line: 3
+.  .  .  .  Col: 11
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: params
@@ -75,17 +85,7 @@ Stmt_Function {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 9
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 11
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
@@ -94,6 +94,16 @@ Stmt_Function {
 .  .  }
 .  .  5: Param {
 .  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 32
+.  .  .  .  Line: 3
+.  .  .  .  Col: 14
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 42
+.  .  .  .  Line: 3
+.  .  .  .  Col: 16
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: params
@@ -103,17 +113,7 @@ Stmt_Function {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 14
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 16
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
@@ -122,6 +122,16 @@ Stmt_Function {
 .  .  }
 .  .  6: Param {
 .  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 45
+.  .  .  .  Line: 3
+.  .  .  .  Col: 19
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 48
+.  .  .  .  Line: 3
+.  .  .  .  Col: 21
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: params
@@ -130,47 +140,37 @@ Stmt_Function {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 19
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 21
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Name {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 45
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 19
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 45
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 19
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: type
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  TOKEN "E"
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 19
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 19
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  TOKEN "E"
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }

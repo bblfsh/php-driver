@@ -4,71 +4,71 @@ Errors:
 UAST: 
 Stmt_If {
 .  Roles: If,Statement
+.  StartPosition: {
+.  .  Offset: 7
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 39
+.  .  Line: 5
+.  .  Col: 19
+.  }
 .  Children: {
 .  .  0:  {
-.  .  .  Roles: Incomplete
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 3
-.  .  .  .  Col: 2
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 5
-.  .  .  .  Col: 19
-.  .  .  }
+.  .  .  Roles: Noop
 .  .  .  Properties: {
 .  .  .  .  internalRole: attributes
 .  .  .  }
 .  .  }
 .  .  1: Expr_ConstFetch {
 .  .  .  Roles: Expression,Incomplete,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 11
+.  .  .  .  Line: 3
+.  .  .  .  Col: 5
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 14
+.  .  .  .  Line: 3
+.  .  .  .  Col: 5
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: cond
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Name {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Identifier
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 11
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 5
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 14
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 5
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: name
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  TOKEN "true"
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1:  {
-.  .  .  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  TOKEN "true"
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -78,37 +78,37 @@ Stmt_If {
 .  .  2: Stmt_Function {
 .  .  .  Roles: Declaration,Function
 .  .  .  TOKEN "A"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 23
+.  .  .  .  Line: 4
+.  .  .  .  Col: 10
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 37
+.  .  .  .  Line: 4
+.  .  .  .  Col: 17
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  internalRole: stmts
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Function.returnType {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Function.returnType {
 .  .  .  .  .  Roles: Declaration,Function,Return,Type
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: returnType
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Function.body {
+.  .  .  .  2: Function.body {
 .  .  .  .  .  Roles: Body,Declaration,Function
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 10
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 17
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

@@ -7,36 +7,36 @@ UAST:
 .  .  0: Stmt_Function {
 .  .  .  Roles: Declaration,Function
 .  .  .  TOKEN "test1"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 7
+.  .  .  .  Line: 3
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 25
+.  .  .  .  Line: 3
+.  .  .  .  Col: 9
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Function.returnType {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Function.returnType {
 .  .  .  .  .  Roles: Declaration,Function,Return,Type
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: returnType
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Function.body {
+.  .  .  .  2: Function.body {
 .  .  .  .  .  Roles: Body,Declaration,Function
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 9
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -44,37 +44,37 @@ UAST:
 .  .  1: Stmt_Function {
 .  .  .  Roles: Declaration,Function
 .  .  .  TOKEN "test2"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 27
+.  .  .  .  Line: 4
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 53
+.  .  .  .  Line: 4
+.  .  .  .  Col: 22
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Function.returnType {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Function.returnType {
 .  .  .  .  .  Roles: Declaration,Function,Return,Type
 .  .  .  .  .  TOKEN "array"
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: returnType
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Function.body {
+.  .  .  .  2: Function.body {
 .  .  .  .  .  Roles: Body,Declaration,Function
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 11
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 22
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -82,37 +82,37 @@ UAST:
 .  .  2: Stmt_Function {
 .  .  .  Roles: Declaration,Function
 .  .  .  TOKEN "test3"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 55
+.  .  .  .  Line: 5
+.  .  .  .  Col: 24
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 84
+.  .  .  .  Line: 5
+.  .  .  .  Col: 35
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Function.returnType {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Function.returnType {
 .  .  .  .  .  Roles: Declaration,Function,Return,Type
 .  .  .  .  .  TOKEN "callable"
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: returnType
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Function.body {
+.  .  .  .  2: Function.body {
 .  .  .  .  .  Roles: Body,Declaration,Function
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 24
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 35
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -120,36 +120,36 @@ UAST:
 .  .  3: Stmt_Function {
 .  .  .  Roles: Declaration,Function
 .  .  .  TOKEN "test4"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 86
+.  .  .  .  Line: 6
+.  .  .  .  Col: 37
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 114
+.  .  .  .  Line: 6
+.  .  .  .  Col: 50
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Function.returnType {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Function.returnType {
 .  .  .  .  .  Roles: Declaration,Function,Return,Type
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: returnType
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Function.body {
+.  .  .  .  2: Function.body {
 .  .  .  .  .  Roles: Body,Declaration,Function
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 37
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 50
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

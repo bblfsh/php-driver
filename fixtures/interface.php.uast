@@ -4,88 +4,98 @@ Errors:
 UAST: 
 Stmt_Interface {
 .  Roles: Unannotated
+.  StartPosition: {
+.  .  Offset: 7
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 59
+.  .  Line: 5
+.  .  Col: 24
+.  }
 .  Properties: {
 .  .  name: A
 .  }
 .  Children: {
 .  .  0:  {
-.  .  .  Roles: Incomplete
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 3
-.  .  .  .  Col: 2
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 5
-.  .  .  .  Col: 24
-.  .  .  }
+.  .  .  Roles: Noop
 .  .  .  Properties: {
 .  .  .  .  internalRole: attributes
 .  .  .  }
 .  .  }
 .  .  1: Name {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Identifier
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 27
+.  .  .  .  Line: 3
+.  .  .  .  Col: 8
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 27
+.  .  .  .  Line: 3
+.  .  .  .  Col: 8
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: extends
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1:  {
 .  .  .  .  .  TOKEN "C"
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 8
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 8
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  }
-.  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: Name {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Identifier
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 30
+.  .  .  .  Line: 3
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 30
+.  .  .  .  Line: 3
+.  .  .  .  Col: 11
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: extends
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  TOKEN "D"
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 11
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 11
-.  .  .  .  .  }
+.  .  .  .  .  TOKEN "D"
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  3: Stmt_ClassMethod {
 .  .  .  Roles: Function,Type
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 38
+.  .  .  .  Line: 4
+.  .  .  .  Col: 15
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 57
+.  .  .  .  Line: 4
+.  .  .  .  Col: 22
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
 .  .  .  .  flags: 1
@@ -95,17 +105,7 @@ Stmt_Interface {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
-.  .  .  .  .  Roles: Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 15
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 22
-.  .  .  .  .  }
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }

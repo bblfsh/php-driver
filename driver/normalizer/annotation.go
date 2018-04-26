@@ -6,66 +6,81 @@ import (
 	"gopkg.in/bblfsh/sdk.v1/uast"
 	"gopkg.in/bblfsh/sdk.v1/uast/role"
 	. "gopkg.in/bblfsh/sdk.v1/uast/transformer"
-	//"gopkg.in/bblfsh/sdk.v1/uast/transformer/positioner"
 )
 
-// FIXME: not reversible, and can probably be done using annotations
-//func reparentAttributes() TransformFunc {
+//var rootProcessed bool = false
+
+//func addRootNode() TransformFunc {
 	//return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
-		//obj, ok := n.(uast.Object)
+		//if rootProcessed {
+			//return n, false, nil
+		//}
+
+		//objRoot, ok := n.(uast.Object)
 		//if !ok {
 			//return n, false, nil
 		//}
 
-		//if attrs, ok := obj["attributes"]; ok {
-			//props, ok := attrs.(uast.Object)
-			//if !ok {
-				//return n, false, nil
-			//}
-
-			//for k, v := range props {
-				//obj[k] = v
-			//}
-
-			//delete(obj, "attributes")
-			//return n, true, nil
+		//if _, ok := objRoot["rerooted"]; ok {
+			//return n, false, nil
 		//}
 
-		//return n, false, nil
+		//newRoot := uast.Object{}
+		//// XXX add type so it can be annotated
+		//newRoot["body"] = n
+		//newRoot["nodeType"] = uast.String("FakeRoot")
+
+		//rootProcessed = true
+		//return newRoot, true, nil
+		////return n, true, nil
 	//})
 //}
+
+
+type addRootNode struct {}
+
+// Do applies the transformation described by this object.
+func (n addRootNode) Do(root uast.Node) (uast.Node, error) {
+	if obj, ok := root.(uast.Object); ok && len(obj) == 1 {
+		newRoot := uast.Object{}
+		newRoot["nodeType"] = uast.String("FakeRoot")
+		newRoot["main"] = root
+		return newRoot, nil
+	}
+	return root, nil
+}
 
 // FIXME: not reversible
 //func fixCommentPositions() TransformFunc {
-	//return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
-		//obj, ok := n.(uast.Object)
-		//if !ok {
-			//return n, false, nil
-		//}
+//return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
+//obj, ok := n.(uast.Object)
+//if !ok {
+//return n, false, nil
+//}
 
-		//// Positions in comments don't follow the same schema as the other
-		//// nodes, the position info is moved to the same place.
-		//if pos, ok := obj["filePos"].Native().(float64); ok {
-			//obj["startFilePos"] = uast.Int(pos)
-			//obj["endFilePos"] = uast.Int(pos + float64(len(obj["text"].Native().(string))))
-			//obj["startLine"] = obj["line"]
-			//delete(obj, "filePos")
-			//delete(obj, "line")
+//// Positions in comments don't follow the same schema as the other
+//// nodes, the position info is moved to the same place.
+//if pos, ok := obj["filePos"].Native().(float64); ok {
+//obj["startFilePos"] = uast.Int(pos)
+//obj["endFilePos"] = uast.Int(pos + float64(len(obj["text"].Native().(string))))
+//obj["startLine"] = obj["line"]
+//delete(obj, "filePos")
+//delete(obj, "line")
 
-			//return n, true, nil
-		//}
+//return n, true, nil
+//}
 
-		//return n, false, nil
-	//})
+//return n, false, nil
+//})
 //}
 
 var Native = Transformers([][]Transformer{
+	{ addRootNode{} },
 	{
 		ResponseMetadata{
-			TopLevelIsRootNode: true,
+			TopLevelIsRootNode: false,
 		},
 	},
-	//{reparentAttributes()},
 	//{fixCommentPositions()},
 	{Mappings(Annotations...)},
 	{RolesDedup()},
@@ -73,7 +88,6 @@ var Native = Transformers([][]Transformer{
 
 var Code = []CodeTransformer{
 	//positioner.NewFillOffsetFromLineCol(),
-	//positioner.NewFillLineColFromOffset(),
 }
 
 // FIXME: move to the SDK and remove from here and the python driver
@@ -103,22 +117,17 @@ func annAssign(typ string, opRoles ...role.Role) Mapping {
 }
 
 // XXX Missing:
-// - Investigate/fix the problem with positions. Check if the reparenting of attributes
-// can be done using annotations.
 // - Comments position fix.
+// - Comments remove /*[*] */
 // - Add a root File node.
 // - Add missing tokens
 // - Add roles based on key values:
 //		- Name with parts ["Null"] should get role.Null
-//		- Add Default switch role when cond == null
-//		- Add Argument.[byRef|variadic] roles when == true
 
 var Annotations = []Mapping{
 
 	// The native AST puts positions and comments inside an "attribute" node. Here
 	// we reparent them to the current node.
-	// FIXME: doesn't work
-	// FIXME: remove /*[*]... */ and //
 	Map("x",
 		Part("root", Obj{
 			"attributes": Part("attrs", Fields{
@@ -131,13 +140,22 @@ var Annotations = []Mapping{
 				{Name: "comments", Op: Var("comments"), Optional: "comments_exists"},
 			}),
 		}),
+
 		Part("root", Fields{
-			{Name: "startLine", Op: Var("sline")},
-			{Name: "endLine", Op: Var("eline")},
-			{Name: "startTokenPos", Op: Var("stoken")},
-			{Name: "endTokenPos", Op: Var("etoken")},
-			{Name: "startFilePos", Op: Var("sfile")},
-			{Name: "endFilePos", Op: Var("efile")},
+			{Name: uast.KeyStart, Op: Obj{
+				uast.KeyType:    String(uast.TypePosition),
+				uast.KeyPosLine: Var("sline"),
+				uast.KeyPosCol:  Var("stoken"),
+				uast.KeyPosOff:  Var("sfile"),
+			},
+			},
+			{Name: uast.KeyEnd, Op: Obj{
+				uast.KeyType:    String(uast.TypePosition),
+				uast.KeyPosLine: Var("eline"),
+				uast.KeyPosCol:  Var("etoken"),
+				uast.KeyPosOff:  Var("efile"),
+			},
+			},
 			{Name: "comments", Op: Var("comments"), Optional: "comments_exists"},
 			{Name: "attributes", Op: Part("attrs", Obj{})},
 		}),
@@ -146,27 +164,17 @@ var Annotations = []Mapping{
 	ObjectToNode{
 		InternalTypeKey: "nodeType",
 	}.Mapping(),
-	ObjectToNode{
-		LineKey:   "startLine",
-		ColumnKey: "startTokenPos",
-		OffsetKey: "startFilePos",
-	}.Mapping(),
-	ObjectToNode{
-		EndLineKey:   "endLine",
-		EndColumnKey: "endTokenPos",
-		EndOffsetKey: "endFilePos",
-	}.Mapping(),
 
 	// FIXME: remove this
-	mapInternalProperty("attributes", role.Incomplete),
+	mapInternalProperty("attributes", role.Noop),
 
-	//mapInternalProperty("stmts", role.Expression, role.Body),
 	mapInternalProperty("left", role.Left),
 	mapInternalProperty("right", role.Right),
 	mapInternalProperty("default", role.Default),
 
 	AnnotateType(php.File, nil, role.File),
 
+	AnnotateType(php.Name, nil, role.Identifier),
 	AnnotateType(php.Name, ObjRoles{
 		"class": {role.Qualified},
 	}, role.Expression, role.Identifier),
@@ -427,10 +435,22 @@ var Annotations = []Mapping{
 		uast.KeyToken: Var("name"),
 	}, role.Function, role.Declaration),
 
-	// No reference role
-	// FIXME: byRef -> add role.Incomplete
-	//        variadic->add role.ArgsList
-	AnnotateType(php.Param, nil, role.Argument),
+	AnnotateTypeFields(php.Param, FieldRoles{
+		"byRef": {Op: Is(uast.Bool(false))},
+		"variadic": {Op: Is(uast.Bool(false))},
+	}, role.Argument),
+	AnnotateTypeFields(php.Param, FieldRoles{
+		"byRef": {Op: Is(uast.Bool(false))},
+		"variadic": {Op: Is(uast.Bool(true))},
+	}, role.Argument, role.ArgsList),
+	AnnotateTypeFields(php.Param, FieldRoles{
+		"byRef": {Op: Is(uast.Bool(true))},
+		"variadic": {Op: Is(uast.Bool(false))},
+	}, role.Argument, role.Incomplete),
+	AnnotateTypeFields(php.Param, FieldRoles{
+		"byRef": {Op: Is(uast.Bool(true))},
+		"variadic": {Op: Is(uast.Bool(true))},
+	}, role.Argument, role.Incomplete, role.ArgsList),
 
 	// Include and require
 	AnnotateType(php.Include, ObjRoles{
@@ -463,10 +483,14 @@ var Annotations = []Mapping{
 
 	// Switch
 	AnnotateType(php.Switch, nil, role.Switch),
-	// FIXME: if cond == null add role "Default"
 	AnnotateTypeFields(php.Case, FieldRoles{
-		//"cond": {role.Condition},
-		"cond":  {Opt: true, Roles: role.Roles{role.Condition}},
-		"stmts": {Arr: true, Roles: role.Roles{role.Body}},
+		// FIXME: if cond == null add role.Default
+		"cond":  {Opt: true, Roles: role.Roles{role.Case, role.Condition}},
+		"stmts": {Arr: true, Roles: role.Roles{role.Case, role.Body}},
 	}, role.Case),
+	AnnotateTypeFields(php.Case, FieldRoles{
+		// FIXME: if cond == null add role.Default
+		"cond":  {Op: Is(nil)},
+		"stmts": {Arr: true, Roles: role.Roles{role.Case, role.Body}},
+	}, role.Case, role.Default),
 }
