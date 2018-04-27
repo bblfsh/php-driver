@@ -11,6 +11,7 @@ import (
 /*
 var rootProcessed bool = false
 
+// FIXME: Doesnt work
 func addRootNode() TransformFunc {
 	return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
 		if rootProcessed {
@@ -51,30 +52,6 @@ func (n addRootNode) Do(root uast.Node) (uast.Node, error) {
 	return root, nil
 }
 
-// FIXME: not reversible
-//func fixCommentPositions() TransformFunc {
-//return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
-//obj, ok := n.(uast.Object)
-//if !ok {
-//return n, false, nil
-//}
-
-//// Positions in comments don't follow the same schema as the other
-//// nodes, the position info is moved to the same place.
-//if pos, ok := obj["filePos"].Native().(float64); ok {
-//obj["startFilePos"] = uast.Int(pos)
-//obj["endFilePos"] = uast.Int(pos + float64(len(obj["text"].Native().(string))))
-//obj["startLine"] = obj["line"]
-//delete(obj, "filePos")
-//delete(obj, "line")
-
-//return n, true, nil
-//}
-
-//return n, false, nil
-//})
-//}
-
 var Native = Transformers([][]Transformer{
 	//{addRootNode{}},
 	{
@@ -82,7 +59,6 @@ var Native = Transformers([][]Transformer{
 			TopLevelIsRootNode: false,
 		},
 	},
-	//{fixCommentPositions()},
 	{Mappings(Annotations...)},
 	{RolesDedup()},
 }...)
@@ -118,9 +94,17 @@ func annAssign(typ string, opRoles ...role.Role) Mapping {
 }
 
 // XXX Missing:
-// - Comments position fix.
-// - Add a root File node.
 // - Add missing tokens (check the old tonoder ones)
+
+// - Add a root File node (native AST is directly an array).
+
+// - Add KeyType and KeyToken to Name.parts objects (these are auto generated from string
+//   lists in the native UAST. Also, they don't seem to get the Unannotated role). Works
+//   in ops_test.go but not here, even if I comment all the other annotations.
+
+// - Comments: annotation not working:
+//		- UncommentCLike not working
+//		- Position keys translation not working
 
 var Annotations = []Mapping{
 
@@ -157,28 +141,42 @@ var Annotations = []Mapping{
 		}),
 	),
 
+	// FIXME: Doesnt work
+	MapAST(php.Comment, Obj{
+		"text":    UncommentCLike("text"),
+		"filePos": Var("fp"),
+		"line":    Var("ln"),
+	}, Obj{
+		uast.KeyToken: Var("text"),
+		uast.KeyStart: Obj{
+			uast.KeyPosCol:  Var("fp"),
+			uast.KeyPosLine: Var("ln"),
+		},
+	}, role.Comment, role.Noop),
+
 	ObjectToNode{
 		InternalTypeKey: "nodeType",
 	}.Mapping(),
 
-	// FIXME: remove this
 	mapInternalProperty("attributes", role.Noop),
 	mapInternalProperty("left", role.Left),
 	mapInternalProperty("right", role.Right),
 	mapInternalProperty("default", role.Default),
-	Map("x", Fields{
-			{Name: uast.KeyToken, Op: Var("tk")},
-		}, Fields{
-			{Name:uast.KeyType, Op: String("Name.parts")},
-			{Name: uast.KeyToken, Op: Var("tk")},
-		},
+
+	// FIXME: Doesnt work
+	Map("fill_parts", Fields{
+		{Name: uast.KeyToken, Op: Var("tk")},
+	}, Fields{
+		{Name: uast.KeyType, Op: String("Name.parts")},
+		{Name: uast.KeyToken, Op: Var("tk")},
+	},
 	),
 	AnnotateType(php.File, nil, role.File),
 
 	MapAST(php.Name, Obj{
 		"parts": Arr(String("NULL")),
 	}, Obj{
-		"parts": Obj{ uast.KeyRoles: Roles(role.Noop) },
+		"parts": Obj{uast.KeyRoles: Roles(role.Noop)},
 	}, role.Expression, role.Null),
 
 	// Name; the actual tokens are in the "parts" children
@@ -186,14 +184,12 @@ var Annotations = []Mapping{
 		{Name: "parts", Op: Each("part", Obj{
 			"TOKEN": Var("tk"),
 		})},
-		{Name: "attributes", Op: Var("attrs"), Optional: "attrs_exists"},
 	}, Fields{
 		{Name: "parts", Op: Each("part", Obj{
-			"TOKEN": Var("tk"),
+			"TOKEN":      Var("tk"),
 			uast.KeyType: String("Name.parts"),
-			//uast.KeyRoles: Roles(role.Identifier),
+			uast.KeyRoles: Roles(role.Identifier),
 		})},
-		{Name: "attributes", Op: Var("attrs"), Optional: "attrs_exists"},
 	}, role.Identifier),
 
 	annAssign(php.Assign, role.Expression, role.Assignment),
@@ -219,7 +215,6 @@ var Annotations = []Mapping{
 	AnnotateType(php.ArrayItem, nil, role.Expression, role.List, role.Entry),
 	AnnotateType(php.Variable, nil, role.Identifier, role.Variable),
 	AnnotateType(php.NameRelative, nil, role.Expression, role.Identifier, role.Qualified, role.Incomplete),
-	AnnotateType(php.Comment, nil, role.Noop, role.Comment),
 	AnnotateType(php.Doc, nil, role.Noop, role.Comment, role.Documentation),
 	AnnotateType(php.Nop, nil, role.Noop),
 	AnnotateType(php.Echo, nil, role.Statement, role.Call),
@@ -503,15 +498,4 @@ var Annotations = []Mapping{
 		"cond":  {Op: Is(nil)},
 		"stmts": {Arr: true, Roles: role.Roles{role.Case, role.Body}},
 	}, role.Case, role.Default),
-
-	// FIXME: Convert the comment-like positions to the normal ones
-	MapAST("Comment", Obj{
-		"text": UncommentCLike("t"),
-		"filePos": Var("fp"),
-		"line": Var("ln"),
-	}, Obj{
-		uast.KeyToken: Var("t"),
-		"filePos": Var("fp"),
-		"line": Var("ln"),
-	}, role.Comment, role.Noop),
 }
