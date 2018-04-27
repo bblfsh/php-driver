@@ -76,7 +76,7 @@ func (n addRootNode) Do(root uast.Node) (uast.Node, error) {
 //}
 
 var Native = Transformers([][]Transformer{
-	{addRootNode{}},
+	//{addRootNode{}},
 	{
 		ResponseMetadata{
 			TopLevelIsRootNode: false,
@@ -119,10 +119,8 @@ func annAssign(typ string, opRoles ...role.Role) Mapping {
 
 // XXX Missing:
 // - Comments position fix.
-// - Comments remove /*[*] */
 // - Add a root File node.
 // - Add missing tokens (check the old tonoder ones)
-// - Names.parts doesn't work (check with the sdk test)
 
 var Annotations = []Mapping{
 
@@ -175,81 +173,28 @@ var Annotations = []Mapping{
 			{Name: uast.KeyToken, Op: Var("tk")},
 		},
 	),
-
-	//Map("x",
-		//Part("other", Obj{
-			//"parts": Obj{
-				//"TOKEN": Var("token"),
-			//},
-		//}),
-		//Part("other", Obj{
-			//uast.KeyToken: Var("token"),
-			//uast.KeyType:  String("Name.parts"),
-			//uast.KeyRoles: Roles(role.Identifier),
-		//}),
-	//),
-
 	AnnotateType(php.File, nil, role.File),
 
-	// Name; the actual tokens are in the "parts" children
 	MapAST(php.Name, Obj{
 		"parts": Arr(String("NULL")),
 	}, Obj{
 		"parts": Obj{ uast.KeyRoles: Roles(role.Noop) },
 	}, role.Expression, role.Null),
 
-	//MapAST(php.Name,
-	//Obj{
-		//"parts": Each("part", Obj{
-			//"TOKEN": Var("tk"),
-		//}),
-	//}, Obj{
-		//"parts": Each("part", Obj{
-			//"TOKEN": Var("tk"),
-			//uast.KeyRoles: Roles(role.Identifier),
-		//}),
-	//}, role.Identifier, role.Throw),
-
-	// XXX check that it doesnt have type
-	//Map("x",
-		//Part("other", Obj{
-			//"parts": ObjectRoles("p"),
-		//}),
-		//Part("other", Obj{
-			//"parts": ObjectRoles("p", role.Identifier),
-		//}),
-	//),
-
+	// Name; the actual tokens are in the "parts" children
 	MapAST(php.Name, Fields{
 		{Name: "parts", Op: Each("part", Obj{
 			"TOKEN": Var("tk"),
-		},
-	)}}, Fields{
+		})},
+		{Name: "attributes", Op: Var("attrs"), Optional: "attrs_exists"},
+	}, Fields{
 		{Name: "parts", Op: Each("part", Obj{
 			"TOKEN": Var("tk"),
 			uast.KeyType: String("Name.parts"),
 			//uast.KeyRoles: Roles(role.Identifier),
 		})},
+		{Name: "attributes", Op: Var("attrs"), Optional: "attrs_exists"},
 	}, role.Identifier),
-
-	//MapAST(php.Name,
-	//Fields{
-		//{Name:"parts", Op: Each("part", ObjectRolesCustom("p",
-			//Obj{
-				//// XXX change to uast.KeyToken
-				//"TOKEN": Var("tk"),
-			//})),
-		//},
-	//},
-	//Fields{
-		//{Name:"parts", Op: Each("part", ObjectRolesCustom("p",
-			//Obj{
-				//uast.KeyType: String("Name.parts"),
-				//// XXX change to uast.KeyToken
-				//"TOKEN": Var("tk"),
-			//})),
-		//},
-	//}, role.Expression, role.Identifier),
 
 	annAssign(php.Assign, role.Expression, role.Assignment),
 	annAssign(php.AssignOpMinus, role.Expression, role.Assignment, role.Operator, role.Substract),
@@ -558,4 +503,15 @@ var Annotations = []Mapping{
 		"cond":  {Op: Is(nil)},
 		"stmts": {Arr: true, Roles: role.Roles{role.Case, role.Body}},
 	}, role.Case, role.Default),
+
+	// FIXME: Convert the comment-like positions to the normal ones
+	MapAST("Comment", Obj{
+		"text": UncommentCLike("t"),
+		"filePos": Var("fp"),
+		"line": Var("ln"),
+	}, Obj{
+		uast.KeyToken: Var("t"),
+		"filePos": Var("fp"),
+		"line": Var("ln"),
+	}, role.Comment, role.Noop),
 }
