@@ -8,36 +8,37 @@ import (
 	. "gopkg.in/bblfsh/sdk.v1/uast/transformer"
 )
 
-//var rootProcessed bool = false
+/*
+var rootProcessed bool = false
 
-//func addRootNode() TransformFunc {
-	//return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
-		//if rootProcessed {
-			//return n, false, nil
-		//}
+func addRootNode() TransformFunc {
+	return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
+		if rootProcessed {
+			return n, false, nil
+		}
 
-		//objRoot, ok := n.(uast.Object)
-		//if !ok {
-			//return n, false, nil
-		//}
+		objRoot, ok := n.(uast.Object)
+		if !ok {
+			return n, false, nil
+		}
 
-		//if _, ok := objRoot["rerooted"]; ok {
-			//return n, false, nil
-		//}
+		if _, ok := objRoot["rerooted"]; ok {
+			return n, false, nil
+		}
 
-		//newRoot := uast.Object{}
-		//// XXX add type so it can be annotated
-		//newRoot["body"] = n
-		//newRoot["nodeType"] = uast.String("FakeRoot")
+		newRoot := uast.Object{}
+		// XXX add type so it can be annotated
+		newRoot["body"] = n
+		newRoot["nodeType"] = uast.String("FakeRoot")
 
-		//rootProcessed = true
-		//return newRoot, true, nil
-		////return n, true, nil
-	//})
-//}
+		rootProcessed = true
+		return newRoot, true, nil
+		//return n, true, nil
+	})
+}
+*/
 
-
-type addRootNode struct {}
+type addRootNode struct{}
 
 // Do applies the transformation described by this object.
 func (n addRootNode) Do(root uast.Node) (uast.Node, error) {
@@ -75,7 +76,7 @@ func (n addRootNode) Do(root uast.Node) (uast.Node, error) {
 //}
 
 var Native = Transformers([][]Transformer{
-	{ addRootNode{} },
+	{addRootNode{}},
 	{
 		ResponseMetadata{
 			TopLevelIsRootNode: false,
@@ -146,15 +147,13 @@ var Annotations = []Mapping{
 				uast.KeyPosLine: Var("sline"),
 				uast.KeyPosCol:  Var("stoken"),
 				uast.KeyPosOff:  Var("sfile"),
-			},
-			},
+			}},
 			{Name: uast.KeyEnd, Op: Obj{
 				uast.KeyType:    String(uast.TypePosition),
 				uast.KeyPosLine: Var("eline"),
 				uast.KeyPosCol:  Var("etoken"),
 				uast.KeyPosOff:  Var("efile"),
-			},
-			},
+			}},
 			{Name: "comments", Op: Var("comments"), Optional: "comments_exists"},
 			{Name: "attributes", Op: Part("attrs", Obj{})},
 		}),
@@ -169,45 +168,88 @@ var Annotations = []Mapping{
 	mapInternalProperty("left", role.Left),
 	mapInternalProperty("right", role.Right),
 	mapInternalProperty("default", role.Default),
-	mapInternalProperty("parts", role.Identifier),
-	Map("x",
-			Part("other", Obj{
-				"parts": Obj{
-					"TOKEN": Var("token"),
-				},
-			}),
-			Part("other", Obj{
-				uast.KeyToken: Var("token"),
-				uast.KeyType: String("Name.parts"),
-				uast.KeyRoles: Roles(role.Identifier),
-			}),
+	Map("x", Fields{
+			{Name: uast.KeyToken, Op: Var("tk")},
+		}, Fields{
+			{Name:uast.KeyType, Op: String("Name.parts")},
+			{Name: uast.KeyToken, Op: Var("tk")},
+		},
 	),
+
+	//Map("x",
+		//Part("other", Obj{
+			//"parts": Obj{
+				//"TOKEN": Var("token"),
+			//},
+		//}),
+		//Part("other", Obj{
+			//uast.KeyToken: Var("token"),
+			//uast.KeyType:  String("Name.parts"),
+			//uast.KeyRoles: Roles(role.Identifier),
+		//}),
+	//),
 
 	AnnotateType(php.File, nil, role.File),
 
-	// Name, the actual tokens are in the "parts" children
-	AnnotateType(php.Name, ObjRoles{
-		"class": {role.Qualified},
-	}, role.Expression, role.Identifier),
-
+	// Name; the actual tokens are in the "parts" children
 	MapAST(php.Name, Obj{
 		"parts": Arr(String("NULL")),
 	}, Obj{
-		"parts": Obj{},
+		"parts": Obj{ uast.KeyRoles: Roles(role.Noop) },
 	}, role.Expression, role.Null),
 
-	// FIXME: doesnt work
-	MapAST(php.Name, Obj{
-		"parts": Obj{
+	//MapAST(php.Name,
+	//Obj{
+		//"parts": Each("part", Obj{
+			//"TOKEN": Var("tk"),
+		//}),
+	//}, Obj{
+		//"parts": Each("part", Obj{
+			//"TOKEN": Var("tk"),
+			//uast.KeyRoles: Roles(role.Identifier),
+		//}),
+	//}, role.Identifier, role.Throw),
+
+	// XXX check that it doesnt have type
+	//Map("x",
+		//Part("other", Obj{
+			//"parts": ObjectRoles("p"),
+		//}),
+		//Part("other", Obj{
+			//"parts": ObjectRoles("p", role.Identifier),
+		//}),
+	//),
+
+	MapAST(php.Name, Fields{
+		{Name: "parts", Op: Each("part", Obj{
 			"TOKEN": Var("tk"),
-	},
-	}, Obj{
-		"parts": Obj{
-			uast.KeyToken: Var("tk"),
-			uast.KeyType: String("Parts.name"),
-			uast.KeyRoles: Roles(role.Identifier, role.Value),
 		},
-	}, role.Expression, role.Identifier),
+	)}}, Fields{
+		{Name: "parts", Op: Each("part", Obj{
+			"TOKEN": Var("tk"),
+			uast.KeyType: String("Name.parts"),
+			//uast.KeyRoles: Roles(role.Identifier),
+		})},
+	}, role.Identifier),
+
+	//MapAST(php.Name,
+	//Fields{
+		//{Name:"parts", Op: Each("part", ObjectRolesCustom("p",
+			//Obj{
+				//// XXX change to uast.KeyToken
+				//"TOKEN": Var("tk"),
+			//})),
+		//},
+	//},
+	//Fields{
+		//{Name:"parts", Op: Each("part", ObjectRolesCustom("p",
+			//Obj{
+				//uast.KeyType: String("Name.parts"),
+				//// XXX change to uast.KeyToken
+				//"TOKEN": Var("tk"),
+			//})),
+		//},
+	//}, role.Expression, role.Identifier),
 
 	annAssign(php.Assign, role.Expression, role.Assignment),
 	annAssign(php.AssignOpMinus, role.Expression, role.Assignment, role.Operator, role.Substract),
@@ -274,11 +316,6 @@ var Annotations = []Mapping{
 
 	// no role role for goto target labels
 	AnnotateType(php.Label, nil, role.Statement, role.Goto, role.Incomplete),
-
-	// XXX Implement this (native annotations were wrong too), must
-	// have the role.Null if has a parts key and the single element in the
-	// array is the string "NULL".
-	//AnnotateType(php.Name, nil, role(HasToken("null")).Roles(role.Null)),
 
 	// no Nullable/Optional in UAST
 	AnnotateType(php.NullableType, nil, role.Type, role.Incomplete),
@@ -466,19 +503,19 @@ var Annotations = []Mapping{
 	}, role.Function, role.Declaration),
 
 	AnnotateTypeFields(php.Param, FieldRoles{
-		"byRef": {Op: Is(uast.Bool(false))},
+		"byRef":    {Op: Is(uast.Bool(false))},
 		"variadic": {Op: Is(uast.Bool(false))},
 	}, role.Argument),
 	AnnotateTypeFields(php.Param, FieldRoles{
-		"byRef": {Op: Is(uast.Bool(false))},
+		"byRef":    {Op: Is(uast.Bool(false))},
 		"variadic": {Op: Is(uast.Bool(true))},
 	}, role.Argument, role.ArgsList),
 	AnnotateTypeFields(php.Param, FieldRoles{
-		"byRef": {Op: Is(uast.Bool(true))},
+		"byRef":    {Op: Is(uast.Bool(true))},
 		"variadic": {Op: Is(uast.Bool(false))},
 	}, role.Argument, role.Incomplete),
 	AnnotateTypeFields(php.Param, FieldRoles{
-		"byRef": {Op: Is(uast.Bool(true))},
+		"byRef":    {Op: Is(uast.Bool(true))},
 		"variadic": {Op: Is(uast.Bool(true))},
 	}, role.Argument, role.Incomplete, role.ArgsList),
 
@@ -514,12 +551,10 @@ var Annotations = []Mapping{
 	// Switch
 	AnnotateType(php.Switch, nil, role.Switch),
 	AnnotateTypeFields(php.Case, FieldRoles{
-		// FIXME: if cond == null add role.Default
 		"cond":  {Opt: true, Roles: role.Roles{role.Case, role.Condition}},
 		"stmts": {Arr: true, Roles: role.Roles{role.Case, role.Body}},
 	}, role.Case),
 	AnnotateTypeFields(php.Case, FieldRoles{
-		// FIXME: if cond == null add role.Default
 		"cond":  {Op: Is(nil)},
 		"stmts": {Arr: true, Roles: role.Roles{role.Case, role.Body}},
 	}, role.Case, role.Default),
