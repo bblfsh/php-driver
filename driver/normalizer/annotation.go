@@ -94,7 +94,8 @@ func annAssign(typ string, opRoles ...role.Role) Mapping {
 }
 
 // XXX Missing:
-// - Add missing tokens (check the old tonoder ones)
+// - Convert "name" keys with a string value into a Name node with a parts
+//   field (array of single element with the original string as token).
 
 // - Add a root File node (native AST is directly an array).
 
@@ -184,6 +185,22 @@ var Annotations = []Mapping{
 		{Name: uast.KeyToken, Op: Var("tk")},
 	})),
 
+	// FIXME: implement this
+	//Map("namestr_to_node", Check(
+		//Has{"name": SOMESTRING()},
+		//Part("x", Fields{
+			//{Name: "name", Op: Var("n")},
+		//}),
+	//), Part("x", Fields{
+		//{Name: "name", Op: Obj{
+			//uast.KeyType: String("Name"),
+			//"parts": Arr(Obj{
+				//uast.KeyType: String("Name.parts"),
+				//uast.KeyToken: Var("n"),
+			//}),
+		//}}}),
+	//),
+
 	// Name; the actual tokens are in the "parts" children
 	AnnotateType(php.Name, nil, role.Identifier),
 
@@ -203,7 +220,9 @@ var Annotations = []Mapping{
 	AnnotateType(php.ScalarMagicMethod, nil, role.Expression, role.Literal, role.Incomplete),
 	AnnotateType(php.ScalarMagicNamespace, nil, role.Expression, role.Literal, role.Incomplete),
 	AnnotateType(php.ScalarMagicTrait, nil, role.Expression, role.Literal, role.Incomplete),
-	AnnotateType(php.Alias, nil, role.Statement, role.Alias),
+	AnnotateType(php.Alias, FieldRoles{
+		"newName": {Rename: uast.KeyToken},
+	}, role.Statement, role.Alias),
 	AnnotateType(php.Arg, nil, role.Argument),
 	AnnotateType(php.Array, nil, role.Expression, role.Literal, role.List),
 	AnnotateType(php.ArrayDimFetch, nil, role.Expression, role.List, role.Value, role.Entry),
@@ -259,7 +278,9 @@ var Annotations = []Mapping{
 	AnnotateType(php.Static, nil, role.Visibility, role.Type),
 	AnnotateType(php.StaticVar, nil, role.Expression, role.Identifier, role.Variable,
 		role.Visibility, role.Type),
-	AnnotateType(php.InlineHTML, nil, role.String, role.Literal, role.Incomplete),
+	AnnotateType(php.InlineHTML, FieldRoles{
+		"value": {Rename: uast.KeyToken},
+	}, role.String, role.Literal, role.Incomplete),
 	AnnotateType(php.List, nil, role.Call, role.List),
 
 	// Operators
@@ -311,10 +332,15 @@ var Annotations = []Mapping{
 		role.GreaterThanOrEqual, role.LessThanOrEqual),
 
 	// Scalars
-	AnnotateType(php.ScalarString, nil, role.Expression, role.Literal, role.String),
-
-	AnnotateType(php.ScalarLNumber, nil, role.Expression, role.Literal, role.Number),
-	AnnotateType(php.ScalarDNumber, nil, role.Expression, role.Literal, role.Number),
+	AnnotateType(php.ScalarString, FieldRoles{
+		"value": {Rename: uast.KeyToken},
+	}, role.Expression, role.Literal, role.String),
+	AnnotateType(php.ScalarLNumber, FieldRoles{
+		"value": {Rename: uast.KeyToken},
+	}, role.Expression, role.Literal, role.Number),
+	AnnotateType(php.ScalarDNumber, FieldRoles{
+		"value": {Rename: uast.KeyToken},
+	}, role.Expression, role.Literal, role.Number),
 
 	// Casts... no Cast in the UAST
 	AnnotateType(php.CastArray, nil, role.Expression, role.List, role.Incomplete),
@@ -327,8 +353,9 @@ var Annotations = []Mapping{
 
 	// TryCatch
 	AnnotateType(php.TryCatch, nil, role.Statement, role.Try),
-	AnnotateType(php.Catch, ObjRoles{
-		"types": {role.Catch, role.Type},
+	AnnotateType(php.Catch, FieldRoles{
+		"types": {Roles: role.Roles{role.Catch, role.Type}},
+		"var": {Rename: uast.KeyToken},
 	}, role.Catch, role.Type),
 
 	AnnotateType(php.Finally, nil, role.Statement, role.Finally),
@@ -338,7 +365,6 @@ var Annotations = []Mapping{
 	AnnotateType(php.Class, FieldRoles{
 		"extends":    {Arr: true, Roles: role.Roles{role.Base}},
 		"implements": {Arr: true, Roles: role.Roles{role.Implements}},
-		"name":       {Rename: uast.KeyToken},
 		"stmts":      {Arr: true, Roles: role.Roles{role.Type, role.Body}},
 	}, role.Statement, role.Declaration, role.Type),
 
@@ -389,7 +415,9 @@ var Annotations = []Mapping{
 
 	// Encapsed; incomplete: no encapsed/ string varsubst in UAST
 	AnnotateType(php.Encapsed, nil, role.Expression, role.Literal, role.String, role.Incomplete),
-	AnnotateType(php.EncapsedStringPart, nil, role.Expression, role.Identifier, role.Value),
+	AnnotateType(php.EncapsedStringPart, FieldRoles{
+		"value": {Rename: uast.KeyToken},
+	}, role.Expression, role.Identifier, role.Value),
 
 	// For
 	AnnotateType(php.For, FieldRoles{
@@ -405,16 +433,14 @@ var Annotations = []Mapping{
 	}, role.Statement, role.For, role.Incomplete),
 
 	// FuncCalls, StaticCalls and MethodCalls
-	AnnotateType(php.FuncCall, ObjRoles{
-		"name": {role.Function, role.Name},
-	}, role.Expression, role.Call),
+	AnnotateType(php.FuncCall, nil, role.Expression, role.Call),
 
 	AnnotateType(php.StaticCall, ObjRoles{
 		"class": {role.Type, role.Receiver},
 	}, role.Expression, role.Call, role.Identifier),
 
-	AnnotateType(php.MethodCall, ObjRoles{
-		"var": {role.Receiver, role.Identifier},
+	AnnotateType(php.MethodCall, FieldRoles{
+		"var": {Roles: role.Roles{role.Receiver, role.Identifier}},
 	}, role.Expression, role.Call, role.Identifier),
 
 	// Function declarations
@@ -433,7 +459,6 @@ var Annotations = []Mapping{
 			uast.KeyRoles: Roles(role.Function, role.Declaration, role.Body),
 			"body":        Var("stmts"),
 		},
-		uast.KeyToken: Var("name"),
 	}, role.Function, role.Declaration),
 
 	AnnotateType(php.Param, FieldRoles{
