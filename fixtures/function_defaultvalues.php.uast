@@ -4,7 +4,6 @@ Errors:
 UAST: 
 Stmt_Function {
 .  Roles: Declaration,Function
-.  TOKEN "a"
 .  StartPosition: {
 .  .  Offset: 7
 .  .  Line: 3
@@ -145,6 +144,7 @@ Stmt_Function {
 .  .  .  .  }
 .  .  .  .  1: Scalar_String {
 .  .  .  .  .  Roles: Default,Expression,Literal,String
+.  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 43
 .  .  .  .  .  .  Line: 5
@@ -157,7 +157,6 @@ Stmt_Function {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: default
-.  .  .  .  .  .  value: foo
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
@@ -302,6 +301,7 @@ Stmt_Function {
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_LNumber {
 .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 75
 .  .  .  .  .  .  .  .  Line: 7
@@ -314,7 +314,6 @@ Stmt_Function {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  .  .  .  value: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
@@ -379,6 +378,7 @@ Stmt_Function {
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_DNumber {
 .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 88
 .  .  .  .  .  .  .  .  Line: 8
@@ -391,7 +391,6 @@ Stmt_Function {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  .  .  .  value: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
@@ -583,6 +582,7 @@ Stmt_Function {
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Scalar_String {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 134
 .  .  .  .  .  .  .  .  .  .  Line: 11
@@ -595,7 +595,6 @@ Stmt_Function {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  value: foo
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0:  {
@@ -686,6 +685,7 @@ Stmt_Function {
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Scalar_String {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 152
 .  .  .  .  .  .  .  .  .  .  Line: 12
@@ -698,7 +698,6 @@ Stmt_Function {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  value: foo
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0:  {
@@ -737,6 +736,7 @@ Stmt_Function {
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Scalar_String {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  .  .  TOKEN "bar"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 159
 .  .  .  .  .  .  .  .  .  .  Line: 12
@@ -749,7 +749,6 @@ Stmt_Function {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: key
-.  .  .  .  .  .  .  .  .  .  value: bar
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0:  {
@@ -763,6 +762,7 @@ Stmt_Function {
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Scalar_String {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  .  .  TOKEN "baz"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 168
 .  .  .  .  .  .  .  .  .  .  Line: 12
@@ -775,7 +775,6 @@ Stmt_Function {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  value: baz
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0:  {

@@ -6,7 +6,6 @@ UAST:
 .  Children: {
 .  .  0: Stmt_Function {
 .  .  .  Roles: Declaration,Function
-.  .  .  TOKEN "arraysSum"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -113,7 +112,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Function,Identifier,Name
+.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 64
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 5
@@ -264,7 +263,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Function,Identifier,Name
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 119
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 6
@@ -431,7 +430,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Name {
-.  .  .  .  .  Roles: Function,Identifier,Name
+.  .  .  .  .  Roles: Identifier
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 158
 .  .  .  .  .  .  Line: 10
@@ -507,7 +506,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  .  .  Roles: Function,Identifier,Name
+.  .  .  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 166
 .  .  .  .  .  .  .  .  .  .  Line: 10
@@ -608,6 +607,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_LNumber {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 177
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 10
@@ -620,7 +620,6 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  value: 1
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0:  {
@@ -659,6 +658,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_LNumber {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 179
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 10
@@ -671,7 +671,6 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  value: 2
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0:  {
@@ -710,6 +709,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_LNumber {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "3"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 181
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 10
@@ -722,7 +722,6 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  value: 3
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0:  {
@@ -812,6 +811,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_LNumber {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "4"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 186
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 10
@@ -824,7 +824,6 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  value: 4
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0:  {
@@ -863,6 +862,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_LNumber {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "5"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 188
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 10
@@ -875,7 +875,6 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  value: 5
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0:  {
@@ -914,6 +913,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_LNumber {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "6"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 190
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 10
@@ -926,7 +926,6 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  value: 6
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0:  {
@@ -1016,6 +1015,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_LNumber {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "7"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 195
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 10
@@ -1028,7 +1028,6 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  value: 7
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0:  {
@@ -1067,6 +1066,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_LNumber {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "8"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 197
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 10
@@ -1079,7 +1079,6 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  value: 8
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0:  {
@@ -1118,6 +1117,7 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_LNumber {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "9"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 199
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 10
@@ -1130,7 +1130,6 @@ UAST:
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  value: 9
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0:  {

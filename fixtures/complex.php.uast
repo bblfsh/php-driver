@@ -448,7 +448,6 @@ Stmt_Namespace {
 .  .  }
 .  .  7: Stmt_Class {
 .  .  .  Roles: Declaration,Statement,Type
-.  .  .  TOKEN "Instantiator"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 1258
 .  .  .  .  Line: 32
@@ -462,6 +461,7 @@ Stmt_Namespace {
 .  .  .  Properties: {
 .  .  .  .  flags: 32
 .  .  .  .  internalRole: stmts
+.  .  .  .  name: Instantiator
 .  .  .  .  type: 32
 .  .  .  }
 .  .  .  Children: {
@@ -581,6 +581,7 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Scalar_String {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  .  .  TOKEN "C"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 1612
 .  .  .  .  .  .  .  .  .  .  Line: 39
@@ -593,7 +594,6 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  value: C
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0:  {
@@ -657,6 +657,7 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Scalar_String {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  .  .  TOKEN "O"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 1669
 .  .  .  .  .  .  .  .  .  .  Line: 40
@@ -669,7 +670,6 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  value: O
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0:  {
@@ -1584,7 +1584,7 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Function,Identifier,Name,Variable
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 2327
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 64
@@ -2159,7 +2159,7 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Function,Identifier,Name,Variable
+.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 2733
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 78
@@ -3087,6 +3087,7 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_String {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "newInstanceWithoutConstructor"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 3419
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 100
@@ -3099,7 +3100,6 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  value: newInstanceWithoutConstructor
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0:  {
@@ -3189,7 +3189,7 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Function,Identifier,Name
+.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 3492
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 103
@@ -3244,6 +3244,7 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_String {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "%s:%d:"%s":0:{}"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 3513
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 104
@@ -3256,7 +3257,6 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  value: %s:%d:"%s":0:{}
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  0:  {
@@ -3398,7 +3398,7 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Function,Identifier,Name
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 3603
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 106
@@ -3806,7 +3806,7 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Function,Identifier,Name
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 3818
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 113
@@ -4065,7 +4065,7 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Function,Identifier,Name
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 4127
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 127
@@ -4843,7 +4843,7 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  .  .  Roles: Function,Identifier,Name
+.  .  .  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 4777
 .  .  .  .  .  .  .  .  .  .  Line: 150
@@ -5621,7 +5621,7 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  .  .  Roles: Function,Identifier,Name
+.  .  .  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 5210
 .  .  .  .  .  .  .  .  .  .  Line: 162
@@ -5927,7 +5927,7 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Function,Identifier,Name
+.  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 5638
 .  .  .  .  .  .  .  .  .  .  .  .  Line: 180
@@ -6085,7 +6085,7 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Function,Identifier,Name
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 5723
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 182
@@ -7355,6 +7355,7 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_String {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "__clone"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 6763
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 214
@@ -7367,7 +7368,6 @@ Stmt_Namespace {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  value: __clone
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0:  {

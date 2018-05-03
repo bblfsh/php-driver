@@ -24,7 +24,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Name {
-.  .  .  .  .  Roles: Function,Identifier,Name
+.  .  .  .  .  Roles: Identifier
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 7
 .  .  .  .  .  .  Line: 3
@@ -177,7 +177,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Name {
-.  .  .  .  .  Roles: Function,Identifier,Name
+.  .  .  .  .  Roles: Identifier
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 28
 .  .  .  .  .  .  Line: 4
@@ -228,7 +228,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Function,Identifier,Name,Variable
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 33
 .  .  .  .  .  .  Line: 5
@@ -274,7 +274,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Function,Identifier,Name,Variable
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 39
 .  .  .  .  .  .  Line: 6
@@ -297,6 +297,7 @@ UAST:
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_String {
 .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 41
 .  .  .  .  .  .  .  .  Line: 6
@@ -309,7 +310,6 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  value: a
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
@@ -345,7 +345,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Function,Identifier,Name,Variable
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 49
 .  .  .  .  .  .  Line: 7
@@ -415,7 +415,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Function,Identifier,Name,Variable
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 56
 .  .  .  .  .  .  Line: 8
@@ -509,7 +509,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Entry,Expression,Function,List,Name,Value
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 64
 .  .  .  .  .  .  Line: 9
@@ -557,6 +557,7 @@ UAST:
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Scalar_String {
 .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 67
 .  .  .  .  .  .  .  .  Line: 9
@@ -569,7 +570,6 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  .  .  .  value: b
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
@@ -605,7 +605,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Entry,Expression,Function,List,Name,Value
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 75
 .  .  .  .  .  .  Line: 10
@@ -653,6 +653,7 @@ UAST:
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Scalar_String {
 .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 78
 .  .  .  .  .  .  .  .  Line: 10
@@ -665,7 +666,6 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  .  .  .  value: b
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
@@ -701,7 +701,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Entry,Expression,Function,List,Name,Value
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 86
 .  .  .  .  .  .  Line: 11
@@ -774,6 +774,7 @@ UAST:
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Scalar_String {
 .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 92
 .  .  .  .  .  .  .  .  Line: 11
@@ -786,7 +787,6 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  .  .  .  value: c
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
@@ -844,7 +844,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  Roles: Function,Identifier,Name
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 100
 .  .  .  .  .  .  .  .  Line: 12
@@ -877,6 +877,7 @@ UAST:
 .  .  .  .  }
 .  .  .  .  2: Scalar_String {
 .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  TOKEN "b"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 104
 .  .  .  .  .  .  Line: 12
@@ -889,7 +890,6 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  .  value: b
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {

@@ -80,6 +80,7 @@ UAST:
 .  .  .  .  }
 .  .  .  .  2: Scalar_LNumber {
 .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  TOKEN "0"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 12
 .  .  .  .  .  .  Line: 3
@@ -92,7 +93,6 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  .  value: 0
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
@@ -226,6 +226,7 @@ UAST:
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Scalar_LNumber {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  .  .  TOKEN "0"
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 21
 .  .  .  .  .  .  .  .  .  .  Line: 4
@@ -238,7 +239,6 @@ UAST:
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  .  .  .  .  .  value: 0
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0:  {
@@ -254,6 +254,7 @@ UAST:
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Scalar_LNumber {
 .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 24
 .  .  .  .  .  .  .  .  Line: 4
@@ -266,7 +267,6 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  .  .  .  value: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
@@ -282,6 +282,7 @@ UAST:
 .  .  .  .  }
 .  .  .  .  2: Scalar_LNumber {
 .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  TOKEN "2"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 27
 .  .  .  .  .  .  Line: 4
@@ -294,7 +295,6 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  .  value: 2
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
@@ -332,6 +332,7 @@ UAST:
 .  .  .  .  }
 .  .  .  .  1: Scalar_String {
 .  .  .  .  .  Roles: Expression,Identifier,Literal,Receiver,String
+.  .  .  .  .  TOKEN "string"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 31
 .  .  .  .  .  .  Line: 5
@@ -344,7 +345,6 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: var
-.  .  .  .  .  .  value: string
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
@@ -378,7 +378,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Entry,Expression,Function,List,Name,Value
+.  .  .  .  .  Roles: Entry,Expression,List,Value
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 51
 .  .  .  .  .  .  Line: 6
@@ -475,6 +475,7 @@ UAST:
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Scalar_LNumber {
 .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  TOKEN "0"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 67
 .  .  .  .  .  .  .  .  Line: 6
@@ -487,7 +488,6 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  .  .  .  value: 0
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {
@@ -527,6 +527,7 @@ UAST:
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Scalar_LNumber {
 .  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 70
 .  .  .  .  .  .  .  .  Line: 6
@@ -539,7 +540,6 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  value: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0:  {

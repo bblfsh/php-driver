@@ -6,6 +6,8 @@ UAST:
 .  Children: {
 .  .  0: Stmt_InlineHTML {
 .  .  .  Roles: Incomplete,Literal,String
+.  .  .  TOKEN "#!/usr/bin/env php
+"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 0
 .  .  .  .  Line: 1
@@ -15,10 +17,6 @@ UAST:
 .  .  .  .  Offset: 18
 .  .  .  .  Line: 2
 .  .  .  .  Col: 0
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  value: #!/usr/bin/env php
-
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
@@ -51,6 +49,7 @@ UAST:
 .  .  .  .  }
 .  .  .  .  1: Scalar_String {
 .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  TOKEN "foobar"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 31
 .  .  .  .  .  .  Line: 4
@@ -63,7 +62,6 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: exprs
-.  .  .  .  .  .  value: foobar
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
@@ -79,6 +77,8 @@ UAST:
 .  .  }
 .  .  2: Stmt_InlineHTML {
 .  .  .  Roles: Incomplete,Literal,String
+.  .  .  TOKEN "#!/usr/bin/env php
+"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 45
 .  .  .  .  Line: 7
@@ -88,10 +88,6 @@ UAST:
 .  .  .  .  Offset: 63
 .  .  .  .  Line: 8
 .  .  .  .  Col: 9
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  value: #!/usr/bin/env php
-
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
