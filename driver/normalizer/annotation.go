@@ -93,16 +93,14 @@ func annAssign(typ string, opRoles ...role.Role) Mapping {
 	}, opRoles...)
 }
 
-// FIXME:
+// XXX Missing:
+// - Add missing tokens (check the old tonoder ones)
+
+// - Add a root File node (native AST is directly an array).
+
 // - Add KeyType and KeyToken to Name.parts objects (these are auto generated from string
 //   lists in the native UAST. Also, they don't seem to get the Unannotated role). Works
 //   in ops_test.go but not here, even if I comment all the other annotations.
-
-// - Comments: annotation not working:
-//		- Position keys translation not working (seems no position is written if there
-//		is no KeyEnd, which goes against the specs that say that drivers could not provide
-//		end positions if the native driver doesn't, but even adding a fake KeyEnd it
-//		doesn't work).
 
 var Annotations = []Mapping{
 
@@ -150,15 +148,24 @@ var Annotations = []Mapping{
 	}, Obj{
 		uast.KeyToken: Var("text"),
 		uast.KeyStart: Obj{
+			uast.KeyType: String("ast:Position"),
 			uast.KeyPosCol:  Var("fp"),
 			uast.KeyPosLine: Var("ln"),
 		},
-		uast.KeyEnd: Obj{
-			// FIXME: fake, fix end position
-			uast.KeyPosCol: Var("fp"),
+	}, role.Comment, role.Noop),
+
+	MapAST(php.Doc, Obj{
+		"text":    UncommentCLike("text"),
+		"filePos": Var("fp"),
+		"line":    Var("ln"),
+	}, Obj{
+		uast.KeyToken: Var("text"),
+		uast.KeyStart: Obj{
+			uast.KeyType: String("ast:Position"),
+			uast.KeyPosCol:  Var("fp"),
 			uast.KeyPosLine: Var("ln"),
 		},
-	}, role.Comment, role.Noop),
+	}, role.Comment, role.Noop, role.Documentation),
 
 	mapInternalProperty("attributes", role.Noop),
 	mapInternalProperty("left", role.Left),
@@ -203,7 +210,6 @@ var Annotations = []Mapping{
 	AnnotateType(php.ArrayItem, nil, role.Expression, role.List, role.Entry),
 	AnnotateType(php.Variable, nil, role.Identifier, role.Variable),
 	AnnotateType(php.NameRelative, nil, role.Expression, role.Identifier, role.Qualified, role.Incomplete),
-	AnnotateType(php.Doc, nil, role.Noop, role.Comment, role.Documentation),
 	AnnotateType(php.Nop, nil, role.Noop),
 	AnnotateType(php.Echo, nil, role.Statement, role.Call),
 	AnnotateType(php.Print, nil, role.Statement, role.Call),

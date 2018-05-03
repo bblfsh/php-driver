@@ -28,16 +28,24 @@ UAST:
 .  .  .  .  }
 .  .  .  .  1: Comment_Doc {
 .  .  .  .  .  Roles: Comment,Documentation,Noop
+.  .  .  .  .  TOKEN "* doc 1 "
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  filePos: 7
 .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  line: 3
-.  .  .  .  .  .  text: /** doc 1 */
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Comment {
 .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  TOKEN " foobar 1 "
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 20
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  }
@@ -46,6 +54,11 @@ UAST:
 .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  TOKEN " foo 1
 "
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 35
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  }
@@ -54,6 +67,11 @@ UAST:
 .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  TOKEN " bar 1
 "
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 44
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  }
@@ -93,16 +111,24 @@ UAST:
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Comment_Doc {
 .  .  .  .  .  .  .  .  .  Roles: Comment,Documentation,Noop
+.  .  .  .  .  .  .  .  .  TOKEN "* doc 2 "
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  .  .  Col: 77
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  filePos: 77
 .  .  .  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  .  .  line: 10
-.  .  .  .  .  .  .  .  .  .  text: /** doc 2 */
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Comment {
 .  .  .  .  .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  .  .  .  .  TOKEN " foobar 2 "
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  .  .  Col: 94
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  .  .  .  .  }
@@ -111,6 +137,11 @@ UAST:
 .  .  .  .  .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  .  .  .  .  TOKEN " foo 2
 "
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  Col: 113
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  .  .  .  .  }
@@ -119,6 +150,11 @@ UAST:
 .  .  .  .  .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  .  .  .  .  TOKEN " bar 2
 "
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  .  .  .  .  Col: 126
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  .  .  .  .  }
@@ -165,16 +201,24 @@ UAST:
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Comment_Doc {
 .  .  .  .  .  .  .  Roles: Comment,Documentation,Noop
+.  .  .  .  .  .  .  TOKEN "* doc 3 "
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  Col: 138
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  filePos: 138
 .  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  line: 16
-.  .  .  .  .  .  .  .  text: /** doc 3 */
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Comment {
 .  .  .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  .  .  TOKEN " foobar 3 "
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 17
+.  .  .  .  .  .  .  .  Col: 151
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  .  .  }
@@ -183,6 +227,11 @@ UAST:
 .  .  .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  .  .  TOKEN " foo 3
 "
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 166
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  .  .  }
@@ -191,6 +240,11 @@ UAST:
 .  .  .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  .  .  TOKEN " bar 3
 "
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 19
+.  .  .  .  .  .  .  .  Col: 175
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  .  .  }
