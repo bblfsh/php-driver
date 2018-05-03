@@ -27,33 +27,27 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Comment {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  TOKEN " foo
+"
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  filePos: 7
 .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  line: 3
-.  .  .  .  .  .  text: // foo
-
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Comment {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  TOKEN " bar
+"
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  filePos: 20
 .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  line: 5
-.  .  .  .  .  .  text: // bar
-
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: Comment {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  TOKEN " baz
+"
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  filePos: 41
 .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  line: 7
-.  .  .  .  .  .  text: // baz
-
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -68,13 +62,11 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  .  .  TOKEN " empty
+"
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  filePos: 69
 .  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  line: 12
-.  .  .  .  .  .  .  .  text: // empty
-
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }

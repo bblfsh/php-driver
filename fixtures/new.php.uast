@@ -24,7 +24,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Name {
-.  .  .  .  .  Roles: Type
+.  .  .  .  .  Roles: Identifier,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 11
 .  .  .  .  .  .  Line: 3
@@ -75,7 +75,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Name {
-.  .  .  .  .  Roles: Type
+.  .  .  .  .  Roles: Identifier,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 18
 .  .  .  .  .  .  Line: 4
@@ -177,13 +177,11 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Comment {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  TOKEN " class name variations
+"
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  filePos: 26
 .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  line: 6
-.  .  .  .  .  .  text: // class name variations
-
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_Variable {
@@ -352,7 +350,7 @@ UAST:
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 80
 .  .  .  .  .  .  .  .  Line: 9
@@ -405,13 +403,11 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Comment {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  TOKEN " DNCR object access
+"
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  filePos: 89
 .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  line: 10
-.  .  .  .  .  .  text: // DNCR object access
-
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Expr_PropertyFetch {
@@ -824,7 +820,7 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Name {
-.  .  .  .  .  Roles: Type
+.  .  .  .  .  Roles: Identifier,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 240
 .  .  .  .  .  .  Line: 17

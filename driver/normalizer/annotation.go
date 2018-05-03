@@ -3,9 +3,9 @@ package normalizer
 import (
 	php "github.com/bblfsh/php-driver/driver/normalizer/phpast"
 
-	"gopkg.in/bblfsh/sdk.v1/uast"
-	"gopkg.in/bblfsh/sdk.v1/uast/role"
-	. "gopkg.in/bblfsh/sdk.v1/uast/transformer"
+	"gopkg.in/bblfsh/sdk.v2/uast"
+	"gopkg.in/bblfsh/sdk.v2/uast/role"
+	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
 )
 
 /*
@@ -69,7 +69,7 @@ var Code = []CodeTransformer{
 
 // FIXME: move to the SDK and remove from here and the python driver
 func annotateTypeToken(typ, token string, roles ...role.Role) Mapping {
-	return AnnotateTypeFields(typ,
+	return AnnotateType(typ,
 		FieldRoles{
 			uast.KeyToken: {Add: true, Op: String(token)},
 		}, roles...)
@@ -93,18 +93,16 @@ func annAssign(typ string, opRoles ...role.Role) Mapping {
 	}, opRoles...)
 }
 
-// XXX Missing:
-// - Add missing tokens (check the old tonoder ones)
-
-// - Add a root File node (native AST is directly an array).
-
+// FIXME:
 // - Add KeyType and KeyToken to Name.parts objects (these are auto generated from string
 //   lists in the native UAST. Also, they don't seem to get the Unannotated role). Works
 //   in ops_test.go but not here, even if I comment all the other annotations.
 
 // - Comments: annotation not working:
-//		- UncommentCLike not working
-//		- Position keys translation not working
+//		- Position keys translation not working (seems no position is written if there
+//		is no KeyEnd, which goes against the specs that say that drivers could not provide
+//		end positions if the native driver doesn't, but even adding a fake KeyEnd it
+//		doesn't work).
 
 var Annotations = []Mapping{
 
@@ -141,7 +139,10 @@ var Annotations = []Mapping{
 		}),
 	),
 
-	// FIXME: Doesnt work
+	ObjectToNode{
+		InternalTypeKey: "nodeType",
+	}.Mapping(),
+
 	MapAST(php.Comment, Obj{
 		"text":    UncommentCLike("text"),
 		"filePos": Var("fp"),
@@ -152,45 +153,32 @@ var Annotations = []Mapping{
 			uast.KeyPosCol:  Var("fp"),
 			uast.KeyPosLine: Var("ln"),
 		},
+		uast.KeyEnd: Obj{
+			// FIXME: fake, fix end position
+			uast.KeyPosCol: Var("fp"),
+			uast.KeyPosLine: Var("ln"),
+		},
 	}, role.Comment, role.Noop),
-
-	ObjectToNode{
-		InternalTypeKey: "nodeType",
-	}.Mapping(),
 
 	mapInternalProperty("attributes", role.Noop),
 	mapInternalProperty("left", role.Left),
 	mapInternalProperty("right", role.Right),
 	mapInternalProperty("default", role.Default),
 
-	// FIXME: Doesnt work
-	Map("fill_parts", Fields{
-		{Name: uast.KeyToken, Op: Var("tk")},
-	}, Fields{
-		{Name: uast.KeyType, Op: String("Name.parts")},
-		{Name: uast.KeyToken, Op: Var("tk")},
-	},
-	),
 	AnnotateType(php.File, nil, role.File),
 
-	MapAST(php.Name, Obj{
-		"parts": Arr(String("NULL")),
-	}, Obj{
-		"parts": Obj{uast.KeyRoles: Roles(role.Noop)},
-	}, role.Expression, role.Null),
+	Map("fill_parts", Check(
+		Not(Has{uast.KeyType: AnyVal(nil)}),
+		Part("x", Fields{
+			{Name: uast.KeyToken, Op: Var("tk")},
+		}),
+	), Part("x", Fields{
+		{Name: uast.KeyType, Op: String("Name.parts")},
+		{Name: uast.KeyToken, Op: Var("tk")},
+	})),
 
 	// Name; the actual tokens are in the "parts" children
-	MapAST(php.Name, Fields{
-		{Name: "parts", Op: Each("part", Obj{
-			"TOKEN": Var("tk"),
-		})},
-	}, Fields{
-		{Name: "parts", Op: Each("part", Obj{
-			"TOKEN":      Var("tk"),
-			uast.KeyType: String("Name.parts"),
-			uast.KeyRoles: Roles(role.Identifier),
-		})},
-	}, role.Identifier),
+	AnnotateType(php.Name, nil, role.Identifier),
 
 	annAssign(php.Assign, role.Expression, role.Assignment),
 	annAssign(php.AssignOpMinus, role.Expression, role.Assignment, role.Operator, role.Substract),
@@ -341,7 +329,7 @@ var Annotations = []Mapping{
 
 	// Class
 	// FIXME: php-parser doesn't give Visibility information (public, private, etc)
-	AnnotateTypeFields(php.Class, FieldRoles{
+	AnnotateType(php.Class, FieldRoles{
 		"extends":    {Arr: true, Roles: role.Roles{role.Base}},
 		"implements": {Arr: true, Roles: role.Roles{role.Implements}},
 		"name":       {Rename: uast.KeyToken},
@@ -384,7 +372,7 @@ var Annotations = []Mapping{
 		"attributes": Var("attributes"),
 	}, role.Expression, role.Assignment, role.Incomplete),
 
-	AnnotateTypeFields(php.DeclareDeclare, FieldRoles{
+	AnnotateType(php.DeclareDeclare, FieldRoles{
 		"key":   {Rename: uast.KeyToken},
 		"value": {Roles: role.Roles{role.Right}},
 	}, role.Identifier, role.Left),
@@ -398,7 +386,7 @@ var Annotations = []Mapping{
 	AnnotateType(php.EncapsedStringPart, nil, role.Expression, role.Identifier, role.Value),
 
 	// For
-	AnnotateTypeFields(php.For, FieldRoles{
+	AnnotateType(php.For, FieldRoles{
 		"init":  {Arr: true, Roles: role.Roles{role.Expression, role.For, role.Initialization}},
 		"cond":  {Arr: true, Roles: role.Roles{role.For, role.Condition}},
 		"loop":  {Arr: true, Roles: role.Roles{role.Expression, role.For, role.Update}},
@@ -442,19 +430,19 @@ var Annotations = []Mapping{
 		uast.KeyToken: Var("name"),
 	}, role.Function, role.Declaration),
 
-	AnnotateTypeFields(php.Param, FieldRoles{
+	AnnotateType(php.Param, FieldRoles{
 		"byRef":    {Op: Is(uast.Bool(false))},
 		"variadic": {Op: Is(uast.Bool(false))},
 	}, role.Argument),
-	AnnotateTypeFields(php.Param, FieldRoles{
+	AnnotateType(php.Param, FieldRoles{
 		"byRef":    {Op: Is(uast.Bool(false))},
 		"variadic": {Op: Is(uast.Bool(true))},
 	}, role.Argument, role.ArgsList),
-	AnnotateTypeFields(php.Param, FieldRoles{
+	AnnotateType(php.Param, FieldRoles{
 		"byRef":    {Op: Is(uast.Bool(true))},
 		"variadic": {Op: Is(uast.Bool(false))},
 	}, role.Argument, role.Incomplete),
-	AnnotateTypeFields(php.Param, FieldRoles{
+	AnnotateType(php.Param, FieldRoles{
 		"byRef":    {Op: Is(uast.Bool(true))},
 		"variadic": {Op: Is(uast.Bool(true))},
 	}, role.Argument, role.Incomplete, role.ArgsList),
@@ -465,7 +453,7 @@ var Annotations = []Mapping{
 	}, role.Import),
 
 	// Instanceof
-	AnnotateTypeFields(php.Instanceof, FieldRoles{
+	AnnotateType(php.Instanceof, FieldRoles{
 		"class":       {Roles: role.Roles{role.Call, role.Argument, role.Type, role.Identifier}},
 		"expr":        {Roles: role.Roles{role.Call, role.Argument, role.Type, role.Identifier}},
 		uast.KeyToken: {Add: true, Op: String("instanceof")},
@@ -490,11 +478,11 @@ var Annotations = []Mapping{
 
 	// Switch
 	AnnotateType(php.Switch, nil, role.Switch),
-	AnnotateTypeFields(php.Case, FieldRoles{
+	AnnotateType(php.Case, FieldRoles{
 		"cond":  {Opt: true, Roles: role.Roles{role.Case, role.Condition}},
 		"stmts": {Arr: true, Roles: role.Roles{role.Case, role.Body}},
 	}, role.Case),
-	AnnotateTypeFields(php.Case, FieldRoles{
+	AnnotateType(php.Case, FieldRoles{
 		"cond":  {Op: Is(nil)},
 		"stmts": {Arr: true, Roles: role.Roles{role.Case, role.Body}},
 	}, role.Case, role.Default),
