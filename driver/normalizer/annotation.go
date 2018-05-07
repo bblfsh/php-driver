@@ -8,52 +8,41 @@ import (
 	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
 )
 
-/*
-var rootProcessed bool = false
-
-// FIXME: Doesnt work
-func addRootNode() TransformFunc {
-	return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
-		if rootProcessed {
-			return n, false, nil
-		}
-
-		objRoot, ok := n.(uast.Object)
-		if !ok {
-			return n, false, nil
-		}
-
-		if _, ok := objRoot["rerooted"]; ok {
-			return n, false, nil
-		}
-
-		newRoot := uast.Object{}
-		// XXX add type so it can be annotated
-		newRoot["body"] = n
-		newRoot["nodeType"] = uast.String("FakeRoot")
-
-		rootProcessed = true
-		return newRoot, true, nil
-		//return n, true, nil
-	})
+type fixStrName struct {
+	vr string
 }
-*/
 
-type addRootNode struct{}
+var _ Op = fixStrName{}
 
-// Do applies the transformation described by this object.
-func (n addRootNode) Do(root uast.Node) (uast.Node, error) {
-	if obj, ok := root.(uast.Object); ok && len(obj) == 1 {
-		newRoot := uast.Object{}
-		newRoot["nodeType"] = uast.String("FakeRoot")
-		newRoot["main"] = root
-		return newRoot, nil
+func (op fixStrName) Check(st *State, n uast.Node) (bool, error) {
+	_, ok := n.(uast.String)
+	if !ok {
+		return false, nil
 	}
-	return root, nil
+
+	return true, nil
+}
+
+func (op fixStrName) Construct(st *State, n uast.Node) (uast.Node, error) {
+	o, err := st.MustGetVar(op.vr)
+	if err != nil {
+		return nil, err
+	}
+
+	//strName, ok := o.(uast.String)
+	_, ok := o.(uast.String)
+	if !ok {
+		//return nil, ErrExpectedValue.New(o)
+		return uast.String("XXX ERROR XXX"), nil
+	}
+
+	// XXX return a Name Obj with a parts field with a single
+	// Name.part Obj with the string as KeyToken
+	//return strName, nil
+	return uast.String("XXXHEREXXX"), nil
 }
 
 var Native = Transformers([][]Transformer{
-	//{addRootNode{}},
 	{
 		ResponseMetadata{
 			TopLevelIsRootNode: false,
@@ -63,9 +52,7 @@ var Native = Transformers([][]Transformer{
 	{RolesDedup()},
 }...)
 
-var Code = []CodeTransformer{
-	//positioner.NewFillOffsetFromLineCol(),
-}
+var Code = []CodeTransformer{}
 
 // FIXME: move to the SDK and remove from here and the python driver
 func annotateTypeToken(typ, token string, roles ...role.Role) Mapping {
@@ -96,8 +83,6 @@ func annAssign(typ string, opRoles ...role.Role) Mapping {
 // XXX Missing:
 // - Convert "name" keys with a string value into a Name node with a parts
 //   field (array of single element with the original string as token).
-
-// - Add a root File node (native AST is directly an array).
 
 // - Add KeyType and KeyToken to Name.parts objects (these are auto generated from string
 //   lists in the native UAST. Also, they don't seem to get the Unannotated role). Works
@@ -149,7 +134,7 @@ var Annotations = []Mapping{
 	}, Obj{
 		uast.KeyToken: Var("text"),
 		uast.KeyStart: Obj{
-			uast.KeyType: String("ast:Position"),
+			uast.KeyType:    String("ast:Position"),
 			uast.KeyPosCol:  Var("fp"),
 			uast.KeyPosLine: Var("ln"),
 		},
@@ -162,7 +147,7 @@ var Annotations = []Mapping{
 	}, Obj{
 		uast.KeyToken: Var("text"),
 		uast.KeyStart: Obj{
-			uast.KeyType: String("ast:Position"),
+			uast.KeyType:    String("ast:Position"),
 			uast.KeyPosCol:  Var("fp"),
 			uast.KeyPosLine: Var("ln"),
 		},
@@ -186,20 +171,30 @@ var Annotations = []Mapping{
 	})),
 
 	// FIXME: implement this
-	//Map("namestr_to_node", Check(
-		//Has{"name": SOMESTRING()},
-		//Part("x", Fields{
-			//{Name: "name", Op: Var("n")},
-		//}),
-	//), Part("x", Fields{
-		//{Name: "name", Op: Obj{
-			//uast.KeyType: String("Name"),
-			//"parts": Arr(Obj{
-				//uast.KeyType: String("Name.parts"),
-				//uast.KeyToken: Var("n"),
-			//}),
-		//}}}),
-	//),
+	/*
+	Map("namestr_to_node", Check(
+		Has{"name": SOMESTRING()},
+		Part("x", Fields{
+			{Name: "name", Op: Var("n")},
+		}),
+	), Part("x", Fields{
+		{Name: "name", Op: Obj{
+			uast.KeyType: String("Name"),
+			"parts": Arr(Obj{
+				uast.KeyType:  String("Name.parts"),
+				uast.KeyToken: Var("n"),
+			}),
+		}}}),
+	),
+	*/
+	Map("namestr_to_node",
+		Check(Has{"name": AnyVal(nil)},
+		Part("x", Fields{
+			{Name: "name", Op: fixStrName{vr: "name"}},
+		}),
+	), Part("x", Fields{
+		{Name: "name", Op: Var("name")},
+	})),
 
 	// Name; the actual tokens are in the "parts" children
 	AnnotateType(php.Name, nil, role.Identifier),
@@ -355,7 +350,7 @@ var Annotations = []Mapping{
 	AnnotateType(php.TryCatch, nil, role.Statement, role.Try),
 	AnnotateType(php.Catch, FieldRoles{
 		"types": {Roles: role.Roles{role.Catch, role.Type}},
-		"var": {Rename: uast.KeyToken},
+		"var":   {Rename: uast.KeyToken},
 	}, role.Catch, role.Type),
 
 	AnnotateType(php.Finally, nil, role.Statement, role.Finally),
