@@ -8,38 +8,39 @@ import (
 	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
 )
 
-type fixStrName struct {
-	vr string
-}
+func nameStrToNode() TransformFunc {
+	return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
+		obj, ok := n.(uast.Object)
+		if !ok {
+			return n, false, nil
+		}
 
-var _ Op = fixStrName{}
+		nameVal, ok := obj["name"]
+		if !ok {
+			return n, false, nil
+		}
 
-func (op fixStrName) Check(st *State, n uast.Node) (bool, error) {
-	_, ok := n.(uast.String)
-	if !ok {
-		return false, nil
-	}
+		strVal, ok := nameVal.(uast.String)
+		if !ok {
+			return n, false, nil
+		}
 
-	return true, nil
-}
+		goStrVal, ok := strVal.Native().(string)
+		if !ok {
+			return n, false, nil
+		}
 
-func (op fixStrName) Construct(st *State, n uast.Node) (uast.Node, error) {
-	o, err := st.MustGetVar(op.vr)
-	if err != nil {
-		return nil, err
-	}
+		newObj := Obj{
+			uast.KeyType: String("Name"),
+			uast.KeyToken: String(goStrVal),
+		}
 
-	//strName, ok := o.(uast.String)
-	_, ok := o.(uast.String)
-	if !ok {
-		//return nil, ErrExpectedValue.New(o)
-		return uast.String("XXX ERROR XXX"), nil
-	}
+		// @dennys: how to convert obj to Node???
+		x, _ = newObj.Object()
+		obj["name"] = newObj.Object()
 
-	// XXX return a Name Obj with a parts field with a single
-	// Name.part Obj with the string as KeyToken
-	//return strName, nil
-	return uast.String("XXXHEREXXX"), nil
+		return n, true, nil
+	})
 }
 
 var Native = Transformers([][]Transformer{
@@ -48,6 +49,7 @@ var Native = Transformers([][]Transformer{
 			TopLevelIsRootNode: false,
 		},
 	},
+	{nameStrToNode()},
 	{Mappings(Annotations...)},
 	{RolesDedup()},
 }...)
@@ -80,7 +82,7 @@ func annAssign(typ string, opRoles ...role.Role) Mapping {
 	}, opRoles...)
 }
 
-// XXX Missing:
+// @dennys Missing:
 // - Convert "name" keys with a string value into a Name node with a parts
 //   field (array of single element with the original string as token).
 
@@ -160,6 +162,7 @@ var Annotations = []Mapping{
 
 	AnnotateType(php.File, nil, role.File),
 
+	// @dennys: doesnt work
 	Map("fill_parts", Check(
 		Not(Has{uast.KeyType: AnyVal(nil)}),
 		Part("x", Fields{
@@ -170,31 +173,13 @@ var Annotations = []Mapping{
 		{Name: uast.KeyToken, Op: Var("tk")},
 	})),
 
-	// FIXME: implement this
-	/*
-	Map("namestr_to_node", Check(
-		Has{"name": SOMESTRING()},
-		Part("x", Fields{
-			{Name: "name", Op: Var("n")},
-		}),
-	), Part("x", Fields{
-		{Name: "name", Op: Obj{
-			uast.KeyType: String("Name"),
-			"parts": Arr(Obj{
-				uast.KeyType:  String("Name.parts"),
-				uast.KeyToken: Var("n"),
-			}),
-		}}}),
-	),
-	*/
-	Map("namestr_to_node",
-		Check(Has{"name": AnyVal(nil)},
-		Part("x", Fields{
-			{Name: "name", Op: fixStrName{vr: "name"}},
-		}),
-	), Part("x", Fields{
-		{Name: "name", Op: Var("name")},
-	})),
+	//Map("namestr_to_node",
+		//Part("x", Fields{
+			//{Name: "name", Op: nameStr2Node("name"), Optional: "name_exists"},
+		//},
+	//), Part("x", Fields{
+		//{Name: "name", Op: Var("name"), Optional: "name_exists"},
+	//})),
 
 	// Name; the actual tokens are in the "parts" children
 	AnnotateType(php.Name, nil, role.Identifier),

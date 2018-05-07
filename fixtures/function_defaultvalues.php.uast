@@ -1,18 +1,797 @@
-Status:  fatal
+Status:  ok
 Language:  php
 Errors: 
- .  received 11 errors:
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-
 UAST: 
+Stmt_Function {
+.  Roles: Declaration,Function
+.  StartPosition: {
+.  .  Offset: 7
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 178
+.  .  Line: 13
+.  .  Col: 90
+.  }
+.  Properties: {
+.  .  byRef: false
+.  }
+.  Children: {
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Function.returnType {
+.  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  Properties: {
+.  .  .  .  internalRole: returnType
+.  .  .  }
+.  .  }
+.  .  2: Function.body {
+.  .  .  Roles: Body,Declaration,Function
+.  .  .  Properties: {
+.  .  .  .  internalRole: stmts
+.  .  .  }
+.  .  }
+.  .  3: Param {
+.  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 23
+.  .  .  .  Line: 4
+.  .  .  .  Col: 7
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 31
+.  .  .  .  Line: 4
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_ConstFetch {
+.  .  .  .  .  Roles: Default,Expression,Incomplete,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 28
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 11
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 31
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 11
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: default
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 28
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 31
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  TOKEN "null"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  4: Param {
+.  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 38
+.  .  .  .  Line: 5
+.  .  .  .  Col: 14
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 47
+.  .  .  .  Line: 5
+.  .  .  .  Col: 18
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Scalar_String {
+.  .  .  .  .  Roles: Default,Expression,Literal,String
+.  .  .  .  .  TOKEN "foo"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 43
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 18
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 47
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 18
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: default
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  5: Param {
+.  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 54
+.  .  .  .  Line: 6
+.  .  .  .  Col: 21
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 62
+.  .  .  .  Line: 6
+.  .  .  .  Col: 27
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_ClassConstFetch {
+.  .  .  .  .  Roles: Default,Expression,Incomplete,Type
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 59
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 25
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 62
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 27
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: default
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 59
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 25
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 59
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 25
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: class
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  6: Param {
+.  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 69
+.  .  .  .  Line: 7
+.  .  .  .  Col: 30
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 75
+.  .  .  .  Line: 7
+.  .  .  .  Col: 35
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_UnaryPlus {
+.  .  .  .  .  Roles: Default,Expression,Incomplete,Unary
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 74
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 34
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 75
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 35
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: default
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Scalar_LNumber {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  TOKEN "1"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 75
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 35
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 75
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 35
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  kind: 10
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  7: Param {
+.  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 82
+.  .  .  .  Line: 8
+.  .  .  .  Col: 38
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 90
+.  .  .  .  Line: 8
+.  .  .  .  Col: 43
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_UnaryMinus {
+.  .  .  .  .  Roles: Default,Expression,Incomplete,Unary
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 87
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 42
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 90
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 43
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: default
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Scalar_DNumber {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  .  .  TOKEN "1"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 88
+.  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  Col: 43
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 90
+.  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  Col: 43
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  8: Param {
+.  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 97
+.  .  .  .  Line: 9
+.  .  .  .  Col: 46
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 108
+.  .  .  .  Line: 9
+.  .  .  .  Col: 52
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Array {
+.  .  .  .  .  Roles: Default,Expression,List,Literal
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 102
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 50
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 108
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 52
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: default
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  9: Param {
+.  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 115
+.  .  .  .  Line: 10
+.  .  .  .  Col: 55
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 121
+.  .  .  .  Line: 10
+.  .  .  .  Col: 60
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Array {
+.  .  .  .  .  Roles: Default,Expression,List,Literal
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 120
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 59
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 121
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 60
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: default
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 2
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  10: Param {
+.  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 128
+.  .  .  .  Line: 11
+.  .  .  .  Col: 63
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 139
+.  .  .  .  Line: 11
+.  .  .  .  Col: 69
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Array {
+.  .  .  .  .  Roles: Default,Expression,List,Literal
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 133
+.  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  Col: 67
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 139
+.  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  Col: 69
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: default
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 2
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Expr_ArrayItem {
+.  .  .  .  .  .  .  Roles: Entry,Expression,List
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 134
+.  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  Col: 68
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 138
+.  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  Col: 68
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  .  .  internalRole: items
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Scalar_String {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  .  .  TOKEN "foo"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 134
+.  .  .  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  .  .  Col: 68
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 138
+.  .  .  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  .  .  Col: 68
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  11: Param {
+.  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 146
+.  .  .  .  Line: 12
+.  .  .  .  Col: 72
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 173
+.  .  .  .  Line: 12
+.  .  .  .  Col: 85
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Array {
+.  .  .  .  .  Roles: Default,Expression,List,Literal
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 151
+.  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  Col: 76
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 173
+.  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  Col: 85
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: default
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 2
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Expr_ArrayItem {
+.  .  .  .  .  .  .  Roles: Entry,Expression,List
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 152
+.  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  Col: 77
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 156
+.  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  Col: 77
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  .  .  internalRole: items
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Scalar_String {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  .  .  TOKEN "foo"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 152
+.  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  Col: 77
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 156
+.  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  Col: 77
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: Expr_ArrayItem {
+.  .  .  .  .  .  .  Roles: Entry,Expression,List
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 159
+.  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  Col: 80
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 172
+.  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  Col: 84
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  byRef: false
+.  .  .  .  .  .  .  .  internalRole: items
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Scalar_String {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  .  .  TOKEN "bar"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 159
+.  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  Col: 80
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 163
+.  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  Col: 80
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: key
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: Scalar_String {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  .  .  .  .  TOKEN "baz"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 168
+.  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  Col: 84
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 172
+.  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  Col: 84
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
 

@@ -1,13 +1,441 @@
-Status:  fatal
+Status:  ok
 Language:  php
 Errors: 
- .  received 6 errors:
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-
 UAST: 
+ {
+.  Children: {
+.  .  0: Expr_Assign {
+.  .  .  Roles: Assignment,Expression
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 7
+.  .  .  .  Line: 3
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 12
+.  .  .  .  Line: 3
+.  .  .  .  Col: 6
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Left,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 7
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 8
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Scalar_LNumber {
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
+.  .  .  .  .  TOKEN "1"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 12
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 12
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 10
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: Expr_AssignOp_Plus {
+.  .  .  Roles: Add,Assignment,Expression,Operator
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 15
+.  .  .  .  Line: 4
+.  .  .  .  Col: 9
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 21
+.  .  .  .  Line: 4
+.  .  .  .  Col: 13
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Left,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 15
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 9
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 16
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 9
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Scalar_LNumber {
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
+.  .  .  .  .  TOKEN "1"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 21
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 13
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 21
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 13
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 10
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  2: Expr_AssignOp_Minus {
+.  .  .  Roles: Assignment,Expression,Operator,Substract
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 24
+.  .  .  .  Line: 5
+.  .  .  .  Col: 16
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 30
+.  .  .  .  Line: 5
+.  .  .  .  Col: 20
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Left,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 24
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 16
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 25
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 16
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Scalar_LNumber {
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
+.  .  .  .  .  TOKEN "1"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 30
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 20
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 30
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 20
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 10
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  3: Expr_AssignOp_Mul {
+.  .  .  Roles: Assignment,Expression,Multiply,Operator
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 33
+.  .  .  .  Line: 6
+.  .  .  .  Col: 23
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 39
+.  .  .  .  Line: 6
+.  .  .  .  Col: 27
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Left,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 33
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 23
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 34
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 23
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Scalar_LNumber {
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
+.  .  .  .  .  TOKEN "1"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 39
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 27
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 39
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 27
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 10
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  4: Expr_AssignOp_Div {
+.  .  .  Roles: Assignment,Divide,Expression,Operator
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 42
+.  .  .  .  Line: 7
+.  .  .  .  Col: 30
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 48
+.  .  .  .  Line: 7
+.  .  .  .  Col: 34
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Left,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 42
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 30
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 43
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 30
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Scalar_LNumber {
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
+.  .  .  .  .  TOKEN "1"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 48
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 34
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 48
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 34
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 10
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  5: Expr_AssignOp_Mod {
+.  .  .  Roles: Assignment,Expression,Modulo,Operator
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 51
+.  .  .  .  Line: 8
+.  .  .  .  Col: 37
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 57
+.  .  .  .  Line: 8
+.  .  .  .  Col: 41
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Left,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 51
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 37
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 52
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 37
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: var
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Scalar_LNumber {
+.  .  .  .  .  Roles: Expression,Literal,Number,Right
+.  .  .  .  .  TOKEN "1"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 57
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 41
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 57
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 41
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 10
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
 

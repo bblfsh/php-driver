@@ -1,10 +1,174 @@
-Status:  fatal
+Status:  ok
 Language:  php
 Errors: 
- .  received 3 errors:
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-
 UAST: 
+Stmt_Function {
+.  Roles: Declaration,Function
+.  StartPosition: {
+.  .  Offset: 7
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 55
+.  .  Line: 4
+.  .  Col: 25
+.  }
+.  Properties: {
+.  .  byRef: false
+.  }
+.  Children: {
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Function.returnType {
+.  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  Properties: {
+.  .  .  .  internalRole: returnType
+.  .  .  }
+.  .  }
+.  .  2: Function.body {
+.  .  .  Roles: Body,Declaration,Function
+.  .  .  Properties: {
+.  .  .  .  internalRole: stmts
+.  .  .  }
+.  .  }
+.  .  3: Param {
+.  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 21
+.  .  .  .  Line: 3
+.  .  .  .  Col: 6
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 29
+.  .  .  .  Line: 3
+.  .  .  .  Col: 9
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: NullableType {
+.  .  .  .  .  Roles: Incomplete,Type
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 21
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 6
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 24
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: type
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 22
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 24
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: type
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  TOKEN "Foo"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  4: Param {
+.  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 32
+.  .  .  .  Line: 3
+.  .  .  .  Col: 12
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 43
+.  .  .  .  Line: 3
+.  .  .  .  Col: 15
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: NullableType {
+.  .  .  .  .  Roles: Incomplete,Type
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 32
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 12
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 38
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 13
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: type
+.  .  .  .  .  .  type: string
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
 

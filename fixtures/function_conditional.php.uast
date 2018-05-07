@@ -1,6 +1,117 @@
-Status:  fatal
+Status:  ok
 Language:  php
 Errors: 
- .  construct: key "name": variable "name" is not defined
 UAST: 
+Stmt_If {
+.  Roles: If,Statement
+.  StartPosition: {
+.  .  Offset: 7
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 39
+.  .  Line: 5
+.  .  Col: 19
+.  }
+.  Children: {
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Expr_ConstFetch {
+.  .  .  Roles: Expression,Incomplete,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 11
+.  .  .  .  Line: 3
+.  .  .  .  Col: 5
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 14
+.  .  .  .  Line: 3
+.  .  .  .  Col: 5
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: cond
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Name {
+.  .  .  .  .  Roles: Identifier
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 11
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 5
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 14
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 5
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  TOKEN "true"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  2: Stmt_Function {
+.  .  .  Roles: Declaration,Function
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 23
+.  .  .  .  Line: 4
+.  .  .  .  Col: 10
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 37
+.  .  .  .  Line: 4
+.  .  .  .  Col: 17
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: stmts
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Function.returnType {
+.  .  .  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: returnType
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Function.body {
+.  .  .  .  .  Roles: Body,Declaration,Function
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
 

@@ -1,10 +1,95 @@
-Status:  fatal
+Status:  ok
 Language:  php
 Errors: 
- .  received 3 errors:
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-
 UAST: 
+Stmt_Function {
+.  Roles: Declaration,Function
+.  StartPosition: {
+.  .  Offset: 6
+.  .  Line: 2
+.  .  Col: 1
+.  }
+.  EndPosition: {
+.  .  Offset: 37
+.  .  Line: 2
+.  .  Col: 14
+.  }
+.  Properties: {
+.  .  byRef: false
+.  }
+.  Children: {
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Function.returnType {
+.  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  Properties: {
+.  .  .  .  internalRole: returnType
+.  .  .  }
+.  .  }
+.  .  2: Function.body {
+.  .  .  Roles: Body,Declaration,Function
+.  .  .  Properties: {
+.  .  .  .  internalRole: stmts
+.  .  .  }
+.  .  }
+.  .  3: Param {
+.  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 24
+.  .  .  .  Line: 2
+.  .  .  .  Col: 5
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 25
+.  .  .  .  Line: 2
+.  .  .  .  Col: 5
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  4: Param {
+.  .  .  Roles: ArgsList,Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 28
+.  .  .  .  Line: 2
+.  .  .  .  Col: 8
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 33
+.  .  .  .  Line: 2
+.  .  .  .  Col: 10
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: true
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
 

@@ -1,9 +1,258 @@
-Status:  fatal
+Status:  ok
 Language:  php
 Errors: 
- .  received 2 errors:
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-
 UAST: 
+ {
+.  Children: {
+.  .  0: Expr_Variable {
+.  .  .  Roles: Identifier,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 53
+.  .  .  .  Line: 7
+.  .  .  .  Col: 8
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 56
+.  .  .  .  Line: 7
+.  .  .  .  Col: 8
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Comment_Doc {
+.  .  .  .  .  Roles: Comment,Documentation,Noop
+.  .  .  .  .  TOKEN "* doc 1 "
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Comment {
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  TOKEN " foobar 1 "
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 20
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: Comment {
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  TOKEN " foo 1
+"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 35
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  4: Comment {
+.  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  TOKEN " bar 1
+"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 44
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: Stmt_If {
+.  .  .  Roles: If,Statement
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 60
+.  .  .  .  Line: 9
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 135
+.  .  .  .  Line: 14
+.  .  .  .  Col: 26
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_Nop {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Comment_Doc {
+.  .  .  .  .  .  .  .  .  Roles: Comment,Documentation,Noop
+.  .  .  .  .  .  .  .  .  TOKEN "* doc 2 "
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  .  .  Col: 77
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Comment {
+.  .  .  .  .  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  .  .  .  .  TOKEN " foobar 2 "
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  .  .  Col: 94
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: Comment {
+.  .  .  .  .  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  .  .  .  .  TOKEN " foo 2
+"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  Col: 113
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  3: Comment {
+.  .  .  .  .  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  .  .  .  .  TOKEN " bar 2
+"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  .  .  .  .  Col: 126
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 64
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 14
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 68
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 14
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: cond
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  2: Stmt_Nop {
+.  .  .  Roles: Noop
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Comment_Doc {
+.  .  .  .  .  .  .  Roles: Comment,Documentation,Noop
+.  .  .  .  .  .  .  TOKEN "* doc 3 "
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 16
+.  .  .  .  .  .  .  .  Col: 138
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Comment {
+.  .  .  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  .  .  TOKEN " foobar 3 "
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 17
+.  .  .  .  .  .  .  .  Col: 151
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: Comment {
+.  .  .  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  .  .  TOKEN " foo 3
+"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 166
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  3: Comment {
+.  .  .  .  .  .  .  Roles: Comment,Noop
+.  .  .  .  .  .  .  TOKEN " bar 3
+"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 0
+.  .  .  .  .  .  .  .  Line: 19
+.  .  .  .  .  .  .  .  Col: 175
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: comments
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
 

@@ -1,9 +1,77 @@
-Status:  fatal
+Status:  ok
 Language:  php
 Errors: 
- .  received 2 errors:
-	construct: key "name": variable "name" is not defined
-	construct: key "name": variable "name" is not defined
-
 UAST: 
+Expr_Instanceof {
+.  Roles: Call,Expression
+.  TOKEN "instanceof"
+.  StartPosition: {
+.  .  Offset: 7
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 22
+.  .  Line: 3
+.  .  Col: 6
+.  }
+.  Children: {
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Expr_Variable {
+.  .  .  Roles: Argument,Call,Identifier,Type,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 7
+.  .  .  .  Line: 3
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 8
+.  .  .  .  Line: 3
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: expr
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  2: Expr_Variable {
+.  .  .  Roles: Argument,Call,Identifier,Type,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 21
+.  .  .  .  Line: 3
+.  .  .  .  Col: 6
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 22
+.  .  .  .  Line: 3
+.  .  .  .  Col: 6
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: class
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  }
+}
 
