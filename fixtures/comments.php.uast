@@ -16,9 +16,6 @@ UAST:
 .  .  .  .  Line: 7
 .  .  .  .  Col: 8
 .  .  .  }
-.  .  .  Properties: {
-.  .  .  .  name: POLOMPOSXXX
-.  .  .  }
 .  .  .  Children: {
 .  .  .  .  0:  {
 .  .  .  .  .  Roles: Noop
@@ -26,7 +23,14 @@ UAST:
 .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Comment_Doc {
+.  .  .  .  1: Name {
+.  .  .  .  .  Roles: Identifier
+.  .  .  .  .  TOKEN "var"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Comment_Doc {
 .  .  .  .  .  Roles: Comment,Documentation,Noop
 .  .  .  .  .  TOKEN "* doc 1 "
 .  .  .  .  .  StartPosition: {
@@ -38,7 +42,7 @@ UAST:
 .  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  2: Comment {
+.  .  .  .  3: Comment {
 .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  TOKEN " foobar 1 "
 .  .  .  .  .  StartPosition: {
@@ -50,7 +54,7 @@ UAST:
 .  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  3: Comment {
+.  .  .  .  4: Comment {
 .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  TOKEN " foo 1
 "
@@ -63,7 +67,7 @@ UAST:
 .  .  .  .  .  .  internalRole: comments
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  4: Comment {
+.  .  .  .  5: Comment {
 .  .  .  .  .  Roles: Comment,Noop
 .  .  .  .  .  TOKEN " bar 1
 "
@@ -177,13 +181,19 @@ UAST:
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: cond
-.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0:  {
 .  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
+.  .  .  .  .  .  .  TOKEN "cond"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
