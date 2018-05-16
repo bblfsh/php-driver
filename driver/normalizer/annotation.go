@@ -8,39 +8,11 @@ import (
 	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
 )
 
-func nameStrToNode() TransformFunc {
-	return TransformFunc(func(n uast.Node) (uast.Node, bool, error) {
-		obj, ok := n.(uast.Object)
-		if !ok {
-			return n, false, nil
-		}
+type isString struct{}
 
-		nameVal, ok := obj["name"]
-		if !ok {
-			return n, false, nil
-		}
-
-		strVal, ok := nameVal.(uast.String)
-		if !ok {
-			return n, false, nil
-		}
-
-		goStrVal, ok := strVal.Native().(string)
-		if !ok {
-			return n, false, nil
-		}
-
-		newObj := Obj{
-			uast.KeyType: String("Name"),
-			uast.KeyToken: String(goStrVal),
-		}
-
-		// @dennys: how to convert obj to Node???
-		x, _ = newObj.Object()
-		obj["name"] = newObj.Object()
-
-		return n, true, nil
-	})
+func (isString) Check(st *State, n uast.Node) (bool, error) {
+	_, ok := n.(uast.String)
+	return ok, nil
 }
 
 var Native = Transformers([][]Transformer{
@@ -49,7 +21,19 @@ var Native = Transformers([][]Transformer{
 			TopLevelIsRootNode: false,
 		},
 	},
-	{nameStrToNode()},
+	{Mappings(
+		Map("name field",
+			Part("_", Obj{
+				"name": Check(isString{}, Var("name")),
+			}),
+			Part("_", Obj{
+				"name": Obj{
+					uast.KeyType:  String("Name"),
+					uast.KeyToken: Var("name"),
+				},
+			}),
+		),
+	)},
 	{Mappings(Annotations...)},
 	{RolesDedup()},
 }...)
@@ -174,11 +158,11 @@ var Annotations = []Mapping{
 	})),
 
 	//Map("namestr_to_node",
-		//Part("x", Fields{
-			//{Name: "name", Op: nameStr2Node("name"), Optional: "name_exists"},
-		//},
+	//Part("x", Fields{
+	//{Name: "name", Op: nameStr2Node("name"), Optional: "name_exists"},
+	//},
 	//), Part("x", Fields{
-		//{Name: "name", Op: Var("name"), Optional: "name_exists"},
+	//{Name: "name", Op: Var("name"), Optional: "name_exists"},
 	//})),
 
 	// Name; the actual tokens are in the "parts" children
