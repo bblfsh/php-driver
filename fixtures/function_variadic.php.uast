@@ -2,12 +2,10 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+ {
 .  Children: {
 .  .  0: Stmt_Function {
-.  .  .  Roles: Function,Declaration
-.  .  .  TOKEN "test"
+.  .  .  Roles: Declaration,Function
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 6
 .  .  .  .  Line: 2
@@ -16,182 +14,290 @@ File {
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 33
 .  .  .  .  Line: 2
-.  .  .  .  Col: 28
+.  .  .  .  Col: 14
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
-.  .  .  .  internalRole: children
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Param {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Function.returnType {
+.  .  .  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: returnType
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Function.body {
+.  .  .  .  .  Roles: Body,Declaration,Function
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: Param {
 .  .  .  .  .  Roles: Argument
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 20
 .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  Col: 5
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 21
 .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 16
+.  .  .  .  .  .  Col: 5
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  .  variadic: false
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Param {
-.  .  .  .  .  Roles: Argument,ArgsList
-.  .  .  .  .  TOKEN "b"
+.  .  .  .  4: Param {
+.  .  .  .  .  Roles: ArgsList,Argument
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 24
 .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 19
+.  .  .  .  .  .  Col: 8
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 29
 .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 24
+.  .  .  .  .  .  Col: 10
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  .  variadic: true
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Function {
-.  .  .  Roles: Function,Declaration
-.  .  .  TOKEN "test"
+.  .  .  Roles: Declaration,Function
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 35
 .  .  .  .  Line: 3
-.  .  .  .  Col: 1
+.  .  .  .  Col: 16
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 63
 .  .  .  .  Line: 3
-.  .  .  .  Col: 29
+.  .  .  .  Col: 30
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
-.  .  .  .  internalRole: children
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Param {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Function.returnType {
+.  .  .  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: returnType
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Function.body {
+.  .  .  .  .  Roles: Body,Declaration,Function
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: Param {
 .  .  .  .  .  Roles: Argument
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 49
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  Col: 20
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 50
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 16
+.  .  .  .  .  .  Col: 20
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  .  variadic: false
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Param {
-.  .  .  .  .  Roles: Argument,Incomplete,ArgsList
-.  .  .  .  .  TOKEN "b"
+.  .  .  .  4: Param {
+.  .  .  .  .  Roles: ArgsList,Argument,Incomplete
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 53
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 19
+.  .  .  .  .  .  Col: 23
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 59
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 25
+.  .  .  .  .  .  Col: 26
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: true
 .  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  .  variadic: true
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: Stmt_Function {
-.  .  .  Roles: Function,Declaration
-.  .  .  TOKEN "test"
+.  .  .  Roles: Declaration,Function
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 65
 .  .  .  .  Line: 4
-.  .  .  .  Col: 1
+.  .  .  .  Col: 32
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 97
 .  .  .  .  Line: 4
-.  .  .  .  Col: 33
+.  .  .  .  Col: 47
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
-.  .  .  .  internalRole: children
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Param {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Function.returnType {
+.  .  .  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: returnType
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Function.body {
+.  .  .  .  .  Roles: Body,Declaration,Function
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: Param {
 .  .  .  .  .  Roles: Argument
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 79
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  Col: 36
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 80
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 16
+.  .  .  .  .  .  Col: 36
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  .  variadic: false
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Param {
-.  .  .  .  .  Roles: Argument,ArgsList
-.  .  .  .  .  TOKEN "b"
+.  .  .  .  4: Param {
+.  .  .  .  .  Roles: ArgsList,Argument
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 83
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 19
+.  .  .  .  .  .  Col: 39
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 93
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 29
+.  .  .  .  .  .  Col: 43
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  .  variadic: true
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "Type"
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 83
 .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 19
+.  .  .  .  .  .  .  .  Col: 39
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 86
 .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  .  Col: 39
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: type
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  TOKEN "Type"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -199,76 +305,119 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: Stmt_Function {
-.  .  .  Roles: Function,Declaration
-.  .  .  TOKEN "test"
+.  .  .  Roles: Declaration,Function
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 99
 .  .  .  .  Line: 5
-.  .  .  .  Col: 1
+.  .  .  .  Col: 49
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 132
 .  .  .  .  Line: 5
-.  .  .  .  Col: 34
+.  .  .  .  Col: 65
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
-.  .  .  .  internalRole: children
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Param {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Function.returnType {
+.  .  .  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: returnType
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Function.body {
+.  .  .  .  .  Roles: Body,Declaration,Function
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: Param {
 .  .  .  .  .  Roles: Argument
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 113
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  Col: 53
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 114
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 16
+.  .  .  .  .  .  Col: 53
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  .  variadic: false
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Param {
-.  .  .  .  .  Roles: Argument,Incomplete,ArgsList
-.  .  .  .  .  TOKEN "b"
+.  .  .  .  4: Param {
+.  .  .  .  .  Roles: ArgsList,Argument,Incomplete
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 117
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 19
+.  .  .  .  .  .  Col: 56
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 128
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 30
+.  .  .  .  .  .  Col: 61
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: true
 .  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  .  variadic: true
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "Type"
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 117
 .  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 19
+.  .  .  .  .  .  .  .  Col: 56
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 120
 .  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  .  Col: 56
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: type
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  TOKEN "Type"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }

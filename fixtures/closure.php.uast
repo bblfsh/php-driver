@@ -2,11 +2,10 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+ {
 .  Children: {
 .  .  0: Expr_Closure {
-.  .  .  Roles: Function,Declaration,Expression,Anonymous
+.  .  .  Roles: Anonymous,Declaration,Expression,Function
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 6
 .  .  .  .  Line: 2
@@ -15,313 +14,441 @@ File {
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 25
 .  .  .  .  Line: 2
-.  .  .  .  Col: 20
+.  .  .  .  Col: 11
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
-.  .  .  .  internalRole: children
 .  .  .  .  static: false
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Param {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Param {
 .  .  .  .  .  Roles: Argument
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 15
 .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 10
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 16
 .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  .  variadic: false
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Expression,Body
-.  .  .  .  .  TOKEN "a"
+.  .  .  .  2: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 21
 .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 16
+.  .  .  .  .  .  Col: 8
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 22
 .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 17
+.  .  .  .  .  .  Col: 8
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Expr_Closure {
-.  .  .  Roles: Function,Declaration,Expression,Anonymous
+.  .  .  Roles: Anonymous,Declaration,Expression,Function
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 28
 .  .  .  .  Line: 3
-.  .  .  .  Col: 1
+.  .  .  .  Col: 14
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 50
 .  .  .  .  Line: 3
-.  .  .  .  Col: 23
+.  .  .  .  Col: 25
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
-.  .  .  .  internalRole: children
 .  .  .  .  static: false
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Param {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Param {
 .  .  .  .  .  Roles: Argument
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 37
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 10
+.  .  .  .  .  .  Col: 16
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 38
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  Col: 16
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  .  variadic: false
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Expr_ClosureUse {
-.  .  .  .  .  Roles: Visibility,Incomplete
-.  .  .  .  .  TOKEN "b"
+.  .  .  .  2: Expr_ClosureUse {
+.  .  .  .  .  Roles: Incomplete,Visibility
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 45
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 18
+.  .  .  .  .  .  Col: 21
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 46
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 19
+.  .  .  .  .  .  Col: 21
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: uses
+.  .  .  .  .  .  var: b
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: Expr_Closure {
-.  .  .  Roles: Function,Declaration,Expression,Anonymous
+.  .  .  Roles: Anonymous,Declaration,Expression,Function
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 53
 .  .  .  .  Line: 4
-.  .  .  .  Col: 1
+.  .  .  .  Col: 28
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 78
 .  .  .  .  Line: 4
-.  .  .  .  Col: 26
+.  .  .  .  Col: 42
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
-.  .  .  .  internalRole: children
 .  .  .  .  static: false
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Expr_ClosureUse {
-.  .  .  .  .  Roles: Visibility,Incomplete
-.  .  .  .  .  TOKEN "a"
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_ClosureUse {
+.  .  .  .  .  Roles: Incomplete,Visibility
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 68
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 16
+.  .  .  .  .  .  Col: 34
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 69
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 17
+.  .  .  .  .  .  Col: 34
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: uses
+.  .  .  .  .  .  var: a
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Expr_ClosureUse {
-.  .  .  .  .  Roles: Visibility,Incomplete
-.  .  .  .  .  TOKEN "b"
+.  .  .  .  2: Expr_ClosureUse {
+.  .  .  .  .  Roles: Incomplete,Visibility
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 72
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 20
+.  .  .  .  .  .  Col: 37
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 74
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  Col: 38
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: true
 .  .  .  .  .  .  internalRole: uses
+.  .  .  .  .  .  var: b
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  3: Expr_Closure {
-.  .  .  Roles: Function,Declaration,Expression,Anonymous
+.  .  .  Roles: Anonymous,Declaration,Expression,Function
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 81
 .  .  .  .  Line: 5
-.  .  .  .  Col: 1
+.  .  .  .  Col: 45
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 97
 .  .  .  .  Line: 5
-.  .  .  .  Col: 17
+.  .  .  .  Col: 53
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: true
-.  .  .  .  internalRole: children
 .  .  .  .  static: false
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Param {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Param {
 .  .  .  .  .  Roles: Argument
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 92
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  Col: 49
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 93
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  Col: 49
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  .  variadic: false
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  4: Expr_Closure {
-.  .  .  Roles: Function,Declaration,Expression,Anonymous
+.  .  .  Roles: Anonymous,Declaration,Expression,Function
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 100
 .  .  .  .  Line: 6
-.  .  .  .  Col: 1
+.  .  .  .  Col: 56
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 119
 .  .  .  .  Line: 6
-.  .  .  .  Col: 20
+.  .  .  .  Col: 63
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
-.  .  .  .  internalRole: children
 .  .  .  .  static: true
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  5: Expr_Closure {
-.  .  .  Roles: Function,Declaration,Expression,Anonymous
+.  .  .  Roles: Anonymous,Declaration,Expression,Function
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 122
 .  .  .  .  Line: 7
-.  .  .  .  Col: 1
+.  .  .  .  Col: 66
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 144
 .  .  .  .  Line: 7
-.  .  .  .  Col: 23
+.  .  .  .  Col: 76
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
-.  .  .  .  internalRole: children
 .  .  .  .  returnType: array
 .  .  .  .  static: false
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Param {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Param {
 .  .  .  .  .  Roles: Argument
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 131
 .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 10
+.  .  .  .  .  .  Col: 68
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 132
 .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  Col: 68
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: params
+.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  .  variadic: false
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  6: Expr_Closure {
-.  .  .  Roles: Function,Declaration,Expression,Anonymous
+.  .  .  Roles: Anonymous,Declaration,Expression,Function
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 147
 .  .  .  .  Line: 8
-.  .  .  .  Col: 1
+.  .  .  .  Col: 79
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 178
 .  .  .  .  Line: 8
-.  .  .  .  Col: 32
+.  .  .  .  Col: 96
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
-.  .  .  .  internalRole: children
 .  .  .  .  static: false
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Expr_ClosureUse {
-.  .  .  .  .  Roles: Visibility,Incomplete
-.  .  .  .  .  TOKEN "a"
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_ClosureUse {
+.  .  .  .  .  Roles: Incomplete,Visibility
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 162
 .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 16
+.  .  .  .  .  .  Col: 85
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 163
 .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 17
+.  .  .  .  .  .  Col: 85
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  internalRole: uses
+.  .  .  .  .  .  var: a
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Name_FullyQualified {
-.  .  .  .  .  Roles: Expression,Variable,Incomplete
-.  .  .  .  .  TOKEN "Foo\Bar"
+.  .  .  .  2: Name_FullyQualified {
+.  .  .  .  .  Roles: Expression,Incomplete,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 168
 .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  Col: 90
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 175
 .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 29
+.  .  .  .  .  .  Col: 93
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: returnType
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  TOKEN "Foo"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2:  {
+.  .  .  .  .  .  .  TOKEN "Bar"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

@@ -2,71 +2,94 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Stmt_Function {
+.  Roles: Declaration,Function
+.  StartPosition: {
+.  .  Offset: 6
+.  .  Line: 2
+.  .  Col: 1
+.  }
+.  EndPosition: {
+.  .  Offset: 43
+.  .  Line: 2
+.  .  Col: 15
+.  }
+.  Properties: {
+.  .  byRef: false
+.  }
 .  Children: {
-.  .  0: Stmt_Function {
-.  .  .  Roles: Function,Declaration
-.  .  .  TOKEN "func1"
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Function.returnType {
+.  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  TOKEN "string"
+.  .  .  Properties: {
+.  .  .  .  internalRole: returnType
+.  .  .  }
+.  .  }
+.  .  2: Function.body {
+.  .  .  Roles: Body,Declaration,Function
+.  .  .  Properties: {
+.  .  .  .  internalRole: stmts
+.  .  .  }
+.  .  }
+.  .  3: Param {
+.  .  .  Roles: Argument
 .  .  .  StartPosition: {
-.  .  .  .  Offset: 6
+.  .  .  .  Offset: 21
 .  .  .  .  Line: 2
-.  .  .  .  Col: 1
+.  .  .  .  Col: 5
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 43
+.  .  .  .  Offset: 30
 .  .  .  .  Line: 2
-.  .  .  .  Col: 38
+.  .  .  .  Col: 7
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  Stmt_Function.returnType: string
 .  .  .  .  byRef: false
-.  .  .  .  internalRole: children
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: false
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Param {
-.  .  .  .  .  Roles: Argument
-.  .  .  .  .  TOKEN "a"
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Name {
+.  .  .  .  .  Roles: Identifier
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 21
 .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 16
+.  .  .  .  .  .  Col: 5
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 30
+.  .  .  .  .  .  Offset: 27
 .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 25
+.  .  .  .  .  .  Col: 5
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  internalRole: params
-.  .  .  .  .  .  variadic: false
+.  .  .  .  .  .  internalRole: type
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "boolean"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 21
-.  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  Col: 16
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 27
-.  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  Col: 22
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: type
+.  .  .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Stmt_Function.returnType {
-.  .  .  .  .  Roles: Return,Type
-.  .  .  .  .  TOKEN "string"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  promotedPropertyString: true
+.  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  TOKEN "boolean"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

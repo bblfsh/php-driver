@@ -2,46 +2,54 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Stmt_Class {
+.  Roles: Declaration,Statement,Type
+.  StartPosition: {
+.  .  Offset: 6
+.  .  Line: 2
+.  .  Col: 1
+.  }
+.  EndPosition: {
+.  .  Offset: 49
+.  .  Line: 4
+.  .  Col: 18
+.  }
+.  Properties: {
+.  .  flags: 0
+.  .  name: POLOMPOSXXX
+.  .  type: 0
+.  }
 .  Children: {
-.  .  0: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "A"
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Stmt_ClassMethod {
+.  .  .  Roles: Body,Function,Type
 .  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
+.  .  .  .  Offset: 20
+.  .  .  .  Line: 3
+.  .  .  .  Col: 7
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 49
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
+.  .  .  .  Offset: 47
+.  .  .  .  Line: 3
+.  .  .  .  Col: 16
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  flags: 0
-.  .  .  .  internalRole: children
-.  .  .  .  type: 0
+.  .  .  .  byRef: false
+.  .  .  .  flags: 8
+.  .  .  .  internalRole: stmts
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  type: 8
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "method1"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 20
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 47
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 32
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 8
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 8
+.  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

@@ -2,37 +2,41 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+ {
 .  Children: {
 .  .  0: Stmt_Use {
 .  .  .  Roles: Alias
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
-.  .  .  .  Col: 1
+.  .  .  .  Col: 2
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 14
 .  .  .  .  Line: 3
-.  .  .  .  Col: 8
+.  .  .  .  Col: 7
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  type: 1
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_UseUse {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_UseUse {
 .  .  .  .  .  Roles: Alias
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 11
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  Col: 4
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 13
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  Col: 6
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  alias: B
@@ -40,21 +44,46 @@ File {
 .  .  .  .  .  .  type: 0
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "A\B"
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 11
 .  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  .  .  Col: 4
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 13
 .  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  Col: 6
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2:  {
+.  .  .  .  .  .  .  .  .  TOKEN "B"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -66,29 +95,34 @@ File {
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 16
 .  .  .  .  Line: 4
-.  .  .  .  Col: 1
+.  .  .  .  Col: 9
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 28
 .  .  .  .  Line: 4
-.  .  .  .  Col: 13
+.  .  .  .  Col: 18
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  type: 1
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_UseUse {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_UseUse {
 .  .  .  .  .  Roles: Alias
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 20
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  Col: 11
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 27
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  Col: 17
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  alias: E
@@ -96,21 +130,46 @@ File {
 .  .  .  .  .  .  type: 0
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "C\D"
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 20
 .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  .  .  Col: 11
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 22
 .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  Col: 13
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  TOKEN "C"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2:  {
+.  .  .  .  .  .  .  .  .  TOKEN "D"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -122,29 +181,34 @@ File {
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 30
 .  .  .  .  Line: 5
-.  .  .  .  Col: 1
+.  .  .  .  Col: 20
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 45
 .  .  .  .  Line: 5
-.  .  .  .  Col: 16
+.  .  .  .  Col: 32
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  type: 1
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_UseUse {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_UseUse {
 .  .  .  .  .  Roles: Alias
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 34
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  Col: 22
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 41
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  Col: 28
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  alias: H
@@ -152,36 +216,61 @@ File {
 .  .  .  .  .  .  type: 0
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "F\G"
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 34
 .  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  .  .  Col: 22
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 36
 .  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  Col: 24
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: name
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  TOKEN "F"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2:  {
+.  .  .  .  .  .  .  .  .  TOKEN "G"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Stmt_UseUse {
+.  .  .  .  2: Stmt_UseUse {
 .  .  .  .  .  Roles: Alias
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 44
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  Col: 31
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 44
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  Col: 31
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  alias: J
@@ -189,21 +278,40 @@ File {
 .  .  .  .  .  .  type: 0
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "J"
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 44
 .  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  .  .  Col: 31
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 44
 .  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  .  .  Col: 31
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  TOKEN "J"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -215,29 +323,34 @@ File {
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 48
 .  .  .  .  Line: 7
-.  .  .  .  Col: 1
+.  .  .  .  Col: 34
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 68
 .  .  .  .  Line: 7
-.  .  .  .  Col: 21
+.  .  .  .  Col: 41
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  type: 2
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_UseUse {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_UseUse {
 .  .  .  .  .  Roles: Alias
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 61
 .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 14
+.  .  .  .  .  .  Col: 38
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 67
 .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 20
+.  .  .  .  .  .  Col: 40
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  alias: bar
@@ -245,21 +358,46 @@ File {
 .  .  .  .  .  .  type: 0
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "foo\bar"
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 61
 .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 14
+.  .  .  .  .  .  .  .  Col: 38
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 67
 .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 20
+.  .  .  .  .  .  .  .  Col: 40
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  TOKEN "foo"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2:  {
+.  .  .  .  .  .  .  .  .  TOKEN "bar"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -271,29 +409,34 @@ File {
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 70
 .  .  .  .  Line: 8
-.  .  .  .  Col: 1
+.  .  .  .  Col: 43
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 97
 .  .  .  .  Line: 8
-.  .  .  .  Col: 28
+.  .  .  .  Col: 54
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  type: 2
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_UseUse {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_UseUse {
 .  .  .  .  .  Roles: Alias
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 83
 .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 14
+.  .  .  .  .  .  Col: 47
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 96
 .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 27
+.  .  .  .  .  .  Col: 53
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  alias: baz
@@ -301,21 +444,46 @@ File {
 .  .  .  .  .  .  type: 0
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "foo\bar"
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 83
 .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  Col: 14
+.  .  .  .  .  .  .  .  Col: 47
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 89
 .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  Col: 20
+.  .  .  .  .  .  .  .  Col: 49
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  TOKEN "foo"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2:  {
+.  .  .  .  .  .  .  .  .  TOKEN "bar"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -327,29 +495,34 @@ File {
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 99
 .  .  .  .  Line: 9
-.  .  .  .  Col: 1
+.  .  .  .  Col: 56
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 116
 .  .  .  .  Line: 9
-.  .  .  .  Col: 18
+.  .  .  .  Col: 63
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  type: 3
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_UseUse {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_UseUse {
 .  .  .  .  .  Roles: Alias
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 109
 .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  Col: 60
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 115
 .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  Col: 17
+.  .  .  .  .  .  Col: 62
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  alias: BAR
@@ -357,21 +530,46 @@ File {
 .  .  .  .  .  .  type: 0
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "foo\BAR"
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 109
 .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  .  .  Col: 60
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 115
 .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  Col: 17
+.  .  .  .  .  .  .  .  Col: 62
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  TOKEN "foo"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2:  {
+.  .  .  .  .  .  .  .  .  TOKEN "BAR"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -383,29 +581,34 @@ File {
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 118
 .  .  .  .  Line: 10
-.  .  .  .  Col: 1
+.  .  .  .  Col: 65
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 142
 .  .  .  .  Line: 10
-.  .  .  .  Col: 25
+.  .  .  .  Col: 76
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  type: 3
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_UseUse {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_UseUse {
 .  .  .  .  .  Roles: Alias
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 128
 .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  Col: 69
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 141
 .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 24
+.  .  .  .  .  .  Col: 75
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  alias: BAZ
@@ -413,21 +616,46 @@ File {
 .  .  .  .  .  .  type: 0
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "foo\BAR"
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 128
 .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  .  .  Col: 69
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 134
 .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  Col: 17
+.  .  .  .  .  .  .  .  Col: 71
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  TOKEN "foo"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2:  {
+.  .  .  .  .  .  .  .  .  TOKEN "BAR"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }

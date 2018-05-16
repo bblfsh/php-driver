@@ -2,61 +2,75 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Stmt_Class {
+.  Roles: Declaration,Statement,Type
+.  StartPosition: {
+.  .  Offset: 6
+.  .  Line: 2
+.  .  Col: 1
+.  }
+.  EndPosition: {
+.  .  Offset: 38
+.  .  Line: 4
+.  .  Col: 12
+.  }
+.  Properties: {
+.  .  flags: 0
+.  .  name: POLOMPOSXXX
+.  .  type: 0
+.  }
 .  Children: {
-.  .  0: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "testcls1"
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Stmt_Property {
+.  .  .  Roles: Body,Incomplete,Type,Variable
 .  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
+.  .  .  .  Offset: 27
+.  .  .  .  Line: 3
+.  .  .  .  Col: 7
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 38
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
+.  .  .  .  Offset: 36
+.  .  .  .  Line: 3
+.  .  .  .  Col: 10
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  flags: 0
-.  .  .  .  internalRole: children
-.  .  .  .  type: 0
+.  .  .  .  flags: 8
+.  .  .  .  internalRole: stmts
+.  .  .  .  type: 8
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_Property {
-.  .  .  .  .  Roles: Expression,Body,Type,Variable,Incomplete
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_PropertyProperty {
+.  .  .  .  .  Roles: Incomplete,Type,Variable
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 27
+.  .  .  .  .  .  Offset: 34
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  Col: 9
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 36
+.  .  .  .  .  .  Offset: 35
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 14
+.  .  .  .  .  .  Col: 9
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  flags: 8
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 8
+.  .  .  .  .  .  internalRole: props
+.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Stmt_PropertyProperty {
-.  .  .  .  .  .  .  Roles: Type,Variable,Incomplete
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 34
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 12
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 35
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: props
+.  .  .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }

@@ -2,80 +2,114 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Stmt_Function {
+.  Roles: Declaration,Function
+.  StartPosition: {
+.  .  Offset: 6
+.  .  Line: 2
+.  .  Col: 1
+.  }
+.  EndPosition: {
+.  .  Offset: 35
+.  .  Line: 2
+.  .  Col: 14
+.  }
+.  Properties: {
+.  .  byRef: false
+.  }
 .  Children: {
-.  .  0: Stmt_Function {
-.  .  .  Roles: Function,Declaration
-.  .  .  TOKEN "testfnc1"
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Function.returnType {
+.  .  .  Roles: Declaration,Function,Return,Type
+.  .  .  Properties: {
+.  .  .  .  internalRole: returnType
+.  .  .  }
+.  .  }
+.  .  2: Function.body {
+.  .  .  Roles: Body,Declaration,Function
+.  .  .  Properties: {
+.  .  .  .  internalRole: stmts
+.  .  .  }
+.  .  }
+.  .  3: Param {
+.  .  .  Roles: Argument
 .  .  .  StartPosition: {
-.  .  .  .  Offset: 6
+.  .  .  .  Offset: 24
 .  .  .  .  Line: 2
-.  .  .  .  Col: 1
+.  .  .  .  Col: 5
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 35
+.  .  .  .  Offset: 25
 .  .  .  .  Line: 2
-.  .  .  .  Col: 30
+.  .  .  .  Col: 5
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  byRef: false
-.  .  .  .  internalRole: children
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: false
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Param {
-.  .  .  .  .  Roles: Argument
-.  .  .  .  .  TOKEN "a"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 24
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 19
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 25
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 20
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  internalRole: params
-.  .  .  .  .  .  variadic: false
+.  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Param {
-.  .  .  .  .  Roles: Argument
-.  .  .  .  .  TOKEN "b"
+.  .  .  }
+.  .  }
+.  .  4: Param {
+.  .  .  Roles: Argument
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 28
+.  .  .  .  Line: 2
+.  .  .  .  Col: 8
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 31
+.  .  .  .  Line: 2
+.  .  .  .  Col: 10
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  internalRole: params
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  variadic: false
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Scalar_LNumber {
+.  .  .  .  .  Roles: Default,Expression,Literal,Number
+.  .  .  .  .  TOKEN "1"
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 28
+.  .  .  .  .  .  Offset: 31
 .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 23
+.  .  .  .  .  .  Col: 10
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 31
 .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 26
+.  .  .  .  .  .  Col: 10
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  internalRole: params
-.  .  .  .  .  .  variadic: false
+.  .  .  .  .  .  internalRole: default
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Scalar_LNumber {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Number,Default
-.  .  .  .  .  .  .  TOKEN "1"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 31
-.  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  Col: 26
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 31
-.  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  Col: 26
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: default
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 10
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }

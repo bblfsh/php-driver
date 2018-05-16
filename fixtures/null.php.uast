@@ -2,40 +2,51 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Expr_ConstFetch {
+.  Roles: Expression,Incomplete,Variable
+.  StartPosition: {
+.  .  Offset: 7
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 10
+.  .  Line: 3
+.  .  Col: 2
+.  }
 .  Children: {
-.  .  0: Expr_ConstFetch {
-.  .  .  Roles: Expression,Variable,Incomplete
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Name {
+.  .  .  Roles: Identifier
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
-.  .  .  .  Col: 1
+.  .  .  .  Col: 2
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 10
 .  .  .  .  Line: 3
-.  .  .  .  Col: 4
+.  .  .  .  Col: 2
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  internalRole: name
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "NULL"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 7
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 10
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 4
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1:  {
+.  .  .  .  .  TOKEN "NULL"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

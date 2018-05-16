@@ -2,42 +2,47 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Expr_New {
+.  Roles: Call,Expression,Initialization
+.  StartPosition: {
+.  .  Offset: 6
+.  .  Line: 2
+.  .  Col: 1
+.  }
+.  EndPosition: {
+.  .  Offset: 17
+.  .  Line: 2
+.  .  Col: 6
+.  }
 .  Children: {
-.  .  0: Expr_New {
-.  .  .  Roles: Expression,Initialization,Call
-.  .  .  TOKEN "new"
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Stmt_Class {
+.  .  .  Roles: Declaration,Statement,Type
 .  .  .  StartPosition: {
-.  .  .  .  Offset: 6
+.  .  .  .  Offset: 10
 .  .  .  .  Line: 2
-.  .  .  .  Col: 1
+.  .  .  .  Col: 3
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 17
 .  .  .  .  Line: 2
-.  .  .  .  Col: 12
+.  .  .  .  Col: 6
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  flags: 0
+.  .  .  .  internalRole: class
+.  .  .  .  type: 0
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_Class {
-.  .  .  .  .  Roles: Statement,Declaration,Type
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 10
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 17
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 12
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  flags: 0
-.  .  .  .  .  .  internalRole: class
-.  .  .  .  .  .  type: 0
+.  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

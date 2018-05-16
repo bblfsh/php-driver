@@ -2,8 +2,7 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+ {
 .  Children: {
 .  .  0: Expr_Include {
 .  .  .  Roles: Import
@@ -15,28 +14,42 @@ File {
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 20
 .  .  .  .  Line: 2
-.  .  .  .  Col: 15
+.  .  .  .  Col: 3
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  type: 1
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Scalar_String {
+.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
 .  .  .  .  .  TOKEN "a.php"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 14
 .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 20
 .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  Col: 3
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -46,33 +59,47 @@ File {
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 23
 .  .  .  .  Line: 3
-.  .  .  .  Col: 1
+.  .  .  .  Col: 6
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 38
 .  .  .  .  Line: 3
-.  .  .  .  Col: 16
+.  .  .  .  Col: 9
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  type: 3
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Scalar_String {
+.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
 .  .  .  .  .  TOKEN "b.php"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 31
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  Col: 8
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 37
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 15
+.  .  .  .  .  .  Col: 8
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 1
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

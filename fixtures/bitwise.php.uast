@@ -2,32 +2,33 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+ {
 .  Children: {
 .  .  0: Expr_BinaryOp_BitwiseAnd {
-.  .  .  Roles: Expression,Binary,Operator,Bitwise,And
+.  .  .  Roles: And,Binary,Bitwise,Expression,Operator
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
-.  .  .  .  Col: 1
+.  .  .  .  Col: 2
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 13
 .  .  .  .  Line: 3
-.  .  .  .  Col: 7
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  Col: 6
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "a"
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 7
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  Col: 2
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 8
@@ -36,11 +37,19 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  TOKEN "b"
+.  .  .  .  2: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Right,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 12
 .  .  .  .  .  .  Line: 3
@@ -49,253 +58,349 @@ File {
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 13
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  Col: 6
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Expr_BinaryOp_BitwiseOr {
-.  .  .  Roles: Expression,Binary,Operator,Bitwise,Or
+.  .  .  Roles: Binary,Bitwise,Expression,Operator,Or
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 16
 .  .  .  .  Line: 4
-.  .  .  .  Col: 1
+.  .  .  .  Col: 9
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 22
 .  .  .  .  Line: 4
-.  .  .  .  Col: 7
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  Col: 13
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "b"
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 16
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  Col: 9
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 17
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 2
+.  .  .  .  .  .  Col: 9
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  TOKEN "c"
+.  .  .  .  2: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Right,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 21
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  Col: 13
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 22
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  Col: 13
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: Expr_BinaryOp_BitwiseXor {
-.  .  .  Roles: Expression,Binary,Operator,Bitwise,Xor
+.  .  .  Roles: Binary,Bitwise,Expression,Operator,Xor
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 25
 .  .  .  .  Line: 5
-.  .  .  .  Col: 1
+.  .  .  .  Col: 16
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 31
 .  .  .  .  Line: 5
-.  .  .  .  Col: 7
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  Col: 20
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "d"
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 25
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  Col: 16
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 26
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 2
+.  .  .  .  .  .  Col: 16
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  TOKEN "e"
+.  .  .  .  2: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Right,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 30
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  Col: 20
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 31
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  Col: 20
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  3: Expr_BitwiseNot {
-.  .  .  Roles: Expression,Unary,Operator,Bitwise,Not
+.  .  .  Roles: Bitwise,Expression,Not,Operator,Unary
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 34
 .  .  .  .  Line: 6
-.  .  .  .  Col: 1
+.  .  .  .  Col: 23
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 37
 .  .  .  .  Line: 6
-.  .  .  .  Col: 4
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  Col: 25
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "f"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 36
 .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  Col: 25
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 37
 .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  Col: 25
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  4: Expr_BinaryOp_ShiftLeft {
-.  .  .  Roles: Expression,Binary,Operator,Bitwise,LeftShift
+.  .  .  Roles: Binary,Bitwise,Expression,LeftShift,Operator
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 40
 .  .  .  .  Line: 7
-.  .  .  .  Col: 1
+.  .  .  .  Col: 28
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 47
 .  .  .  .  Line: 7
-.  .  .  .  Col: 8
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  Col: 32
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "g"
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 40
 .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  Col: 28
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 41
 .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 2
+.  .  .  .  .  .  Col: 28
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  TOKEN "h"
+.  .  .  .  2: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Right,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 46
 .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  Col: 32
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 47
 .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 8
+.  .  .  .  .  .  Col: 32
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  5: Expr_BinaryOp_ShiftRight {
-.  .  .  Roles: Expression,Binary,Operator,Bitwise,RightShift
+.  .  .  Roles: Binary,Bitwise,Expression,Operator,RightShift
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 50
 .  .  .  .  Line: 8
-.  .  .  .  Col: 1
+.  .  .  .  Col: 35
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 57
 .  .  .  .  Line: 8
-.  .  .  .  Col: 8
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  Col: 39
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Left
-.  .  .  .  .  TOKEN "i"
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Left,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 50
 .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  Col: 35
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 51
 .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 2
+.  .  .  .  .  .  Col: 35
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: left
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable,Right
-.  .  .  .  .  TOKEN "j"
+.  .  .  .  2: Expr_Variable {
+.  .  .  .  .  Roles: Identifier,Right,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 56
 .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  Col: 39
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 57
 .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 8
+.  .  .  .  .  .  Col: 39
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: right
+.  .  .  .  .  .  name: POLOMPOSXXX
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

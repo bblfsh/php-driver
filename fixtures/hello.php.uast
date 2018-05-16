@@ -2,59 +2,60 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Stmt_Echo {
+.  Roles: Call,Statement
+.  StartPosition: {
+.  .  Offset: 46
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 65
+.  .  Line: 3
+.  .  Col: 5
+.  }
 .  Children: {
-.  .  0: Stmt_Echo {
-.  .  .  Roles: Statement,Call
-.  .  .  TOKEN "echo"
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 46
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
 .  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 65
-.  .  .  .  Line: 3
-.  .  .  .  Col: 20
+.  .  }
+.  .  1: Comment {
+.  .  .  Roles: Comment,Noop
+.  .  .  TOKEN " this is a simple hello world example
+"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 2
+.  .  .  .  Col: 6
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  internalRole: comments
+.  .  .  }
+.  .  }
+.  .  2: Scalar_String {
+.  .  .  Roles: Expression,Literal,String
+.  .  .  TOKEN "Hello World!"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 51
+.  .  .  .  Line: 3
+.  .  .  .  Col: 4
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 64
+.  .  .  .  Line: 3
+.  .  .  .  Col: 4
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: exprs
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Noop,Comment
-.  .  .  .  .  TOKEN " this is a simple hello world example
-"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 6
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 46
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: attributes
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  TOKEN "Hello World!"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 51
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 6
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 64
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 19
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: exprs
+.  .  .  .  .  .  kind: 2
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

@@ -2,181 +2,248 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Stmt_Const {
+.  Roles: Unannotated
+.  StartPosition: {
+.  .  Offset: 7
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 43
+.  .  Line: 3
+.  .  Col: 30
+.  }
 .  Children: {
-.  .  0: Stmt_Const {
-.  .  .  Roles: Expression,Variable,Incomplete
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Const {
+.  .  .  Roles: Expression,Incomplete,Variable
 .  .  .  StartPosition: {
-.  .  .  .  Offset: 7
+.  .  .  .  Offset: 13
 .  .  .  .  Line: 3
-.  .  .  .  Col: 1
+.  .  .  .  Col: 4
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 43
+.  .  .  .  Offset: 17
 .  .  .  .  Line: 3
-.  .  .  .  Col: 37
+.  .  .  .  Col: 8
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  internalRole: consts
+.  .  .  .  name: POLOMPOSXXX
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Const {
-.  .  .  .  .  Roles: Expression,Variable,Incomplete
-.  .  .  .  .  TOKEN "A"
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Scalar_LNumber {
+.  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  TOKEN "0"
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 13
+.  .  .  .  .  .  Offset: 17
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  Col: 8
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 17
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  Col: 8
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: consts
+.  .  .  .  .  .  internalRole: value
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Scalar_LNumber {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Number
-.  .  .  .  .  .  .  TOKEN "0"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 17
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 11
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 17
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 11
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 10
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Const {
-.  .  .  .  .  Roles: Expression,Variable,Incomplete
-.  .  .  .  .  TOKEN "B"
+.  .  .  }
+.  .  }
+.  .  2: Const {
+.  .  .  Roles: Expression,Incomplete,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 20
+.  .  .  .  Line: 3
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 26
+.  .  .  .  Line: 3
+.  .  .  .  Col: 15
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: consts
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Scalar_DNumber {
+.  .  .  .  .  Roles: Expression,Literal,Number
+.  .  .  .  .  TOKEN "1"
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 20
+.  .  .  .  .  .  Offset: 24
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 14
+.  .  .  .  .  .  Col: 15
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 26
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 20
+.  .  .  .  .  .  Col: 15
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: consts
+.  .  .  .  .  .  internalRole: value
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Scalar_DNumber {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Number
-.  .  .  .  .  .  .  TOKEN "1"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 24
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 18
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 26
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 20
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  2: Const {
-.  .  .  .  .  Roles: Expression,Variable,Incomplete
-.  .  .  .  .  TOKEN "C"
+.  .  .  }
+.  .  }
+.  .  3: Const {
+.  .  .  Roles: Expression,Incomplete,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 29
+.  .  .  .  Line: 3
+.  .  .  .  Col: 18
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 35
+.  .  .  .  Line: 3
+.  .  .  .  Col: 22
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: consts
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Scalar_String {
+.  .  .  .  .  Roles: Expression,Literal,String
+.  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 29
+.  .  .  .  .  .  Offset: 33
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 23
+.  .  .  .  .  .  Col: 22
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 35
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 29
+.  .  .  .  .  .  Col: 22
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: consts
+.  .  .  .  .  .  internalRole: value
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  TOKEN "A"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 33
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 27
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 35
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 29
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  3: Const {
-.  .  .  .  .  Roles: Expression,Variable,Incomplete
-.  .  .  .  .  TOKEN "D"
+.  .  .  }
+.  .  }
+.  .  4: Const {
+.  .  .  Roles: Expression,Incomplete,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 38
+.  .  .  .  Line: 3
+.  .  .  .  Col: 25
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 42
+.  .  .  .  Line: 3
+.  .  .  .  Col: 29
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: consts
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Expr_ConstFetch {
+.  .  .  .  .  Roles: Expression,Incomplete,Variable
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 38
+.  .  .  .  .  .  Offset: 42
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 32
+.  .  .  .  .  .  Col: 29
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 42
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 36
+.  .  .  .  .  .  Col: 29
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: consts
+.  .  .  .  .  .  internalRole: value
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_ConstFetch {
-.  .  .  .  .  .  .  Roles: Expression,Variable,Incomplete
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 42
 .  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 36
+.  .  .  .  .  .  .  .  Col: 29
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 42
 .  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 36
+.  .  .  .  .  .  .  .  Col: 29
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: value
+.  .  .  .  .  .  .  .  internalRole: name
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "E"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 42
-.  .  .  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  .  .  Col: 36
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 42
-.  .  .  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  .  .  Col: 36
-.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  TOKEN "E"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }

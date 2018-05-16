@@ -2,41 +2,54 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+ {
 .  Children: {
 .  .  0: Expr_Include {
 .  .  .  Roles: Import
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
-.  .  .  .  Col: 1
+.  .  .  .  Col: 2
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 24
 .  .  .  .  Line: 3
-.  .  .  .  Col: 18
+.  .  .  .  Col: 5
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  type: 1
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Scalar_String {
+.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
 .  .  .  .  .  TOKEN "pok.php"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 15
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  Col: 4
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 23
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 17
+.  .  .  .  .  .  Col: 4
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 2
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -46,33 +59,47 @@ File {
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 27
 .  .  .  .  Line: 4
-.  .  .  .  Col: 1
+.  .  .  .  Col: 8
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 44
 .  .  .  .  Line: 4
-.  .  .  .  Col: 18
+.  .  .  .  Col: 11
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  type: 3
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Scalar_String {
+.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
 .  .  .  .  .  TOKEN "foo.php"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 35
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  Col: 10
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 43
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 17
+.  .  .  .  .  .  Col: 10
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 2
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -82,33 +109,47 @@ File {
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 47
 .  .  .  .  Line: 5
-.  .  .  .  Col: 1
+.  .  .  .  Col: 14
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 69
 .  .  .  .  Line: 5
-.  .  .  .  Col: 23
+.  .  .  .  Col: 17
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
 .  .  .  .  type: 4
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Scalar_String {
+.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
 .  .  .  .  .  TOKEN "bar.php"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 60
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 14
+.  .  .  .  .  .  Col: 16
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 68
 .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  Col: 16
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  kind: 2
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

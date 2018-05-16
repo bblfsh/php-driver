@@ -2,25 +2,27 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Expr_Closure {
+.  Roles: Anonymous,Declaration,Expression,Function
+.  StartPosition: {
+.  .  Offset: 6
+.  .  Line: 2
+.  .  Col: 1
+.  }
+.  EndPosition: {
+.  .  Offset: 18
+.  .  Line: 2
+.  .  Col: 6
+.  }
+.  Properties: {
+.  .  byRef: false
+.  .  static: false
+.  }
 .  Children: {
-.  .  0: Expr_Closure {
-.  .  .  Roles: Function,Declaration,Expression,Anonymous
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 18
-.  .  .  .  Line: 2
-.  .  .  .  Col: 13
-.  .  .  }
+.  .  0:  {
+.  .  .  Roles: Noop
 .  .  .  Properties: {
-.  .  .  .  byRef: false
-.  .  .  .  internalRole: children
-.  .  .  .  static: false
+.  .  .  .  internalRole: attributes
 .  .  .  }
 .  .  }
 .  }

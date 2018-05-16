@@ -2,78 +2,112 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Stmt_Interface {
+.  Roles: Unannotated
+.  StartPosition: {
+.  .  Offset: 7
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 59
+.  .  Line: 5
+.  .  Col: 24
+.  }
+.  Properties: {
+.  .  name: POLOMPOSXXX
+.  }
 .  Children: {
-.  .  0: Stmt_Interface {
-.  .  .  Roles: Type,Declaration
-.  .  .  TOKEN "A"
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Name {
+.  .  .  Roles: Identifier
 .  .  .  StartPosition: {
-.  .  .  .  Offset: 7
+.  .  .  .  Offset: 27
 .  .  .  .  Line: 3
-.  .  .  .  Col: 1
+.  .  .  .  Col: 8
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 59
-.  .  .  .  Line: 5
-.  .  .  .  Col: 1
+.  .  .  .  Offset: 27
+.  .  .  .  Line: 3
+.  .  .  .  Col: 8
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  internalRole: extends
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier,Base,Type
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1:  {
 .  .  .  .  .  TOKEN "C"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 27
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 21
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 27
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 21
-.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: extends
+.  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Name {
-.  .  .  .  .  Roles: Expression,Identifier,Base,Type
+.  .  .  }
+.  .  }
+.  .  2: Name {
+.  .  .  Roles: Identifier
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 30
+.  .  .  .  Line: 3
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 30
+.  .  .  .  Line: 3
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: extends
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1:  {
 .  .  .  .  .  TOKEN "D"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 30
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 24
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 30
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 24
-.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: extends
+.  .  .  .  .  .  internalRole: parts
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  2: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "a"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 38
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 57
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 24
-.  .  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  3: Stmt_ClassMethod {
+.  .  .  Roles: Function,Type
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 38
+.  .  .  .  Line: 4
+.  .  .  .  Col: 15
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 57
+.  .  .  .  Line: 4
+.  .  .  .  Col: 22
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  flags: 1
+.  .  .  .  internalRole: stmts
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  type: 1
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 1
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 1
+.  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

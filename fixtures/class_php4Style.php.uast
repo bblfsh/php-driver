@@ -2,103 +2,133 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Stmt_Class {
+.  Roles: Declaration,Statement,Type
+.  StartPosition: {
+.  .  Offset: 7
+.  .  Line: 3
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 91
+.  .  Line: 7
+.  .  Col: 35
+.  }
+.  Properties: {
+.  .  flags: 0
+.  .  name: POLOMPOSXXX
+.  .  type: 0
+.  }
 .  Children: {
-.  .  0: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "A"
+.  .  0:  {
+.  .  .  Roles: Noop
+.  .  .  Properties: {
+.  .  .  .  internalRole: attributes
+.  .  .  }
+.  .  }
+.  .  1: Stmt_Property {
+.  .  .  Roles: Body,Incomplete,Type,Variable
 .  .  .  StartPosition: {
-.  .  .  .  Offset: 7
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
+.  .  .  .  Offset: 21
+.  .  .  .  Line: 4
+.  .  .  .  Col: 8
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 91
-.  .  .  .  Line: 7
-.  .  .  .  Col: 1
+.  .  .  .  Offset: 29
+.  .  .  .  Line: 4
+.  .  .  .  Col: 11
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  flags: 0
-.  .  .  .  internalRole: children
+.  .  .  .  internalRole: stmts
 .  .  .  .  type: 0
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_Property {
-.  .  .  .  .  Roles: Expression,Body,Type,Variable,Incomplete
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_PropertyProperty {
+.  .  .  .  .  Roles: Incomplete,Type,Variable
 .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 21
+.  .  .  .  .  .  Offset: 25
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  Col: 10
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 29
+.  .  .  .  .  .  Offset: 28
 .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  Col: 10
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  flags: 0
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 0
+.  .  .  .  .  .  internalRole: props
+.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Stmt_PropertyProperty {
-.  .  .  .  .  .  .  Roles: Type,Variable,Incomplete
-.  .  .  .  .  .  .  TOKEN "foo"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 25
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 9
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 28
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 12
-.  .  .  .  .  .  .  }
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: props
+.  .  .  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "bar"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 35
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 51
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 21
-.  .  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  2: Stmt_ClassMethod {
+.  .  .  Roles: Body,Function,Type
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 35
+.  .  .  .  Line: 5
+.  .  .  .  Col: 13
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 51
+.  .  .  .  Line: 5
+.  .  .  .  Col: 20
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  flags: 0
+.  .  .  .  internalRole: stmts
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  type: 0
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 0
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 0
+.  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  2: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "baz"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 57
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 89
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 37
-.  .  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  3: Stmt_ClassMethod {
+.  .  .  Roles: Body,Function,Type
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 57
+.  .  .  .  Line: 6
+.  .  .  .  Col: 22
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 89
+.  .  .  .  Line: 6
+.  .  .  .  Col: 33
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  byRef: false
+.  .  .  .  flags: 24
+.  .  .  .  internalRole: stmts
+.  .  .  .  name: POLOMPOSXXX
+.  .  .  .  type: 24
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 24
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 24
+.  .  .  .  .  .  internalRole: attributes
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

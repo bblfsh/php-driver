@@ -2,12 +2,10 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+ {
 .  Children: {
 .  .  0: Stmt_Trait {
-.  .  .  Roles: Type,Declaration
-.  .  .  TOKEN "testtrait1"
+.  .  .  Roles: Declaration,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 6
 .  .  .  .  Line: 2
@@ -16,103 +14,149 @@ File {
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 59
 .  .  .  .  Line: 4
-.  .  .  .  Col: 1
+.  .  .  .  Col: 18
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  internalRole: children
+.  .  .  .  name: POLOMPOSXXX
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Expression,Body,Type,Function
-.  .  .  .  .  TOKEN "testfnc1"
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_ClassMethod {
+.  .  .  .  .  Roles: Function,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 29
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  Col: 7
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 57
 .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 33
+.  .  .  .  .  .  Col: 16
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  byRef: false
 .  .  .  .  .  .  flags: 1
 .  .  .  .  .  .  internalRole: stmts
+.  .  .  .  .  .  name: POLOMPOSXXX
 .  .  .  .  .  .  type: 1
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Class {
-.  .  .  Roles: Statement,Declaration,Type
-.  .  .  TOKEN "testcls1"
+.  .  .  Roles: Declaration,Statement,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 61
 .  .  .  .  Line: 5
-.  .  .  .  Col: 1
+.  .  .  .  Col: 20
 .  .  .  }
 .  .  .  EndPosition: {
 .  .  .  .  Offset: 133
 .  .  .  .  Line: 7
-.  .  .  .  Col: 1
+.  .  .  .  Col: 43
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  flags: 0
-.  .  .  .  internalRole: children
+.  .  .  .  name: POLOMPOSXXX
 .  .  .  .  type: 0
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Stmt_TraitUse {
-.  .  .  .  .  Roles: Expression,Body,Base
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Noop
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Stmt_TraitUse {
+.  .  .  .  .  Roles: Base,Body,Type
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 82
 .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  Col: 26
 .  .  .  .  .  }
 .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  Offset: 131
 .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 54
+.  .  .  .  .  .  Col: 41
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "testtrait1"
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Name {
+.  .  .  .  .  .  .  Roles: Identifier
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 86
 .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  .  Col: 28
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 95
 .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 18
+.  .  .  .  .  .  .  .  Col: 28
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: traits
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  TOKEN "testtrait1"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  1: Stmt_TraitUseAdaptation_Alias {
-.  .  .  .  .  .  .  Roles: Statement,Alias
+.  .  .  .  .  .  2: Stmt_TraitUseAdaptation_Alias {
+.  .  .  .  .  .  .  Roles: Alias,Statement
 .  .  .  .  .  .  .  TOKEN "testfnc2"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 99
 .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 22
+.  .  .  .  .  .  .  .  Col: 32
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  EndPosition: {
 .  .  .  .  .  .  .  .  Offset: 129
 .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 52
+.  .  .  .  .  .  .  .  Col: 39
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: adaptations
 .  .  .  .  .  .  .  .  method: testfnc1
 .  .  .  .  .  .  .  .  newModifier: 2
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Noop
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  internalRole: attributes
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
