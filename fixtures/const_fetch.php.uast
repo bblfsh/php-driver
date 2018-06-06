@@ -2,11 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Expr_ConstFetch {
-.  .  .  Roles: Expression,Variable,Incomplete
+.  .  .  Roles: Expression,Incomplete,Variable
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -41,8 +41,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Expr_ClassConstFetch {
-.  .  .  Roles: Expression,Type,Incomplete
-.  .  .  TOKEN "B"
+.  .  .  Roles: Expression,Incomplete,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 10
 .  .  .  .  Line: 4
@@ -58,7 +57,14 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier,Qualified
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "B"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Name {
+.  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 10
@@ -77,8 +83,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: Expr_ClassConstFetch {
-.  .  .  Roles: Expression,Type,Incomplete
-.  .  .  TOKEN "class"
+.  .  .  Roles: Expression,Incomplete,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 16
 .  .  .  .  Line: 5
@@ -94,7 +99,14 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier,Qualified
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "class"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Name {
+.  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 16

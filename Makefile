@@ -13,4 +13,3 @@ build-native-internal:
 
 	rm $(BUILD_PATH)/bin/native || true
 	ln -s /opt/driver/src/ast $(BUILD_PATH)/bin/native
-

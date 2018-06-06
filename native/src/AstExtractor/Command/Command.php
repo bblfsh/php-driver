@@ -29,7 +29,7 @@ class Command
         while ($this->io->isAvailable()) {
             try {
                 $request = $this->io->nextRequest();
-                $ast = $this->extractor->getAst($request->content);
+                $ast = ["nodeType" => "Module", "children" => $this->extractor->getAst($request->content)];
                 $response = $request->answer($ast);
                 $this->io->write($response);
             } catch (BaseFailure $e) {

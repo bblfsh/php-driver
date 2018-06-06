@@ -1,319 +1,522 @@
 package normalizer
 
 import (
-	"errors"
+	"strings"
 
-	"github.com/bblfsh/php-driver/driver/normalizer/phpast"
+	php "github.com/bblfsh/php-driver/driver/normalizer/phpast"
 
-	"gopkg.in/bblfsh/sdk.v1/uast"
-	. "gopkg.in/bblfsh/sdk.v1/uast/ann"
-	"gopkg.in/bblfsh/sdk.v1/uast/transformer"
-	"gopkg.in/bblfsh/sdk.v1/uast/transformer/annotatter"
-	"gopkg.in/bblfsh/sdk.v1/uast/transformer/positioner"
+	"gopkg.in/bblfsh/sdk.v2/uast"
+	"gopkg.in/bblfsh/sdk.v2/uast/role"
+	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
+	"gopkg.in/bblfsh/sdk.v2/uast/transformer/positioner"
 )
 
-// Transformers is the list of `transformer.Transfomer` to apply to a UAST, to
-// learn more about the Transformers and the available ones take a look to:
-// https://godoc.org/gopkg.in/bblfsh/sdk.v1/uast/transformers
-var Transformers = []transformer.Tranformer{
-	annotatter.NewAnnotatter(AnnotationRules),
+func parts2str(arr uast.Array) (uast.String, error) {
+	l := make([]string, len(arr))
+
+	for i, v := range arr {
+		s, ok := v.(uast.String)
+		if !ok {
+			return uast.String(""), ErrExpectedValue.New(s)
+		}
+		l[i] = string(s)
+	}
+
+	return uast.String(strings.Join(l, "\\")), nil
+}
+
+type opParts2Str struct {
+	orig Op
+	str Op
+}
+
+func (op opParts2Str) Check(st *State, n uast.Node) (bool, error) {
+	v, ok := n.(uast.Array)
+	if !ok {
+		return false, nil
+	}
+
+	nv, err := parts2str(v)
+	if err != nil {
+		return false, nil
+	}
+	res2, err := op.str.Check(st, nv)
+	if err != nil {
+		return false, nil
+	}
+
+	res1, err := op.orig.Check(st, v)
+	if err != nil {
+		return false, nil
+	}
+
+	return res1 && res2, nil
+}
+
+func (op opParts2Str) Construct(st *State, n uast.Node) (uast.Node, error) {
+	return op.orig.Construct(st, n)
+}
+
+type isString struct{}
+
+func (isString) Check(st *State, n uast.Node) (bool, error) {
+	_, ok := n.(uast.String)
+	return ok, nil
+}
+
+var Native = Transformers([][]Transformer{
+	{
+		ResponseMetadata{
+			TopLevelIsRootNode: true,
+		},
+	},
+	{Mappings(
+		Map("name field as string value",
+			Part("_", Obj{
+				"name": Check(isString{}, Var("name")),
+			}),
+			Part("_", Obj{
+				"name": Obj{
+					uast.KeyType:  String("Name"),
+					uast.KeyToken: Var("name"),
+				},
+			}),
+		),
+	)},
+	{Mappings(Annotations...)},
+	{RolesDedup()},
+}...)
+
+var Code = []CodeTransformer{
 	positioner.NewFillLineColFromOffset(),
 }
 
-// AnnotationRules describes how a UAST should be annotated with `uast.Role`.
-//
-// https://godoc.org/gopkg.in/bblfsh/sdk.v1/uast/ann
+// FIXME: move to the SDK and remove from here and the python driver
+func annotateTypeToken(typ, token string, roles ...role.Role) Mapping {
+	return AnnotateType(typ,
+		FieldRoles{
+			uast.KeyToken: {Add: true, Op: String(token)},
+		}, roles...)
+}
 
-var someAssignOp = Or(phpast.AssignOpPlus,
-			phpast.AssignOpMinus,
-			phpast.AssignOpMul,
-			phpast.AssignOpDiv,
-			phpast.AssignOpMod)
+func mapInternalProperty(key string, roles ...role.Role) Mapping {
+	return Map(key,
+		Part("other", Obj{
+			key: ObjectRoles(key),
+		}),
+		Part("other", Obj{
+			key: ObjectRoles(key, roles...),
+		}),
+	)
+}
 
-// AnnotationRules for the PHP language
-var AnnotationRules = On(Any).Self(
-	On(Not(phpast.File)).Error(errors.New("root must be uast.File")),
-	On(phpast.File).Roles(uast.File, uast.Module).Descendants(
-		// Misc
-		On(phpast.Alias).Roles(uast.Statement, uast.Alias),
-		On(phpast.Arg).Roles(uast.Argument),
-		On(phpast.Array).Roles(uast.Expression, uast.Literal, uast.List),
-		On(phpast.ArrayDimFetch).Roles(uast.Expression, uast.List, uast.Value,
-			uast.Entry),
-		On(phpast.ArrayItem).Roles(uast.Expression, uast.List, uast.Entry),
-		On(phpast.Variable).Roles(uast.Identifier, uast.Variable),
-		On(phpast.Name).Roles(uast.Expression, uast.Identifier).Self(
-			On(HasInternalRole("class")).Roles(uast.Qualified),
-		),
-		On(phpast.NameRelative).Roles(uast.Expression, uast.Identifier, uast.Qualified, uast.Incomplete),
-		On(phpast.Comment).Roles(uast.Noop, uast.Comment),
-		On(phpast.Doc).Roles(uast.Noop, uast.Comment, uast.Documentation),
-		On(phpast.Nop).Roles(uast.Noop),
-		On(phpast.Echo).Roles(uast.Statement, uast.Call),
-		On(phpast.Print).Roles(uast.Statement, uast.Call),
-		On(phpast.Empty).Roles(uast.Expression, uast.Call),
-		On(phpast.Isset).Roles(uast.Expression, uast.Call),
-		On(phpast.Unset).Roles(uast.Expression, uast.Call),
-		On(HasInternalRole("stmts")).Roles(uast.Expression, uast.Body),
-		On(phpast.PropertyFetch).Roles(uast.Expression, uast.Map, uast.Identifier,
-			uast.Entry, uast.Value),
-		// no static in UAST
-		On(phpast.StaticPropertyFetch).Roles(uast.Expression, uast.Map,
-			uast.Identifier, uast.Entry, uast.Value, uast.Incomplete),
-		// no error supress in UAST
-		On(phpast.ErrorSuppress).Roles(uast.Expression, uast.Incomplete),
-		On(phpast.Eval).Roles(uast.Expression, uast.Call),
-		On(phpast.Exit).Roles(uast.Expression, uast.Call),
-		On(phpast.Namespace).Roles(uast.Block),
-		// no const in UAST
-		On(phpast.Const).Roles(uast.Expression, uast.Variable, uast.Incomplete),
-		On(phpast.ConstFetch).Roles(uast.Expression, uast.Variable, uast.Incomplete),
-		On(phpast.FullyQualified).Roles(uast.Expression, uast.Variable, uast.Incomplete),
-		On(phpast.ClassConstFetch).Roles(uast.Expression, uast.Type, uast.Incomplete),
-		On(phpast.Clone).Roles(uast.Expression, uast.Call, uast.Incomplete),
-		On(phpast.Param).Roles(uast.Argument),
-		On(phpast.Closure).Roles(uast.Function, uast.Declaration, uast.Expression,
-			uast.Anonymous),
-		On(phpast.ClosureUse).Roles(uast.Visibility, uast.Incomplete),
-		On(phpast.Coalesce).Roles(uast.Expression, uast.Incomplete),
-	        On(HasInternalRole("cond")).Roles(uast.Condition),
-	        On(Or(phpast.Use, phpast.UseUse)).Roles(uast.Alias),
-	        On(Or(phpast.Yield, phpast.YieldFrom)).Roles(uast.Return, uast.Incomplete),
+func annAssign(typ string, opRoles ...role.Role) Mapping {
+	return AnnotateType(typ, ObjRoles{
+		"var":  {role.Left},
+		"expr": {role.Right},
+	}, opRoles...)
+}
 
-		// Control flow
-		On(phpast.Break).Roles(uast.Statement, uast.Break),
-		On(phpast.Continue).Roles(uast.Statement, uast.Continue),
-		On(phpast.Return).Roles(uast.Statement, uast.Return),
-		On(phpast.Throw).Roles(uast.Statement, uast.Throw),
-		On(phpast.Goto).Roles(uast.Statement, uast.Goto),
-		// no UAST role for goto target labels
-		On(phpast.Label).Roles(uast.Statement, uast.Goto, uast.Incomplete),
+var Annotations = []Mapping{
 
-		On(Or(phpast.Assign, someAssignOp)).Roles(uast.Expression, uast.Assignment).Children(
-			On(HasInternalRole("var")).Roles(uast.Left),
-			On(HasInternalRole("expr")).Roles(uast.Right),
-		),
+	//The native AST puts positions and comments inside an "attribute" node. Here
+	//we reparent them to the current node.
+	Map("x",
+		Part("root", Obj{
+			"attributes": Part("attrs", Fields{
+				// Ignore those because they're wrong in the native AST; we instead
+				// compute line and col from the offset
 
-		On(HasInternalRole("left")).Roles(uast.Left),
-		On(HasInternalRole("right")).Roles(uast.Right),
-		On(phpast.Name).Self(On(HasToken("null")).Roles(uast.Null)),
-		// no Nullable/Optional in UAST
-		On(phpast.NullableType).Roles(uast.Type, uast.Incomplete),
-		On(phpast.Global).Roles(uast.Visibility, uast.World),
-		// no Static in UAST
-		On(phpast.Static).Roles(uast.Visibility, uast.Type),
-		On(phpast.StaticVar).Roles(uast.Expression, uast.Identifier, uast.Variable, uast.Visibility, uast.Type),
-		On(phpast.InlineHTML).Roles(uast.String, uast.Literal, uast.Incomplete),
-		On(phpast.List).Roles(uast.Call, uast.List),
+				//{Name: "startLine", Op: Var("sline")},
+				//{Name: "endLine", Op: Var("eline")},
+				//{Name: "startTokenPos", Op: Var("stoken")},
+				//{Name: "endTokenPos", Op: Var("etoken")},
+				{Name: "startFilePos", Op: Var("sfile")},
+				{Name: "endFilePos", Op: Var("efile")},
+				{Name: "comments", Op: Var("comments"), Optional: "comments_exists"},
+			}),
+		}),
 
-		// Operators
-		On(phpast.BinaryOpPlus).Roles(uast.Expression, uast.Operator, uast.Add),
-		On(phpast.BinaryOpMinus).Roles(uast.Expression, uast.Operator, uast.Substract),
-		On(phpast.BinaryOpMul).Roles(uast.Expression, uast.Operator, uast.Multiply),
-		On(phpast.BinaryOpDiv).Roles(uast.Expression, uast.Operator, uast.Divide),
-		On(phpast.BinaryOpMod).Roles(uast.Expression, uast.Operator, uast.Modulo),
-		On(phpast.BinaryOpPow).Roles(uast.Expression, uast.Operator, uast.Incomplete),
-
-		On(phpast.AssignOpPlus).Roles(uast.Expression, uast.Operator, uast.Add),
-		On(phpast.AssignOpMinus).Roles(uast.Expression, uast.Operator, uast.Substract),
-		On(phpast.AssignOpMul).Roles(uast.Expression, uast.Operator, uast.Multiply),
-		On(phpast.AssignOpDiv).Roles(uast.Expression, uast.Operator, uast.Divide),
-		On(phpast.AssignOpMod).Roles(uast.Expression, uast.Operator, uast.Modulo),
-
-		On(phpast.BitwiseAnd).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Bitwise, uast.And),
-		On(phpast.BitwiseOr).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Bitwise, uast.Or),
-		On(phpast.BitwiseXor).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Bitwise, uast.Xor),
-		On(phpast.BitwiseNot).Roles(uast.Expression, uast.Unary, uast.Operator,
-			uast.Bitwise, uast.Not),
-
-		On(phpast.BooleanAnd).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Boolean, uast.And),
-		On(phpast.BooleanOr).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Boolean, uast.Or),
-		On(phpast.BooleanXor).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Boolean, uast.Xor),
-		On(phpast.BooleanNot).Roles(uast.Expression, uast.Operator, uast.Boolean,
-			uast.Not),
-
-		On(phpast.UnaryPlus).Roles(uast.Expression, uast.Unary, uast.Incomplete),
-		On(phpast.UnaryMinus).Roles(uast.Expression, uast.Unary, uast.Incomplete),
-		On(phpast.PreInc).Roles(uast.Expression, uast.Unary, uast.Increment),
-		On(phpast.PostInc).Roles(uast.Expression, uast.Unary, uast.Increment, uast.Postfix),
-		On(phpast.PreDec).Roles(uast.Expression, uast.Unary, uast.Decrement),
-		On(phpast.PostDec).Roles(uast.Expression, uast.Unary, uast.Decrement, uast.Postfix),
-
-	        // no join/concatenation role in UAST
-	        On(phpast.Concat).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Add, uast.Incomplete),
-
-		On(phpast.ShiftLeft).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Bitwise, uast.LeftShift),
-		On(phpast.ShiftRight).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Bitwise, uast.RightShift),
-
-		On(phpast.Equal).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Relational, uast.Equal),
-		On(phpast.Identical).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Relational, uast.Identical),
-		On(phpast.NotEqual).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Relational, uast.Not, uast.Equal),
-		On(phpast.NotIdentical).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Relational, uast.Not, uast.Identical),
-		On(phpast.GreaterOrEqual).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Relational, uast.GreaterThanOrEqual),
-		On(phpast.SmallerOrEqual).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Relational, uast.LessThanOrEqual),
-		On(phpast.Greater).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Relational, uast.GreaterThan),
-		On(phpast.Smaller).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Relational, uast.LessThan),
-		On(phpast.Spaceship).Roles(uast.Expression, uast.Binary, uast.Operator,
-			uast.Relational, uast.GreaterThanOrEqual, uast.LessThanOrEqual),
-
-		// Scalars
-		On(phpast.ScalarString).Roles(uast.Expression, uast.Literal, uast.String),
-		On(Or(phpast.ScalarLNumber, phpast.ScalarDNumber)).Roles(uast.Expression,
-			uast.Literal, uast.Number),
-		// __CLASS__ and similar constants. Also mising a Const role in the UAST.
-		On(Or(phpast.ScalarMagicClass,
-	              phpast.ScalarMagicDir,
-	              phpast.ScalarMagicFile,
-	              phpast.ScalarMagicFunction,
-	              phpast.ScalarMagicLine,
-	              phpast.ScalarMagicMethod,
-	              phpast.ScalarMagicNamespace,
-	              phpast.ScalarMagicTrait)).Roles(uast.Expression, uast.Literal,
-			uast.Incomplete),
-
-
-		// Switch
-		On(phpast.Switch).Roles(uast.Statement, uast.Switch).Children(
-			On(HasInternalRole("cond")).Roles(uast.Switch),
-		),
-		On(phpast.Case).Roles(uast.Statement, uast.Case).Self(
-			On(Not(HasChild(HasInternalRole("cond")))).Roles(uast.Default),
-		).Children(
-			On(HasInternalRole("cond")).Roles(uast.Case),
-		),
-
-		// Casts... no Cast in the UAST
-		On(phpast.CastArray).Roles(uast.Expression, uast.List, uast.Incomplete),
-		On(phpast.CastBool).Roles(uast.Expression, uast.Boolean, uast.Incomplete),
-		On(phpast.CastDouble).Roles(uast.Expression, uast.Number, uast.Incomplete),
-		On(phpast.CastInt).Roles(uast.Expression, uast.Number, uast.Incomplete),
-		On(phpast.CastObject).Roles(uast.Expression, uast.Type, uast.Incomplete),
-		On(phpast.CastString).Roles(uast.Expression, uast.String, uast.Incomplete),
-		On(phpast.CastUnset).Roles(uast.Expression, uast.Incomplete),
-
-		// TryCatch
-		On(phpast.TryCatch).Roles(uast.Statement, uast.Try),
-		On(phpast.Catch).Roles(uast.Statement, uast.Catch).Children(
-			On(HasInternalRole("types")).Roles(uast.Catch, uast.Type),
-		),
-		On(phpast.Finally).Roles(uast.Statement, uast.Finally),
-
-		// Class
-		On(phpast.Class).Roles(uast.Statement, uast.Declaration, uast.Type),
-		On(HasInternalRole("extends")).Roles(uast.Base),
-		On(HasInternalRole("implements")).Roles(uast.Implements),
-		// FIXME: php-parser doesn't give Visibility information (public, private, etc)
-		// no const in UAST
-		On(phpast.ClassConst).Roles(uast.Type, uast.Variable, uast.Incomplete),
-		// no member role in UAST
-		On(Or(phpast.Property, phpast.PropertyProperty)).Roles(uast.Type,
-			uast.Variable, uast.Incomplete),
-		// ditto
-		On(phpast.ClassMethod).Roles(uast.Type, uast.Function),
-
-		// If + Ternary
-		On(phpast.Ternary).Roles(uast.Expression, uast.If).Children(
-			On(HasInternalRole("if")).Roles(uast.Then),
-			On(HasInternalRole("else")).Roles(uast.Else),
-		),
-		On(phpast.If).Roles(uast.Statement, uast.If),
-		On(phpast.ElseIf).Roles(uast.Statement, uast.If, uast.Else),
-		On(phpast.Else).Roles(uast.Statement, uast.Else),
-
-		// Declare, we interpret it as an assignment-ish
-		On(phpast.Declare).Roles(uast.Expression, uast.Assignment, uast.Incomplete).Children(
-			On(HasInternalRole("declares")).Roles(uast.Identifier, uast.Left).Children(
-				On(HasInternalRole("value")).Roles(uast.Right),
-			),
-		),
-
-		// While and DoWhile
-		On(phpast.Do).Roles(uast.Statement, uast.DoWhile),
-		On(phpast.While).Roles(uast.Statement, uast.While),
-
-		// Encapsed; incomplete: no encapsed/ string varsubst in UAST
-		On(phpast.Encapsed).Roles(uast.Expression, uast.Literal, uast.String,
-			uast.Incomplete),
-		On(phpast.EncapsedStringPart).Roles(uast.Expression, uast.Identifier,
-			uast.Value),
-
-		// For
-		On(phpast.For).Roles(uast.Statement, uast.For).Children(
-			On(HasInternalRole("init")).Roles(uast.Expression, uast.For, uast.Initialization),
-			On(HasInternalRole("cond")).Roles(uast.For), // Condition role added elsewhere
-			On(HasInternalRole("loop")).Roles(uast.Expression, uast.For, uast.Update),
-		),
-
-		// Foreach
-		On(phpast.Foreach).Roles(uast.Statement, uast.For, uast.Incomplete).Children(
-			On(HasInternalRole("valueVar")).Roles(uast.Iterator),
-		),
-
-		// FuncCalls, StaticCalls and MethodCalls
-		On(phpast.FuncCall).Roles(uast.Expression, uast.Call).Children(
-			On(HasInternalRole("name")).Roles(uast.Function, uast.Name),
-		),
-		On(phpast.StaticCall).Roles(uast.Expression, uast.Call, uast.Identifier).Children(
-			On(HasInternalRole("class")).Roles(uast.Type, uast.Receiver),
-		),
-		On(phpast.MethodCall).Roles(uast.Expression, uast.Call, uast.Identifier).Children(
-			On(HasInternalRole("var")).Roles(uast.Receiver, uast.Receiver, uast.Identifier),
-		),
-
-		// Function declarations
-		On(phpast.Function).Roles(uast.Function, uast.Declaration).Children(
-			On(phpast.Param).Self(
-				// No reference/value in the UAST
-				On(HasProperty("byRef", "true")).Roles(uast.Incomplete),
-				On(HasProperty("variadic", "true")).Roles(uast.ArgsList),
-			).Children(
-				On(HasInternalRole("default")).Roles(uast.Default),
-			),
-			On(phpast.FunctionReturn).Roles(uast.Return, uast.Type),
-		),
-
-		// Include and require
-		On(phpast.Include).Roles(uast.Import).Children(
-			On(Any).Roles(uast.Import, uast.Pathname),
-		),
-
-		// Instanceof
-		On(phpast.Instanceof).Roles(uast.Expression, uast.Call).Children(
-			On(Any).Roles(uast.Argument),
-			On(HasInternalRole("class")).Roles(uast.Type),
-		),
-
-		// Interface
-		On(phpast.Interface).Roles(uast.Type, uast.Declaration).Children(
-			On(HasInternalRole("extends")).Roles(uast.Type, uast.Base),
-		),
-
-		// Traits
-		On(phpast.Trait).Roles(uast.Type, uast.Declaration),
-		On(phpast.TraitUse).Roles(uast.Base),
-		On(phpast.TraitPrecedence).Roles(uast.Base, uast.Alias, uast.Incomplete),
-		On(HasInternalRole("insteadof")).Roles(uast.Alias, uast.Incomplete),
-
-		// New
-		On(phpast.New).Roles(uast.Expression, uast.Initialization, uast.Call).Children(
-			On(HasInternalRole("class")).Roles(uast.Type),
-		),
+		Part("root", Fields{
+			{Name: uast.KeyStart, Op: Obj{
+				uast.KeyType:    String(uast.TypePosition),
+				// Ditto
+				//uast.KeyPosLine: Var("sline"),
+				//uast.KeyPosCol:  Var("stoken"),
+				uast.KeyPosOff:  Var("sfile"),
+			}},
+			{Name: uast.KeyEnd, Op: Obj{
+				uast.KeyType:    String(uast.TypePosition),
+				//uast.KeyPosLine: Var("eline"),
+				//uast.KeyPosCol:  Var("etoken"),
+				uast.KeyPosOff:  Var("efile"),
+			}},
+			{Name: "comments", Op: Var("comments"), Optional: "comments_exists"},
+		}),
 	),
-)
+
+	ObjectToNode{
+		InternalTypeKey: "nodeType",
+	}.Mapping(),
+
+	MapAST(php.Comment, Obj{
+		"text":    UncommentCLike("text"),
+		"filePos": Var("fp"),
+		"line":    Var("ln"),
+	}, Obj{
+		uast.KeyToken: Var("text"),
+		uast.KeyStart: Obj{
+			uast.KeyType:    String("ast:Position"),
+			uast.KeyPosCol:  Var("fp"),
+			uast.KeyPosLine: Var("ln"),
+		},
+	}, role.Comment, role.Noop),
+
+	MapAST(php.Doc, Obj{
+		"text":    UncommentCLike("text"),
+		"filePos": Var("fp"),
+		"line":    Var("ln"),
+	}, Obj{
+		uast.KeyToken: Var("text"),
+		uast.KeyStart: Obj{
+			uast.KeyType:    String("ast:Position"),
+			uast.KeyPosCol:  Var("fp"),
+			uast.KeyPosLine: Var("ln"),
+		},
+	}, role.Comment, role.Noop, role.Documentation),
+
+	mapInternalProperty("left", role.Left),
+	mapInternalProperty("right", role.Right),
+	mapInternalProperty("default", role.Default),
+
+	AnnotateType(php.File, nil, role.File),
+
+	// Name; the actual tokens are in the "parts" children, we join
+	// them into a single string
+	MapAST(php.Name, Obj{
+		"parts": opParts2Str{orig: Var("parts"), str: Var("parts_str")},
+	}, Obj{
+		uast.KeyToken: Var("parts_str"),
+	}, role.Expression, role.Identifier),
+	AnnotateType(php.Name, nil, role.Expression, role.Identifier),
+
+	annAssign(php.Assign, role.Expression, role.Assignment),
+	annAssign(php.AssignOpMinus, role.Expression, role.Assignment, role.Operator, role.Substract),
+	annAssign(php.AssignOpPlus, role.Expression, role.Assignment, role.Operator, role.Add),
+	annAssign(php.AssignOpMul, role.Expression, role.Assignment, role.Operator, role.Multiply),
+	annAssign(php.AssignOpDiv, role.Expression, role.Assignment, role.Operator, role.Divide),
+	annAssign(php.AssignOpMod, role.Expression, role.Assignment, role.Operator, role.Modulo),
+
+	// __CLASS__ and similar constants. Also mising a Const role in the UAST.
+	AnnotateType(php.ScalarMagicClass, nil, role.Expression, role.Literal, role.Incomplete),
+	AnnotateType(php.ScalarMagicDir, nil, role.Expression, role.Literal, role.Incomplete),
+	AnnotateType(php.ScalarMagicFile, nil, role.Expression, role.Literal, role.Incomplete),
+	AnnotateType(php.ScalarMagicFunction, nil, role.Expression, role.Literal, role.Incomplete),
+	AnnotateType(php.ScalarMagicLine, nil, role.Expression, role.Literal, role.Incomplete),
+	AnnotateType(php.ScalarMagicMethod, nil, role.Expression, role.Literal, role.Incomplete),
+	AnnotateType(php.ScalarMagicNamespace, nil, role.Expression, role.Literal, role.Incomplete),
+	AnnotateType(php.ScalarMagicTrait, nil, role.Expression, role.Literal, role.Incomplete),
+	AnnotateType(php.Alias, FieldRoles{
+		"newName": {Rename: uast.KeyToken},
+	}, role.Statement, role.Alias),
+	AnnotateType(php.Arg, nil, role.Argument),
+	AnnotateType(php.Array, nil, role.Expression, role.Literal, role.List),
+	AnnotateType(php.ArrayDimFetch, nil, role.Expression, role.List, role.Value, role.Entry),
+	AnnotateType(php.ArrayItem, nil, role.Expression, role.List, role.Entry),
+	AnnotateType(php.Variable, nil, role.Identifier, role.Variable),
+	AnnotateType(php.NameRelative, nil, role.Expression, role.Identifier, role.Qualified, role.Incomplete),
+	AnnotateType(php.Nop, nil, role.Noop),
+	AnnotateType(php.Echo, nil, role.Statement, role.Call),
+	AnnotateType(php.GroupUse, nil, role.Block, role.Incomplete),
+	AnnotateType(php.Print, nil, role.Statement, role.Call),
+	AnnotateType(php.Empty, nil, role.Expression, role.Call),
+	AnnotateType(php.Isset, nil, role.Expression, role.Call),
+	AnnotateType(php.Unset, nil, role.Expression, role.Call),
+	AnnotateType(php.PropertyFetch, nil, role.Expression, role.Map, role.Identifier, role.Entry, role.Value),
+
+	// no static in UAST
+	AnnotateType(php.StaticPropertyFetch, nil, role.Expression, role.Map, role.Identifier,
+		role.Entry, role.Value, role.Incomplete),
+
+	// no error supress in UAST
+	AnnotateType(php.ErrorSuppress, nil, role.Expression, role.Incomplete),
+	AnnotateType(php.Eval, nil, role.Expression, role.Call),
+	AnnotateType(php.Exit, nil, role.Expression, role.Call),
+	AnnotateType(php.Namespace, nil, role.Block),
+	// no const in UAST
+	AnnotateType(php.Const, nil, role.Expression, role.Variable, role.Incomplete),
+	AnnotateType(php.StmtConst, nil, role.Expression, role.Variable, role.Incomplete),
+	AnnotateType(php.ConstFetch, nil, role.Expression, role.Variable, role.Incomplete),
+	AnnotateType(php.FullyQualified, nil, role.Expression, role.Variable, role.Incomplete),
+	AnnotateType(php.ClassConstFetch, nil, role.Expression, role.Type, role.Incomplete),
+	AnnotateType(php.Clone, nil, role.Expression, role.Call, role.Incomplete),
+	AnnotateType(php.Closure, nil, role.Function, role.Declaration, role.Expression, role.Anonymous),
+	AnnotateType(php.ClosureUse, nil, role.Visibility, role.Incomplete),
+	AnnotateType(php.Coalesce, nil, role.Expression, role.Incomplete),
+	AnnotateType(php.Use, nil, role.Alias),
+	AnnotateType(php.UseUse, nil, role.Alias),
+	AnnotateType(php.Yield, nil, role.Return, role.Incomplete),
+	AnnotateType(php.YieldFrom, nil, role.Return, role.Incomplete),
+
+	// Control flow
+	AnnotateType(php.Break, nil, role.Statement, role.Break),
+	AnnotateType(php.Continue, nil, role.Statement, role.Continue),
+	AnnotateType(php.Return, nil, role.Statement, role.Return),
+	AnnotateType(php.Throw, nil, role.Statement, role.Throw),
+	AnnotateType(php.Goto, nil, role.Statement, role.Goto),
+
+	// no role role for goto target labels
+	AnnotateType(php.Label, nil, role.Statement, role.Goto, role.Incomplete),
+
+	// no Nullable/Optional in UAST
+	AnnotateType(php.NullableType, nil, role.Type, role.Incomplete),
+	AnnotateType(php.Global, nil, role.Visibility, role.World),
+
+	// no Static in UAST
+	AnnotateType(php.Static, nil, role.Visibility, role.Type),
+	AnnotateType(php.StaticVar, nil, role.Expression, role.Identifier, role.Variable,
+		role.Visibility, role.Type),
+	AnnotateType(php.InlineHTML, FieldRoles{
+		"value": {Rename: uast.KeyToken},
+	}, role.String, role.Literal, role.Incomplete),
+	AnnotateType(php.List, nil, role.Call, role.List),
+
+	// Operators
+	AnnotateType(php.BinaryOpPlus, nil, role.Expression, role.Operator, role.Add),
+	AnnotateType(php.BinaryOpMinus, nil, role.Expression, role.Operator, role.Substract),
+	AnnotateType(php.BinaryOpMul, nil, role.Expression, role.Operator, role.Multiply),
+	AnnotateType(php.BinaryOpDiv, nil, role.Expression, role.Operator, role.Divide),
+	AnnotateType(php.BinaryOpMod, nil, role.Expression, role.Operator, role.Modulo),
+	AnnotateType(php.BinaryOpPow, nil, role.Expression, role.Operator, role.Incomplete),
+
+	AnnotateType(php.AssignOpPlus, nil, role.Expression, role.Operator, role.Add),
+	AnnotateType(php.AssignOpMinus, nil, role.Expression, role.Operator, role.Substract),
+	AnnotateType(php.AssignOpMul, nil, role.Expression, role.Operator, role.Multiply),
+	AnnotateType(php.AssignOpDiv, nil, role.Expression, role.Operator, role.Divide),
+	AnnotateType(php.AssignOpMod, nil, role.Expression, role.Operator, role.Modulo),
+
+	AnnotateType(php.BitwiseAnd, nil, role.Expression, role.Binary, role.Operator, role.Bitwise, role.And),
+	AnnotateType(php.BitwiseOr, nil, role.Expression, role.Binary, role.Operator, role.Bitwise, role.Or),
+	AnnotateType(php.BitwiseXor, nil, role.Expression, role.Binary, role.Operator, role.Bitwise, role.Xor),
+	AnnotateType(php.BitwiseNot, nil, role.Expression, role.Unary, role.Operator, role.Bitwise, role.Not),
+
+	AnnotateType(php.BooleanAnd, nil, role.Expression, role.Binary, role.Operator, role.Boolean, role.And),
+	AnnotateType(php.LogicalAnd, nil, role.Expression, role.Binary, role.Operator, role.Boolean, role.And),
+	AnnotateType(php.BooleanOr, nil, role.Expression, role.Binary, role.Operator, role.Boolean, role.Or),
+	AnnotateType(php.LogicalOr, nil, role.Expression, role.Binary, role.Operator, role.Boolean, role.Or),
+	AnnotateType(php.BooleanXor, nil, role.Expression, role.Binary, role.Operator, role.Boolean, role.Xor),
+	AnnotateType(php.LogicalXor, nil, role.Expression, role.Binary, role.Operator, role.Boolean, role.Xor),
+	AnnotateType(php.BooleanNot, nil, role.Expression, role.Operator, role.Boolean, role.Not),
+
+	AnnotateType(php.UnaryPlus, nil, role.Expression, role.Unary, role.Incomplete),
+	AnnotateType(php.UnaryMinus, nil, role.Expression, role.Unary, role.Incomplete),
+	AnnotateType(php.PreInc, nil, role.Expression, role.Unary, role.Increment),
+	AnnotateType(php.PostInc, nil, role.Expression, role.Unary, role.Increment, role.Postfix),
+	AnnotateType(php.PreDec, nil, role.Expression, role.Unary, role.Decrement),
+	AnnotateType(php.PostDec, nil, role.Expression, role.Unary, role.Decrement, role.Postfix),
+
+	// no join/concatenation role in UAST
+	AnnotateType(php.Concat, nil, role.Expression, role.Binary, role.Operator, role.Add, role.Incomplete),
+
+	AnnotateType(php.ShiftLeft, nil, role.Expression, role.Binary, role.Operator, role.Bitwise, role.LeftShift),
+	AnnotateType(php.ShiftRight, nil, role.Expression, role.Binary, role.Operator, role.Bitwise, role.RightShift),
+
+	AnnotateType("Module", nil, role.Module),
+	AnnotateType(php.Equal, nil, role.Expression, role.Binary, role.Operator, role.Relational, role.Equal),
+	AnnotateType(php.Identical, nil, role.Expression, role.Binary, role.Operator, role.Relational, role.Identical),
+	AnnotateType(php.NotEqual, nil, role.Expression, role.Binary, role.Operator, role.Relational, role.Not, role.Equal),
+	AnnotateType(php.NotIdentical, nil, role.Expression, role.Binary, role.Operator, role.Relational, role.Not, role.Identical),
+	AnnotateType(php.GreaterOrEqual, nil, role.Expression, role.Binary, role.Operator, role.Relational, role.GreaterThanOrEqual),
+	AnnotateType(php.SmallerOrEqual, nil, role.Expression, role.Binary, role.Operator, role.Relational, role.LessThanOrEqual),
+	AnnotateType(php.Greater, nil, role.Expression, role.Binary, role.Operator, role.Relational, role.GreaterThan),
+	AnnotateType(php.Smaller, nil, role.Expression, role.Binary, role.Operator, role.Relational, role.LessThan),
+	AnnotateType(php.Spaceship, nil, role.Expression, role.Binary, role.Operator, role.Relational,
+		role.GreaterThanOrEqual, role.LessThanOrEqual),
+
+	// Scalars
+	AnnotateType(php.ScalarString, FieldRoles{
+		"value": {Rename: uast.KeyToken},
+	}, role.Expression, role.Literal, role.String),
+	AnnotateType(php.ScalarLNumber, FieldRoles{
+		"value": {Rename: uast.KeyToken},
+	}, role.Expression, role.Literal, role.Number),
+	AnnotateType(php.ScalarDNumber, FieldRoles{
+		"value": {Rename: uast.KeyToken},
+	}, role.Expression, role.Literal, role.Number),
+
+	// Casts... no Cast in the UAST
+	AnnotateType(php.CastArray, nil, role.Expression, role.List, role.Incomplete),
+	AnnotateType(php.CastBool, nil, role.Expression, role.Boolean, role.Incomplete),
+	AnnotateType(php.CastDouble, nil, role.Expression, role.Number, role.Incomplete),
+	AnnotateType(php.CastInt, nil, role.Expression, role.Number, role.Incomplete),
+	AnnotateType(php.CastObject, nil, role.Expression, role.Type, role.Incomplete),
+	AnnotateType(php.CastString, nil, role.Expression, role.String, role.Incomplete),
+	AnnotateType(php.CastUnset, nil, role.Expression, role.Incomplete),
+
+	// TryCatch
+	AnnotateType(php.TryCatch, nil, role.Statement, role.Try),
+	AnnotateType(php.Catch, FieldRoles{
+		"types": {Arr: true, Roles: role.Roles{role.Catch, role.Type}},
+		"var":   {Rename: uast.KeyToken},
+		"stmts": {Arr: true, Roles: role.Roles{role.Catch, role.Body}},
+	}, role.Catch, role.Type),
+
+	AnnotateType(php.Finally, nil, role.Statement, role.Finally),
+
+	// Class
+	// FIXME: php-parser doesn't give Visibility information (public, private, etc)
+	AnnotateType(php.Class, FieldRoles{
+		"extends":    {Roles: role.Roles{role.Base}, Opt: true},
+		"implements": {Arr: true, Roles: role.Roles{role.Implements}},
+		"stmts":      {Arr: true, Roles: role.Roles{role.Type, role.Body}},
+	}, role.Statement, role.Declaration, role.Type),
+
+	// plus no const in UAST
+	AnnotateType(php.ClassConst, nil, role.Type, role.Variable, role.Incomplete),
+
+	// no member role in UAST
+	AnnotateType(php.Property, nil, role.Type, role.Variable, role.Incomplete),
+	AnnotateType(php.PropertyProperty, nil, role.Type, role.Variable, role.Incomplete),
+
+	// ditto
+	AnnotateType(php.ClassMethod, nil, role.Type, role.Function),
+
+	// If + Ternary
+	AnnotateType(php.Ternary, ObjRoles{
+		"if":   {role.Then},
+		"else": {role.Else},
+		"cond": {role.If, role.Condition},
+	}, role.Expression, role.If),
+
+	AnnotateType(php.If, nil, role.Statement, role.If),
+	AnnotateType(php.ElseIf, nil, role.Statement, role.If, role.Else),
+	AnnotateType(php.Else, nil, role.Statement, role.Else),
+
+	// Declare, we interpret it as an assignment-ish
+	MapAST(php.Declare, Obj{
+		"stmts":      Var("body_stmts"),
+		"declares":   Var("declares"),
+	}, Obj{
+		"stmts": Obj{
+			uast.KeyType:  String("Declare.stmts"),
+			uast.KeyRoles: Roles(role.Assignment, role.Body),
+			"stmts":       Var("body_stmts"),
+		},
+		"declares":   Var("declares"),
+	}, role.Expression, role.Assignment, role.Incomplete),
+
+	AnnotateType(php.DeclareDeclare, FieldRoles{
+		"key":   {Rename: uast.KeyToken},
+		"value": {Roles: role.Roles{role.Right}},
+	}, role.Identifier, role.Left),
+
+	// While and DoWhile
+	AnnotateType(php.Do, nil, role.Statement, role.DoWhile),
+	AnnotateType(php.While, nil, role.Statement, role.While),
+
+	// Encapsed; incomplete: no encapsed/ string varsubst in UAST
+	AnnotateType(php.Encapsed, nil, role.Expression, role.Literal, role.String, role.Incomplete),
+	AnnotateType(php.EncapsedStringPart, FieldRoles{
+		"value": {Rename: uast.KeyToken},
+	}, role.Expression, role.Identifier, role.Value),
+
+	// For
+	AnnotateType(php.For, FieldRoles{
+		"init":  {Arr: true, Roles: role.Roles{role.Expression, role.For, role.Initialization}},
+		"cond":  {Arr: true, Roles: role.Roles{role.For, role.Condition}},
+		"loop":  {Arr: true, Roles: role.Roles{role.Expression, role.For, role.Update}},
+		"stmts": {Arr: true, Roles: role.Roles{role.For, role.Body}},
+	}, role.Statement, role.For),
+
+	// Foreach
+	AnnotateType(php.Foreach, ObjRoles{
+		"valueVar": {role.Iterator},
+	}, role.Statement, role.For, role.Incomplete),
+
+	// FuncCalls, StaticCalls and MethodCalls
+	AnnotateType(php.FuncCall, nil, role.Expression, role.Call),
+
+	AnnotateType(php.StaticCall, ObjRoles{
+		"class": {role.Type, role.Receiver},
+	}, role.Expression, role.Call, role.Identifier),
+
+	AnnotateType(php.MethodCall, FieldRoles{
+		"var": {Roles: role.Roles{role.Receiver, role.Identifier}},
+	}, role.Expression, role.Call, role.Identifier),
+
+	// Function declarations
+	MapAST(php.Function, Obj{
+		"returnType": Var("returnType"),
+		"stmts":      Var("stmts"),
+		"name":       Var("name"),
+	}, Obj{
+		"returnType": Obj{
+			uast.KeyType:  String("Function.returnType"),
+			uast.KeyRoles: Roles(role.Function, role.Declaration, role.Return, role.Type),
+			uast.KeyToken: Var("returnType"),
+		},
+		"stmts": Obj{
+			uast.KeyType:  String("Function.body"),
+			uast.KeyRoles: Roles(role.Function, role.Declaration, role.Body),
+			"body":        Var("stmts"),
+		},
+	}, role.Function, role.Declaration),
+
+	AnnotateType(php.Param, FieldRoles{
+		"byRef":    {Op: Is(uast.Bool(false))},
+		"variadic": {Op: Is(uast.Bool(false))},
+	}, role.Argument),
+	AnnotateType(php.Param, FieldRoles{
+		"byRef":    {Op: Is(uast.Bool(false))},
+		"variadic": {Op: Is(uast.Bool(true))},
+	}, role.Argument, role.ArgsList),
+	AnnotateType(php.Param, FieldRoles{
+		"byRef":    {Op: Is(uast.Bool(true))},
+		"variadic": {Op: Is(uast.Bool(false))},
+	}, role.Argument, role.Incomplete),
+	AnnotateType(php.Param, FieldRoles{
+		"byRef":    {Op: Is(uast.Bool(true))},
+		"variadic": {Op: Is(uast.Bool(true))},
+	}, role.Argument, role.Incomplete, role.ArgsList),
+
+	// Include and require
+	AnnotateType(php.Include, ObjRoles{
+		"expr": {role.Import, role.Pathname},
+	}, role.Import),
+
+	// Instanceof
+	AnnotateType(php.Instanceof, FieldRoles{
+		"class":       {Roles: role.Roles{role.Call, role.Argument, role.Type, role.Identifier}},
+		"expr":        {Roles: role.Roles{role.Call, role.Argument, role.Type, role.Identifier}},
+		uast.KeyToken: {Add: true, Op: String("instanceof")},
+	}, role.Expression, role.Call),
+
+	// Interface
+	AnnotateType(php.Interface, nil, role.Type, role.Declaration),
+	AnnotateType(php.Interface, ObjRoles{
+		"extends": {role.Receiver, role.Identifier},
+	}, role.Type, role.Declaration),
+
+	// Traits
+	AnnotateType(php.Trait, nil, role.Type, role.Declaration),
+	AnnotateType(php.TraitUse, nil, role.Base),
+	AnnotateType(php.TraitPrecedence, FieldRoles{
+		"insteadof": {Arr: true, Roles: role.Roles{role.Alias, role.Incomplete}},
+	}, role.Base, role.Alias, role.Incomplete),
+
+	// New
+	AnnotateType(php.New, ObjRoles{
+		"class": {role.Type},
+	}, role.Expression, role.Initialization, role.Call),
+
+	//Switch
+	AnnotateType(php.Switch, nil, role.Switch),
+	AnnotateType(php.Case, FieldRoles{
+		"cond":  {Opt: true, Roles: role.Roles{role.Case, role.Condition}},
+		"stmts": {Arr: true, Roles: role.Roles{role.Case, role.Body}},
+	}, role.Case),
+	AnnotateType(php.Case, FieldRoles{
+		"cond":  {Op: Is(nil)},
+		"stmts": {Arr: true, Roles: role.Roles{role.Case, role.Body}},
+	}, role.Case, role.Default),
+}

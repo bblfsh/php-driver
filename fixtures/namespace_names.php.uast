@@ -2,11 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Expr_ConstFetch {
-.  .  .  Roles: Expression,Variable,Incomplete
+.  .  .  Roles: Expression,Incomplete,Variable
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -41,7 +41,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Expr_ConstFetch {
-.  .  .  Roles: Expression,Variable,Incomplete
+.  .  .  Roles: Expression,Incomplete,Variable
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 10
 .  .  .  .  Line: 4
@@ -76,7 +76,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: Expr_ConstFetch {
-.  .  .  Roles: Expression,Variable,Incomplete
+.  .  .  Roles: Expression,Incomplete,Variable
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 15
 .  .  .  .  Line: 5
@@ -92,8 +92,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Name_FullyQualified {
-.  .  .  .  .  Roles: Expression,Variable,Incomplete
-.  .  .  .  .  TOKEN "A\B"
+.  .  .  .  .  Roles: Expression,Incomplete,Variable
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 15
 .  .  .  .  .  .  Line: 5
@@ -107,11 +106,25 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: name
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  TOKEN "B"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  3: Expr_ConstFetch {
-.  .  .  Roles: Expression,Variable,Incomplete
+.  .  .  Roles: Expression,Incomplete,Variable
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 21
 .  .  .  .  Line: 6
@@ -127,8 +140,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Name_Relative {
-.  .  .  .  .  Roles: Expression,Identifier,Qualified,Incomplete
-.  .  .  .  .  TOKEN "A\B"
+.  .  .  .  .  Roles: Expression,Identifier,Incomplete,Qualified
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 21
 .  .  .  .  .  .  Line: 6
@@ -141,6 +153,20 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  TOKEN "A"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  TOKEN "B"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: parts
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

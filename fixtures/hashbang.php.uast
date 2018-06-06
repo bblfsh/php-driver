@@ -2,11 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_InlineHTML {
-.  .  .  Roles: String,Literal,Incomplete
+.  .  .  Roles: Incomplete,Literal,String
 .  .  .  TOKEN "#!/usr/bin/env php
 "
 .  .  .  StartPosition: {
@@ -24,8 +24,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Echo {
-.  .  .  Roles: Statement,Call
-.  .  .  TOKEN "echo"
+.  .  .  Roles: Call,Statement
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 26
 .  .  .  .  Line: 4
@@ -60,7 +59,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: Stmt_InlineHTML {
-.  .  .  Roles: String,Literal,Incomplete
+.  .  .  Roles: Incomplete,Literal,String
 .  .  .  TOKEN "#!/usr/bin/env php
 "
 .  .  .  StartPosition: {

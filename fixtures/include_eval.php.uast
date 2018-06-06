@@ -2,8 +2,8 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Expr_Include {
 .  .  .  Roles: Import
@@ -23,7 +23,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
+.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
 .  .  .  .  .  TOKEN "A.php"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 14
@@ -59,7 +59,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
+.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
 .  .  .  .  .  TOKEN "A.php"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 36
@@ -95,7 +95,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
+.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
 .  .  .  .  .  TOKEN "A.php"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 53
@@ -131,7 +131,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String,Import,Pathname
+.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
 .  .  .  .  .  TOKEN "A.php"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 75
@@ -150,8 +150,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  4: Expr_Eval {
-.  .  .  Roles: Expression,Call
-.  .  .  TOKEN "eval"
+.  .  .  Roles: Call,Expression
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 84
 .  .  .  .  Line: 6

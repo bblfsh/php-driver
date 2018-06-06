@@ -2,11 +2,11 @@ Status:  ok
 Language:  php
 Errors: 
 UAST: 
-File {
-.  Roles: File,Module
+Module {
+.  Roles: Module
 .  Children: {
 .  .  0: Stmt_Break {
-.  .  .  Roles: Statement,Break
+.  .  .  Roles: Break,Statement
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 7
 .  .  .  .  Line: 3
@@ -22,7 +22,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: Stmt_Break {
-.  .  .  Roles: Statement,Break
+.  .  .  Roles: Break,Statement
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 14
 .  .  .  .  Line: 4
@@ -57,7 +57,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: Stmt_Continue {
-.  .  .  Roles: Statement,Continue
+.  .  .  Roles: Continue,Statement
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 24
 .  .  .  .  Line: 6
@@ -73,7 +73,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: Stmt_Continue {
-.  .  .  Roles: Statement,Continue
+.  .  .  Roles: Continue,Statement
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 34
 .  .  .  .  Line: 7
@@ -108,7 +108,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  4: Stmt_Return {
-.  .  .  Roles: Statement,Return
+.  .  .  Roles: Return,Statement
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 47
 .  .  .  .  Line: 9
@@ -124,7 +124,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  5: Stmt_Return {
-.  .  .  Roles: Statement,Return
+.  .  .  Roles: Return,Statement
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 55
 .  .  .  .  Line: 10
@@ -141,7 +141,6 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "a"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 62
 .  .  .  .  .  .  Line: 10
@@ -154,6 +153,15 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -176,7 +184,6 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Expr_Variable {
 .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  TOKEN "e"
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 73
 .  .  .  .  .  .  Line: 12
@@ -190,12 +197,20 @@ File {
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: expr
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Name {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "e"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  7: Stmt_Label {
-.  .  .  Roles: Statement,Goto,Incomplete
-.  .  .  TOKEN "label"
+.  .  .  Roles: Goto,Incomplete,Statement
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 78
 .  .  .  .  Line: 14
@@ -209,10 +224,18 @@ File {
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "label"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
 .  .  8: Stmt_Goto {
-.  .  .  Roles: Statement,Goto
-.  .  .  TOKEN "label"
+.  .  .  Roles: Goto,Statement
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 85
 .  .  .  .  Line: 15
@@ -225,6 +248,15 @@ File {
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  internalRole: children
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "label"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: name
+.  .  .  .  .  }
+.  .  .  .  }
 .  .  .  }
 .  .  }
 .  }
