@@ -110,29 +110,15 @@ func annAssign(typ string, opRoles ...role.Role) Mapping {
 
 var Annotations = []Mapping{
 	AnnotateType(php.Comment, MapObj(Obj{
-		"text":    UncommentCLike("text"),
-		"filePos": Var("fp"),
-		"line":    Var("ln"),
+		"text": UncommentCLike("text"),
 	}, Obj{
 		uast.KeyToken: Var("text"),
-		uast.KeyStart: Obj{
-			uast.KeyType:    String("ast:Position"),
-			uast.KeyPosCol:  Var("fp"),
-			uast.KeyPosLine: Var("ln"),
-		},
 	}), role.Comment, role.Noop),
 
 	AnnotateType(php.Doc, MapObj(Obj{
-		"text":    UncommentCLike("text"),
-		"filePos": Var("fp"),
-		"line":    Var("ln"),
+		"text": UncommentCLike("text"),
 	}, Obj{
 		uast.KeyToken: Var("text"),
-		uast.KeyStart: Obj{
-			uast.KeyType:    String("ast:Position"),
-			uast.KeyPosCol:  Var("fp"),
-			uast.KeyPosLine: Var("ln"),
-		},
 	}), role.Comment, role.Noop, role.Documentation),
 
 	mapInternalProperty("left", role.Left),

@@ -28,7 +28,17 @@ var Suite = &fixtures.Suite{
 	},
 	BenchName: "complex",
 	Semantic: fixtures.SemanticConfig{
-		BlacklistTypes: []string{},
+		BlacklistTypes: []string{
+			"Name",
+			"Scalar_String",
+			"Scalar_EncapsedStringPart",
+			"Comment",
+			"Comment_Doc",
+			"Expr_Include",
+			"Stmt_Use",
+			"Stmt_UseUse",
+			"Stmt_GroupUse",
+		},
 	},
 }
 

@@ -43,6 +43,9 @@
                      col: 21,
                   },
                },
+               attributes: {
+                  kind: 10,
+               },
             },
             var: { '@type': "Expr_BinaryOp_Plus",
                '@role': [Add, Expression, Operator],
@@ -71,6 +74,9 @@
                         line: 3,
                         col: 13,
                      },
+                  },
+                  attributes: {
+                     kind: 2,
                   },
                   items: [
                      { '@type': "Expr_ArrayItem",
@@ -103,6 +109,9 @@
                                  line: 3,
                                  col: 9,
                               },
+                           },
+                           attributes: {
+                              kind: 10,
                            },
                         },
                      },
@@ -137,6 +146,9 @@
                                  col: 12,
                               },
                            },
+                           attributes: {
+                              kind: 10,
+                           },
                         },
                      },
                   ],
@@ -154,6 +166,9 @@
                         line: 3,
                         col: 18,
                      },
+                  },
+                  attributes: {
+                     kind: 2,
                   },
                   items: [],
                },
@@ -193,6 +208,8 @@
             name: { '@type': "Name",
                '@token': "a",
                '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
             },
             var: { '@type': "Expr_Array",
                '@role': [Expression, List, Literal],
@@ -207,6 +224,9 @@
                      line: 4,
                      col: 18,
                   },
+               },
+               attributes: {
+                  kind: 2,
                },
                items: [
                   { '@type': "Expr_ArrayItem",
@@ -239,6 +259,9 @@
                               col: 10,
                            },
                         },
+                        attributes: {
+                           kind: 1,
+                        },
                      },
                      value: { '@type': "Scalar_String",
                         '@token': "b",
@@ -254,6 +277,9 @@
                               line: 4,
                               col: 17,
                            },
+                        },
+                        attributes: {
+                           kind: 1,
                         },
                      },
                   },
@@ -294,6 +320,8 @@
             name: { '@type': "Name",
                '@token': "a",
                '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
             },
             var: { '@type': "Scalar_String",
                '@token': "str",
@@ -309,6 +337,9 @@
                      line: 5,
                      col: 11,
                   },
+               },
+               attributes: {
+                  kind: 2,
                },
             },
          },

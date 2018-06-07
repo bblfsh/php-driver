@@ -17,6 +17,8 @@
       name: { '@type': "Name",
          '@token': "gen",
          '@role': [Expression, Identifier],
+         '@pos': { '@type': "uast:Positions",
+         },
       },
       params: [],
       returnType: { '@type': "Function.returnType",
@@ -70,6 +72,9 @@
                            col: 13,
                         },
                      },
+                     attributes: {
+                        kind: 2,
+                     },
                   },
                   right: { '@type': "Scalar_String",
                      '@token': "b",
@@ -85,6 +90,9 @@
                            line: 4,
                            col: 19,
                         },
+                     },
+                     attributes: {
+                        kind: 2,
                      },
                   },
                },
@@ -133,6 +141,9 @@
                            col: 13,
                         },
                      },
+                     attributes: {
+                        kind: 2,
+                     },
                   },
                },
                right: { '@type': "Expr_Exit",
@@ -148,6 +159,9 @@
                         line: 5,
                         col: 20,
                      },
+                  },
+                  attributes: {
+                     kind: 2,
                   },
                   expr: ~,
                },
@@ -181,6 +195,9 @@
                         col: 13,
                      },
                   },
+                  attributes: {
+                     kind: 2,
+                  },
                },
                value: { '@type': "Expr_BinaryOp_Concat",
                   '@role': [Add, Binary, Expression, Incomplete, Operator],
@@ -211,6 +228,9 @@
                            col: 20,
                         },
                      },
+                     attributes: {
+                        kind: 2,
+                     },
                   },
                   right: { '@type': "Scalar_String",
                      '@token': "b",
@@ -226,6 +246,9 @@
                            line: 6,
                            col: 26,
                         },
+                     },
+                     attributes: {
+                        kind: 2,
                      },
                   },
                },
@@ -273,6 +296,9 @@
                            col: 13,
                         },
                      },
+                     attributes: {
+                        kind: 2,
+                     },
                   },
                   value: { '@type': "Scalar_String",
                      '@token': "a",
@@ -289,6 +315,9 @@
                            col: 20,
                         },
                      },
+                     attributes: {
+                        kind: 2,
+                     },
                   },
                },
                right: { '@type': "Expr_Exit",
@@ -304,6 +333,9 @@
                         line: 7,
                         col: 27,
                      },
+                  },
+                  attributes: {
+                     kind: 2,
                   },
                   expr: ~,
                },
@@ -353,6 +385,9 @@
                               col: 37,
                            },
                         },
+                        attributes: {
+                           kind: 2,
+                        },
                         items: [
                            { '@type': "Expr_ArrayItem",
                               '@role': [Entry, Expression, List],
@@ -399,6 +434,9 @@
                                           col: 23,
                                        },
                                     },
+                                    attributes: {
+                                       kind: 2,
+                                    },
                                  },
                                  value: { '@type': "Expr_BinaryOp_Concat",
                                     '@role': [Add, Binary, Expression, Incomplete, Operator],
@@ -429,6 +467,9 @@
                                              col: 30,
                                           },
                                        },
+                                       attributes: {
+                                          kind: 2,
+                                       },
                                     },
                                     right: { '@type': "Scalar_String",
                                        '@token': "b",
@@ -444,6 +485,9 @@
                                              line: 8,
                                              col: 36,
                                           },
+                                       },
+                                       attributes: {
+                                          kind: 2,
                                        },
                                     },
                                  },
@@ -514,6 +558,9 @@
                            col: 20,
                         },
                      },
+                     attributes: {
+                        kind: 2,
+                     },
                   },
                   value: { '@type': "Expr_Yield",
                      '@role': [Incomplete, Return],
@@ -543,6 +590,9 @@
                               line: 9,
                               col: 34,
                            },
+                        },
+                        attributes: {
+                           kind: 2,
                         },
                      },
                      value: { '@type': "Expr_BinaryOp_Concat",
@@ -574,6 +624,9 @@
                                  col: 41,
                               },
                            },
+                           attributes: {
+                              kind: 2,
+                           },
                         },
                         right: { '@type': "Scalar_String",
                            '@token': "b",
@@ -589,6 +642,9 @@
                                  line: 9,
                                  col: 47,
                               },
+                           },
+                           attributes: {
+                              kind: 2,
                            },
                         },
                      },
@@ -638,6 +694,9 @@
                            col: 20,
                         },
                      },
+                     attributes: {
+                        kind: 2,
+                     },
                   },
                   value: { '@type': "Expr_Yield",
                      '@role': [Incomplete, Return],
@@ -668,6 +727,9 @@
                               line: 10,
                               col: 35,
                            },
+                        },
+                        attributes: {
+                           kind: 2,
                         },
                      },
                   },
@@ -701,6 +763,9 @@
                            col: 43,
                         },
                      },
+                     attributes: {
+                        kind: 2,
+                     },
                   },
                   right: { '@type': "Scalar_String",
                      '@token': "b",
@@ -716,6 +781,9 @@
                            line: 10,
                            col: 49,
                         },
+                     },
+                     attributes: {
+                        kind: 2,
                      },
                   },
                },
@@ -765,6 +833,9 @@
                               col: 52,
                            },
                         },
+                        attributes: {
+                           kind: 2,
+                        },
                         items: [
                            { '@type': "Expr_ArrayItem",
                               '@role': [Entry, Expression, List],
@@ -811,6 +882,9 @@
                                           col: 24,
                                        },
                                     },
+                                    attributes: {
+                                       kind: 2,
+                                    },
                                  },
                                  value: { '@type': "Expr_Yield",
                                     '@role': [Incomplete, Return],
@@ -840,6 +914,9 @@
                                              line: 11,
                                              col: 38,
                                           },
+                                       },
+                                       attributes: {
+                                          kind: 2,
                                        },
                                     },
                                     value: { '@type': "Expr_BinaryOp_Concat",
@@ -871,6 +948,9 @@
                                                 col: 45,
                                              },
                                           },
+                                          attributes: {
+                                             kind: 2,
+                                          },
                                        },
                                        right: { '@type': "Scalar_String",
                                           '@token': "b",
@@ -886,6 +966,9 @@
                                                 line: 11,
                                                 col: 51,
                                              },
+                                          },
+                                          attributes: {
+                                             kind: 2,
                                           },
                                        },
                                     },
@@ -958,6 +1041,9 @@
                               col: 54,
                            },
                         },
+                        attributes: {
+                           kind: 2,
+                        },
                         items: [
                            { '@type': "Expr_ArrayItem",
                               '@role': [Entry, Expression, List],
@@ -1003,6 +1089,9 @@
                                           col: 24,
                                        },
                                     },
+                                    attributes: {
+                                       kind: 2,
+                                    },
                                  },
                                  value: { '@type': "Expr_Yield",
                                     '@role': [Incomplete, Return],
@@ -1033,6 +1122,9 @@
                                              line: 12,
                                              col: 39,
                                           },
+                                       },
+                                       attributes: {
+                                          kind: 2,
                                        },
                                     },
                                  },
@@ -1066,6 +1158,9 @@
                                           col: 47,
                                        },
                                     },
+                                    attributes: {
+                                       kind: 2,
+                                    },
                                  },
                                  right: { '@type': "Scalar_String",
                                     '@token': "b",
@@ -1081,6 +1176,9 @@
                                           line: 12,
                                           col: 53,
                                        },
+                                    },
+                                    attributes: {
+                                       kind: 2,
                                     },
                                  },
                               },

@@ -30,6 +30,8 @@
          name: { '@type': "Name",
             '@token': "a",
             '@role': [Expression, Identifier],
+            '@pos': { '@type': "uast:Positions",
+            },
          },
       },
       stmts: [
@@ -62,6 +64,9 @@
                      col: 10,
                   },
                },
+               attributes: {
+                  kind: 10,
+               },
             },
             var: { '@type': "Expr_Variable",
                '@role': [Identifier, Left, Variable],
@@ -80,6 +85,8 @@
                name: { '@type': "Name",
                   '@token': "a",
                   '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
                },
             },
          },

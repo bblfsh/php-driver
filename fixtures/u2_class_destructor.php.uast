@@ -19,6 +19,8 @@
       name: { '@type': "Name",
          '@token': "testcls1",
          '@role': [Expression, Identifier],
+         '@pos': { '@type': "uast:Positions",
+         },
       },
       stmts: [
          { '@type': "Stmt_ClassMethod",
@@ -40,6 +42,8 @@
             name: { '@type': "Name",
                '@token': "__destruct",
                '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
             },
             params: [],
             returnType: ~,
