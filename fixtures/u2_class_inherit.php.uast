@@ -1,54 +1,37 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Stmt_Class {
-.  .  .  Roles: Declaration,Statement,Type
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 39
-.  .  .  .  Line: 2
-.  .  .  .  Col: 34
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  flags: 0
-.  .  .  .  internalRole: children
-.  .  .  .  type: 0
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "testcls1"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Name {
-.  .  .  .  .  Roles: Base,Expression,Identifier
-.  .  .  .  .  TOKEN "testcls2"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 29
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 24
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 36
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 31
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: extends
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
-}
-
+[
+   { '@type': "Stmt_Class",
+      '@role': [Declaration, Statement, Type],
+      end: { '@type': "uast:Position",
+         offset: 39,
+         line: 2,
+         col: 34,
+      },
+      extends: { '@type': "Name",
+         '@token': "testcls2",
+         '@role': [Base, Expression, Identifier],
+         end: { '@type': "uast:Position",
+            offset: 36,
+            line: 2,
+            col: 31,
+         },
+         start: { '@type': "uast:Position",
+            offset: 29,
+            line: 2,
+            col: 24,
+         },
+      },
+      flags: 0,
+      implements: [],
+      name: { '@type': "Name",
+         '@token': "testcls1",
+         '@role': [Expression, Identifier],
+      },
+      start: { '@type': "uast:Position",
+         offset: 6,
+         line: 2,
+         col: 1,
+      },
+      stmts: [],
+      type: 0,
+   },
+]

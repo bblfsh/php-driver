@@ -1,267 +1,210 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Stmt_Class {
-.  .  .  Roles: Declaration,Statement,Type
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 7
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 186
-.  .  .  .  Line: 11
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  flags: 16
-.  .  .  .  internalRole: children
-.  .  .  .  type: 16
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "A"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Stmt_Property {
-.  .  .  .  .  Roles: Body,Incomplete,Type,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 30
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 36
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 11
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  flags: 0
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 0
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Stmt_PropertyProperty {
-.  .  .  .  .  .  .  Roles: Incomplete,Type,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 34
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 9
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 35
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 10
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: props
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Stmt_Property {
-.  .  .  .  .  Roles: Body,Incomplete,Type,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 42
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 51
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 14
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  flags: 8
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 8
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Stmt_PropertyProperty {
-.  .  .  .  .  .  .  Roles: Incomplete,Type,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 49
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 12
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 50
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: props
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  3: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Body,Function,Type
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 57
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 78
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 26
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 16
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 16
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "c"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  4: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Body,Function,Type
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 84
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 104
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 25
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 32
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 32
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "d"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  5: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Body,Function,Type
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 110
-.  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 131
-.  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 26
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 8
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 8
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "e"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  6: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Body,Function,Type
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 137
-.  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 164
-.  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  Col: 32
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 40
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 40
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "f"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  7: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Body,Function,Type
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 170
-.  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 184
-.  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 19
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 0
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 0
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "g"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
-}
-
+[
+   { '@type': "Stmt_Class",
+      '@role': [Declaration, Statement, Type],
+      end: { '@type': "uast:Position",
+         offset: 186,
+         line: 11,
+         col: 1,
+      },
+      extends: ~,
+      flags: 16,
+      implements: [],
+      name: { '@type': "Name",
+         '@token': "A",
+         '@role': [Expression, Identifier],
+      },
+      start: { '@type': "uast:Position",
+         offset: 7,
+         line: 3,
+         col: 1,
+      },
+      stmts: [
+         { '@type': "Stmt_Property",
+            '@role': [Body, Incomplete, Type, Variable],
+            end: { '@type': "uast:Position",
+               offset: 36,
+               line: 4,
+               col: 11,
+            },
+            flags: 0,
+            props: [
+               { '@type': "Stmt_PropertyProperty",
+                  '@role': [Incomplete, Type, Variable],
+                  default: ~,
+                  end: { '@type': "uast:Position",
+                     offset: 35,
+                     line: 4,
+                     col: 10,
+                  },
+                  name: { '@type': "Name",
+                     '@token': "a",
+                     '@role': [Expression, Identifier],
+                  },
+                  start: { '@type': "uast:Position",
+                     offset: 34,
+                     line: 4,
+                     col: 9,
+                  },
+               },
+            ],
+            start: { '@type': "uast:Position",
+               offset: 30,
+               line: 4,
+               col: 5,
+            },
+            type: 0,
+         },
+         { '@type': "Stmt_Property",
+            '@role': [Body, Incomplete, Type, Variable],
+            end: { '@type': "uast:Position",
+               offset: 51,
+               line: 5,
+               col: 14,
+            },
+            flags: 8,
+            props: [
+               { '@type': "Stmt_PropertyProperty",
+                  '@role': [Incomplete, Type, Variable],
+                  default: ~,
+                  end: { '@type': "uast:Position",
+                     offset: 50,
+                     line: 5,
+                     col: 13,
+                  },
+                  name: { '@type': "Name",
+                     '@token': "b",
+                     '@role': [Expression, Identifier],
+                  },
+                  start: { '@type': "uast:Position",
+                     offset: 49,
+                     line: 5,
+                     col: 12,
+                  },
+               },
+            ],
+            start: { '@type': "uast:Position",
+               offset: 42,
+               line: 5,
+               col: 5,
+            },
+            type: 8,
+         },
+         { '@type': "Stmt_ClassMethod",
+            '@role': [Body, Function, Type],
+            byRef: false,
+            end: { '@type': "uast:Position",
+               offset: 78,
+               line: 6,
+               col: 26,
+            },
+            flags: 16,
+            name: { '@type': "Name",
+               '@token': "c",
+               '@role': [Expression, Identifier],
+            },
+            params: [],
+            returnType: ~,
+            start: { '@type': "uast:Position",
+               offset: 57,
+               line: 6,
+               col: 5,
+            },
+            stmts: ~,
+            type: 16,
+         },
+         { '@type': "Stmt_ClassMethod",
+            '@role': [Body, Function, Type],
+            byRef: false,
+            end: { '@type': "uast:Position",
+               offset: 104,
+               line: 7,
+               col: 25,
+            },
+            flags: 32,
+            name: { '@type': "Name",
+               '@token': "d",
+               '@role': [Expression, Identifier],
+            },
+            params: [],
+            returnType: ~,
+            start: { '@type': "uast:Position",
+               offset: 84,
+               line: 7,
+               col: 5,
+            },
+            stmts: [],
+            type: 32,
+         },
+         { '@type': "Stmt_ClassMethod",
+            '@role': [Body, Function, Type],
+            byRef: false,
+            end: { '@type': "uast:Position",
+               offset: 131,
+               line: 8,
+               col: 26,
+            },
+            flags: 8,
+            name: { '@type': "Name",
+               '@token': "e",
+               '@role': [Expression, Identifier],
+            },
+            params: [],
+            returnType: ~,
+            start: { '@type': "uast:Position",
+               offset: 110,
+               line: 8,
+               col: 5,
+            },
+            stmts: [],
+            type: 8,
+         },
+         { '@type': "Stmt_ClassMethod",
+            '@role': [Body, Function, Type],
+            byRef: false,
+            end: { '@type': "uast:Position",
+               offset: 164,
+               line: 9,
+               col: 32,
+            },
+            flags: 40,
+            name: { '@type': "Name",
+               '@token': "f",
+               '@role': [Expression, Identifier],
+            },
+            params: [],
+            returnType: ~,
+            start: { '@type': "uast:Position",
+               offset: 137,
+               line: 9,
+               col: 5,
+            },
+            stmts: [],
+            type: 40,
+         },
+         { '@type': "Stmt_ClassMethod",
+            '@role': [Body, Function, Type],
+            byRef: false,
+            end: { '@type': "uast:Position",
+               offset: 184,
+               line: 10,
+               col: 19,
+            },
+            flags: 0,
+            name: { '@type': "Name",
+               '@token': "g",
+               '@role': [Expression, Identifier],
+            },
+            params: [],
+            returnType: ~,
+            start: { '@type': "uast:Position",
+               offset: 170,
+               line: 10,
+               col: 5,
+            },
+            stmts: [],
+            type: 0,
+         },
+      ],
+      type: 16,
+   },
+]

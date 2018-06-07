@@ -1,81 +1,59 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Stmt_InlineHTML {
-.  .  .  Roles: Incomplete,Literal,String
-.  .  .  TOKEN "#!/usr/bin/env php
-"
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 0
-.  .  .  .  Line: 1
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 18
-.  .  .  .  Line: 1
-.  .  .  .  Col: 19
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  }
-.  .  1: Stmt_Echo {
-.  .  .  Roles: Call,Statement
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 26
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 39
-.  .  .  .  Line: 4
-.  .  .  .  Col: 14
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  TOKEN "foobar"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 31
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 6
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 38
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 13
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: exprs
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  2: Stmt_InlineHTML {
-.  .  .  Roles: Incomplete,Literal,String
-.  .  .  TOKEN "#!/usr/bin/env php
-"
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 45
-.  .  .  .  Line: 7
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 63
-.  .  .  .  Line: 7
-.  .  .  .  Col: 19
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  }
-.  }
-}
-
+[
+   { '@type': "Stmt_InlineHTML",
+      '@token': "#!/usr/bin/env php\n",
+      '@role': [Incomplete, Literal, String],
+      end: { '@type': "uast:Position",
+         offset: 18,
+         line: 1,
+         col: 19,
+      },
+      start: { '@type': "uast:Position",
+         offset: 0,
+         line: 1,
+         col: 1,
+      },
+   },
+   { '@type': "Stmt_Echo",
+      '@role': [Call, Statement],
+      end: { '@type': "uast:Position",
+         offset: 39,
+         line: 4,
+         col: 14,
+      },
+      exprs: [
+         { '@type': "Scalar_String",
+            '@token': "foobar",
+            '@role': [Expression, Literal, String],
+            end: { '@type': "uast:Position",
+               offset: 38,
+               line: 4,
+               col: 13,
+            },
+            start: { '@type': "uast:Position",
+               offset: 31,
+               line: 4,
+               col: 6,
+            },
+         },
+      ],
+      start: { '@type': "uast:Position",
+         offset: 26,
+         line: 4,
+         col: 1,
+      },
+   },
+   { '@type': "Stmt_InlineHTML",
+      '@token': "#!/usr/bin/env php\n",
+      '@role': [Incomplete, Literal, String],
+      end: { '@type': "uast:Position",
+         offset: 63,
+         line: 7,
+         col: 19,
+      },
+      start: { '@type': "uast:Position",
+         offset: 45,
+         line: 7,
+         col: 1,
+      },
+   },
+]

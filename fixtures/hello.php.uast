@@ -1,58 +1,42 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Stmt_Echo {
-.  .  .  Roles: Call,Statement
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 46
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 65
-.  .  .  .  Line: 3
-.  .  .  .  Col: 20
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  TOKEN " this is a simple hello world example
-"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  TOKEN "Hello World!"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 51
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 6
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 64
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 19
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: exprs
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
-}
-
+[
+   { '@type': "Stmt_Echo",
+      '@role': [Call, Statement],
+      comments: [
+         { '@type': "Comment",
+            '@token': " this is a simple hello world example\n",
+            '@role': [Comment, Noop],
+            start: { '@type': "ast:Position",
+               '@role': [Unannotated],
+               col: 6,
+               line: 2,
+            },
+         },
+      ],
+      end: { '@type': "uast:Position",
+         offset: 65,
+         line: 3,
+         col: 20,
+      },
+      exprs: [
+         { '@type': "Scalar_String",
+            '@token': "Hello World!",
+            '@role': [Expression, Literal, String],
+            end: { '@type': "uast:Position",
+               offset: 64,
+               line: 3,
+               col: 19,
+            },
+            start: { '@type': "uast:Position",
+               offset: 51,
+               line: 3,
+               col: 6,
+            },
+         },
+      ],
+      start: { '@type': "uast:Position",
+         offset: 46,
+         line: 3,
+         col: 1,
+      },
+   },
+]

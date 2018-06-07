@@ -1,35 +1,21 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Stmt_Interface {
-.  .  .  Roles: Declaration,Type
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 28
-.  .  .  .  Line: 2
-.  .  .  .  Col: 23
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "testiface1"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
-}
-
+[
+   { '@type': "Stmt_Interface",
+      '@role': [Declaration, Type],
+      end: { '@type': "uast:Position",
+         offset: 28,
+         line: 2,
+         col: 23,
+      },
+      extends: [],
+      name: { '@type': "Name",
+         '@token': "testiface1",
+         '@role': [Expression, Identifier],
+      },
+      start: { '@type': "uast:Position",
+         offset: 6,
+         line: 2,
+         col: 1,
+      },
+      stmts: [],
+   },
+]

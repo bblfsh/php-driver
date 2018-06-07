@@ -1,249 +1,192 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Expr_Include {
-.  .  .  Roles: Import
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 20
-.  .  .  .  Line: 2
-.  .  .  .  Col: 15
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  .  type: 1
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
-.  .  .  .  .  TOKEN "a.php"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 14
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 9
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 20
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 15
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  1: Stmt_Use {
-.  .  .  Roles: Alias
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 23
-.  .  .  .  Line: 2
-.  .  .  .  Col: 18
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 32
-.  .  .  .  Line: 2
-.  .  .  .  Col: 27
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  .  type: 1
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Stmt_UseUse {
-.  .  .  .  .  Roles: Alias
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 27
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 22
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 31
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 26
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  alias: C
-.  .  .  .  .  .  internalRole: uses
-.  .  .  .  .  .  type: 0
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "A\B\C"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 27
-.  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  Col: 22
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 31
-.  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  Col: 26
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  2: Stmt_GroupUse {
-.  .  .  Roles: Block,Incomplete
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 34
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 50
-.  .  .  .  Line: 3
-.  .  .  .  Col: 17
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  .  type: 0
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "A\B"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 38
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 40
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 7
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: prefix
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Stmt_UseUse {
-.  .  .  .  .  Roles: Alias
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 43
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 10
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 43
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 10
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  alias: C
-.  .  .  .  .  .  internalRole: uses
-.  .  .  .  .  .  type: 1
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "C"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 43
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 10
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 43
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 10
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Stmt_UseUse {
-.  .  .  .  .  Roles: Alias
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 46
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 13
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 46
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 13
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  alias: D
-.  .  .  .  .  .  internalRole: uses
-.  .  .  .  .  .  type: 1
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "D"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 46
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 46
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  3: Stmt_UseUse {
-.  .  .  .  .  Roles: Alias
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 49
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 16
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 49
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 16
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  alias: E
-.  .  .  .  .  .  internalRole: uses
-.  .  .  .  .  .  type: 1
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "E"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 49
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 16
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 49
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 16
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
-}
-
+[
+   { '@type': "Expr_Include",
+      '@role': [Import],
+      end: { '@type': "uast:Position",
+         offset: 20,
+         line: 2,
+         col: 15,
+      },
+      expr: { '@type': "Scalar_String",
+         '@token': "a.php",
+         '@role': [Expression, Import, Literal, Pathname, String],
+         end: { '@type': "uast:Position",
+            offset: 20,
+            line: 2,
+            col: 15,
+         },
+         start: { '@type': "uast:Position",
+            offset: 14,
+            line: 2,
+            col: 9,
+         },
+      },
+      start: { '@type': "uast:Position",
+         offset: 6,
+         line: 2,
+         col: 1,
+      },
+      type: 1,
+   },
+   { '@type': "Stmt_Use",
+      '@role': [Alias],
+      end: { '@type': "uast:Position",
+         offset: 32,
+         line: 2,
+         col: 27,
+      },
+      start: { '@type': "uast:Position",
+         offset: 23,
+         line: 2,
+         col: 18,
+      },
+      type: 1,
+      uses: [
+         { '@type': "Stmt_UseUse",
+            '@role': [Alias],
+            alias: "C",
+            end: { '@type': "uast:Position",
+               offset: 31,
+               line: 2,
+               col: 26,
+            },
+            name: { '@type': "Name",
+               '@token': "A\\B\\C",
+               '@role': [Expression, Identifier],
+               end: { '@type': "uast:Position",
+                  offset: 31,
+                  line: 2,
+                  col: 26,
+               },
+               start: { '@type': "uast:Position",
+                  offset: 27,
+                  line: 2,
+                  col: 22,
+               },
+            },
+            start: { '@type': "uast:Position",
+               offset: 27,
+               line: 2,
+               col: 22,
+            },
+            type: 0,
+         },
+      ],
+   },
+   { '@type': "Stmt_GroupUse",
+      '@role': [Block, Incomplete],
+      end: { '@type': "uast:Position",
+         offset: 50,
+         line: 3,
+         col: 17,
+      },
+      prefix: { '@type': "Name",
+         '@token': "A\\B",
+         '@role': [Expression, Identifier],
+         end: { '@type': "uast:Position",
+            offset: 40,
+            line: 3,
+            col: 7,
+         },
+         start: { '@type': "uast:Position",
+            offset: 38,
+            line: 3,
+            col: 5,
+         },
+      },
+      start: { '@type': "uast:Position",
+         offset: 34,
+         line: 3,
+         col: 1,
+      },
+      type: 0,
+      uses: [
+         { '@type': "Stmt_UseUse",
+            '@role': [Alias],
+            alias: "C",
+            end: { '@type': "uast:Position",
+               offset: 43,
+               line: 3,
+               col: 10,
+            },
+            name: { '@type': "Name",
+               '@token': "C",
+               '@role': [Expression, Identifier],
+               end: { '@type': "uast:Position",
+                  offset: 43,
+                  line: 3,
+                  col: 10,
+               },
+               start: { '@type': "uast:Position",
+                  offset: 43,
+                  line: 3,
+                  col: 10,
+               },
+            },
+            start: { '@type': "uast:Position",
+               offset: 43,
+               line: 3,
+               col: 10,
+            },
+            type: 1,
+         },
+         { '@type': "Stmt_UseUse",
+            '@role': [Alias],
+            alias: "D",
+            end: { '@type': "uast:Position",
+               offset: 46,
+               line: 3,
+               col: 13,
+            },
+            name: { '@type': "Name",
+               '@token': "D",
+               '@role': [Expression, Identifier],
+               end: { '@type': "uast:Position",
+                  offset: 46,
+                  line: 3,
+                  col: 13,
+               },
+               start: { '@type': "uast:Position",
+                  offset: 46,
+                  line: 3,
+                  col: 13,
+               },
+            },
+            start: { '@type': "uast:Position",
+               offset: 46,
+               line: 3,
+               col: 13,
+            },
+            type: 1,
+         },
+         { '@type': "Stmt_UseUse",
+            '@role': [Alias],
+            alias: "E",
+            end: { '@type': "uast:Position",
+               offset: 49,
+               line: 3,
+               col: 16,
+            },
+            name: { '@type': "Name",
+               '@token': "E",
+               '@role': [Expression, Identifier],
+               end: { '@type': "uast:Position",
+                  offset: 49,
+                  line: 3,
+                  col: 16,
+               },
+               start: { '@type': "uast:Position",
+                  offset: 49,
+                  line: 3,
+                  col: 16,
+               },
+            },
+            start: { '@type': "uast:Position",
+               offset: 49,
+               line: 3,
+               col: 16,
+            },
+            type: 1,
+         },
+      ],
+   },
+]

@@ -1,133 +1,101 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Stmt_Namespace {
-.  .  .  Roles: Block
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 7
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 36
-.  .  .  .  Line: 5
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "Foo\Bar"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 17
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 11
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 23
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 17
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_ConstFetch {
-.  .  .  .  .  Roles: Expression,Incomplete,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 31
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 33
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 7
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "foo"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 31
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 33
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 7
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  1: Stmt_Namespace {
-.  .  .  Roles: Block
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 38
-.  .  .  .  Line: 6
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 59
-.  .  .  .  Line: 8
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Expr_ConstFetch {
-.  .  .  .  .  Roles: Expression,Incomplete,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 54
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 56
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 7
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "bar"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 54
-.  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 56
-.  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 7
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
-}
-
+[
+   { '@type': "Stmt_Namespace",
+      '@role': [Block],
+      end: { '@type': "uast:Position",
+         offset: 36,
+         line: 5,
+         col: 1,
+      },
+      name: { '@type': "Name",
+         '@token': "Foo\\Bar",
+         '@role': [Expression, Identifier],
+         end: { '@type': "uast:Position",
+            offset: 23,
+            line: 3,
+            col: 17,
+         },
+         start: { '@type': "uast:Position",
+            offset: 17,
+            line: 3,
+            col: 11,
+         },
+      },
+      start: { '@type': "uast:Position",
+         offset: 7,
+         line: 3,
+         col: 1,
+      },
+      stmts: [
+         { '@type': "Expr_ConstFetch",
+            '@role': [Expression, Incomplete, Variable],
+            end: { '@type': "uast:Position",
+               offset: 33,
+               line: 4,
+               col: 7,
+            },
+            name: { '@type': "Name",
+               '@token': "foo",
+               '@role': [Expression, Identifier],
+               end: { '@type': "uast:Position",
+                  offset: 33,
+                  line: 4,
+                  col: 7,
+               },
+               start: { '@type': "uast:Position",
+                  offset: 31,
+                  line: 4,
+                  col: 5,
+               },
+            },
+            start: { '@type': "uast:Position",
+               offset: 31,
+               line: 4,
+               col: 5,
+            },
+         },
+      ],
+   },
+   { '@type': "Stmt_Namespace",
+      '@role': [Block],
+      end: { '@type': "uast:Position",
+         offset: 59,
+         line: 8,
+         col: 1,
+      },
+      name: ~,
+      start: { '@type': "uast:Position",
+         offset: 38,
+         line: 6,
+         col: 1,
+      },
+      stmts: [
+         { '@type': "Expr_ConstFetch",
+            '@role': [Expression, Incomplete, Variable],
+            end: { '@type': "uast:Position",
+               offset: 56,
+               line: 7,
+               col: 7,
+            },
+            name: { '@type': "Name",
+               '@token': "bar",
+               '@role': [Expression, Identifier],
+               end: { '@type': "uast:Position",
+                  offset: 56,
+                  line: 7,
+                  col: 7,
+               },
+               start: { '@type': "uast:Position",
+                  offset: 54,
+                  line: 7,
+                  col: 5,
+               },
+            },
+            start: { '@type': "uast:Position",
+               offset: 54,
+               line: 7,
+               col: 5,
+            },
+         },
+      ],
+   },
+]

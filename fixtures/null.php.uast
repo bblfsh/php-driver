@@ -1,45 +1,29 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Expr_ConstFetch {
-.  .  .  Roles: Expression,Incomplete,Variable
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 7
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 10
-.  .  .  .  Line: 3
-.  .  .  .  Col: 4
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "NULL"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 7
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 10
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 4
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
-}
-
+[
+   { '@type': "Expr_ConstFetch",
+      '@role': [Expression, Incomplete, Variable],
+      end: { '@type': "uast:Position",
+         offset: 10,
+         line: 3,
+         col: 4,
+      },
+      name: { '@type': "Name",
+         '@token': "NULL",
+         '@role': [Expression, Identifier],
+         end: { '@type': "uast:Position",
+            offset: 10,
+            line: 3,
+            col: 4,
+         },
+         start: { '@type': "uast:Position",
+            offset: 7,
+            line: 3,
+            col: 1,
+         },
+      },
+      start: { '@type': "uast:Position",
+         offset: 7,
+         line: 3,
+         col: 1,
+      },
+   },
+]

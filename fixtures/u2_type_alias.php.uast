@@ -1,119 +1,89 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Expr_FuncCall {
-.  .  .  Roles: Call,Expression
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 34
-.  .  .  .  Line: 2
-.  .  .  .  Col: 29
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "class_alias"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 6
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 16
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 11
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Arg {
-.  .  .  .  .  Roles: Argument
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 18
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 13
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 24
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 19
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  internalRole: args
-.  .  .  .  .  .  unpack: false
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  TOKEN "type1"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 18
-.  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 24
-.  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  Col: 19
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Arg {
-.  .  .  .  .  Roles: Argument
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 27
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 22
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 33
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 28
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  internalRole: args
-.  .  .  .  .  .  unpack: false
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  TOKEN "type2"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 27
-.  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  Col: 22
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 33
-.  .  .  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  .  .  Col: 28
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
-}
-
+[
+   { '@type': "Expr_FuncCall",
+      '@role': [Call, Expression],
+      args: [
+         { '@type': "Arg",
+            '@role': [Argument],
+            byRef: false,
+            end: { '@type': "uast:Position",
+               offset: 24,
+               line: 2,
+               col: 19,
+            },
+            start: { '@type': "uast:Position",
+               offset: 18,
+               line: 2,
+               col: 13,
+            },
+            unpack: false,
+            value: { '@type': "Scalar_String",
+               '@token': "type1",
+               '@role': [Expression, Literal, String],
+               end: { '@type': "uast:Position",
+                  offset: 24,
+                  line: 2,
+                  col: 19,
+               },
+               start: { '@type': "uast:Position",
+                  offset: 18,
+                  line: 2,
+                  col: 13,
+               },
+            },
+         },
+         { '@type': "Arg",
+            '@role': [Argument],
+            byRef: false,
+            end: { '@type': "uast:Position",
+               offset: 33,
+               line: 2,
+               col: 28,
+            },
+            start: { '@type': "uast:Position",
+               offset: 27,
+               line: 2,
+               col: 22,
+            },
+            unpack: false,
+            value: { '@type': "Scalar_String",
+               '@token': "type2",
+               '@role': [Expression, Literal, String],
+               end: { '@type': "uast:Position",
+                  offset: 33,
+                  line: 2,
+                  col: 28,
+               },
+               start: { '@type': "uast:Position",
+                  offset: 27,
+                  line: 2,
+                  col: 22,
+               },
+            },
+         },
+      ],
+      end: { '@type': "uast:Position",
+         offset: 34,
+         line: 2,
+         col: 29,
+      },
+      name: { '@type': "Name",
+         '@token': "class_alias",
+         '@role': [Expression, Identifier],
+         end: { '@type': "uast:Position",
+            offset: 16,
+            line: 2,
+            col: 11,
+         },
+         start: { '@type': "uast:Position",
+            offset: 6,
+            line: 2,
+            col: 1,
+         },
+      },
+      start: { '@type': "uast:Position",
+         offset: 6,
+         line: 2,
+         col: 1,
+      },
+   },
+]

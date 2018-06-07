@@ -1,144 +1,112 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Expr_Exit {
-.  .  .  Roles: Call,Expression
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 9
-.  .  .  .  Line: 2
-.  .  .  .  Col: 4
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  }
-.  .  1: Expr_Exit {
-.  .  .  Roles: Call,Expression
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 12
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 17
-.  .  .  .  Line: 3
-.  .  .  .  Col: 6
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  }
-.  .  2: Expr_Exit {
-.  .  .  Roles: Call,Expression
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 20
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 31
-.  .  .  .  Line: 4
-.  .  .  .  Col: 12
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  TOKEN "Die!"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 25
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 6
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 30
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 11
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  3: Expr_Exit {
-.  .  .  Roles: Call,Expression
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 34
-.  .  .  .  Line: 5
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 36
-.  .  .  .  Line: 5
-.  .  .  .  Col: 3
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  }
-.  .  4: Expr_Exit {
-.  .  .  Roles: Call,Expression
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 39
-.  .  .  .  Line: 6
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 43
-.  .  .  .  Line: 6
-.  .  .  .  Col: 5
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  }
-.  .  5: Expr_Exit {
-.  .  .  Roles: Call,Expression
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 46
-.  .  .  .  Line: 7
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 57
-.  .  .  .  Line: 7
-.  .  .  .  Col: 12
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  TOKEN "Exit!"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 50
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 56
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 11
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
-}
-
+[
+   { '@type': "Expr_Exit",
+      '@role': [Call, Expression],
+      end: { '@type': "uast:Position",
+         offset: 9,
+         line: 2,
+         col: 4,
+      },
+      expr: ~,
+      start: { '@type': "uast:Position",
+         offset: 6,
+         line: 2,
+         col: 1,
+      },
+   },
+   { '@type': "Expr_Exit",
+      '@role': [Call, Expression],
+      end: { '@type': "uast:Position",
+         offset: 17,
+         line: 3,
+         col: 6,
+      },
+      expr: ~,
+      start: { '@type': "uast:Position",
+         offset: 12,
+         line: 3,
+         col: 1,
+      },
+   },
+   { '@type': "Expr_Exit",
+      '@role': [Call, Expression],
+      end: { '@type': "uast:Position",
+         offset: 31,
+         line: 4,
+         col: 12,
+      },
+      expr: { '@type': "Scalar_String",
+         '@token': "Die!",
+         '@role': [Expression, Literal, String],
+         end: { '@type': "uast:Position",
+            offset: 30,
+            line: 4,
+            col: 11,
+         },
+         start: { '@type': "uast:Position",
+            offset: 25,
+            line: 4,
+            col: 6,
+         },
+      },
+      start: { '@type': "uast:Position",
+         offset: 20,
+         line: 4,
+         col: 1,
+      },
+   },
+   { '@type': "Expr_Exit",
+      '@role': [Call, Expression],
+      end: { '@type': "uast:Position",
+         offset: 36,
+         line: 5,
+         col: 3,
+      },
+      expr: ~,
+      start: { '@type': "uast:Position",
+         offset: 34,
+         line: 5,
+         col: 1,
+      },
+   },
+   { '@type': "Expr_Exit",
+      '@role': [Call, Expression],
+      end: { '@type': "uast:Position",
+         offset: 43,
+         line: 6,
+         col: 5,
+      },
+      expr: ~,
+      start: { '@type': "uast:Position",
+         offset: 39,
+         line: 6,
+         col: 1,
+      },
+   },
+   { '@type': "Expr_Exit",
+      '@role': [Call, Expression],
+      end: { '@type': "uast:Position",
+         offset: 57,
+         line: 7,
+         col: 12,
+      },
+      expr: { '@type': "Scalar_String",
+         '@token': "Exit!",
+         '@role': [Expression, Literal, String],
+         end: { '@type': "uast:Position",
+            offset: 56,
+            line: 7,
+            col: 11,
+         },
+         start: { '@type': "uast:Position",
+            offset: 50,
+            line: 7,
+            col: 5,
+         },
+      },
+      start: { '@type': "uast:Position",
+         offset: 46,
+         line: 7,
+         col: 1,
+      },
+   },
+]

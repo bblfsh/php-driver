@@ -1,147 +1,133 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Stmt_Function {
-.  .  .  Roles: Declaration,Function
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 7
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 55
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  byRef: false
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Function.returnType {
-.  .  .  .  .  Roles: Declaration,Function,Return,Type
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: returnType
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Function.body {
-.  .  .  .  .  Roles: Body,Declaration,Function
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Param {
-.  .  .  .  .  Roles: Argument
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 21
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 15
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 29
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 23
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  internalRole: params
-.  .  .  .  .  .  variadic: false
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "bar"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: NullableType {
-.  .  .  .  .  .  .  Roles: Incomplete,Type
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 21
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 15
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 24
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 18
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: type
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "Foo"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 22
-.  .  .  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  .  .  Col: 16
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 24
-.  .  .  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  .  .  Col: 18
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: type
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  3: Param {
-.  .  .  .  .  Roles: Argument
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 26
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 43
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 37
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  internalRole: params
-.  .  .  .  .  .  variadic: false
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "foo"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: NullableType {
-.  .  .  .  .  .  .  Roles: Incomplete,Type
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 26
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 38
-.  .  .  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  .  .  Col: 32
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: type
-.  .  .  .  .  .  .  .  type: string
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
-}
-
+[
+   { '@type': "Stmt_Function",
+      '@role': [Declaration, Function],
+      byRef: false,
+      end: { '@type': "uast:Position",
+         offset: 55,
+         line: 4,
+         col: 1,
+      },
+      params: [
+         { '@type': "Param",
+            '@role': [Argument],
+            byRef: false,
+            default: ~,
+            end: { '@type': "uast:Position",
+               offset: 29,
+               line: 3,
+               col: 23,
+            },
+            name: { '@type': "Name",
+               '@token': "bar",
+               '@role': [Expression, Identifier],
+            },
+            start: { '@type': "uast:Position",
+               offset: 21,
+               line: 3,
+               col: 15,
+            },
+            type: { '@type': "NullableType",
+               '@role': [Incomplete, Type],
+               end: { '@type': "uast:Position",
+                  offset: 24,
+                  line: 3,
+                  col: 18,
+               },
+               start: { '@type': "uast:Position",
+                  offset: 21,
+                  line: 3,
+                  col: 15,
+               },
+               type: { '@type': "Name",
+                  '@token': "Foo",
+                  '@role': [Expression, Identifier],
+                  end: { '@type': "uast:Position",
+                     offset: 24,
+                     line: 3,
+                     col: 18,
+                  },
+                  start: { '@type': "uast:Position",
+                     offset: 22,
+                     line: 3,
+                     col: 16,
+                  },
+               },
+            },
+            variadic: false,
+         },
+         { '@type': "Param",
+            '@role': [Argument],
+            byRef: false,
+            default: ~,
+            end: { '@type': "uast:Position",
+               offset: 43,
+               line: 3,
+               col: 37,
+            },
+            name: { '@type': "Name",
+               '@token': "foo",
+               '@role': [Expression, Identifier],
+            },
+            start: { '@type': "uast:Position",
+               offset: 32,
+               line: 3,
+               col: 26,
+            },
+            type: { '@type': "NullableType",
+               '@role': [Incomplete, Type],
+               end: { '@type': "uast:Position",
+                  offset: 38,
+                  line: 3,
+                  col: 32,
+               },
+               start: { '@type': "uast:Position",
+                  offset: 32,
+                  line: 3,
+                  col: 26,
+               },
+               type: "string",
+            },
+            variadic: false,
+         },
+      ],
+      returnType: { '@type': "Function.returnType",
+         '@role': [Declaration, Function, Return, Type],
+         '@token': { '@type': "NullableType",
+            '@role': [Incomplete, Type],
+            end: { '@type': "uast:Position",
+               offset: 51,
+               line: 3,
+               col: 45,
+            },
+            start: { '@type': "uast:Position",
+               offset: 48,
+               line: 3,
+               col: 42,
+            },
+            type: { '@type': "Name",
+               '@token': "Baz",
+               '@role': [Expression, Identifier],
+               end: { '@type': "uast:Position",
+                  offset: 51,
+                  line: 3,
+                  col: 45,
+               },
+               start: { '@type': "uast:Position",
+                  offset: 49,
+                  line: 3,
+                  col: 43,
+               },
+            },
+         },
+      },
+      start: { '@type': "uast:Position",
+         offset: 7,
+         line: 3,
+         col: 1,
+      },
+      stmts: { '@type': "Function.body",
+         '@role': [Body, Declaration, Function],
+         body: [],
+      },
+   },
+]

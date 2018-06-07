@@ -12,4 +12,4 @@ build-native-internal:
 	cd $(BUILD_PATH)/src && composer.phar install
 
 	rm $(BUILD_PATH)/bin/native || true
-	ln -s /opt/driver/src/ast $(BUILD_PATH)/bin/native
+	ln -s ../src/ast $(BUILD_PATH)/bin/native

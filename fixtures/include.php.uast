@@ -1,118 +1,86 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Expr_Include {
-.  .  .  Roles: Import
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 7
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 24
-.  .  .  .  Line: 3
-.  .  .  .  Col: 18
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  .  type: 1
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
-.  .  .  .  .  TOKEN "pok.php"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 15
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 9
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 23
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 17
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  1: Expr_Include {
-.  .  .  Roles: Import
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 27
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 44
-.  .  .  .  Line: 4
-.  .  .  .  Col: 18
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  .  type: 3
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
-.  .  .  .  .  TOKEN "foo.php"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 35
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 9
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 43
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 17
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  2: Expr_Include {
-.  .  .  Roles: Import
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 47
-.  .  .  .  Line: 5
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 69
-.  .  .  .  Line: 5
-.  .  .  .  Col: 23
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  .  type: 4
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Scalar_String {
-.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,String
-.  .  .  .  .  TOKEN "bar.php"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 60
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 14
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 68
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 22
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
-}
-
+[
+   { '@type': "Expr_Include",
+      '@role': [Import],
+      end: { '@type': "uast:Position",
+         offset: 24,
+         line: 3,
+         col: 18,
+      },
+      expr: { '@type': "Scalar_String",
+         '@token': "pok.php",
+         '@role': [Expression, Import, Literal, Pathname, String],
+         end: { '@type': "uast:Position",
+            offset: 23,
+            line: 3,
+            col: 17,
+         },
+         start: { '@type': "uast:Position",
+            offset: 15,
+            line: 3,
+            col: 9,
+         },
+      },
+      start: { '@type': "uast:Position",
+         offset: 7,
+         line: 3,
+         col: 1,
+      },
+      type: 1,
+   },
+   { '@type': "Expr_Include",
+      '@role': [Import],
+      end: { '@type': "uast:Position",
+         offset: 44,
+         line: 4,
+         col: 18,
+      },
+      expr: { '@type': "Scalar_String",
+         '@token': "foo.php",
+         '@role': [Expression, Import, Literal, Pathname, String],
+         end: { '@type': "uast:Position",
+            offset: 43,
+            line: 4,
+            col: 17,
+         },
+         start: { '@type': "uast:Position",
+            offset: 35,
+            line: 4,
+            col: 9,
+         },
+      },
+      start: { '@type': "uast:Position",
+         offset: 27,
+         line: 4,
+         col: 1,
+      },
+      type: 3,
+   },
+   { '@type': "Expr_Include",
+      '@role': [Import],
+      end: { '@type': "uast:Position",
+         offset: 69,
+         line: 5,
+         col: 23,
+      },
+      expr: { '@type': "Scalar_String",
+         '@token': "bar.php",
+         '@role': [Expression, Import, Literal, Pathname, String],
+         end: { '@type': "uast:Position",
+            offset: 68,
+            line: 5,
+            col: 22,
+         },
+         start: { '@type': "uast:Position",
+            offset: 60,
+            line: 5,
+            col: 14,
+         },
+      },
+      start: { '@type': "uast:Position",
+         offset: 47,
+         line: 5,
+         col: 1,
+      },
+      type: 4,
+   },
+]
