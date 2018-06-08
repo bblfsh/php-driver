@@ -62,17 +62,6 @@ func (op opParts2Str) Construct(st *State, n nodes.Node) (nodes.Node, error) {
 	return op.orig.Construct(st, n)
 }
 
-type isString struct{}
-
-func (isString) Kinds() nodes.Kind {
-	return nodes.KindString
-}
-
-func (isString) Check(st *State, n nodes.Node) (bool, error) {
-	_, ok := n.(nodes.String)
-	return ok, nil
-}
-
 var Native = Transformers([][]Transformer{
 	{Mappings(Annotations...)},
 	{RolesDedup()},

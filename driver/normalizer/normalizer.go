@@ -2,6 +2,7 @@ package normalizer
 
 import (
 	"gopkg.in/bblfsh/sdk.v2/uast"
+	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
 	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
 )
 
@@ -10,6 +11,7 @@ var Preprocess = Transformers([][]Transformer{
 }...)
 
 var Normalize = Transformers([][]Transformer{
+	{Mappings(PreNormilizers...)},
 	{Mappings(Normalizers...)},
 }...)
 
@@ -17,7 +19,7 @@ var Normalize = Transformers([][]Transformer{
 var Preprocessors = []Mapping{
 	MapPart("root", ObjMap{ // name field as string value
 		"name": Map(
-			Check(isString{}, Var("name")),
+			VarKind("name", nodes.KindString),
 
 			Obj{
 				uast.KeyType:  String("Name"),
@@ -84,6 +86,13 @@ var Preprocessors = []Mapping{
 	ObjectToNode{
 		InternalTypeKey: "nodeType",
 	}.Mapping(),
+}
+
+var PreNormilizers = []Mapping{
+	Map(
+		splitUse{vr: "uses"},
+		VarKind("uses", nodes.KindArray),
+	),
 }
 
 // Normalizers is the main block of normalization rules to convert native AST to semantic UAST.
@@ -273,28 +282,41 @@ var Normalizers = []Mapping{
 				uast.KeyPos:  Var("name_pos"),
 				"type":       Int(0),
 				"alias":      Var("alias"),
-				"name": UASTTypePart("path", uast.QualifiedIdentifier{}, Obj{
-					"Names": Append(Var("path_pref"), One(Var("name"))),
-				}),
+				"name": Cases("name_case",
+					Check(HasType(uast.Identifier{}), Var("name")),
+					UASTTypePart("path", uast.QualifiedIdentifier{}, Obj{
+						"Names": Append(Var("path_pref"), One(Var("name"))),
+					}),
+				),
 			}),
 		},
-		Obj{
-			"Path": UASTTypePart("path", uast.QualifiedIdentifier{}, Obj{
-				"Names": Var("path_pref"),
-			}),
-			"All": Cases("typ",
-				Bool(false), // use
-				Bool(false), // use function
-				Bool(false), // use const
-			),
-			"Names": One(UASTType(uast.Alias{}, Obj{
-				uast.KeyPos: Var("name_pos"),
-				"Name": UASTType(uast.Identifier{}, Obj{
-					"Name": Var("alias"),
-				}),
-				"Node": Var("name"),
-			})),
-		},
+		CasesObj("name_case",
+			// common
+			Obj{
+				"All": Cases("typ",
+					Bool(false), // use
+					Bool(false), // use function
+					Bool(false), // use const
+				),
+				"Names": One(UASTType(uast.Alias{}, Obj{
+					uast.KeyPos: Var("name_pos"),
+					"Name": UASTType(uast.Identifier{}, Obj{
+						"Name": Var("alias"),
+					}),
+					"Node": Var("name"),
+				})),
+			},
+			Objs{
+				{
+					"Path": Is(nil),
+				},
+				{
+					"Path": UASTTypePart("path", uast.QualifiedIdentifier{}, Obj{
+						"Names": Var("path_pref"),
+					}),
+				},
+			},
+		),
 	)),
 }
 
@@ -312,4 +334,63 @@ func convertBlock(typ, field string) Mapping {
 			}),
 		),
 	})
+}
+
+type splitUse struct {
+	vr string
+}
+
+func (op splitUse) Kinds() nodes.Kind {
+	return nodes.KindArray
+}
+
+func (op splitUse) Check(st *State, n nodes.Node) (bool, error) {
+	arr, ok := n.(nodes.Array)
+	if !ok {
+		return false, nil
+	}
+	contains := false
+	for _, s := range arr {
+		obj, ok := s.(nodes.Object)
+		if !ok && s != nil {
+			return false, nil
+		}
+		if uast.TypeOf(obj) == "Stmt_Use" {
+			uses, _ := obj["uses"].(nodes.Array)
+			if len(uses) > 1 {
+				contains = true
+				break
+			}
+		}
+	}
+	if !contains {
+		return false, nil
+	}
+	arr = arr.CloneList()
+	for i := 0; i < len(arr); i++ {
+		s := arr[i]
+		obj, ok := s.(nodes.Object)
+		if !ok || uast.TypeOf(obj) != "Stmt_Use" {
+			continue
+		}
+		uses, _ := obj["uses"].(nodes.Array)
+		if len(uses) < 2 {
+			continue
+		}
+		sub := make(nodes.Array, 0, len(uses))
+		for _, u := range uses {
+			use := obj.CloneObject()
+			use["uses"] = nodes.Array{u}
+			sub = append(sub, use)
+		}
+		arr = append(arr[:i], append(sub, arr[i+1:]...)...)
+		i += len(uses) - 1
+	}
+	err := st.SetVar(op.vr, arr)
+	return err == nil, err
+}
+
+func (op splitUse) Construct(st *State, n nodes.Node) (nodes.Node, error) {
+	// TODO: add some info to join nodes back
+	return st.MustGetVar(op.vr)
 }
