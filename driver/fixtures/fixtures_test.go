@@ -38,6 +38,8 @@ var Suite = &fixtures.Suite{
 			"Stmt_Use",
 			"Stmt_UseUse",
 			"Stmt_GroupUse",
+			"Param",
+			"Stmt_Function",
 		},
 	},
 }

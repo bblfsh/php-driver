@@ -318,6 +318,83 @@ var Normalizers = []Mapping{
 			},
 		),
 	)),
+
+	MapSemantic("Param", uast.Argument{}, MapObj(
+		Obj{
+			"byRef": Cases("by_ref",
+				Bool(false),
+				Bool(true),
+			),
+			"default":  Var("init"),
+			"name":     Var("name"),
+			"type":     typeCaseLeft("typ"),
+			"variadic": Var("variadic"),
+		},
+		Obj{
+			"Name": Var("name"),
+			"Type": Cases("by_ref",
+				typeCaseRight("typ"),
+				Obj{
+					uast.KeyType: String("ByRef"),
+					"Type":       typeCaseRight("typ"),
+				},
+			),
+			"Init":     Var("init"),
+			"Variadic": Var("variadic"),
+		},
+	)),
+	MapSemantic("Stmt_Function", uast.FunctionGroup{}, MapObj(
+		Obj{
+			"byRef": Cases("by_ref",
+				Bool(false),
+				Bool(true),
+			),
+			"name":       Var("name"),
+			"params":     Var("params"),
+			"returnType": typeCaseLeft("return"),
+			"stmts":      Var("body"),
+		},
+		Obj{
+			"Nodes": UASTType(uast.Alias{}, Obj{
+				"Name": Var("name"),
+				"Node": UASTType(uast.Function{}, Obj{
+					"Type": UASTType(uast.FunctionType{}, Obj{
+						"Arguments": Var("params"),
+						"Returns": One(UASTType(uast.Argument{}, Obj{
+							"Type": Cases("by_ref",
+								// by val
+								typeCaseRight("return"),
+								// by ref
+								Obj{
+									uast.KeyType: String("ByRef"),
+									"Type":       typeCaseRight("return"),
+								},
+							),
+						})),
+					}),
+					"Body": UASTType(uast.Block{}, Obj{
+						"Statements": Var("body"),
+					}),
+				}),
+			}),
+		},
+	)),
+}
+
+func typeCaseLeft(vr string) Op {
+	return Cases(vr+"_case",
+		Is(nil),
+		VarKind(vr, nodes.KindString),
+		VarKind(vr, nodes.KindObject|nodes.KindArray),
+	)
+}
+
+func typeCaseRight(vr string) Op {
+	return Cases(vr+"_case",
+		Is(nil),
+		UASTType(uast.Identifier{}, Obj{"Name": Var(vr)}),
+		VarKind(vr, nodes.KindObject|nodes.KindArray),
+	)
 }
 
 func convertBlock(typ, field string) Mapping {
