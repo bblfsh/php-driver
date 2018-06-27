@@ -35,6 +35,9 @@ var Suite = &fixtures.Suite{
 			"Stmt_Function",
 		},
 	},
+	Docker: fixtures.DockerConfig{
+		Image: "php:7",
+	},
 }
 
 func TestPHPDriver(t *testing.T) {
