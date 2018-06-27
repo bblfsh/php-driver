@@ -18,15 +18,8 @@ var Suite = &fixtures.Suite{
 	NewDriver: func() driver.BaseDriver {
 		return driver.NewExecDriverAt(filepath.Join(projectRoot, "build/bin/native"))
 	},
-	//UpdateNative:true,
-	//UpdateUAST:true,
-	Transforms: driver.Transforms{
-		Preprocess: normalizer.Preprocess,
-		Normalize:  normalizer.Normalize,
-		Native:     normalizer.Native,
-		Code:       normalizer.Code,
-	},
-	BenchName: "complex",
+	Transforms: normalizer.Transforms,
+	BenchName:  "complex",
 	Semantic: fixtures.SemanticConfig{
 		BlacklistTypes: []string{
 			"Name",
