@@ -1,36 +1,39 @@
-[
-   {
-      attributes: {
-         comments: [
+{
+   children: [
+      {
+         attributes: {
+            comments: [
+               {
+                  filePos: 6,
+                  line: 2,
+                  nodeType: "Comment",
+                  text: "// this is a simple hello world example\n",
+               },
+            ],
+            endFilePos: 65,
+            endLine: 3,
+            endTokenPos: 5,
+            startFilePos: 46,
+            startLine: 3,
+            startTokenPos: 2,
+         },
+         exprs: [
             {
-               filePos: 6,
-               line: 2,
-               nodeType: "Comment",
-               text: "// this is a simple hello world example\n",
+               attributes: {
+                  endFilePos: 64,
+                  endLine: 3,
+                  endTokenPos: 4,
+                  kind: 2,
+                  startFilePos: 51,
+                  startLine: 3,
+                  startTokenPos: 4,
+               },
+               nodeType: "Scalar_String",
+               value: "Hello World!",
             },
          ],
-         endFilePos: 65,
-         endLine: 3,
-         endTokenPos: 5,
-         startFilePos: 46,
-         startLine: 3,
-         startTokenPos: 2,
+         nodeType: "Stmt_Echo",
       },
-      exprs: [
-         {
-            attributes: {
-               endFilePos: 64,
-               endLine: 3,
-               endTokenPos: 4,
-               kind: 2,
-               startFilePos: 51,
-               startLine: 3,
-               startTokenPos: 4,
-            },
-            nodeType: "Scalar_String",
-            value: "Hello World!",
-         },
-      ],
-      nodeType: "Stmt_Echo",
-   },
-]
+   ],
+   nodeType: "Module",
+}
