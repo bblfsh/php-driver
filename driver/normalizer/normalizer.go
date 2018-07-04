@@ -355,28 +355,30 @@ var Normalizers = []Mapping{
 			"stmts":      Var("body"),
 		},
 		Obj{
-			"Nodes": UASTType(uast.Alias{}, Obj{
-				"Name": Var("name"),
-				"Node": UASTType(uast.Function{}, Obj{
-					"Type": UASTType(uast.FunctionType{}, Obj{
-						"Arguments": Var("params"),
-						"Returns": One(UASTType(uast.Argument{}, Obj{
-							"Type": Cases("by_ref",
-								// by val
-								typeCaseRight("return"),
-								// by ref
-								Obj{
-									uast.KeyType: String("ByRef"),
-									"Type":       typeCaseRight("return"),
-								},
-							),
-						})),
-					}),
-					"Body": UASTType(uast.Block{}, Obj{
-						"Statements": Var("body"),
+			"Nodes": Arr(
+				UASTType(uast.Alias{}, Obj{
+					"Name": Var("name"),
+					"Node": UASTType(uast.Function{}, Obj{
+						"Type": UASTType(uast.FunctionType{}, Obj{
+							"Arguments": Var("params"),
+							"Returns": One(UASTType(uast.Argument{}, Obj{
+								"Type": Cases("by_ref",
+									// by val
+									typeCaseRight("return"),
+									// by ref
+									Obj{
+										uast.KeyType: String("ByRef"),
+										"Type":       typeCaseRight("return"),
+									},
+								),
+							})),
+						}),
+						"Body": UASTType(uast.Block{}, Obj{
+							"Statements": Var("body"),
+						}),
 					}),
 				}),
-			}),
+			),
 		},
 	)),
 }
