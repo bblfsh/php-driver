@@ -180,6 +180,12 @@ var Normalizers = []Mapping{
 	)),
 	MapSemantic("Comment", uast.Comment{}, MapObj(
 		Obj{
+			"text": CommentText([2]string{"#", "\n"}, "text"),
+		},
+		CommentNode(false, "text", nil),
+	)),
+	MapSemantic("Comment", uast.Comment{}, MapObj(
+		Obj{
 			"text": CommentText([2]string{"/*", "*/"}, "text"),
 		},
 		CommentNode(true, "text", nil),
