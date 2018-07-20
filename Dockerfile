@@ -43,23 +43,22 @@ ADD driver $DRIVER_REPO_PATH/driver
 
 WORKDIR $DRIVER_REPO_PATH/
 
-# build tests
-RUN go test -c -o /tmp/fixtures.test ./driver/fixtures/
 # build server binary
 RUN go build -o /tmp/driver ./driver/main.go
+# build tests
+RUN go test -c -o /tmp/fixtures.test ./driver/fixtures/
 
 #=======================
 # Stage 3: Driver Build
 #=======================
 FROM php:7-alpine3.6
 
+
+
 LABEL maintainer="source{d}" \
       bblfsh.language="php"
 
 WORKDIR /opt/driver
-
-# copy driver manifest and static files
-ADD .manifest.release.toml ./etc/manifest.toml
 
 # copy static files from driver source directory
 ADD ./native/ast ./bin/native
@@ -70,13 +69,16 @@ ADD ./native/src ./bin/src
 COPY --from=native /native/vendor ./bin/vendor
 
 
+# copy driver server binary
+COPY --from=driver /tmp/driver ./bin/
+
 # copy tests binary
 COPY --from=driver /tmp/fixtures.test ./bin/
 # move stuff to make tests work
 RUN ln -s /opt/driver ../build
 VOLUME /opt/fixtures
 
-# copy driver server binary
-COPY --from=driver /tmp/driver ./bin/
+# copy driver manifest and static files
+ADD .manifest.release.toml ./etc/manifest.toml
 
 ENTRYPOINT ["/opt/driver/bin/driver"]
