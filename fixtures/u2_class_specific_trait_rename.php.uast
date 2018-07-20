@@ -1,144 +1,136 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Stmt_Trait {
-.  .  .  Roles: Declaration,Type
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 59
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "testtrait1"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Function,Type
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 29
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 57
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 33
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 1
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 1
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "testfnc1"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  1: Stmt_Class {
-.  .  .  Roles: Declaration,Statement,Type
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 61
-.  .  .  .  Line: 5
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 133
-.  .  .  .  Line: 7
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  flags: 0
-.  .  .  .  internalRole: children
-.  .  .  .  type: 0
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "testcls1"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Stmt_TraitUse {
-.  .  .  .  .  Roles: Base,Body,Type
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 82
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 131
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 54
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "testtrait1"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 86
-.  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 9
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 95
-.  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 18
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: traits
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Stmt_TraitUseAdaptation_Alias {
-.  .  .  .  .  .  .  Roles: Alias,Statement
-.  .  .  .  .  .  .  TOKEN "testfnc2"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 99
-.  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 22
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 129
-.  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 52
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: adaptations
-.  .  .  .  .  .  .  .  method: testfnc1
-.  .  .  .  .  .  .  .  newModifier: 2
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "Module",
+   '@role': [Module],
+   children: [
+      { '@type': "Stmt_Trait",
+         '@role': [Declaration, Type],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 6,
+               line: 2,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 59,
+               line: 4,
+               col: 1,
+            },
+         },
+         name: { '@type': "Name",
+            '@token': "testtrait1",
+            '@role': [Expression, Identifier],
+            '@pos': { '@type': "uast:Positions",
+            },
+         },
+         stmts: [
+            { '@type': "Stmt_ClassMethod",
+               '@role': [Function, Type],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 29,
+                     line: 3,
+                     col: 5,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 57,
+                     line: 3,
+                     col: 33,
+                  },
+               },
+               byRef: false,
+               flags: 1,
+               name: { '@type': "Name",
+                  '@token': "testfnc1",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+               params: [],
+               returnType: ~,
+               stmts: [],
+               type: 1,
+            },
+         ],
+      },
+      { '@type': "Stmt_Class",
+         '@role': [Declaration, Statement, Type],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 61,
+               line: 5,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 133,
+               line: 7,
+               col: 1,
+            },
+         },
+         extends: ~,
+         flags: 0,
+         implements: [],
+         name: { '@type': "Name",
+            '@token': "testcls1",
+            '@role': [Expression, Identifier],
+            '@pos': { '@type': "uast:Positions",
+            },
+         },
+         stmts: [
+            { '@type': "Stmt_TraitUse",
+               '@role': [Base, Body, Type],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 82,
+                     line: 6,
+                     col: 5,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 131,
+                     line: 6,
+                     col: 54,
+                  },
+               },
+               adaptations: [
+                  { '@type': "Stmt_TraitUseAdaptation_Alias",
+                     '@token': "testfnc2",
+                     '@role': [Alias, Statement],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 99,
+                           line: 6,
+                           col: 22,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 129,
+                           line: 6,
+                           col: 52,
+                        },
+                     },
+                     method: "testfnc1",
+                     newModifier: 2,
+                     trait: ~,
+                  },
+               ],
+               traits: [
+                  { '@type': "Name",
+                     '@token': "testtrait1",
+                     '@role': [Expression, Identifier],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 86,
+                           line: 6,
+                           col: 9,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 95,
+                           line: 6,
+                           col: 18,
+                        },
+                     },
+                  },
+               ],
+            },
+         ],
+         type: 0,
+      },
+   ],
 }
-

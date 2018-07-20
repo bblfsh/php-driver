@@ -12,17 +12,32 @@ import (
 const projectRoot = "../../"
 
 var Suite = &fixtures.Suite{
-	Lang:     "php",
-	Ext:      ".php",
-	Path:     filepath.Join(projectRoot, fixtures.Dir),
+	Lang: "php",
+	Ext:  ".php",
+	Path: filepath.Join(projectRoot, fixtures.Dir),
 	NewDriver: func() driver.BaseDriver {
-		return driver.NewExecDriverAt(filepath.Join(projectRoot, "native/ast"))
+		return driver.NewExecDriverAt(filepath.Join(projectRoot, "build/bin/native"))
 	},
-	Transforms: driver.Transforms{
-		Native: normalizer.Native,
-		Code:   normalizer.Code,
+	Transforms: normalizer.Transforms,
+	BenchName:  "complex",
+	Semantic: fixtures.SemanticConfig{
+		BlacklistTypes: []string{
+			"Name",
+			"Scalar_String",
+			"Scalar_EncapsedStringPart",
+			"Comment",
+			"Comment_Doc",
+			"Expr_Include",
+			"Stmt_Use",
+			"Stmt_UseUse",
+			"Stmt_GroupUse",
+			"Param",
+			"Stmt_Function",
+		},
 	},
-	BenchName: "complex",
+	Docker: fixtures.DockerConfig{
+		Image: "php:7",
+	},
 }
 
 func TestPHPDriver(t *testing.T) {

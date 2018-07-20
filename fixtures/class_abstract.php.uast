@@ -1,93 +1,86 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Stmt_Class {
-.  .  .  Roles: Declaration,Statement,Type
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 7
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 87
-.  .  .  .  Line: 6
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  flags: 16
-.  .  .  .  internalRole: children
-.  .  .  .  type: 16
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "A"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Body,Function,Type
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 30
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 51
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 26
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 1
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 1
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Body,Function,Type
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 57
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 85
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 33
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 17
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 17
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "Module",
+   '@role': [Module],
+   children: [
+      { '@type': "Stmt_Class",
+         '@role': [Declaration, Statement, Type],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 7,
+               line: 3,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 87,
+               line: 6,
+               col: 1,
+            },
+         },
+         extends: ~,
+         flags: 16,
+         implements: [],
+         name: { '@type': "Name",
+            '@token': "A",
+            '@role': [Expression, Identifier],
+            '@pos': { '@type': "uast:Positions",
+            },
+         },
+         stmts: [
+            { '@type': "Stmt_ClassMethod",
+               '@role': [Body, Function, Type],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 30,
+                     line: 4,
+                     col: 5,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 51,
+                     line: 4,
+                     col: 26,
+                  },
+               },
+               byRef: false,
+               flags: 1,
+               name: { '@type': "Name",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+               params: [],
+               returnType: ~,
+               stmts: [],
+               type: 1,
+            },
+            { '@type': "Stmt_ClassMethod",
+               '@role': [Body, Function, Type],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 57,
+                     line: 5,
+                     col: 5,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 85,
+                     line: 5,
+                     col: 33,
+                  },
+               },
+               byRef: false,
+               flags: 17,
+               name: { '@type': "Name",
+                  '@token': "b",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+               params: [],
+               returnType: ~,
+               stmts: ~,
+               type: 17,
+            },
+         ],
+         type: 16,
+      },
+   ],
 }
-

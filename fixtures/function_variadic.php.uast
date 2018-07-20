@@ -1,384 +1,363 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Stmt_Function {
-.  .  .  Roles: Declaration,Function
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 33
-.  .  .  .  Line: 2
-.  .  .  .  Col: 28
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  byRef: false
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Function.returnType {
-.  .  .  .  .  Roles: Declaration,Function,Return,Type
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: returnType
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Function.body {
-.  .  .  .  .  Roles: Body,Declaration,Function
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Param {
-.  .  .  .  .  Roles: Argument
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 20
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 15
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 21
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 16
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  internalRole: params
-.  .  .  .  .  .  variadic: false
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  3: Param {
-.  .  .  .  .  Roles: ArgsList,Argument
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 24
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 19
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 29
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 24
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  internalRole: params
-.  .  .  .  .  .  variadic: true
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  1: Stmt_Function {
-.  .  .  Roles: Declaration,Function
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 35
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 63
-.  .  .  .  Line: 3
-.  .  .  .  Col: 29
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  byRef: false
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Function.returnType {
-.  .  .  .  .  Roles: Declaration,Function,Return,Type
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: returnType
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Function.body {
-.  .  .  .  .  Roles: Body,Declaration,Function
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Param {
-.  .  .  .  .  Roles: Argument
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 49
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 15
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 50
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 16
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  internalRole: params
-.  .  .  .  .  .  variadic: false
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  3: Param {
-.  .  .  .  .  Roles: ArgsList,Argument,Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 53
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 19
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 59
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 25
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: true
-.  .  .  .  .  .  internalRole: params
-.  .  .  .  .  .  variadic: true
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  2: Stmt_Function {
-.  .  .  Roles: Declaration,Function
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 65
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 97
-.  .  .  .  Line: 4
-.  .  .  .  Col: 33
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  byRef: false
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Function.returnType {
-.  .  .  .  .  Roles: Declaration,Function,Return,Type
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: returnType
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Function.body {
-.  .  .  .  .  Roles: Body,Declaration,Function
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Param {
-.  .  .  .  .  Roles: Argument
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 79
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 15
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 80
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 16
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  internalRole: params
-.  .  .  .  .  .  variadic: false
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  3: Param {
-.  .  .  .  .  Roles: ArgsList,Argument
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 83
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 19
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 93
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 29
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  internalRole: params
-.  .  .  .  .  .  variadic: true
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "Type"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 83
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 19
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 86
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 22
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: type
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  3: Stmt_Function {
-.  .  .  Roles: Declaration,Function
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 99
-.  .  .  .  Line: 5
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 132
-.  .  .  .  Line: 5
-.  .  .  .  Col: 34
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  byRef: false
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Function.returnType {
-.  .  .  .  .  Roles: Declaration,Function,Return,Type
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: returnType
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Function.body {
-.  .  .  .  .  Roles: Body,Declaration,Function
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Param {
-.  .  .  .  .  Roles: Argument
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 113
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 15
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 114
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 16
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  internalRole: params
-.  .  .  .  .  .  variadic: false
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  3: Param {
-.  .  .  .  .  Roles: ArgsList,Argument,Incomplete
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 117
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 19
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 128
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 30
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: true
-.  .  .  .  .  .  internalRole: params
-.  .  .  .  .  .  variadic: true
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "Type"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 117
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 19
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 120
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 22
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: type
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "Module",
+   '@role': [Module],
+   children: [
+      { '@type': "Stmt_Function",
+         '@role': [Declaration, Function],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 6,
+               line: 2,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 33,
+               line: 2,
+               col: 28,
+            },
+         },
+         byRef: false,
+         name: { '@type': "Name",
+            '@token': "test",
+            '@role': [Expression, Identifier],
+            '@pos': { '@type': "uast:Positions",
+            },
+         },
+         params: [
+            { '@type': "Param",
+               '@role': [Argument],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 20,
+                     line: 2,
+                     col: 15,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 21,
+                     line: 2,
+                     col: 16,
+                  },
+               },
+               byRef: false,
+               default: ~,
+               name: { '@type': "Name",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+               type: ~,
+               variadic: false,
+            },
+            { '@type': "Param",
+               '@role': [ArgsList, Argument],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 24,
+                     line: 2,
+                     col: 19,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 29,
+                     line: 2,
+                     col: 24,
+                  },
+               },
+               byRef: false,
+               default: ~,
+               name: { '@type': "Name",
+                  '@token': "b",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+               type: ~,
+               variadic: true,
+            },
+         ],
+         returnType: { '@type': "Function.returnType",
+            '@role': [Declaration, Function, Return, Type],
+            '@token': ~,
+         },
+         stmts: { '@type': "Function.body",
+            '@role': [Body, Declaration, Function],
+            body: [],
+         },
+      },
+      { '@type': "Stmt_Function",
+         '@role': [Declaration, Function],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 35,
+               line: 3,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 63,
+               line: 3,
+               col: 29,
+            },
+         },
+         byRef: false,
+         name: { '@type': "Name",
+            '@token': "test",
+            '@role': [Expression, Identifier],
+            '@pos': { '@type': "uast:Positions",
+            },
+         },
+         params: [
+            { '@type': "Param",
+               '@role': [Argument],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 49,
+                     line: 3,
+                     col: 15,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 50,
+                     line: 3,
+                     col: 16,
+                  },
+               },
+               byRef: false,
+               default: ~,
+               name: { '@type': "Name",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+               type: ~,
+               variadic: false,
+            },
+            { '@type': "Param",
+               '@role': [ArgsList, Argument, Incomplete],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 53,
+                     line: 3,
+                     col: 19,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 59,
+                     line: 3,
+                     col: 25,
+                  },
+               },
+               byRef: true,
+               default: ~,
+               name: { '@type': "Name",
+                  '@token': "b",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+               type: ~,
+               variadic: true,
+            },
+         ],
+         returnType: { '@type': "Function.returnType",
+            '@role': [Declaration, Function, Return, Type],
+            '@token': ~,
+         },
+         stmts: { '@type': "Function.body",
+            '@role': [Body, Declaration, Function],
+            body: [],
+         },
+      },
+      { '@type': "Stmt_Function",
+         '@role': [Declaration, Function],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 65,
+               line: 4,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 97,
+               line: 4,
+               col: 33,
+            },
+         },
+         byRef: false,
+         name: { '@type': "Name",
+            '@token': "test",
+            '@role': [Expression, Identifier],
+            '@pos': { '@type': "uast:Positions",
+            },
+         },
+         params: [
+            { '@type': "Param",
+               '@role': [Argument],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 79,
+                     line: 4,
+                     col: 15,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 80,
+                     line: 4,
+                     col: 16,
+                  },
+               },
+               byRef: false,
+               default: ~,
+               name: { '@type': "Name",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+               type: ~,
+               variadic: false,
+            },
+            { '@type': "Param",
+               '@role': [ArgsList, Argument],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 83,
+                     line: 4,
+                     col: 19,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 93,
+                     line: 4,
+                     col: 29,
+                  },
+               },
+               byRef: false,
+               default: ~,
+               name: { '@type': "Name",
+                  '@token': "b",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+               type: { '@type': "Name",
+                  '@token': "Type",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 83,
+                        line: 4,
+                        col: 19,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 86,
+                        line: 4,
+                        col: 22,
+                     },
+                  },
+               },
+               variadic: true,
+            },
+         ],
+         returnType: { '@type': "Function.returnType",
+            '@role': [Declaration, Function, Return, Type],
+            '@token': ~,
+         },
+         stmts: { '@type': "Function.body",
+            '@role': [Body, Declaration, Function],
+            body: [],
+         },
+      },
+      { '@type': "Stmt_Function",
+         '@role': [Declaration, Function],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 99,
+               line: 5,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 132,
+               line: 5,
+               col: 34,
+            },
+         },
+         byRef: false,
+         name: { '@type': "Name",
+            '@token': "test",
+            '@role': [Expression, Identifier],
+            '@pos': { '@type': "uast:Positions",
+            },
+         },
+         params: [
+            { '@type': "Param",
+               '@role': [Argument],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 113,
+                     line: 5,
+                     col: 15,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 114,
+                     line: 5,
+                     col: 16,
+                  },
+               },
+               byRef: false,
+               default: ~,
+               name: { '@type': "Name",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+               type: ~,
+               variadic: false,
+            },
+            { '@type': "Param",
+               '@role': [ArgsList, Argument, Incomplete],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 117,
+                     line: 5,
+                     col: 19,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 128,
+                     line: 5,
+                     col: 30,
+                  },
+               },
+               byRef: true,
+               default: ~,
+               name: { '@type': "Name",
+                  '@token': "b",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+               type: { '@type': "Name",
+                  '@token': "Type",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 117,
+                        line: 5,
+                        col: 19,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 120,
+                        line: 5,
+                        col: 22,
+                     },
+                  },
+               },
+               variadic: true,
+            },
+         ],
+         returnType: { '@type': "Function.returnType",
+            '@role': [Declaration, Function, Return, Type],
+            '@token': ~,
+         },
+         stmts: { '@type': "Function.body",
+            '@role': [Body, Declaration, Function],
+            body: [],
+         },
+      },
+   ],
 }
-

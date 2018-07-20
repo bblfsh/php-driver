@@ -1,129 +1,110 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Expr_ConstFetch {
-.  .  .  Roles: Expression,Incomplete,Variable
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 7
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 7
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "A"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 7
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 7
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  1: Expr_ClassConstFetch {
-.  .  .  Roles: Expression,Incomplete,Type
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 10
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 13
-.  .  .  .  Line: 4
-.  .  .  .  Col: 4
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "B"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "A"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 10
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 10
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: class
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  2: Expr_ClassConstFetch {
-.  .  .  Roles: Expression,Incomplete,Type
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 16
-.  .  .  .  Line: 5
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 23
-.  .  .  .  Line: 5
-.  .  .  .  Col: 8
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "class"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "A"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 16
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 16
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: class
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "Module",
+   '@role': [Module],
+   children: [
+      { '@type': "Expr_ConstFetch",
+         '@role': [Expression, Incomplete, Variable],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 7,
+               line: 3,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 7,
+               line: 3,
+               col: 1,
+            },
+         },
+         name: { '@type': "Name",
+            '@token': "A",
+            '@role': [Expression, Identifier],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 7,
+                  line: 3,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 7,
+                  line: 3,
+                  col: 1,
+               },
+            },
+         },
+      },
+      { '@type': "Expr_ClassConstFetch",
+         '@role': [Expression, Incomplete, Type],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 10,
+               line: 4,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 13,
+               line: 4,
+               col: 4,
+            },
+         },
+         class: { '@type': "Name",
+            '@token': "A",
+            '@role': [Expression, Identifier],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 10,
+                  line: 4,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 10,
+                  line: 4,
+                  col: 1,
+               },
+            },
+         },
+         name: { '@type': "Name",
+            '@token': "B",
+            '@role': [Expression, Identifier],
+            '@pos': { '@type': "uast:Positions",
+            },
+         },
+      },
+      { '@type': "Expr_ClassConstFetch",
+         '@role': [Expression, Incomplete, Type],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 16,
+               line: 5,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 23,
+               line: 5,
+               col: 8,
+            },
+         },
+         class: { '@type': "Name",
+            '@token': "A",
+            '@role': [Expression, Identifier],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 16,
+                  line: 5,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 16,
+                  line: 5,
+                  col: 1,
+               },
+            },
+         },
+         name: { '@type': "Name",
+            '@token': "class",
+            '@role': [Expression, Identifier],
+            '@pos': { '@type': "uast:Positions",
+            },
+         },
+      },
+   ],
 }
-

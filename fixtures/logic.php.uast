@@ -1,1075 +1,912 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Expr_BinaryOp_BooleanAnd {
-.  .  .  Roles: And,Binary,Boolean,Expression,Operator
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 22
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 29
-.  .  .  .  Line: 4
-.  .  .  .  Col: 8
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  TOKEN " boolean ops
-"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Left,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 22
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 23
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: left
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Comment {
-.  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  TOKEN " boolean ops
-"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Right,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 28
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 7
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 29
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 8
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: right
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  1: Expr_BinaryOp_BooleanOr {
-.  .  .  Roles: Binary,Boolean,Expression,Operator,Or
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 32
-.  .  .  .  Line: 5
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 39
-.  .  .  .  Line: 5
-.  .  .  .  Col: 8
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Left,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 33
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: left
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Right,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 38
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 7
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 39
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 8
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: right
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  2: Expr_BooleanNot {
-.  .  .  Roles: Boolean,Expression,Not,Operator
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 42
-.  .  .  .  Line: 6
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 44
-.  .  .  .  Line: 6
-.  .  .  .  Col: 3
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 43
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 44
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 3
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  3: Expr_BooleanNot {
-.  .  .  Roles: Boolean,Expression,Not,Operator
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 47
-.  .  .  .  Line: 7
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 50
-.  .  .  .  Line: 7
-.  .  .  .  Col: 4
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Expr_BooleanNot {
-.  .  .  .  .  Roles: Boolean,Expression,Not,Operator
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 48
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 50
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 4
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 49
-.  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 3
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 50
-.  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 4
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  4: Expr_BinaryOp_LogicalAnd {
-.  .  .  Roles: And,Binary,Boolean,Expression,Operator
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 69
-.  .  .  .  Line: 10
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 77
-.  .  .  .  Line: 10
-.  .  .  .  Col: 9
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  TOKEN " logical ops
-"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Left,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 69
-.  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 70
-.  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: left
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Comment {
-.  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  TOKEN " logical ops
-"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Right,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 76
-.  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 8
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 77
-.  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  Col: 9
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: right
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  5: Expr_BinaryOp_LogicalOr {
-.  .  .  Roles: Binary,Boolean,Expression,Operator,Or
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 80
-.  .  .  .  Line: 11
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 87
-.  .  .  .  Line: 11
-.  .  .  .  Col: 8
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Left,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 80
-.  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 81
-.  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: left
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Right,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 86
-.  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  Col: 7
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 87
-.  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  Col: 8
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: right
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  6: Expr_BinaryOp_LogicalXor {
-.  .  .  Roles: Binary,Boolean,Expression,Operator,Xor
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 90
-.  .  .  .  Line: 12
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 98
-.  .  .  .  Line: 12
-.  .  .  .  Col: 9
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Left,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 90
-.  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 91
-.  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: left
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Right,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 97
-.  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  Col: 8
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 98
-.  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  Col: 9
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: right
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  7: Expr_BinaryOp_BooleanOr {
-.  .  .  Roles: Binary,Boolean,Expression,Operator,Or
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 116
-.  .  .  .  Line: 15
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 135
-.  .  .  .  Line: 15
-.  .  .  .  Col: 20
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  TOKEN " precedence
-"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_BinaryOp_BooleanAnd {
-.  .  .  .  .  Roles: And,Binary,Boolean,Expression,Left,Operator
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 116
-.  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 123
-.  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  Col: 8
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: left
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Comment {
-.  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  TOKEN " precedence
-"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Left,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 116
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 117
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 2
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: left
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Comment {
-.  .  .  .  .  .  .  .  .  Roles: Comment,Noop
-.  .  .  .  .  .  .  .  .  TOKEN " precedence
-"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 0
-.  .  .  .  .  .  .  .  .  .  Line: 1
-.  .  .  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: comments
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  2: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Right,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 122
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 7
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 123
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 8
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: right
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Expr_BinaryOp_BooleanAnd {
-.  .  .  .  .  Roles: And,Binary,Boolean,Expression,Operator,Right
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 128
-.  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  Col: 13
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 135
-.  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  Col: 20
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: right
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Left,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 128
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 129
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: left
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "c"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Right,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 134
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 19
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 135
-.  .  .  .  .  .  .  .  Line: 15
-.  .  .  .  .  .  .  .  Col: 20
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: right
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "d"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  8: Expr_BinaryOp_BooleanAnd {
-.  .  .  Roles: And,Binary,Boolean,Expression,Operator
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 138
-.  .  .  .  Line: 16
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 159
-.  .  .  .  Line: 16
-.  .  .  .  Col: 22
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Expr_BinaryOp_BooleanAnd {
-.  .  .  .  .  Roles: And,Binary,Boolean,Expression,Left,Operator
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 138
-.  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 153
-.  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  Col: 16
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: left
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Left,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 138
-.  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 139
-.  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  Col: 2
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: left
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Expr_BinaryOp_BooleanOr {
-.  .  .  .  .  .  .  Roles: Binary,Boolean,Expression,Operator,Or,Right
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 145
-.  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  Col: 8
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 152
-.  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  Col: 15
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: right
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Identifier,Left,Variable
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 145
-.  .  .  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  .  .  Col: 8
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 146
-.  .  .  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  .  .  Col: 9
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: left
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  .  .  Roles: Identifier,Right,Variable
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 151
-.  .  .  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 152
-.  .  .  .  .  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  .  .  .  .  Col: 15
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: right
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "c"
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Right,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 158
-.  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  Col: 21
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 159
-.  .  .  .  .  .  Line: 16
-.  .  .  .  .  .  Col: 22
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: right
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "d"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  9: Expr_Assign {
-.  .  .  Roles: Assignment,Expression
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 163
-.  .  .  .  Line: 18
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 175
-.  .  .  .  Line: 18
-.  .  .  .  Col: 13
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Left,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 163
-.  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 164
-.  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: var
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_BinaryOp_BooleanOr {
-.  .  .  .  .  Roles: Binary,Boolean,Expression,Operator,Or,Right
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 168
-.  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  Col: 6
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 175
-.  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  Col: 13
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Left,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 168
-.  .  .  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  .  .  Col: 6
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 169
-.  .  .  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  .  .  Col: 7
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: left
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Right,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 174
-.  .  .  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  .  .  Col: 12
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 175
-.  .  .  .  .  .  .  .  Line: 18
-.  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: right
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "c"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  10: Expr_BinaryOp_LogicalOr {
-.  .  .  Roles: Binary,Boolean,Expression,Operator,Or
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 178
-.  .  .  .  Line: 19
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 190
-.  .  .  .  Line: 19
-.  .  .  .  Col: 13
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Expr_Assign {
-.  .  .  .  .  Roles: Assignment,Expression,Left
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 178
-.  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 184
-.  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  Col: 7
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: left
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Left,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 178
-.  .  .  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 179
-.  .  .  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  .  .  Col: 2
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: var
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Right,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 183
-.  .  .  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  .  .  Col: 6
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 184
-.  .  .  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  .  .  Col: 7
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Right,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 189
-.  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  Col: 12
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 190
-.  .  .  .  .  .  Line: 19
-.  .  .  .  .  .  Col: 13
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: right
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "c"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "Module",
+   '@role': [Module],
+   children: [
+      { '@type': "Expr_BinaryOp_BooleanAnd",
+         '@role': [And, Binary, Boolean, Expression, Operator],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 22,
+               line: 4,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 29,
+               line: 4,
+               col: 8,
+            },
+         },
+         comments: [
+            { '@type': "Comment",
+               '@token': " boolean ops\n",
+               '@role': [Comment, Noop],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 7,
+                     line: 3,
+                     col: 1,
+                  },
+               },
+            },
+         ],
+         left: { '@type': "Expr_Variable",
+            '@role': [Identifier, Left, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 22,
+                  line: 4,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 23,
+                  line: 4,
+                  col: 2,
+               },
+            },
+            comments: [
+               { '@type': "Comment",
+                  '@token': " boolean ops\n",
+                  '@role': [Comment, Noop],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 7,
+                        line: 3,
+                        col: 1,
+                     },
+                  },
+               },
+            ],
+            name: { '@type': "Name",
+               '@token': "a",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+         right: { '@type': "Expr_Variable",
+            '@role': [Identifier, Right, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 28,
+                  line: 4,
+                  col: 7,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 29,
+                  line: 4,
+                  col: 8,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "b",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+      },
+      { '@type': "Expr_BinaryOp_BooleanOr",
+         '@role': [Binary, Boolean, Expression, Operator, Or],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 32,
+               line: 5,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 39,
+               line: 5,
+               col: 8,
+            },
+         },
+         left: { '@type': "Expr_Variable",
+            '@role': [Identifier, Left, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 32,
+                  line: 5,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 33,
+                  line: 5,
+                  col: 2,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "a",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+         right: { '@type': "Expr_Variable",
+            '@role': [Identifier, Right, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 38,
+                  line: 5,
+                  col: 7,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 39,
+                  line: 5,
+                  col: 8,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "b",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+      },
+      { '@type': "Expr_BooleanNot",
+         '@role': [Boolean, Expression, Not, Operator],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 42,
+               line: 6,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 44,
+               line: 6,
+               col: 3,
+            },
+         },
+         expr: { '@type': "Expr_Variable",
+            '@role': [Identifier, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 43,
+                  line: 6,
+                  col: 2,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 44,
+                  line: 6,
+                  col: 3,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "a",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+      },
+      { '@type': "Expr_BooleanNot",
+         '@role': [Boolean, Expression, Not, Operator],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 47,
+               line: 7,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 50,
+               line: 7,
+               col: 4,
+            },
+         },
+         expr: { '@type': "Expr_BooleanNot",
+            '@role': [Boolean, Expression, Not, Operator],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 48,
+                  line: 7,
+                  col: 2,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 50,
+                  line: 7,
+                  col: 4,
+               },
+            },
+            expr: { '@type': "Expr_Variable",
+               '@role': [Identifier, Variable],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 49,
+                     line: 7,
+                     col: 3,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 50,
+                     line: 7,
+                     col: 4,
+                  },
+               },
+               name: { '@type': "Name",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+            },
+         },
+      },
+      { '@type': "Expr_BinaryOp_LogicalAnd",
+         '@role': [And, Binary, Boolean, Expression, Operator],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 69,
+               line: 10,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 77,
+               line: 10,
+               col: 9,
+            },
+         },
+         comments: [
+            { '@type': "Comment",
+               '@token': " logical ops\n",
+               '@role': [Comment, Noop],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 54,
+                     line: 9,
+                     col: 1,
+                  },
+               },
+            },
+         ],
+         left: { '@type': "Expr_Variable",
+            '@role': [Identifier, Left, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 69,
+                  line: 10,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 70,
+                  line: 10,
+                  col: 2,
+               },
+            },
+            comments: [
+               { '@type': "Comment",
+                  '@token': " logical ops\n",
+                  '@role': [Comment, Noop],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 54,
+                        line: 9,
+                        col: 1,
+                     },
+                  },
+               },
+            ],
+            name: { '@type': "Name",
+               '@token': "a",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+         right: { '@type': "Expr_Variable",
+            '@role': [Identifier, Right, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 76,
+                  line: 10,
+                  col: 8,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 77,
+                  line: 10,
+                  col: 9,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "b",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+      },
+      { '@type': "Expr_BinaryOp_LogicalOr",
+         '@role': [Binary, Boolean, Expression, Operator, Or],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 80,
+               line: 11,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 87,
+               line: 11,
+               col: 8,
+            },
+         },
+         left: { '@type': "Expr_Variable",
+            '@role': [Identifier, Left, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 80,
+                  line: 11,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 81,
+                  line: 11,
+                  col: 2,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "a",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+         right: { '@type': "Expr_Variable",
+            '@role': [Identifier, Right, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 86,
+                  line: 11,
+                  col: 7,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 87,
+                  line: 11,
+                  col: 8,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "b",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+      },
+      { '@type': "Expr_BinaryOp_LogicalXor",
+         '@role': [Binary, Boolean, Expression, Operator, Xor],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 90,
+               line: 12,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 98,
+               line: 12,
+               col: 9,
+            },
+         },
+         left: { '@type': "Expr_Variable",
+            '@role': [Identifier, Left, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 90,
+                  line: 12,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 91,
+                  line: 12,
+                  col: 2,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "a",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+         right: { '@type': "Expr_Variable",
+            '@role': [Identifier, Right, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 97,
+                  line: 12,
+                  col: 8,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 98,
+                  line: 12,
+                  col: 9,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "b",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+      },
+      { '@type': "Expr_BinaryOp_BooleanOr",
+         '@role': [Binary, Boolean, Expression, Operator, Or],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 116,
+               line: 15,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 135,
+               line: 15,
+               col: 20,
+            },
+         },
+         comments: [
+            { '@type': "Comment",
+               '@token': " precedence\n",
+               '@role': [Comment, Noop],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 102,
+                     line: 14,
+                     col: 1,
+                  },
+               },
+            },
+         ],
+         left: { '@type': "Expr_BinaryOp_BooleanAnd",
+            '@role': [And, Binary, Boolean, Expression, Left, Operator],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 116,
+                  line: 15,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 123,
+                  line: 15,
+                  col: 8,
+               },
+            },
+            comments: [
+               { '@type': "Comment",
+                  '@token': " precedence\n",
+                  '@role': [Comment, Noop],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 102,
+                        line: 14,
+                        col: 1,
+                     },
+                  },
+               },
+            ],
+            left: { '@type': "Expr_Variable",
+               '@role': [Identifier, Left, Variable],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 116,
+                     line: 15,
+                     col: 1,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 117,
+                     line: 15,
+                     col: 2,
+                  },
+               },
+               comments: [
+                  { '@type': "Comment",
+                     '@token': " precedence\n",
+                     '@role': [Comment, Noop],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 102,
+                           line: 14,
+                           col: 1,
+                        },
+                     },
+                  },
+               ],
+               name: { '@type': "Name",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+            },
+            right: { '@type': "Expr_Variable",
+               '@role': [Identifier, Right, Variable],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 122,
+                     line: 15,
+                     col: 7,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 123,
+                     line: 15,
+                     col: 8,
+                  },
+               },
+               name: { '@type': "Name",
+                  '@token': "b",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+            },
+         },
+         right: { '@type': "Expr_BinaryOp_BooleanAnd",
+            '@role': [And, Binary, Boolean, Expression, Operator, Right],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 128,
+                  line: 15,
+                  col: 13,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 135,
+                  line: 15,
+                  col: 20,
+               },
+            },
+            left: { '@type': "Expr_Variable",
+               '@role': [Identifier, Left, Variable],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 128,
+                     line: 15,
+                     col: 13,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 129,
+                     line: 15,
+                     col: 14,
+                  },
+               },
+               name: { '@type': "Name",
+                  '@token': "c",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+            },
+            right: { '@type': "Expr_Variable",
+               '@role': [Identifier, Right, Variable],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 134,
+                     line: 15,
+                     col: 19,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 135,
+                     line: 15,
+                     col: 20,
+                  },
+               },
+               name: { '@type': "Name",
+                  '@token': "d",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+            },
+         },
+      },
+      { '@type': "Expr_BinaryOp_BooleanAnd",
+         '@role': [And, Binary, Boolean, Expression, Operator],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 138,
+               line: 16,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 159,
+               line: 16,
+               col: 22,
+            },
+         },
+         left: { '@type': "Expr_BinaryOp_BooleanAnd",
+            '@role': [And, Binary, Boolean, Expression, Left, Operator],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 138,
+                  line: 16,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 153,
+                  line: 16,
+                  col: 16,
+               },
+            },
+            left: { '@type': "Expr_Variable",
+               '@role': [Identifier, Left, Variable],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 138,
+                     line: 16,
+                     col: 1,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 139,
+                     line: 16,
+                     col: 2,
+                  },
+               },
+               name: { '@type': "Name",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+            },
+            right: { '@type': "Expr_BinaryOp_BooleanOr",
+               '@role': [Binary, Boolean, Expression, Operator, Or, Right],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 145,
+                     line: 16,
+                     col: 8,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 152,
+                     line: 16,
+                     col: 15,
+                  },
+               },
+               left: { '@type': "Expr_Variable",
+                  '@role': [Identifier, Left, Variable],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 145,
+                        line: 16,
+                        col: 8,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 146,
+                        line: 16,
+                        col: 9,
+                     },
+                  },
+                  name: { '@type': "Name",
+                     '@token': "b",
+                     '@role': [Expression, Identifier],
+                     '@pos': { '@type': "uast:Positions",
+                     },
+                  },
+               },
+               right: { '@type': "Expr_Variable",
+                  '@role': [Identifier, Right, Variable],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 151,
+                        line: 16,
+                        col: 14,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 152,
+                        line: 16,
+                        col: 15,
+                     },
+                  },
+                  name: { '@type': "Name",
+                     '@token': "c",
+                     '@role': [Expression, Identifier],
+                     '@pos': { '@type': "uast:Positions",
+                     },
+                  },
+               },
+            },
+         },
+         right: { '@type': "Expr_Variable",
+            '@role': [Identifier, Right, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 158,
+                  line: 16,
+                  col: 21,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 159,
+                  line: 16,
+                  col: 22,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "d",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+      },
+      { '@type': "Expr_Assign",
+         '@role': [Assignment, Expression],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 163,
+               line: 18,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 175,
+               line: 18,
+               col: 13,
+            },
+         },
+         expr: { '@type': "Expr_BinaryOp_BooleanOr",
+            '@role': [Binary, Boolean, Expression, Operator, Or, Right],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 168,
+                  line: 18,
+                  col: 6,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 175,
+                  line: 18,
+                  col: 13,
+               },
+            },
+            left: { '@type': "Expr_Variable",
+               '@role': [Identifier, Left, Variable],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 168,
+                     line: 18,
+                     col: 6,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 169,
+                     line: 18,
+                     col: 7,
+                  },
+               },
+               name: { '@type': "Name",
+                  '@token': "b",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+            },
+            right: { '@type': "Expr_Variable",
+               '@role': [Identifier, Right, Variable],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 174,
+                     line: 18,
+                     col: 12,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 175,
+                     line: 18,
+                     col: 13,
+                  },
+               },
+               name: { '@type': "Name",
+                  '@token': "c",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+            },
+         },
+         var: { '@type': "Expr_Variable",
+            '@role': [Identifier, Left, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 163,
+                  line: 18,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 164,
+                  line: 18,
+                  col: 2,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "a",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+      },
+      { '@type': "Expr_BinaryOp_LogicalOr",
+         '@role': [Binary, Boolean, Expression, Operator, Or],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 178,
+               line: 19,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 190,
+               line: 19,
+               col: 13,
+            },
+         },
+         left: { '@type': "Expr_Assign",
+            '@role': [Assignment, Expression, Left],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 178,
+                  line: 19,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 184,
+                  line: 19,
+                  col: 7,
+               },
+            },
+            expr: { '@type': "Expr_Variable",
+               '@role': [Identifier, Right, Variable],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 183,
+                     line: 19,
+                     col: 6,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 184,
+                     line: 19,
+                     col: 7,
+                  },
+               },
+               name: { '@type': "Name",
+                  '@token': "b",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+            },
+            var: { '@type': "Expr_Variable",
+               '@role': [Identifier, Left, Variable],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 178,
+                     line: 19,
+                     col: 1,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 179,
+                     line: 19,
+                     col: 2,
+                  },
+               },
+               name: { '@type': "Name",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+            },
+         },
+         right: { '@type': "Expr_Variable",
+            '@role': [Identifier, Right, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 189,
+                  line: 19,
+                  col: 12,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 190,
+                  line: 19,
+                  col: 13,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "c",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+      },
+   ],
 }
-

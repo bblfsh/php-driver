@@ -1,188 +1,337 @@
 {
-    "status": "ok",
-    "language": "php",
-    "errors": [],
-    "ast": {
-        "children": [
+   children: [
+      {
+         attributes: {
+            endFilePos: 20,
+            endLine: 2,
+            endTokenPos: 3,
+            startFilePos: 6,
+            startLine: 2,
+            startTokenPos: 1,
+         },
+         expr: {
+            attributes: {
+               endFilePos: 20,
+               endLine: 2,
+               endTokenPos: 3,
+               kind: 1,
+               startFilePos: 14,
+               startLine: 2,
+               startTokenPos: 3,
+            },
+            nodeType: "Scalar_String",
+            value: "a.php",
+         },
+         nodeType: "Expr_Include",
+         type: 1,
+      },
+      {
+         attributes: {
+            endFilePos: 32,
+            endLine: 2,
+            endTokenPos: 13,
+            startFilePos: 23,
+            startLine: 2,
+            startTokenPos: 6,
+         },
+         nodeType: "Stmt_Use",
+         type: 1,
+         uses: [
             {
-                "attributes": {
-                    "endFilePos": 20,
-                    "endLine": 2,
-                    "endTokenPos": 3,
-                    "startFilePos": 6,
-                    "startLine": 2,
-                    "startTokenPos": 1
-                },
-                "expr": {
-                    "attributes": {
-                        "endFilePos": 20,
-                        "endLine": 2,
-                        "endTokenPos": 3,
-                        "kind": 1,
-                        "startFilePos": 14,
-                        "startLine": 2,
-                        "startTokenPos": 3
-                    },
-                    "nodeType": "Scalar_String",
-                    "value": "a.php"
-                },
-                "nodeType": "Expr_Include",
-                "type": 1
+               alias: "C",
+               attributes: {
+                  endFilePos: 31,
+                  endLine: 2,
+                  endTokenPos: 12,
+                  startFilePos: 27,
+                  startLine: 2,
+                  startTokenPos: 8,
+               },
+               name: {
+                  attributes: {
+                     endFilePos: 31,
+                     endLine: 2,
+                     endTokenPos: 12,
+                     startFilePos: 27,
+                     startLine: 2,
+                     startTokenPos: 8,
+                  },
+                  nodeType: "Name",
+                  parts: [A, B, C],
+               },
+               nodeType: "Stmt_UseUse",
+               type: 0,
+            },
+         ],
+      },
+      {
+         attributes: {
+            endFilePos: 60,
+            endLine: 3,
+            endTokenPos: 36,
+            startFilePos: 34,
+            startLine: 3,
+            startTokenPos: 15,
+         },
+         nodeType: "Stmt_Use",
+         type: 1,
+         uses: [
+            {
+               alias: "C1",
+               attributes: {
+                  endFilePos: 43,
+                  endLine: 3,
+                  endTokenPos: 21,
+                  startFilePos: 38,
+                  startLine: 3,
+                  startTokenPos: 17,
+               },
+               name: {
+                  attributes: {
+                     endFilePos: 43,
+                     endLine: 3,
+                     endTokenPos: 21,
+                     startFilePos: 38,
+                     startLine: 3,
+                     startTokenPos: 17,
+                  },
+                  nodeType: "Name",
+                  parts: [A, B, 'C1'],
+               },
+               nodeType: "Stmt_UseUse",
+               type: 0,
             },
             {
-                "attributes": {
-                    "endFilePos": 32,
-                    "endLine": 2,
-                    "endTokenPos": 13,
-                    "startFilePos": 23,
-                    "startLine": 2,
-                    "startTokenPos": 6
-                },
-                "nodeType": "Stmt_Use",
-                "type": 1,
-                "uses": [
-                    {
-                        "alias": "C",
-                        "attributes": {
-                            "endFilePos": 31,
-                            "endLine": 2,
-                            "endTokenPos": 12,
-                            "startFilePos": 27,
-                            "startLine": 2,
-                            "startTokenPos": 8
-                        },
-                        "name": {
-                            "attributes": {
-                                "endFilePos": 31,
-                                "endLine": 2,
-                                "endTokenPos": 12,
-                                "startFilePos": 27,
-                                "startLine": 2,
-                                "startTokenPos": 8
-                            },
-                            "nodeType": "Name",
-                            "parts": [
-                                "A",
-                                "B",
-                                "C"
-                            ]
-                        },
-                        "nodeType": "Stmt_UseUse",
-                        "type": 0
-                    }
-                ]
+               alias: "D1",
+               attributes: {
+                  endFilePos: 51,
+                  endLine: 3,
+                  endTokenPos: 28,
+                  startFilePos: 46,
+                  startLine: 3,
+                  startTokenPos: 24,
+               },
+               name: {
+                  attributes: {
+                     endFilePos: 51,
+                     endLine: 3,
+                     endTokenPos: 28,
+                     startFilePos: 46,
+                     startLine: 3,
+                     startTokenPos: 24,
+                  },
+                  nodeType: "Name",
+                  parts: [A, B, 'D1'],
+               },
+               nodeType: "Stmt_UseUse",
+               type: 0,
             },
             {
-                "attributes": {
-                    "endFilePos": 50,
-                    "endLine": 3,
-                    "endTokenPos": 29,
-                    "startFilePos": 34,
-                    "startLine": 3,
-                    "startTokenPos": 15
-                },
-                "nodeType": "Stmt_GroupUse",
-                "prefix": {
-                    "attributes": {
-                        "endFilePos": 40,
-                        "endLine": 3,
-                        "endTokenPos": 19,
-                        "startFilePos": 38,
-                        "startLine": 3,
-                        "startTokenPos": 17
-                    },
-                    "nodeType": "Name",
-                    "parts": [
-                        "A",
-                        "B"
-                    ]
-                },
-                "type": 0,
-                "uses": [
-                    {
-                        "alias": "C",
-                        "attributes": {
-                            "endFilePos": 43,
-                            "endLine": 3,
-                            "endTokenPos": 22,
-                            "startFilePos": 43,
-                            "startLine": 3,
-                            "startTokenPos": 22
-                        },
-                        "name": {
-                            "attributes": {
-                                "endFilePos": 43,
-                                "endLine": 3,
-                                "endTokenPos": 22,
-                                "startFilePos": 43,
-                                "startLine": 3,
-                                "startTokenPos": 22
-                            },
-                            "nodeType": "Name",
-                            "parts": [
-                                "C"
-                            ]
-                        },
-                        "nodeType": "Stmt_UseUse",
-                        "type": 1
-                    },
-                    {
-                        "alias": "D",
-                        "attributes": {
-                            "endFilePos": 46,
-                            "endLine": 3,
-                            "endTokenPos": 25,
-                            "startFilePos": 46,
-                            "startLine": 3,
-                            "startTokenPos": 25
-                        },
-                        "name": {
-                            "attributes": {
-                                "endFilePos": 46,
-                                "endLine": 3,
-                                "endTokenPos": 25,
-                                "startFilePos": 46,
-                                "startLine": 3,
-                                "startTokenPos": 25
-                            },
-                            "nodeType": "Name",
-                            "parts": [
-                                "D"
-                            ]
-                        },
-                        "nodeType": "Stmt_UseUse",
-                        "type": 1
-                    },
-                    {
-                        "alias": "E",
-                        "attributes": {
-                            "endFilePos": 49,
-                            "endLine": 3,
-                            "endTokenPos": 28,
-                            "startFilePos": 49,
-                            "startLine": 3,
-                            "startTokenPos": 28
-                        },
-                        "name": {
-                            "attributes": {
-                                "endFilePos": 49,
-                                "endLine": 3,
-                                "endTokenPos": 28,
-                                "startFilePos": 49,
-                                "startLine": 3,
-                                "startTokenPos": 28
-                            },
-                            "nodeType": "Name",
-                            "parts": [
-                                "E"
-                            ]
-                        },
-                        "nodeType": "Stmt_UseUse",
-                        "type": 1
-                    }
-                ]
-            }
-        ],
-        "nodeType": "Module"
-    }
+               alias: "E1",
+               attributes: {
+                  endFilePos: 59,
+                  endLine: 3,
+                  endTokenPos: 35,
+                  startFilePos: 54,
+                  startLine: 3,
+                  startTokenPos: 31,
+               },
+               name: {
+                  attributes: {
+                     endFilePos: 59,
+                     endLine: 3,
+                     endTokenPos: 35,
+                     startFilePos: 54,
+                     startLine: 3,
+                     startTokenPos: 31,
+                  },
+                  nodeType: "Name",
+                  parts: [A, B, 'E1'],
+               },
+               nodeType: "Stmt_UseUse",
+               type: 0,
+            },
+         ],
+      },
+      {
+         attributes: {
+            endFilePos: 81,
+            endLine: 4,
+            endTokenPos: 52,
+            startFilePos: 62,
+            startLine: 4,
+            startTokenPos: 38,
+         },
+         nodeType: "Stmt_GroupUse",
+         prefix: {
+            attributes: {
+               endFilePos: 68,
+               endLine: 4,
+               endTokenPos: 42,
+               startFilePos: 66,
+               startLine: 4,
+               startTokenPos: 40,
+            },
+            nodeType: "Name",
+            parts: [A, B],
+         },
+         type: 0,
+         uses: [
+            {
+               alias: "C2",
+               attributes: {
+                  endFilePos: 72,
+                  endLine: 4,
+                  endTokenPos: 45,
+                  startFilePos: 71,
+                  startLine: 4,
+                  startTokenPos: 45,
+               },
+               name: {
+                  attributes: {
+                     endFilePos: 72,
+                     endLine: 4,
+                     endTokenPos: 45,
+                     startFilePos: 71,
+                     startLine: 4,
+                     startTokenPos: 45,
+                  },
+                  nodeType: "Name",
+                  parts: ['C2'],
+               },
+               nodeType: "Stmt_UseUse",
+               type: 1,
+            },
+            {
+               alias: "D2",
+               attributes: {
+                  endFilePos: 76,
+                  endLine: 4,
+                  endTokenPos: 48,
+                  startFilePos: 75,
+                  startLine: 4,
+                  startTokenPos: 48,
+               },
+               name: {
+                  attributes: {
+                     endFilePos: 76,
+                     endLine: 4,
+                     endTokenPos: 48,
+                     startFilePos: 75,
+                     startLine: 4,
+                     startTokenPos: 48,
+                  },
+                  nodeType: "Name",
+                  parts: ['D2'],
+               },
+               nodeType: "Stmt_UseUse",
+               type: 1,
+            },
+            {
+               alias: "E2",
+               attributes: {
+                  endFilePos: 80,
+                  endLine: 4,
+                  endTokenPos: 51,
+                  startFilePos: 79,
+                  startLine: 4,
+                  startTokenPos: 51,
+               },
+               name: {
+                  attributes: {
+                     endFilePos: 80,
+                     endLine: 4,
+                     endTokenPos: 51,
+                     startFilePos: 79,
+                     startLine: 4,
+                     startTokenPos: 51,
+                  },
+                  nodeType: "Name",
+                  parts: ['E2'],
+               },
+               nodeType: "Stmt_UseUse",
+               type: 1,
+            },
+         ],
+      },
+      {
+         attributes: {
+            endFilePos: 103,
+            endLine: 6,
+            endTokenPos: 64,
+            startFilePos: 85,
+            startLine: 6,
+            startTokenPos: 55,
+         },
+         nodeType: "Stmt_Use",
+         type: 2,
+         uses: [
+            {
+               alias: "F",
+               attributes: {
+                  endFilePos: 102,
+                  endLine: 6,
+                  endTokenPos: 63,
+                  startFilePos: 98,
+                  startLine: 6,
+                  startTokenPos: 59,
+               },
+               name: {
+                  attributes: {
+                     endFilePos: 102,
+                     endLine: 6,
+                     endTokenPos: 63,
+                     startFilePos: 98,
+                     startLine: 6,
+                     startTokenPos: 59,
+                  },
+                  nodeType: "Name",
+                  parts: [A, B, F],
+               },
+               nodeType: "Stmt_UseUse",
+               type: 0,
+            },
+         ],
+      },
+      {
+         attributes: {
+            endFilePos: 120,
+            endLine: 7,
+            endTokenPos: 75,
+            startFilePos: 105,
+            startLine: 7,
+            startTokenPos: 66,
+         },
+         nodeType: "Stmt_Use",
+         type: 3,
+         uses: [
+            {
+               alias: "G",
+               attributes: {
+                  endFilePos: 119,
+                  endLine: 7,
+                  endTokenPos: 74,
+                  startFilePos: 115,
+                  startLine: 7,
+                  startTokenPos: 70,
+               },
+               name: {
+                  attributes: {
+                     endFilePos: 119,
+                     endLine: 7,
+                     endTokenPos: 74,
+                     startFilePos: 115,
+                     startLine: 7,
+                     startTokenPos: 70,
+                  },
+                  nodeType: "Name",
+                  parts: [A, B, G],
+               },
+               nodeType: "Stmt_UseUse",
+               type: 0,
+            },
+         ],
+      },
+   ],
+   nodeType: "Module",
 }

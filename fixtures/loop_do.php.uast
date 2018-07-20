@@ -1,113 +1,98 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Stmt_Do {
-.  .  .  Roles: DoWhile,Statement
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 7
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 36
-.  .  .  .  Line: 5
-.  .  .  .  Col: 13
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Expr_Assign {
-.  .  .  .  .  Roles: Assignment,Expression
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 16
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 21
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 10
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Left,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 16
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 17
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 6
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: var
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Scalar_LNumber {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Number,Right
-.  .  .  .  .  .  .  TOKEN "1"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 21
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 10
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 21
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 10
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 33
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 10
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 34
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 11
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: cond
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "Module",
+   '@role': [Module],
+   children: [
+      { '@type': "Stmt_Do",
+         '@role': [DoWhile, Statement],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 7,
+               line: 3,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 36,
+               line: 5,
+               col: 13,
+            },
+         },
+         cond: { '@type': "Expr_Variable",
+            '@role': [Identifier, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 33,
+                  line: 5,
+                  col: 10,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 34,
+                  line: 5,
+                  col: 11,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "a",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+         stmts: [
+            { '@type': "Expr_Assign",
+               '@role': [Assignment, Expression],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 16,
+                     line: 4,
+                     col: 5,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 21,
+                     line: 4,
+                     col: 10,
+                  },
+               },
+               expr: { '@type': "Scalar_LNumber",
+                  '@token': 1,
+                  '@role': [Expression, Literal, Number, Right],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 21,
+                        line: 4,
+                        col: 10,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 21,
+                        line: 4,
+                        col: 10,
+                     },
+                  },
+                  attributes: {
+                     kind: 10,
+                  },
+               },
+               var: { '@type': "Expr_Variable",
+                  '@role': [Identifier, Left, Variable],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 16,
+                        line: 4,
+                        col: 5,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 17,
+                        line: 4,
+                        col: 6,
+                     },
+                  },
+                  name: { '@type': "Name",
+                     '@token': "a",
+                     '@role': [Expression, Identifier],
+                     '@pos': { '@type': "uast:Positions",
+                     },
+                  },
+               },
+            },
+         ],
+      },
+   ],
 }
-

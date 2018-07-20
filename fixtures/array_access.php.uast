@@ -1,389 +1,347 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Expr_ArrayDimFetch {
-.  .  .  Roles: Entry,Expression,List,Value
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 7
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 13
-.  .  .  .  Line: 3
-.  .  .  .  Col: 7
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 7
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 8
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: var
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  TOKEN "b"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 10
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 4
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 12
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 6
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  1: Expr_ArrayDimFetch {
-.  .  .  Roles: Entry,Expression,List,Value
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 16
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 27
-.  .  .  .  Line: 4
-.  .  .  .  Col: 12
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Entry,Expression,List,Value
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 16
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 22
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 7
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: var
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 16
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 17
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 2
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: var
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Scalar_String {
-.  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 19
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 4
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 21
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 6
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  TOKEN "c"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 24
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 9
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 26
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 11
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  2: Expr_Assign {
-.  .  .  Roles: Assignment,Expression
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 30
-.  .  .  .  Line: 5
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 38
-.  .  .  .  Line: 5
-.  .  .  .  Col: 9
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Expr_ArrayDimFetch {
-.  .  .  .  .  Roles: Entry,Expression,Left,List,Value
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 30
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 33
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 4
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: var
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 30
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 31
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 2
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: var
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Right,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 37
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 8
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 38
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 9
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: expr
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  3: Expr_ArrayDimFetch {
-.  .  .  Roles: Entry,Expression,List,Value
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 41
-.  .  .  .  Line: 6
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 47
-.  .  .  .  Line: 6
-.  .  .  .  Col: 7
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 41
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 42
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 2
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: var
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  TOKEN "b"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 44
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 4
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 46
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 6
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  4: Expr_ArrayDimFetch {
-.  .  .  Roles: Entry,Expression,List,Value
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 50
-.  .  .  .  Line: 7
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 59
-.  .  .  .  Line: 7
-.  .  .  .  Col: 10
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Expr_Variable {
-.  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 50
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 54
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: var
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Variable {
-.  .  .  .  .  .  .  Roles: Identifier,Variable
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 52
-.  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 3
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 53
-.  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 4
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Scalar_String {
-.  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  TOKEN "b"
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 56
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 7
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 58
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 9
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: dim
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "Module",
+   '@role': [Module],
+   children: [
+      { '@type': "Expr_ArrayDimFetch",
+         '@role': [Entry, Expression, List, Value],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 7,
+               line: 3,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 13,
+               line: 3,
+               col: 7,
+            },
+         },
+         dim: { '@type': "Scalar_String",
+            '@token': "b",
+            '@role': [Expression, Literal, String],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 10,
+                  line: 3,
+                  col: 4,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 12,
+                  line: 3,
+                  col: 6,
+               },
+            },
+            attributes: {
+               kind: 1,
+            },
+         },
+         var: { '@type': "Expr_Variable",
+            '@role': [Identifier, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 7,
+                  line: 3,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 8,
+                  line: 3,
+                  col: 2,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "a",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+      },
+      { '@type': "Expr_ArrayDimFetch",
+         '@role': [Entry, Expression, List, Value],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 16,
+               line: 4,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 27,
+               line: 4,
+               col: 12,
+            },
+         },
+         dim: { '@type': "Scalar_String",
+            '@token': "c",
+            '@role': [Expression, Literal, String],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 24,
+                  line: 4,
+                  col: 9,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 26,
+                  line: 4,
+                  col: 11,
+               },
+            },
+            attributes: {
+               kind: 1,
+            },
+         },
+         var: { '@type': "Expr_ArrayDimFetch",
+            '@role': [Entry, Expression, List, Value],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 16,
+                  line: 4,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 22,
+                  line: 4,
+                  col: 7,
+               },
+            },
+            dim: { '@type': "Scalar_String",
+               '@token': "b",
+               '@role': [Expression, Literal, String],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 19,
+                     line: 4,
+                     col: 4,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 21,
+                     line: 4,
+                     col: 6,
+                  },
+               },
+               attributes: {
+                  kind: 1,
+               },
+            },
+            var: { '@type': "Expr_Variable",
+               '@role': [Identifier, Variable],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 16,
+                     line: 4,
+                     col: 1,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 17,
+                     line: 4,
+                     col: 2,
+                  },
+               },
+               name: { '@type': "Name",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+            },
+         },
+      },
+      { '@type': "Expr_Assign",
+         '@role': [Assignment, Expression],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 30,
+               line: 5,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 38,
+               line: 5,
+               col: 9,
+            },
+         },
+         expr: { '@type': "Expr_Variable",
+            '@role': [Identifier, Right, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 37,
+                  line: 5,
+                  col: 8,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 38,
+                  line: 5,
+                  col: 9,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "b",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+         var: { '@type': "Expr_ArrayDimFetch",
+            '@role': [Entry, Expression, Left, List, Value],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 30,
+                  line: 5,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 33,
+                  line: 5,
+                  col: 4,
+               },
+            },
+            dim: ~,
+            var: { '@type': "Expr_Variable",
+               '@role': [Identifier, Variable],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 30,
+                     line: 5,
+                     col: 1,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 31,
+                     line: 5,
+                     col: 2,
+                  },
+               },
+               name: { '@type': "Name",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+            },
+         },
+      },
+      { '@type': "Expr_ArrayDimFetch",
+         '@role': [Entry, Expression, List, Value],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 41,
+               line: 6,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 47,
+               line: 6,
+               col: 7,
+            },
+         },
+         dim: { '@type': "Scalar_String",
+            '@token': "b",
+            '@role': [Expression, Literal, String],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 44,
+                  line: 6,
+                  col: 4,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 46,
+                  line: 6,
+                  col: 6,
+               },
+            },
+            attributes: {
+               kind: 1,
+            },
+         },
+         var: { '@type': "Expr_Variable",
+            '@role': [Identifier, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 41,
+                  line: 6,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 42,
+                  line: 6,
+                  col: 2,
+               },
+            },
+            name: { '@type': "Name",
+               '@token': "a",
+               '@role': [Expression, Identifier],
+               '@pos': { '@type': "uast:Positions",
+               },
+            },
+         },
+      },
+      { '@type': "Expr_ArrayDimFetch",
+         '@role': [Entry, Expression, List, Value],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 50,
+               line: 7,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 59,
+               line: 7,
+               col: 10,
+            },
+         },
+         dim: { '@type': "Scalar_String",
+            '@token': "b",
+            '@role': [Expression, Literal, String],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 56,
+                  line: 7,
+                  col: 7,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 58,
+                  line: 7,
+                  col: 9,
+               },
+            },
+            attributes: {
+               kind: 1,
+            },
+         },
+         var: { '@type': "Expr_Variable",
+            '@role': [Identifier, Variable],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 50,
+                  line: 7,
+                  col: 1,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 54,
+                  line: 7,
+                  col: 5,
+               },
+            },
+            name: { '@type': "Expr_Variable",
+               '@role': [Identifier, Variable],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 52,
+                     line: 7,
+                     col: 3,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 53,
+                     line: 7,
+                     col: 4,
+                  },
+               },
+               name: { '@type': "Name",
+                  '@token': "a",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+            },
+         },
+      },
+   ],
 }
-

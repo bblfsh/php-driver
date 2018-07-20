@@ -1,63 +1,55 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Stmt_Trait {
-.  .  .  Roles: Declaration,Type
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 52
-.  .  .  .  Line: 4
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Name {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "testtrait1"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Stmt_ClassMethod {
-.  .  .  .  .  Roles: Function,Type
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 29
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 50
-.  .  .  .  .  .  Line: 3
-.  .  .  .  .  .  Col: 26
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  flags: 0
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  .  type: 0
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  TOKEN "testfnc1"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "Module",
+   '@role': [Module],
+   children: [
+      { '@type': "Stmt_Trait",
+         '@role': [Declaration, Type],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 6,
+               line: 2,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 52,
+               line: 4,
+               col: 1,
+            },
+         },
+         name: { '@type': "Name",
+            '@token': "testtrait1",
+            '@role': [Expression, Identifier],
+            '@pos': { '@type': "uast:Positions",
+            },
+         },
+         stmts: [
+            { '@type': "Stmt_ClassMethod",
+               '@role': [Function, Type],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 29,
+                     line: 3,
+                     col: 5,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 50,
+                     line: 3,
+                     col: 26,
+                  },
+               },
+               byRef: false,
+               flags: 0,
+               name: { '@type': "Name",
+                  '@token': "testfnc1",
+                  '@role': [Expression, Identifier],
+                  '@pos': { '@type': "uast:Positions",
+                  },
+               },
+               params: [],
+               returnType: ~,
+               stmts: [],
+               type: 0,
+            },
+         ],
+      },
+   ],
 }
-

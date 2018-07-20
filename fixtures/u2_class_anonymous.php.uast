@@ -1,46 +1,42 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Expr_New {
-.  .  .  Roles: Call,Expression,Initialization
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 6
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 17
-.  .  .  .  Line: 2
-.  .  .  .  Col: 12
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Stmt_Class {
-.  .  .  .  .  Roles: Declaration,Statement,Type
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 10
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 5
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 17
-.  .  .  .  .  .  Line: 2
-.  .  .  .  .  .  Col: 12
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  flags: 0
-.  .  .  .  .  .  internalRole: class
-.  .  .  .  .  .  type: 0
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "Module",
+   '@role': [Module],
+   children: [
+      { '@type': "Expr_New",
+         '@role': [Call, Expression, Initialization],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 6,
+               line: 2,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 17,
+               line: 2,
+               col: 12,
+            },
+         },
+         args: [],
+         class: { '@type': "Stmt_Class",
+            '@role': [Declaration, Statement, Type],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 10,
+                  line: 2,
+                  col: 5,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 17,
+                  line: 2,
+                  col: 12,
+               },
+            },
+            extends: ~,
+            flags: 0,
+            implements: [],
+            name: ~,
+            stmts: [],
+            type: 0,
+         },
+      },
+   ],
 }
-

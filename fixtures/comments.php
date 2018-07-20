@@ -4,6 +4,7 @@
 /* foobar 1 */
 // foo 1
 // bar 1
+# baz 1
 $var;
 
 if ($cond) {
@@ -11,9 +12,11 @@ if ($cond) {
     /* foobar 2 */
     // foo 2
     // bar 2
+    # baz 1
 }
 
 /** doc 3 */
 /* foobar 3 */
 // foo 3
 // bar 3
+# baz 3

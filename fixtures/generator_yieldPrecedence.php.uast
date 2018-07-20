@@ -1,1242 +1,1213 @@
-Status:  ok
-Language:  php
-Errors: 
-UAST: 
-Module {
-.  Roles: Module
-.  Children: {
-.  .  0: Stmt_Function {
-.  .  .  Roles: Declaration,Function
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 7
-.  .  .  .  Line: 3
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 376
-.  .  .  .  Line: 13
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  byRef: false
-.  .  .  .  internalRole: children
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Function.returnType {
-.  .  .  .  .  Roles: Declaration,Function,Return,Type
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: returnType
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Function.body {
-.  .  .  .  .  Roles: Body,Declaration,Function
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: stmts
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  Roles: Incomplete,Return
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 28
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 42
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 19
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Expr_BinaryOp_Concat {
-.  .  .  .  .  .  .  .  .  Roles: Add,Binary,Expression,Incomplete,Operator
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 34
-.  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  Col: 11
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 42
-.  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  Col: 19
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Left,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 34
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 11
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 36
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: left
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Right,String
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 40
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 17
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 42
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 19
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: right
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Expr_BinaryOp_LogicalOr {
-.  .  .  .  .  .  .  Roles: Binary,Boolean,Expression,Operator,Or
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 49
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 64
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 20
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  .  .  Roles: Incomplete,Left,Return
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 49
-.  .  .  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 57
-.  .  .  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: left
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 55
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 11
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 57
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Expr_Exit {
-.  .  .  .  .  .  .  .  .  Roles: Call,Expression,Right
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 62
-.  .  .  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  .  .  Col: 18
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 64
-.  .  .  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  .  .  Col: 20
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: right
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  2: Expr_Yield {
-.  .  .  .  .  .  .  Roles: Incomplete,Return
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 71
-.  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 92
-.  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 26
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  .  .  TOKEN "k"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 77
-.  .  .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  .  .  Col: 11
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 79
-.  .  .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: key
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Expr_BinaryOp_Concat {
-.  .  .  .  .  .  .  .  .  Roles: Add,Binary,Expression,Incomplete,Operator
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 84
-.  .  .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  .  .  Col: 18
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 92
-.  .  .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  .  .  Col: 26
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Left,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 84
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 18
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 86
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 20
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: left
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Right,String
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 90
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 24
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 92
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 26
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: right
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  3: Expr_BinaryOp_LogicalOr {
-.  .  .  .  .  .  .  Roles: Binary,Boolean,Expression,Operator,Or
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 99
-.  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 121
-.  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 27
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  .  .  Roles: Incomplete,Left,Return
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 99
-.  .  .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 114
-.  .  .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  .  .  Col: 20
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: left
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "k"
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 105
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 11
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 107
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 13
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: key
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 112
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 18
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 114
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 20
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Expr_Exit {
-.  .  .  .  .  .  .  .  .  Roles: Call,Expression,Right
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 119
-.  .  .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  .  .  Col: 25
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 121
-.  .  .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  .  .  Col: 27
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: right
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  4: Expr_FuncCall {
-.  .  .  .  .  .  .  Roles: Call,Expression
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 128
-.  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 161
-.  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  Col: 38
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "var_dump"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 128
-.  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 135
-.  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  Col: 12
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Arg {
-.  .  .  .  .  .  .  .  .  Roles: Argument
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 137
-.  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 160
-.  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  Col: 37
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  .  .  .  .  internalRole: args
-.  .  .  .  .  .  .  .  .  .  unpack: false
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Expr_Array {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,List,Literal
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 137
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 160
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 37
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: Expr_ArrayItem {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Entry,Expression,List
-.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 138
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 15
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 159
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 36
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: items
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete,Return
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 138
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 15
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 159
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 36
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "k"
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 144
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 21
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 146
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 23
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: key
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Expr_BinaryOp_Concat {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Add,Binary,Expression,Incomplete,Operator
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 151
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 28
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 159
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 36
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Left,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 151
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 28
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 153
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 30
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: left
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Right,String
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 157
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 34
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 159
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 36
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: right
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  5: Expr_Yield {
-.  .  .  .  .  .  .  Roles: Incomplete,Return
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 168
-.  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 210
-.  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  Col: 47
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  .  .  Roles: Incomplete,Return
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 174
-.  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  Col: 11
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 210
-.  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  Col: 47
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "k1"
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 180
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 17
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 183
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 20
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: key
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: Expr_Yield {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete,Return
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 188
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 25
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 210
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 47
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "k2"
-.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 194
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 31
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 197
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 34
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: key
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1: Expr_BinaryOp_Concat {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Add,Binary,Expression,Incomplete,Operator
-.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 202
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 39
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 210
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 47
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Left,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 202
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 39
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 204
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 41
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: left
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Right,String
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 208
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 45
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 210
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 47
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: right
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  6: Expr_Yield {
-.  .  .  .  .  .  .  Roles: Incomplete,Return
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 217
-.  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 261
-.  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  Col: 49
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  .  .  Roles: Incomplete,Return
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 223
-.  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  Col: 11
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 248
-.  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  Col: 36
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: key
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "k1"
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 229
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 17
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 232
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 20
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: key
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: Expr_Yield {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete,Return
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 238
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 26
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 247
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 35
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "k2"
-.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 244
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 32
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 247
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 35
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Expr_BinaryOp_Concat {
-.  .  .  .  .  .  .  .  .  Roles: Add,Binary,Expression,Incomplete,Operator
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 253
-.  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  Col: 41
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 261
-.  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  Col: 49
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Left,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 253
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 41
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 255
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 43
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: left
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Right,String
-.  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 259
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 47
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 261
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 10
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 49
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: right
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  7: Expr_FuncCall {
-.  .  .  .  .  .  .  Roles: Call,Expression
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 268
-.  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 316
-.  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  Col: 53
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "var_dump"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 268
-.  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 275
-.  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  Col: 12
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Arg {
-.  .  .  .  .  .  .  .  .  Roles: Argument
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 277
-.  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 315
-.  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  Col: 52
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  .  .  .  .  internalRole: args
-.  .  .  .  .  .  .  .  .  .  unpack: false
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Expr_Array {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,List,Literal
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 277
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 315
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 52
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: Expr_ArrayItem {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Entry,Expression,List
-.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 278
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 15
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 314
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 51
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: items
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete,Return
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 278
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 15
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 314
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 51
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "k1"
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 284
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 21
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 287
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 24
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: key
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Expr_Yield {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete,Return
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 292
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 29
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 314
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 51
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "k2"
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 298
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 35
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 301
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 38
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: key
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Expr_BinaryOp_Concat {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Add,Binary,Expression,Incomplete,Operator
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 306
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 43
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 314
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 51
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Left,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 306
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 43
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 308
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 45
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: left
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Right,String
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 312
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 49
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 314
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 11
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 51
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: right
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  8: Expr_FuncCall {
-.  .  .  .  .  .  .  Roles: Call,Expression
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 323
-.  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 373
-.  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  Col: 55
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: body
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Name {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "var_dump"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 323
-.  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  Col: 5
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 330
-.  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  Col: 12
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Arg {
-.  .  .  .  .  .  .  .  .  Roles: Argument
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 332
-.  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 372
-.  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  Col: 54
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  .  .  .  .  internalRole: args
-.  .  .  .  .  .  .  .  .  .  unpack: false
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Expr_Array {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,List,Literal
-.  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 332
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 14
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  Offset: 372
-.  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  Col: 54
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: Expr_ArrayItem {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Entry,Expression,List
-.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 333
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 15
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 371
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 53
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  byRef: false
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: items
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Expr_Yield {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete,Return
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 333
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 15
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 358
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 40
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: key
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "k1"
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 339
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 21
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 342
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 24
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: key
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Expr_Yield {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Incomplete,Return
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 348
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 30
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 357
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 39
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "k2"
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 354
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 36
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 357
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 39
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Expr_BinaryOp_Concat {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Add,Binary,Expression,Incomplete,Operator
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 363
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 45
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 371
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 53
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: value
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Left,Literal,String
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 363
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 45
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 365
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 47
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: left
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Scalar_String {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Right,String
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 369
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 51
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 371
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 12
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 53
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: right
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "Module",
+   '@role': [Module],
+   children: [
+      { '@type': "Stmt_Function",
+         '@role': [Declaration, Function],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 7,
+               line: 3,
+               col: 1,
+            },
+            end: { '@type': "uast:Position",
+               offset: 376,
+               line: 13,
+               col: 1,
+            },
+         },
+         byRef: false,
+         name: { '@type': "Name",
+            '@token': "gen",
+            '@role': [Expression, Identifier],
+            '@pos': { '@type': "uast:Positions",
+            },
+         },
+         params: [],
+         returnType: { '@type': "Function.returnType",
+            '@role': [Declaration, Function, Return, Type],
+            '@token': ~,
+         },
+         stmts: { '@type': "Function.body",
+            '@role': [Body, Declaration, Function],
+            body: [
+               { '@type': "Expr_Yield",
+                  '@role': [Incomplete, Return],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 28,
+                        line: 4,
+                        col: 5,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 42,
+                        line: 4,
+                        col: 19,
+                     },
+                  },
+                  key: ~,
+                  value: { '@type': "Expr_BinaryOp_Concat",
+                     '@role': [Add, Binary, Expression, Incomplete, Operator],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 34,
+                           line: 4,
+                           col: 11,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 42,
+                           line: 4,
+                           col: 19,
+                        },
+                     },
+                     left: { '@type': "Scalar_String",
+                        '@token': "a",
+                        '@role': [Expression, Left, Literal, String],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 34,
+                              line: 4,
+                              col: 11,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 36,
+                              line: 4,
+                              col: 13,
+                           },
+                        },
+                        attributes: {
+                           kind: 2,
+                        },
+                     },
+                     right: { '@type': "Scalar_String",
+                        '@token': "b",
+                        '@role': [Expression, Literal, Right, String],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 40,
+                              line: 4,
+                              col: 17,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 42,
+                              line: 4,
+                              col: 19,
+                           },
+                        },
+                        attributes: {
+                           kind: 2,
+                        },
+                     },
+                  },
+               },
+               { '@type': "Expr_BinaryOp_LogicalOr",
+                  '@role': [Binary, Boolean, Expression, Operator, Or],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 49,
+                        line: 5,
+                        col: 5,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 64,
+                        line: 5,
+                        col: 20,
+                     },
+                  },
+                  left: { '@type': "Expr_Yield",
+                     '@role': [Incomplete, Left, Return],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 49,
+                           line: 5,
+                           col: 5,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 57,
+                           line: 5,
+                           col: 13,
+                        },
+                     },
+                     key: ~,
+                     value: { '@type': "Scalar_String",
+                        '@token': "a",
+                        '@role': [Expression, Literal, String],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 55,
+                              line: 5,
+                              col: 11,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 57,
+                              line: 5,
+                              col: 13,
+                           },
+                        },
+                        attributes: {
+                           kind: 2,
+                        },
+                     },
+                  },
+                  right: { '@type': "Expr_Exit",
+                     '@role': [Call, Expression, Right],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 62,
+                           line: 5,
+                           col: 18,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 64,
+                           line: 5,
+                           col: 20,
+                        },
+                     },
+                     attributes: {
+                        kind: 2,
+                     },
+                     expr: ~,
+                  },
+               },
+               { '@type': "Expr_Yield",
+                  '@role': [Incomplete, Return],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 71,
+                        line: 6,
+                        col: 5,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 92,
+                        line: 6,
+                        col: 26,
+                     },
+                  },
+                  key: { '@type': "Scalar_String",
+                     '@token': "k",
+                     '@role': [Expression, Literal, String],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 77,
+                           line: 6,
+                           col: 11,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 79,
+                           line: 6,
+                           col: 13,
+                        },
+                     },
+                     attributes: {
+                        kind: 2,
+                     },
+                  },
+                  value: { '@type': "Expr_BinaryOp_Concat",
+                     '@role': [Add, Binary, Expression, Incomplete, Operator],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 84,
+                           line: 6,
+                           col: 18,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 92,
+                           line: 6,
+                           col: 26,
+                        },
+                     },
+                     left: { '@type': "Scalar_String",
+                        '@token': "a",
+                        '@role': [Expression, Left, Literal, String],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 84,
+                              line: 6,
+                              col: 18,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 86,
+                              line: 6,
+                              col: 20,
+                           },
+                        },
+                        attributes: {
+                           kind: 2,
+                        },
+                     },
+                     right: { '@type': "Scalar_String",
+                        '@token': "b",
+                        '@role': [Expression, Literal, Right, String],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 90,
+                              line: 6,
+                              col: 24,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 92,
+                              line: 6,
+                              col: 26,
+                           },
+                        },
+                        attributes: {
+                           kind: 2,
+                        },
+                     },
+                  },
+               },
+               { '@type': "Expr_BinaryOp_LogicalOr",
+                  '@role': [Binary, Boolean, Expression, Operator, Or],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 99,
+                        line: 7,
+                        col: 5,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 121,
+                        line: 7,
+                        col: 27,
+                     },
+                  },
+                  left: { '@type': "Expr_Yield",
+                     '@role': [Incomplete, Left, Return],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 99,
+                           line: 7,
+                           col: 5,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 114,
+                           line: 7,
+                           col: 20,
+                        },
+                     },
+                     key: { '@type': "Scalar_String",
+                        '@token': "k",
+                        '@role': [Expression, Literal, String],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 105,
+                              line: 7,
+                              col: 11,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 107,
+                              line: 7,
+                              col: 13,
+                           },
+                        },
+                        attributes: {
+                           kind: 2,
+                        },
+                     },
+                     value: { '@type': "Scalar_String",
+                        '@token': "a",
+                        '@role': [Expression, Literal, String],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 112,
+                              line: 7,
+                              col: 18,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 114,
+                              line: 7,
+                              col: 20,
+                           },
+                        },
+                        attributes: {
+                           kind: 2,
+                        },
+                     },
+                  },
+                  right: { '@type': "Expr_Exit",
+                     '@role': [Call, Expression, Right],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 119,
+                           line: 7,
+                           col: 25,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 121,
+                           line: 7,
+                           col: 27,
+                        },
+                     },
+                     attributes: {
+                        kind: 2,
+                     },
+                     expr: ~,
+                  },
+               },
+               { '@type': "Expr_FuncCall",
+                  '@role': [Call, Expression],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 128,
+                        line: 8,
+                        col: 5,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 161,
+                        line: 8,
+                        col: 38,
+                     },
+                  },
+                  args: [
+                     { '@type': "Arg",
+                        '@role': [Argument],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 137,
+                              line: 8,
+                              col: 14,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 160,
+                              line: 8,
+                              col: 37,
+                           },
+                        },
+                        byRef: false,
+                        unpack: false,
+                        value: { '@type': "Expr_Array",
+                           '@role': [Expression, List, Literal],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 137,
+                                 line: 8,
+                                 col: 14,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 160,
+                                 line: 8,
+                                 col: 37,
+                              },
+                           },
+                           attributes: {
+                              kind: 2,
+                           },
+                           items: [
+                              { '@type': "Expr_ArrayItem",
+                                 '@role': [Entry, Expression, List],
+                                 '@pos': { '@type': "uast:Positions",
+                                    start: { '@type': "uast:Position",
+                                       offset: 138,
+                                       line: 8,
+                                       col: 15,
+                                    },
+                                    end: { '@type': "uast:Position",
+                                       offset: 159,
+                                       line: 8,
+                                       col: 36,
+                                    },
+                                 },
+                                 byRef: false,
+                                 key: ~,
+                                 value: { '@type': "Expr_Yield",
+                                    '@role': [Incomplete, Return],
+                                    '@pos': { '@type': "uast:Positions",
+                                       start: { '@type': "uast:Position",
+                                          offset: 138,
+                                          line: 8,
+                                          col: 15,
+                                       },
+                                       end: { '@type': "uast:Position",
+                                          offset: 159,
+                                          line: 8,
+                                          col: 36,
+                                       },
+                                    },
+                                    key: { '@type': "Scalar_String",
+                                       '@token': "k",
+                                       '@role': [Expression, Literal, String],
+                                       '@pos': { '@type': "uast:Positions",
+                                          start: { '@type': "uast:Position",
+                                             offset: 144,
+                                             line: 8,
+                                             col: 21,
+                                          },
+                                          end: { '@type': "uast:Position",
+                                             offset: 146,
+                                             line: 8,
+                                             col: 23,
+                                          },
+                                       },
+                                       attributes: {
+                                          kind: 2,
+                                       },
+                                    },
+                                    value: { '@type': "Expr_BinaryOp_Concat",
+                                       '@role': [Add, Binary, Expression, Incomplete, Operator],
+                                       '@pos': { '@type': "uast:Positions",
+                                          start: { '@type': "uast:Position",
+                                             offset: 151,
+                                             line: 8,
+                                             col: 28,
+                                          },
+                                          end: { '@type': "uast:Position",
+                                             offset: 159,
+                                             line: 8,
+                                             col: 36,
+                                          },
+                                       },
+                                       left: { '@type': "Scalar_String",
+                                          '@token': "a",
+                                          '@role': [Expression, Left, Literal, String],
+                                          '@pos': { '@type': "uast:Positions",
+                                             start: { '@type': "uast:Position",
+                                                offset: 151,
+                                                line: 8,
+                                                col: 28,
+                                             },
+                                             end: { '@type': "uast:Position",
+                                                offset: 153,
+                                                line: 8,
+                                                col: 30,
+                                             },
+                                          },
+                                          attributes: {
+                                             kind: 2,
+                                          },
+                                       },
+                                       right: { '@type': "Scalar_String",
+                                          '@token': "b",
+                                          '@role': [Expression, Literal, Right, String],
+                                          '@pos': { '@type': "uast:Positions",
+                                             start: { '@type': "uast:Position",
+                                                offset: 157,
+                                                line: 8,
+                                                col: 34,
+                                             },
+                                             end: { '@type': "uast:Position",
+                                                offset: 159,
+                                                line: 8,
+                                                col: 36,
+                                             },
+                                          },
+                                          attributes: {
+                                             kind: 2,
+                                          },
+                                       },
+                                    },
+                                 },
+                              },
+                           ],
+                        },
+                     },
+                  ],
+                  name: { '@type': "Name",
+                     '@token': "var_dump",
+                     '@role': [Expression, Identifier],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 128,
+                           line: 8,
+                           col: 5,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 135,
+                           line: 8,
+                           col: 12,
+                        },
+                     },
+                  },
+               },
+               { '@type': "Expr_Yield",
+                  '@role': [Incomplete, Return],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 168,
+                        line: 9,
+                        col: 5,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 210,
+                        line: 9,
+                        col: 47,
+                     },
+                  },
+                  key: ~,
+                  value: { '@type': "Expr_Yield",
+                     '@role': [Incomplete, Return],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 174,
+                           line: 9,
+                           col: 11,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 210,
+                           line: 9,
+                           col: 47,
+                        },
+                     },
+                     key: { '@type': "Scalar_String",
+                        '@token': "k1",
+                        '@role': [Expression, Literal, String],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 180,
+                              line: 9,
+                              col: 17,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 183,
+                              line: 9,
+                              col: 20,
+                           },
+                        },
+                        attributes: {
+                           kind: 2,
+                        },
+                     },
+                     value: { '@type': "Expr_Yield",
+                        '@role': [Incomplete, Return],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 188,
+                              line: 9,
+                              col: 25,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 210,
+                              line: 9,
+                              col: 47,
+                           },
+                        },
+                        key: { '@type': "Scalar_String",
+                           '@token': "k2",
+                           '@role': [Expression, Literal, String],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 194,
+                                 line: 9,
+                                 col: 31,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 197,
+                                 line: 9,
+                                 col: 34,
+                              },
+                           },
+                           attributes: {
+                              kind: 2,
+                           },
+                        },
+                        value: { '@type': "Expr_BinaryOp_Concat",
+                           '@role': [Add, Binary, Expression, Incomplete, Operator],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 202,
+                                 line: 9,
+                                 col: 39,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 210,
+                                 line: 9,
+                                 col: 47,
+                              },
+                           },
+                           left: { '@type': "Scalar_String",
+                              '@token': "a",
+                              '@role': [Expression, Left, Literal, String],
+                              '@pos': { '@type': "uast:Positions",
+                                 start: { '@type': "uast:Position",
+                                    offset: 202,
+                                    line: 9,
+                                    col: 39,
+                                 },
+                                 end: { '@type': "uast:Position",
+                                    offset: 204,
+                                    line: 9,
+                                    col: 41,
+                                 },
+                              },
+                              attributes: {
+                                 kind: 2,
+                              },
+                           },
+                           right: { '@type': "Scalar_String",
+                              '@token': "b",
+                              '@role': [Expression, Literal, Right, String],
+                              '@pos': { '@type': "uast:Positions",
+                                 start: { '@type': "uast:Position",
+                                    offset: 208,
+                                    line: 9,
+                                    col: 45,
+                                 },
+                                 end: { '@type': "uast:Position",
+                                    offset: 210,
+                                    line: 9,
+                                    col: 47,
+                                 },
+                              },
+                              attributes: {
+                                 kind: 2,
+                              },
+                           },
+                        },
+                     },
+                  },
+               },
+               { '@type': "Expr_Yield",
+                  '@role': [Incomplete, Return],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 217,
+                        line: 10,
+                        col: 5,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 261,
+                        line: 10,
+                        col: 49,
+                     },
+                  },
+                  key: { '@type': "Expr_Yield",
+                     '@role': [Incomplete, Return],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 223,
+                           line: 10,
+                           col: 11,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 248,
+                           line: 10,
+                           col: 36,
+                        },
+                     },
+                     key: { '@type': "Scalar_String",
+                        '@token': "k1",
+                        '@role': [Expression, Literal, String],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 229,
+                              line: 10,
+                              col: 17,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 232,
+                              line: 10,
+                              col: 20,
+                           },
+                        },
+                        attributes: {
+                           kind: 2,
+                        },
+                     },
+                     value: { '@type': "Expr_Yield",
+                        '@role': [Incomplete, Return],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 238,
+                              line: 10,
+                              col: 26,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 247,
+                              line: 10,
+                              col: 35,
+                           },
+                        },
+                        key: ~,
+                        value: { '@type': "Scalar_String",
+                           '@token': "k2",
+                           '@role': [Expression, Literal, String],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 244,
+                                 line: 10,
+                                 col: 32,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 247,
+                                 line: 10,
+                                 col: 35,
+                              },
+                           },
+                           attributes: {
+                              kind: 2,
+                           },
+                        },
+                     },
+                  },
+                  value: { '@type': "Expr_BinaryOp_Concat",
+                     '@role': [Add, Binary, Expression, Incomplete, Operator],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 253,
+                           line: 10,
+                           col: 41,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 261,
+                           line: 10,
+                           col: 49,
+                        },
+                     },
+                     left: { '@type': "Scalar_String",
+                        '@token': "a",
+                        '@role': [Expression, Left, Literal, String],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 253,
+                              line: 10,
+                              col: 41,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 255,
+                              line: 10,
+                              col: 43,
+                           },
+                        },
+                        attributes: {
+                           kind: 2,
+                        },
+                     },
+                     right: { '@type': "Scalar_String",
+                        '@token': "b",
+                        '@role': [Expression, Literal, Right, String],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 259,
+                              line: 10,
+                              col: 47,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 261,
+                              line: 10,
+                              col: 49,
+                           },
+                        },
+                        attributes: {
+                           kind: 2,
+                        },
+                     },
+                  },
+               },
+               { '@type': "Expr_FuncCall",
+                  '@role': [Call, Expression],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 268,
+                        line: 11,
+                        col: 5,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 316,
+                        line: 11,
+                        col: 53,
+                     },
+                  },
+                  args: [
+                     { '@type': "Arg",
+                        '@role': [Argument],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 277,
+                              line: 11,
+                              col: 14,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 315,
+                              line: 11,
+                              col: 52,
+                           },
+                        },
+                        byRef: false,
+                        unpack: false,
+                        value: { '@type': "Expr_Array",
+                           '@role': [Expression, List, Literal],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 277,
+                                 line: 11,
+                                 col: 14,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 315,
+                                 line: 11,
+                                 col: 52,
+                              },
+                           },
+                           attributes: {
+                              kind: 2,
+                           },
+                           items: [
+                              { '@type': "Expr_ArrayItem",
+                                 '@role': [Entry, Expression, List],
+                                 '@pos': { '@type': "uast:Positions",
+                                    start: { '@type': "uast:Position",
+                                       offset: 278,
+                                       line: 11,
+                                       col: 15,
+                                    },
+                                    end: { '@type': "uast:Position",
+                                       offset: 314,
+                                       line: 11,
+                                       col: 51,
+                                    },
+                                 },
+                                 byRef: false,
+                                 key: ~,
+                                 value: { '@type': "Expr_Yield",
+                                    '@role': [Incomplete, Return],
+                                    '@pos': { '@type': "uast:Positions",
+                                       start: { '@type': "uast:Position",
+                                          offset: 278,
+                                          line: 11,
+                                          col: 15,
+                                       },
+                                       end: { '@type': "uast:Position",
+                                          offset: 314,
+                                          line: 11,
+                                          col: 51,
+                                       },
+                                    },
+                                    key: { '@type': "Scalar_String",
+                                       '@token': "k1",
+                                       '@role': [Expression, Literal, String],
+                                       '@pos': { '@type': "uast:Positions",
+                                          start: { '@type': "uast:Position",
+                                             offset: 284,
+                                             line: 11,
+                                             col: 21,
+                                          },
+                                          end: { '@type': "uast:Position",
+                                             offset: 287,
+                                             line: 11,
+                                             col: 24,
+                                          },
+                                       },
+                                       attributes: {
+                                          kind: 2,
+                                       },
+                                    },
+                                    value: { '@type': "Expr_Yield",
+                                       '@role': [Incomplete, Return],
+                                       '@pos': { '@type': "uast:Positions",
+                                          start: { '@type': "uast:Position",
+                                             offset: 292,
+                                             line: 11,
+                                             col: 29,
+                                          },
+                                          end: { '@type': "uast:Position",
+                                             offset: 314,
+                                             line: 11,
+                                             col: 51,
+                                          },
+                                       },
+                                       key: { '@type': "Scalar_String",
+                                          '@token': "k2",
+                                          '@role': [Expression, Literal, String],
+                                          '@pos': { '@type': "uast:Positions",
+                                             start: { '@type': "uast:Position",
+                                                offset: 298,
+                                                line: 11,
+                                                col: 35,
+                                             },
+                                             end: { '@type': "uast:Position",
+                                                offset: 301,
+                                                line: 11,
+                                                col: 38,
+                                             },
+                                          },
+                                          attributes: {
+                                             kind: 2,
+                                          },
+                                       },
+                                       value: { '@type': "Expr_BinaryOp_Concat",
+                                          '@role': [Add, Binary, Expression, Incomplete, Operator],
+                                          '@pos': { '@type': "uast:Positions",
+                                             start: { '@type': "uast:Position",
+                                                offset: 306,
+                                                line: 11,
+                                                col: 43,
+                                             },
+                                             end: { '@type': "uast:Position",
+                                                offset: 314,
+                                                line: 11,
+                                                col: 51,
+                                             },
+                                          },
+                                          left: { '@type': "Scalar_String",
+                                             '@token': "a",
+                                             '@role': [Expression, Left, Literal, String],
+                                             '@pos': { '@type': "uast:Positions",
+                                                start: { '@type': "uast:Position",
+                                                   offset: 306,
+                                                   line: 11,
+                                                   col: 43,
+                                                },
+                                                end: { '@type': "uast:Position",
+                                                   offset: 308,
+                                                   line: 11,
+                                                   col: 45,
+                                                },
+                                             },
+                                             attributes: {
+                                                kind: 2,
+                                             },
+                                          },
+                                          right: { '@type': "Scalar_String",
+                                             '@token': "b",
+                                             '@role': [Expression, Literal, Right, String],
+                                             '@pos': { '@type': "uast:Positions",
+                                                start: { '@type': "uast:Position",
+                                                   offset: 312,
+                                                   line: 11,
+                                                   col: 49,
+                                                },
+                                                end: { '@type': "uast:Position",
+                                                   offset: 314,
+                                                   line: 11,
+                                                   col: 51,
+                                                },
+                                             },
+                                             attributes: {
+                                                kind: 2,
+                                             },
+                                          },
+                                       },
+                                    },
+                                 },
+                              },
+                           ],
+                        },
+                     },
+                  ],
+                  name: { '@type': "Name",
+                     '@token': "var_dump",
+                     '@role': [Expression, Identifier],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 268,
+                           line: 11,
+                           col: 5,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 275,
+                           line: 11,
+                           col: 12,
+                        },
+                     },
+                  },
+               },
+               { '@type': "Expr_FuncCall",
+                  '@role': [Call, Expression],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 323,
+                        line: 12,
+                        col: 5,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 373,
+                        line: 12,
+                        col: 55,
+                     },
+                  },
+                  args: [
+                     { '@type': "Arg",
+                        '@role': [Argument],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 332,
+                              line: 12,
+                              col: 14,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 372,
+                              line: 12,
+                              col: 54,
+                           },
+                        },
+                        byRef: false,
+                        unpack: false,
+                        value: { '@type': "Expr_Array",
+                           '@role': [Expression, List, Literal],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 332,
+                                 line: 12,
+                                 col: 14,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 372,
+                                 line: 12,
+                                 col: 54,
+                              },
+                           },
+                           attributes: {
+                              kind: 2,
+                           },
+                           items: [
+                              { '@type': "Expr_ArrayItem",
+                                 '@role': [Entry, Expression, List],
+                                 '@pos': { '@type': "uast:Positions",
+                                    start: { '@type': "uast:Position",
+                                       offset: 333,
+                                       line: 12,
+                                       col: 15,
+                                    },
+                                    end: { '@type': "uast:Position",
+                                       offset: 371,
+                                       line: 12,
+                                       col: 53,
+                                    },
+                                 },
+                                 byRef: false,
+                                 key: { '@type': "Expr_Yield",
+                                    '@role': [Incomplete, Return],
+                                    '@pos': { '@type': "uast:Positions",
+                                       start: { '@type': "uast:Position",
+                                          offset: 333,
+                                          line: 12,
+                                          col: 15,
+                                       },
+                                       end: { '@type': "uast:Position",
+                                          offset: 358,
+                                          line: 12,
+                                          col: 40,
+                                       },
+                                    },
+                                    key: { '@type': "Scalar_String",
+                                       '@token': "k1",
+                                       '@role': [Expression, Literal, String],
+                                       '@pos': { '@type': "uast:Positions",
+                                          start: { '@type': "uast:Position",
+                                             offset: 339,
+                                             line: 12,
+                                             col: 21,
+                                          },
+                                          end: { '@type': "uast:Position",
+                                             offset: 342,
+                                             line: 12,
+                                             col: 24,
+                                          },
+                                       },
+                                       attributes: {
+                                          kind: 2,
+                                       },
+                                    },
+                                    value: { '@type': "Expr_Yield",
+                                       '@role': [Incomplete, Return],
+                                       '@pos': { '@type': "uast:Positions",
+                                          start: { '@type': "uast:Position",
+                                             offset: 348,
+                                             line: 12,
+                                             col: 30,
+                                          },
+                                          end: { '@type': "uast:Position",
+                                             offset: 357,
+                                             line: 12,
+                                             col: 39,
+                                          },
+                                       },
+                                       key: ~,
+                                       value: { '@type': "Scalar_String",
+                                          '@token': "k2",
+                                          '@role': [Expression, Literal, String],
+                                          '@pos': { '@type': "uast:Positions",
+                                             start: { '@type': "uast:Position",
+                                                offset: 354,
+                                                line: 12,
+                                                col: 36,
+                                             },
+                                             end: { '@type': "uast:Position",
+                                                offset: 357,
+                                                line: 12,
+                                                col: 39,
+                                             },
+                                          },
+                                          attributes: {
+                                             kind: 2,
+                                          },
+                                       },
+                                    },
+                                 },
+                                 value: { '@type': "Expr_BinaryOp_Concat",
+                                    '@role': [Add, Binary, Expression, Incomplete, Operator],
+                                    '@pos': { '@type': "uast:Positions",
+                                       start: { '@type': "uast:Position",
+                                          offset: 363,
+                                          line: 12,
+                                          col: 45,
+                                       },
+                                       end: { '@type': "uast:Position",
+                                          offset: 371,
+                                          line: 12,
+                                          col: 53,
+                                       },
+                                    },
+                                    left: { '@type': "Scalar_String",
+                                       '@token': "a",
+                                       '@role': [Expression, Left, Literal, String],
+                                       '@pos': { '@type': "uast:Positions",
+                                          start: { '@type': "uast:Position",
+                                             offset: 363,
+                                             line: 12,
+                                             col: 45,
+                                          },
+                                          end: { '@type': "uast:Position",
+                                             offset: 365,
+                                             line: 12,
+                                             col: 47,
+                                          },
+                                       },
+                                       attributes: {
+                                          kind: 2,
+                                       },
+                                    },
+                                    right: { '@type': "Scalar_String",
+                                       '@token': "b",
+                                       '@role': [Expression, Literal, Right, String],
+                                       '@pos': { '@type': "uast:Positions",
+                                          start: { '@type': "uast:Position",
+                                             offset: 369,
+                                             line: 12,
+                                             col: 51,
+                                          },
+                                          end: { '@type': "uast:Position",
+                                             offset: 371,
+                                             line: 12,
+                                             col: 53,
+                                          },
+                                       },
+                                       attributes: {
+                                          kind: 2,
+                                       },
+                                    },
+                                 },
+                              },
+                           ],
+                        },
+                     },
+                  ],
+                  name: { '@type': "Name",
+                     '@token': "var_dump",
+                     '@role': [Expression, Identifier],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 323,
+                           line: 12,
+                           col: 5,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 330,
+                           line: 12,
+                           col: 12,
+                        },
+                     },
+                  },
+               },
+            ],
+         },
+      },
+   ],
 }
-

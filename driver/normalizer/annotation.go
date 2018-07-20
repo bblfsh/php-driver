@@ -6,32 +6,37 @@ import (
 	php "github.com/bblfsh/php-driver/driver/normalizer/phpast"
 
 	"gopkg.in/bblfsh/sdk.v2/uast"
+	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
 	"gopkg.in/bblfsh/sdk.v2/uast/role"
 	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
 	"gopkg.in/bblfsh/sdk.v2/uast/transformer/positioner"
 )
 
-func parts2str(arr uast.Array) (uast.String, error) {
+func parts2str(arr nodes.Array) (nodes.String, error) {
 	l := make([]string, len(arr))
 
 	for i, v := range arr {
-		s, ok := v.(uast.String)
+		s, ok := v.(nodes.String)
 		if !ok {
-			return uast.String(""), ErrExpectedValue.New(s)
+			return nodes.String(""), ErrExpectedValue.New(s)
 		}
 		l[i] = string(s)
 	}
 
-	return uast.String(strings.Join(l, "\\")), nil
+	return nodes.String(strings.Join(l, "\\")), nil
 }
 
 type opParts2Str struct {
 	orig Op
-	str Op
+	str  Op
 }
 
-func (op opParts2Str) Check(st *State, n uast.Node) (bool, error) {
-	v, ok := n.(uast.Array)
+func (op opParts2Str) Kinds() nodes.Kind {
+	return nodes.KindArray
+}
+
+func (op opParts2Str) Check(st *State, n nodes.Node) (bool, error) {
+	v, ok := n.(nodes.Array)
 	if !ok {
 		return false, nil
 	}
@@ -53,36 +58,11 @@ func (op opParts2Str) Check(st *State, n uast.Node) (bool, error) {
 	return res1 && res2, nil
 }
 
-func (op opParts2Str) Construct(st *State, n uast.Node) (uast.Node, error) {
+func (op opParts2Str) Construct(st *State, n nodes.Node) (nodes.Node, error) {
 	return op.orig.Construct(st, n)
 }
 
-type isString struct{}
-
-func (isString) Check(st *State, n uast.Node) (bool, error) {
-	_, ok := n.(uast.String)
-	return ok, nil
-}
-
 var Native = Transformers([][]Transformer{
-	{
-		ResponseMetadata{
-			TopLevelIsRootNode: true,
-		},
-	},
-	{Mappings(
-		Map("name field as string value",
-			Part("_", Obj{
-				"name": Check(isString{}, Var("name")),
-			}),
-			Part("_", Obj{
-				"name": Obj{
-					uast.KeyType:  String("Name"),
-					uast.KeyToken: Var("name"),
-				},
-			}),
-		),
-	)},
 	{Mappings(Annotations...)},
 	{RolesDedup()},
 }...)
@@ -100,7 +80,7 @@ func annotateTypeToken(typ, token string, roles ...role.Role) Mapping {
 }
 
 func mapInternalProperty(key string, roles ...role.Role) Mapping {
-	return Map(key,
+	return Map(
 		Part("other", Obj{
 			key: ObjectRoles(key),
 		}),
@@ -118,72 +98,17 @@ func annAssign(typ string, opRoles ...role.Role) Mapping {
 }
 
 var Annotations = []Mapping{
-
-	//The native AST puts positions and comments inside an "attribute" node. Here
-	//we reparent them to the current node.
-	Map("x",
-		Part("root", Obj{
-			"attributes": Part("attrs", Fields{
-				// Ignore those because they're wrong in the native AST; we instead
-				// compute line and col from the offset
-
-				//{Name: "startLine", Op: Var("sline")},
-				//{Name: "endLine", Op: Var("eline")},
-				//{Name: "startTokenPos", Op: Var("stoken")},
-				//{Name: "endTokenPos", Op: Var("etoken")},
-				{Name: "startFilePos", Op: Var("sfile")},
-				{Name: "endFilePos", Op: Var("efile")},
-				{Name: "comments", Op: Var("comments"), Optional: "comments_exists"},
-			}),
-		}),
-
-		Part("root", Fields{
-			{Name: uast.KeyStart, Op: Obj{
-				uast.KeyType:    String(uast.TypePosition),
-				// Ditto
-				//uast.KeyPosLine: Var("sline"),
-				//uast.KeyPosCol:  Var("stoken"),
-				uast.KeyPosOff:  Var("sfile"),
-			}},
-			{Name: uast.KeyEnd, Op: Obj{
-				uast.KeyType:    String(uast.TypePosition),
-				//uast.KeyPosLine: Var("eline"),
-				//uast.KeyPosCol:  Var("etoken"),
-				uast.KeyPosOff:  Var("efile"),
-			}},
-			{Name: "comments", Op: Var("comments"), Optional: "comments_exists"},
-		}),
-	),
-
-	ObjectToNode{
-		InternalTypeKey: "nodeType",
-	}.Mapping(),
-
-	MapAST(php.Comment, Obj{
-		"text":    UncommentCLike("text"),
-		"filePos": Var("fp"),
-		"line":    Var("ln"),
+	AnnotateType(php.Comment, MapObj(Obj{
+		"text": UncommentCLike("text"),
 	}, Obj{
 		uast.KeyToken: Var("text"),
-		uast.KeyStart: Obj{
-			uast.KeyType:    String("ast:Position"),
-			uast.KeyPosCol:  Var("fp"),
-			uast.KeyPosLine: Var("ln"),
-		},
-	}, role.Comment, role.Noop),
+	}), role.Comment, role.Noop),
 
-	MapAST(php.Doc, Obj{
-		"text":    UncommentCLike("text"),
-		"filePos": Var("fp"),
-		"line":    Var("ln"),
+	AnnotateType(php.Doc, MapObj(Obj{
+		"text": UncommentCLike("text"),
 	}, Obj{
 		uast.KeyToken: Var("text"),
-		uast.KeyStart: Obj{
-			uast.KeyType:    String("ast:Position"),
-			uast.KeyPosCol:  Var("fp"),
-			uast.KeyPosLine: Var("ln"),
-		},
-	}, role.Comment, role.Noop, role.Documentation),
+	}), role.Comment, role.Noop, role.Documentation),
 
 	mapInternalProperty("left", role.Left),
 	mapInternalProperty("right", role.Right),
@@ -193,11 +118,11 @@ var Annotations = []Mapping{
 
 	// Name; the actual tokens are in the "parts" children, we join
 	// them into a single string
-	MapAST(php.Name, Obj{
+	AnnotateType(php.Name, MapObj(Obj{
 		"parts": opParts2Str{orig: Var("parts"), str: Var("parts_str")},
 	}, Obj{
 		uast.KeyToken: Var("parts_str"),
-	}, role.Expression, role.Identifier),
+	}), role.Expression, role.Identifier),
 	AnnotateType(php.Name, nil, role.Expression, role.Identifier),
 
 	annAssign(php.Assign, role.Expression, role.Assignment),
@@ -393,17 +318,17 @@ var Annotations = []Mapping{
 	AnnotateType(php.Else, nil, role.Statement, role.Else),
 
 	// Declare, we interpret it as an assignment-ish
-	MapAST(php.Declare, Obj{
-		"stmts":      Var("body_stmts"),
-		"declares":   Var("declares"),
+	AnnotateType(php.Declare, MapObj(Obj{
+		"stmts":    Var("body_stmts"),
+		"declares": Var("declares"),
 	}, Obj{
 		"stmts": Obj{
 			uast.KeyType:  String("Declare.stmts"),
 			uast.KeyRoles: Roles(role.Assignment, role.Body),
 			"stmts":       Var("body_stmts"),
 		},
-		"declares":   Var("declares"),
-	}, role.Expression, role.Assignment, role.Incomplete),
+		"declares": Var("declares"),
+	}), role.Expression, role.Assignment, role.Incomplete),
 
 	AnnotateType(php.DeclareDeclare, FieldRoles{
 		"key":   {Rename: uast.KeyToken},
@@ -445,11 +370,12 @@ var Annotations = []Mapping{
 	}, role.Expression, role.Call, role.Identifier),
 
 	// Function declarations
-	MapAST(php.Function, Obj{
+	AnnotateType(php.Function, MapObj(Obj{
 		"returnType": Var("returnType"),
 		"stmts":      Var("stmts"),
 		"name":       Var("name"),
 	}, Obj{
+		"name": Var("name"),
 		"returnType": Obj{
 			uast.KeyType:  String("Function.returnType"),
 			uast.KeyRoles: Roles(role.Function, role.Declaration, role.Return, role.Type),
@@ -460,23 +386,23 @@ var Annotations = []Mapping{
 			uast.KeyRoles: Roles(role.Function, role.Declaration, role.Body),
 			"body":        Var("stmts"),
 		},
-	}, role.Function, role.Declaration),
+	}), role.Function, role.Declaration),
 
 	AnnotateType(php.Param, FieldRoles{
-		"byRef":    {Op: Is(uast.Bool(false))},
-		"variadic": {Op: Is(uast.Bool(false))},
+		"byRef":    {Op: Bool(false)},
+		"variadic": {Op: Bool(false)},
 	}, role.Argument),
 	AnnotateType(php.Param, FieldRoles{
-		"byRef":    {Op: Is(uast.Bool(false))},
-		"variadic": {Op: Is(uast.Bool(true))},
+		"byRef":    {Op: Bool(false)},
+		"variadic": {Op: Bool(true)},
 	}, role.Argument, role.ArgsList),
 	AnnotateType(php.Param, FieldRoles{
-		"byRef":    {Op: Is(uast.Bool(true))},
-		"variadic": {Op: Is(uast.Bool(false))},
+		"byRef":    {Op: Bool(true)},
+		"variadic": {Op: Bool(false)},
 	}, role.Argument, role.Incomplete),
 	AnnotateType(php.Param, FieldRoles{
-		"byRef":    {Op: Is(uast.Bool(true))},
-		"variadic": {Op: Is(uast.Bool(true))},
+		"byRef":    {Op: Bool(true)},
+		"variadic": {Op: Bool(true)},
 	}, role.Argument, role.Incomplete, role.ArgsList),
 
 	// Include and require
