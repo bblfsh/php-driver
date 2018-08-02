@@ -57,7 +57,7 @@ var Preprocessors = []Mapping{
 				uast.KeyEnd: UASTType(uast.Position{}, Obj{
 					//uast.KeyPosLine: Var("eline"),
 					//uast.KeyPosCol:  Var("etoken"),
-					uast.KeyPosOff: Var("efile"),
+					uast.KeyPosOff: opAdd{op: Var("efile"), n: +1},
 				}),
 			})},
 			{Name: "attributes", Op: Var("attrs")},
@@ -478,4 +478,51 @@ func (op splitUse) Check(st *State, n nodes.Node) (bool, error) {
 func (op splitUse) Construct(st *State, n nodes.Node) (nodes.Node, error) {
 	// TODO: add some info to join nodes back
 	return st.MustGetVar(op.vr)
+}
+
+type opAdd struct {
+	op Op
+	n  int
+}
+
+func (op opAdd) Kinds() nodes.Kind {
+	return nodes.KindInt | nodes.KindUint | nodes.KindFloat
+}
+
+func (op opAdd) Check(st *State, n nodes.Node) (bool, error) {
+	switch v := n.(type) {
+	case nodes.Float:
+		v -= nodes.Float(op.n)
+		n = v
+	case nodes.Int:
+		v -= nodes.Int(op.n)
+		n = v
+	case nodes.Uint:
+		v -= nodes.Uint(op.n)
+		n = v
+	default:
+		return false, nil
+	}
+	return op.op.Check(st, n)
+}
+
+func (op opAdd) Construct(st *State, n nodes.Node) (nodes.Node, error) {
+	n, err := op.op.Construct(st, n)
+	if err != nil {
+		return nil, err
+	}
+	switch v := n.(type) {
+	case nodes.Float:
+		v += nodes.Float(op.n)
+		n = v
+	case nodes.Int:
+		v += nodes.Int(op.n)
+		n = v
+	case nodes.Uint:
+		v += nodes.Uint(op.n)
+		n = v
+	default:
+		return nil, ErrUnexpectedType.New(n)
+	}
+	return n, nil
 }
