@@ -2,7 +2,7 @@ Module {
 .  Roles: Module
 .  Children: {
 .  .  0: Stmt_Class {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Statement,Declaration,Type
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 6
 .  .  .  .  Line: 2
@@ -19,15 +19,11 @@ Module {
 .  .  .  .  type: 0
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Identifier {
+.  .  .  .  0: Name {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "tetscls1"
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  Name: tetscls1
 .  .  .  .  .  .  internalRole: name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Block {
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: stmts
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
