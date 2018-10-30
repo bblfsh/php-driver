@@ -36,7 +36,10 @@ class Response
 
         if (count($err) > 0) {
             $response->status = SELF::STATUS_ERROR;
-            $response->errors = $err;
+            $response->errors = [];
+            foreach ($err as $e) {
+                $response->errors[] = $e->getMessage();
+            }
         } else {
             $response->status = SELF::STATUS_OK;
         }
