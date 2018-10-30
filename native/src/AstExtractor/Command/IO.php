@@ -64,7 +64,7 @@ class IO
             $response = Response::fromError($e);
         } else {
             $response = $request->answer([]);
-            $response->errors = [$e];
+            $response->errors = [$e->getMessage()];
             $response->status = Response::getStatus($e->getCode());
         }
 
