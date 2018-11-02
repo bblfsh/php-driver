@@ -1,7 +1,7 @@
-{ '@type': "Module",
+{ '@type': "php:Module",
    '@role': [Module],
    children: [
-      { '@type': "Stmt_TryCatch",
+      { '@type': "php:Stmt_TryCatch",
          '@role': [Statement, Try],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",
@@ -16,7 +16,7 @@
             },
          },
          catches: [
-            { '@type': "Stmt_Catch",
+            { '@type': "php:Stmt_Catch",
                '@role': [Unannotated],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
@@ -32,7 +32,7 @@
                },
                stmts: { '@type': "uast:Block",
                   Statements: [
-                     { '@type': "Expr_Variable",
+                     { '@type': "php:Expr_Variable",
                         '@role': [Identifier, Variable],
                         '@pos': { '@type': "uast:Positions",
                            start: { '@type': "uast:Position",
@@ -88,7 +88,7 @@
                ],
                var: "e1",
             },
-            { '@type': "Stmt_Catch",
+            { '@type': "php:Stmt_Catch",
                '@role': [Unannotated],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
@@ -104,7 +104,7 @@
                },
                stmts: { '@type': "uast:Block",
                   Statements: [
-                     { '@type': "Expr_Variable",
+                     { '@type': "php:Expr_Variable",
                         '@role': [Identifier, Variable],
                         '@pos': { '@type': "uast:Positions",
                            start: { '@type': "uast:Position",
@@ -127,7 +127,7 @@
                   ],
                },
                types: [
-                  { '@type': "Name_FullyQualified",
+                  { '@type': "php:Name_FullyQualified",
                      '@role': [Expression, Incomplete, Variable],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
@@ -172,7 +172,7 @@
          finally: ~,
          stmts: { '@type': "uast:Block",
             Statements: [
-               { '@type': "Expr_Variable",
+               { '@type': "php:Expr_Variable",
                   '@role': [Identifier, Variable],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",

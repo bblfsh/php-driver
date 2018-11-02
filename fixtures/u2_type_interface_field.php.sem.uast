@@ -1,7 +1,7 @@
-{ '@type': "Module",
+{ '@type': "php:Module",
    '@role': [Module],
    children: [
-      { '@type': "Stmt_Interface",
+      { '@type': "php:Stmt_Interface",
          '@role': [Declaration, Type],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",
@@ -23,7 +23,7 @@
          },
          stmts: { '@type': "uast:Block",
             Statements: [
-               { '@type': "Stmt_ClassConst",
+               { '@type': "php:Stmt_ClassConst",
                   '@role': [Incomplete, Type, Variable],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",
@@ -38,7 +38,7 @@
                      },
                   },
                   consts: [
-                     { '@type': "Const",
+                     { '@type': "php:Const",
                         '@role': [Expression, Incomplete, Variable],
                         '@pos': { '@type': "uast:Positions",
                            start: { '@type': "uast:Position",

@@ -1,7 +1,7 @@
-{ '@type': "Module",
+{ '@type': "php:Module",
    '@role': [Module],
    children: [
-      { '@type': "Expr_Variable",
+      { '@type': "php:Expr_Variable",
          '@role': [Identifier, Variable],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",
@@ -93,7 +93,7 @@
             Name: "var",
          },
       },
-      { '@type': "Stmt_If",
+      { '@type': "php:Stmt_If",
          '@role': [If, Statement],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",
@@ -107,7 +107,7 @@
                col: 2,
             },
          },
-         cond: { '@type': "Expr_Variable",
+         cond: { '@type': "php:Expr_Variable",
             '@role': [Identifier, Variable],
             '@pos': { '@type': "uast:Positions",
                start: { '@type': "uast:Position",
@@ -131,7 +131,7 @@
          elseifs: [],
          stmts: { '@type': "uast:Block",
             Statements: [
-               { '@type': "Stmt_Nop",
+               { '@type': "php:Stmt_Nop",
                   '@role': [Noop],
                   attributes: {
                      comments: [
@@ -211,7 +211,7 @@
             ],
          },
       },
-      { '@type': "Stmt_Nop",
+      { '@type': "php:Stmt_Nop",
          '@role': [Noop],
          attributes: {
             comments: [
