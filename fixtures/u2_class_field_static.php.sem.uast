@@ -1,7 +1,7 @@
-{ '@type': "Module",
+{ '@type': "php:Module",
    '@role': [Module],
    children: [
-      { '@type': "Stmt_Class",
+      { '@type': "php:Stmt_Class",
          '@role': [Unannotated],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",
@@ -25,7 +25,7 @@
          },
          stmts: { '@type': "uast:Block",
             Statements: [
-               { '@type': "Stmt_Property",
+               { '@type': "php:Stmt_Property",
                   '@role': [Incomplete, Type, Variable],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",
@@ -41,7 +41,7 @@
                   },
                   flags: 9,
                   props: [
-                     { '@type': "Stmt_PropertyProperty",
+                     { '@type': "php:Stmt_PropertyProperty",
                         '@role': [Incomplete, Type, Variable],
                         '@pos': { '@type': "uast:Positions",
                            start: { '@type': "uast:Position",
@@ -55,7 +55,7 @@
                               col: 25,
                            },
                         },
-                        default: { '@type': "Scalar_LNumber",
+                        default: { '@type': "php:Scalar_LNumber",
                            '@token': 1,
                            '@role': [Default, Expression, Literal, Number],
                            '@pos': { '@type': "uast:Positions",

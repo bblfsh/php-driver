@@ -1,7 +1,7 @@
-{ '@type': "Module",
+{ '@type': "php:Module",
    '@role': [Module],
    children: [
-      { '@type': "Stmt_If",
+      { '@type': "php:Stmt_If",
          '@role': [If, Statement],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",
@@ -15,7 +15,7 @@
                col: 2,
             },
          },
-         cond: { '@type': "Expr_ConstFetch",
+         cond: { '@type': "php:Expr_ConstFetch",
             '@role': [Expression, Incomplete, Variable],
             '@pos': { '@type': "uast:Positions",
                start: { '@type': "uast:Position",
@@ -49,7 +49,7 @@
          elseifs: [],
          stmts: { '@type': "uast:Block",
             Statements: [
-               { '@type': "Stmt_Class",
+               { '@type': "php:Stmt_Class",
                   '@role': [Unannotated],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",

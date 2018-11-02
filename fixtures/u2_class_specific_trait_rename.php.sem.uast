@@ -1,7 +1,7 @@
-{ '@type': "Module",
+{ '@type': "php:Module",
    '@role': [Module],
    children: [
-      { '@type': "Stmt_Trait",
+      { '@type': "php:Stmt_Trait",
          '@role': [Declaration, Type],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",
@@ -22,7 +22,7 @@
          },
          stmts: { '@type': "uast:Block",
             Statements: [
-               { '@type': "Stmt_ClassMethod",
+               { '@type': "php:Stmt_ClassMethod",
                   '@role': [Function, Type],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",
@@ -53,7 +53,7 @@
             ],
          },
       },
-      { '@type': "Stmt_Class",
+      { '@type': "php:Stmt_Class",
          '@role': [Unannotated],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",
@@ -77,7 +77,7 @@
          },
          stmts: { '@type': "uast:Block",
             Statements: [
-               { '@type': "Stmt_TraitUse",
+               { '@type': "php:Stmt_TraitUse",
                   '@role': [Base],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",
@@ -92,7 +92,7 @@
                      },
                   },
                   adaptations: [
-                     { '@type': "Stmt_TraitUseAdaptation_Alias",
+                     { '@type': "php:Stmt_TraitUseAdaptation_Alias",
                         '@token': "testfnc2",
                         '@role': [Alias, Statement],
                         '@pos': { '@type': "uast:Positions",
