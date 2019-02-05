@@ -15,6 +15,8 @@ var Normalize = Transformers([][]Transformer{
 	{Mappings(Normalizers...)},
 }...)
 
+var PreprocessCode = []CodeTransformer{}
+
 // Preprocessors is a block of AST preprocessing rules rules.
 var Preprocessors = []Mapping{
 	MapPart("root", ObjMap{ // name field as string value

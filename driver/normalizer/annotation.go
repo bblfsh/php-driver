@@ -99,13 +99,13 @@ func annAssign(typ string, opRoles ...role.Role) Mapping {
 
 var Annotations = []Mapping{
 	AnnotateType(php.Comment, MapObj(Obj{
-		"text": UncommentCLike("text"),
+		"text": Var("text"),
 	}, Obj{
 		uast.KeyToken: Var("text"),
 	}), role.Comment, role.Noop),
 
 	AnnotateType(php.Doc, MapObj(Obj{
-		"text": UncommentCLike("text"),
+		"text": Var("text"),
 	}, Obj{
 		uast.KeyToken: Var("text"),
 	}), role.Comment, role.Noop, role.Documentation),
