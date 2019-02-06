@@ -20,7 +20,7 @@
          },
          comments: [
             { '@type': "Comment",
-               '@token': "\n * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n * \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n *\n * This software consists of voluntary contributions made by many individuals\n * and is licensed under the MIT license. For more information, see\n * <http://www.doctrine-project.org>.\n ",
+               '@token': "/*\n * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n * \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n *\n * This software consists of voluntary contributions made by many individuals\n * and is licensed under the MIT license. For more information, see\n * <http://www.doctrine-project.org>.\n */",
                '@role': [Comment, Noop],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
@@ -268,7 +268,7 @@
                },
                comments: [
                   { '@type': "Comment_Doc",
-                     '@token': "*\n * {@inheritDoc}\n *\n * @author Marco Pivetta <ocramius@gmail.com>\n ",
+                     '@token': "/**\n * {@inheritDoc}\n *\n * @author Marco Pivetta <ocramius@gmail.com>\n */",
                      '@role': [Comment, Documentation, Noop],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
@@ -322,7 +322,7 @@
                      },
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n     * Markers used internally by PHP to define whether {@see \\unserialize} should invoke\n     * the method {@see \\Serializable::unserialize()} when dealing with classes implementing\n     * the {@see \\Serializable} interface.\n     ",
+                           '@token': "/**\n     * Markers used internally by PHP to define whether {@see \\unserialize} should invoke\n     * the method {@see \\Serializable::unserialize()} when dealing with classes implementing\n     * the {@see \\Serializable} interface.\n     */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -451,7 +451,7 @@
                      },
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n     * @var \\callable[] used to instantiate specific classes, indexed by class name\n     ",
+                           '@token': "/**\n     * @var \\callable[] used to instantiate specific classes, indexed by class name\n     */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -523,7 +523,7 @@
                      },
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n     * @var object[] of objects that can directly be cloned, indexed by class name\n     ",
+                           '@token': "/**\n     * @var object[] of objects that can directly be cloned, indexed by class name\n     */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -596,7 +596,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n     * {@inheritDoc}\n     ",
+                           '@token': "/**\n     * {@inheritDoc}\n     */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -1242,7 +1242,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n     * Builds the requested object and caches it in static properties for performance\n     *\n     * @return object\n     ",
+                           '@token': "/**\n     * Builds the requested object and caches it in static properties for performance\n     *\n     * @return object\n     */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -1899,7 +1899,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n     * Builds a callable capable of instantiating the given $className without\n     * invoking its constructor.\n     *\n     * @throws InvalidArgumentException\n     * @throws UnexpectedValueException\n     * @throws \\ReflectionException\n     ",
+                           '@token': "/**\n     * Builds a callable capable of instantiating the given $className without\n     * invoking its constructor.\n     *\n     * @throws InvalidArgumentException\n     * @throws UnexpectedValueException\n     * @throws \\ReflectionException\n     */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -2840,7 +2840,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n     * @param string $className\n     *\n     * @return ReflectionClass\n     *\n     * @throws InvalidArgumentException\n     * @throws \\ReflectionException\n     ",
+                           '@token': "/**\n     * @param string $className\n     *\n     * @return ReflectionClass\n     *\n     * @throws InvalidArgumentException\n     * @throws \\ReflectionException\n     */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -3416,7 +3416,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n     * @param ReflectionClass $reflectionClass\n     * @param string          $serializedString\n     *\n     * @throws UnexpectedValueException\n     *\n     * @return void\n     ",
+                           '@token': "/**\n     * @param ReflectionClass $reflectionClass\n     * @param string          $serializedString\n     *\n     * @throws UnexpectedValueException\n     *\n     * @return void\n     */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -4224,7 +4224,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n     * @param ReflectionClass $reflectionClass\n     * @param string          $serializedString\n     *\n     * @throws UnexpectedValueException\n     *\n     * @return void\n     ",
+                           '@token': "/**\n     * @param ReflectionClass $reflectionClass\n     * @param string          $serializedString\n     *\n     * @throws UnexpectedValueException\n     *\n     * @return void\n     */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -4859,7 +4859,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n     * Verifies whether the given class is to be considered internal\n     ",
+                           '@token': "/**\n     * Verifies whether the given class is to be considered internal\n     */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -5191,7 +5191,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n     * Checks if a class is cloneable\n     *\n     * Classes implementing `__clone` cannot be safely cloned, as that may cause side-effects.\n     ",
+                           '@token': "/**\n     * Checks if a class is cloneable\n     *\n     * Classes implementing `__clone` cannot be safely cloned, as that may cause side-effects.\n     */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",

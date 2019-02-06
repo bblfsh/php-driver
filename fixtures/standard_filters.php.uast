@@ -20,7 +20,7 @@
          },
          comments: [
             { '@type': "Comment_Doc",
-               '@token': "*\n * This file is part of the Liquid package.\n *\n * For the full copyright and license information, please view the LICENSE\n * file that was distributed with this source code.\n *\n * @package Liquid\n ",
+               '@token': "/**\n * This file is part of the Liquid package.\n *\n * For the full copyright and license information, please view the LICENSE\n * file that was distributed with this source code.\n *\n * @package Liquid\n */",
                '@role': [Comment, Documentation, Noop],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
@@ -64,7 +64,7 @@
                },
                comments: [
                   { '@type': "Comment_Doc",
-                     '@token': "*\n * A selection of standard filters.\n ",
+                     '@token': "/**\n * A selection of standard filters.\n */",
                      '@role': [Comment, Documentation, Noop],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
@@ -102,7 +102,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Add one string to another\n\t *\n\t * @param string $input\n\t * @param string $string\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Add one string to another\n\t *\n\t * @param string $input\n\t * @param string $string\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -266,7 +266,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Capitalize words in the input sentence\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Capitalize words in the input sentence\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -760,7 +760,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * @param mixed $input number\n\t *\n\t * @return int\n\t ",
+                           '@token': "/**\n\t * @param mixed $input number\n\t *\n\t * @return int\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -943,7 +943,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Formats a date using strftime\n\t *\n\t * @param mixed $input\n\t * @param string $format\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Formats a date using strftime\n\t *\n\t * @param mixed $input\n\t * @param string $format\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -1569,7 +1569,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Default\n\t *\n\t * @param string $input\n\t * @param string $default_value\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Default\n\t *\n\t * @param string $input\n\t * @param string $default_value\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -2009,7 +2009,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * division\n\t *\n\t * @param int $input\n\t * @param int $operand\n\t *\n\t * @return int\n\t ",
+                           '@token': "/**\n\t * division\n\t *\n\t * @param int $input\n\t * @param int $operand\n\t *\n\t * @return int\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -2203,7 +2203,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Convert an input to lowercase\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Convert an input to lowercase\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -2463,7 +2463,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Pseudo-filter: negates auto-added escape filter\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Pseudo-filter: negates auto-added escape filter\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -2566,7 +2566,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Escape a string\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Escape a string\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -2874,7 +2874,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Escape a string once, keeping all previous HTML entities intact\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Escape a string once, keeping all previous HTML entities intact\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -3278,7 +3278,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Returns the first element of an array\n\t *\n\t * @param array|\\Iterator $input\n\t *\n\t * @return mixed\n\t ",
+                           '@token': "/**\n\t * Returns the first element of an array\n\t *\n\t * @param array|\\Iterator $input\n\t *\n\t * @return mixed\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -3711,7 +3711,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * @param mixed $input number\n\t *\n\t * @return int\n\t ",
+                           '@token': "/**\n\t * @param mixed $input number\n\t *\n\t * @return int\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -3894,7 +3894,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Joins elements of an array with a given character between them\n\t *\n\t * @param array|\\Traversable $input\n\t * @param string $glue\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Joins elements of an array with a given character between them\n\t *\n\t * @param array|\\Traversable $input\n\t * @param string $glue\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -4613,7 +4613,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Returns the last element of an array\n\t *\n\t * @param array|\\Traversable $input\n\t *\n\t * @return mixed\n\t ",
+                           '@token': "/**\n\t * Returns the last element of an array\n\t *\n\t * @param array|\\Traversable $input\n\t *\n\t * @return mixed\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -5166,7 +5166,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * @param string $input\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * @param string $input\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -5319,7 +5319,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Map/collect on a given property\n\t *\n\t * @param array|\\Traversable $input\n\t * @param string $property\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Map/collect on a given property\n\t *\n\t * @param array|\\Traversable $input\n\t * @param string $property\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -6373,7 +6373,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * subtraction\n\t *\n\t * @param int $input\n\t * @param int $operand\n\t *\n\t * @return int\n\t ",
+                           '@token': "/**\n\t * subtraction\n\t *\n\t * @param int $input\n\t * @param int $operand\n\t *\n\t * @return int\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -6567,7 +6567,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * modulo\n\t *\n\t * @param int $input\n\t * @param int $operand\n\t *\n\t * @return int\n\t ",
+                           '@token': "/**\n\t * modulo\n\t *\n\t * @param int $input\n\t * @param int $operand\n\t *\n\t * @return int\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -6761,7 +6761,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Replace each newline (\\n) with html break\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Replace each newline (\\n) with html break\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -7166,7 +7166,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * addition\n\t *\n\t * @param float $input\n\t * @param float $operand\n\t *\n\t * @return float\n\t ",
+                           '@token': "/**\n\t * addition\n\t *\n\t * @param float $input\n\t * @param float $operand\n\t *\n\t * @return float\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -7654,7 +7654,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Prepend a string to another\n\t *\n\t * @param string $input\n\t * @param string $string\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Prepend a string to another\n\t *\n\t * @param string $input\n\t * @param string $string\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -7818,7 +7818,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Remove a substring\n\t *\n\t * @param string $input\n\t * @param string $string\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Remove a substring\n\t *\n\t * @param string $input\n\t * @param string $string\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -8070,7 +8070,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Remove the first occurrences of a substring\n\t *\n\t * @param string $input\n\t * @param string $string\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Remove the first occurrences of a substring\n\t *\n\t * @param string $input\n\t * @param string $string\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -8677,7 +8677,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Replace occurrences of a string with another\n\t *\n\t * @param string $input\n\t * @param string $string\n\t * @param string $replacement\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Replace occurrences of a string with another\n\t *\n\t * @param string $input\n\t * @param string $string\n\t * @param string $replacement\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -8974,7 +8974,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Replace the first occurrences of a string with another\n\t *\n\t * @param string $input\n\t * @param string $string\n\t * @param string $replacement\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Replace the first occurrences of a string with another\n\t *\n\t * @param string $input\n\t * @param string $string\n\t * @param string $replacement\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -9626,7 +9626,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Reverse the elements of an array\n\t *\n\t * @param array|\\Traversable $input\n\t *\n\t * @return array\n\t ",
+                           '@token': "/**\n\t * Reverse the elements of an array\n\t *\n\t * @param array|\\Traversable $input\n\t *\n\t * @return array\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -9958,7 +9958,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Round a number\n\t *\n\t * @param float $input\n\t * @param int $n precision\n\t *\n\t * @return float\n\t ",
+                           '@token': "/**\n\t * Round a number\n\t *\n\t * @param float $input\n\t * @param int $n precision\n\t *\n\t * @return float\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -10222,7 +10222,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * @param string $input\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * @param string $input\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -10375,7 +10375,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Return the size of an array or of an string\n\t *\n\t * @param mixed $input\n\t *\n\t * @return int\n\t ",
+                           '@token': "/**\n\t * Return the size of an array or of an string\n\t *\n\t * @param mixed $input\n\t *\n\t * @return int\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -11345,7 +11345,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * @param array|\\Iterator|string $input\n\t * @param int $offset\n\t * @param int $length\n\t *\n\t * @return array|\\Iterator|string\n\t ",
+                           '@token': "/**\n\t * @param array|\\Iterator|string $input\n\t * @param int $offset\n\t * @param int $length\n\t *\n\t * @return array|\\Iterator|string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -12443,7 +12443,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Sort the elements of an array\n\t *\n\t * @param array|\\Traversable $input\n\t * @param string $property use this property of an array element\n\t *\n\t * @return array\n\t ",
+                           '@token': "/**\n\t * Sort the elements of an array\n\t *\n\t * @param array|\\Traversable $input\n\t * @param string $property use this property of an array element\n\t *\n\t * @return array\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -13929,7 +13929,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Split input string into an array of substrings separated by given pattern.\n\t *\n\t * @param string $input\n\t * @param string $pattern\n\t *\n\t * @return array\n\t ",
+                           '@token': "/**\n\t * Split input string into an array of substrings separated by given pattern.\n\t *\n\t * @param string $input\n\t * @param string $pattern\n\t *\n\t * @return array\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -14017,7 +14017,7 @@
                            },
                            comments: [
                               { '@type': "Comment",
-                                 '@token': " Unlike PHP explode function, empty string after split filtering is empty array in Liquid.\n",
+                                 '@token': "// Unlike PHP explode function, empty string after split filtering is empty array in Liquid.\n",
                                  '@role': [Comment, Noop],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
@@ -14367,7 +14367,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * @param string $input\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * @param string $input\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -14520,7 +14520,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Removes html tags from text\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Removes html tags from text\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -14780,7 +14780,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Strip all newlines (\\n, \\r) from string\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Strip all newlines (\\n, \\r) from string\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -15185,7 +15185,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * multiplication\n\t *\n\t * @param int $input\n\t * @param int $operand\n\t *\n\t * @return int\n\t ",
+                           '@token': "/**\n\t * multiplication\n\t *\n\t * @param int $input\n\t * @param int $operand\n\t *\n\t * @return int\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -15379,7 +15379,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Truncate a string down to x characters\n\t *\n\t * @param string $input\n\t * @param int $characters\n\t * @param string $ending string to append if truncated\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Truncate a string down to x characters\n\t *\n\t * @param string $input\n\t * @param int $characters\n\t * @param string $ending string to append if truncated\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -16066,7 +16066,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Truncate string down to x words\n\t *\n\t * @param string $input\n\t * @param int $words\n\t * @param string $ending string to append if truncated\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Truncate string down to x words\n\t *\n\t * @param string $input\n\t * @param int $words\n\t * @param string $ending string to append if truncated\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -16896,7 +16896,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Remove duplicate elements from an array\n\t *\n\t * @param array|\\Traversable $input\n\t *\n\t * @return array\n\t ",
+                           '@token': "/**\n\t * Remove duplicate elements from an array\n\t *\n\t * @param array|\\Traversable $input\n\t *\n\t * @return array\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -17228,7 +17228,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Convert an input to uppercase\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * Convert an input to uppercase\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -17488,7 +17488,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * URL encodes a string\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t ",
+                           '@token': "/**\n\t * URL encodes a string\n\t *\n\t * @param string $input\n\t *\n\t * @return string\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
@@ -17641,7 +17641,7 @@
                      byRef: false,
                      comments: [
                         { '@type': "Comment_Doc",
-                           '@token': "*\n\t * Use overloading to get around reserved php words - in this case 'default'\n\t *\n\t * @param string $name\n\t * @param array $arguments\n\t *\n\t * @return string\n\t *\n\t ",
+                           '@token': "/**\n\t * Use overloading to get around reserved php words - in this case 'default'\n\t *\n\t * @param string $name\n\t * @param array $arguments\n\t *\n\t * @return string\n\t *\n\t */",
                            '@role': [Comment, Documentation, Noop],
                            '@pos': { '@type': "uast:Positions",
                               start: { '@type': "uast:Position",
