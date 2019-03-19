@@ -100,24 +100,27 @@ var PreNormilizers = []Mapping{
 // Normalizers is the main block of normalization rules to convert native AST to semantic UAST.
 var Normalizers = []Mapping{
 	MapSemantic("Name", uast.Identifier{}, MapObj(
-		Obj{
-			uast.KeyToken: Var("name"),
+		Fields{
+			{Name: uast.KeyToken, Op: Var("name")},
+			{Name: "comments", Drop: true, Op: Any()}, // FIXME(dennwc): handle comments
 		},
 		Obj{
 			"Name": Var("name"),
 		},
 	)),
 	MapSemantic("Name", uast.Identifier{}, MapObj(
-		Obj{
-			"parts": One(Var("name")),
+		Fields{
+			{Name: "parts", Op: One(Var("name"))},
+			{Name: "comments", Drop: true, Op: Any()}, // FIXME(dennwc): handle comments
 		},
 		Obj{
 			"Name": Var("name"),
 		},
 	)),
 	MapSemantic("Name", uast.QualifiedIdentifier{}, MapObj(
-		Obj{
-			"parts": Each("names", Var("name")),
+		Fields{
+			{Name: "parts", Op: Each("names", Var("name"))},
+			{Name: "comments", Drop: true, Op: Any()}, // FIXME(dennwc): handle comments
 		},
 		Obj{
 			"Names": Each("names", UASTType(uast.Identifier{}, Obj{
@@ -352,15 +355,16 @@ var Normalizers = []Mapping{
 		},
 	)),
 	MapSemantic("Stmt_Function", uast.FunctionGroup{}, MapObj(
-		Obj{
-			"byRef": Cases("by_ref",
+		Fields{
+			{Name: "byRef", Op: Cases("by_ref",
 				Bool(false),
 				Bool(true),
-			),
-			"name":       Var("name"),
-			"params":     Var("params"),
-			"returnType": typeCaseLeft("return"),
-			"stmts":      Var("body"),
+			)},
+			{Name: "name", Op: Var("name")},
+			{Name: "params", Op: Var("params")},
+			{Name: "returnType", Op: typeCaseLeft("return")},
+			{Name: "stmts", Op: Var("body")},
+			{Name: "comments", Drop: true, Op: Any()}, // FIXME(dennwc): handle comments
 		},
 		Obj{
 			"Nodes": Arr(
