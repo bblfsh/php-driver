@@ -68,15 +68,7 @@ var Native = Transformers([][]Transformer{
 }...)
 
 var Code = []CodeTransformer{
-	positioner.NewFillLineColFromOffset(),
-}
-
-// FIXME: move to the SDK and remove from here and the python driver
-func annotateTypeToken(typ, token string, roles ...role.Role) Mapping {
-	return AnnotateType(typ,
-		FieldRoles{
-			uast.KeyToken: {Add: true, Op: String(token)},
-		}, roles...)
+	positioner.FromOffset(),
 }
 
 func mapInternalProperty(key string, roles ...role.Role) Mapping {
