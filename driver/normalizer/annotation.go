@@ -313,8 +313,12 @@ var Annotations = []Mapping{
 		"cond": {role.If, role.Condition},
 	}, role.Expression, role.If),
 
-	AnnotateType(php.If, nil, role.Statement, role.If),
-	AnnotateType(php.ElseIf, nil, role.Statement, role.If, role.Else),
+	AnnotateType(php.If, ObjRoles{
+		"cond": {role.If, role.Condition},
+	}, role.Statement, role.If),
+	AnnotateType(php.ElseIf, ObjRoles{
+		"cond": {role.If, role.Condition},
+	}, role.Statement, role.If, role.Else),
 	AnnotateType(php.Else, nil, role.Statement, role.Else),
 
 	// Declare, we interpret it as an assignment-ish
