@@ -52,7 +52,7 @@
             },
             stmts: [
                { '@type': "Expr_Variable",
-                  '@role': [Identifier, Variable],
+                  '@role': [Body, Else, Identifier, If, Variable],
                   '@pos': { '@type': "uast:Positions",
                      start: { '@type': "uast:Position",
                         offset: 40,
@@ -112,7 +112,7 @@
                },
                stmts: [
                   { '@type': "Expr_Variable",
-                     '@role': [Identifier, Variable],
+                     '@role': [Body, Else, Identifier, If, Then, Variable],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
                            offset: 31,
@@ -137,7 +137,7 @@
          ],
          stmts: [
             { '@type': "Expr_Variable",
-               '@role': [Identifier, Variable],
+               '@role': [Body, Identifier, If, Then, Variable],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
                      offset: 15,

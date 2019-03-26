@@ -522,7 +522,7 @@
                         elseifs: [],
                         stmts: [
                            { '@type': "Stmt_Return",
-                              '@role': [Return, Statement],
+                              '@role': [Body, If, Return, Statement, Then],
                               '@pos': { '@type': "uast:Positions",
                                  start: { '@type': "uast:Position",
                                     offset: 200,
@@ -696,7 +696,7 @@
                         elseifs: [],
                         stmts: [
                            { '@type': "Stmt_Return",
-                              '@role': [Return, Statement],
+                              '@role': [Body, If, Return, Statement, Then],
                               '@pos': { '@type': "uast:Positions",
                                  start: { '@type': "uast:Position",
                                     offset: 270,
@@ -1146,7 +1146,7 @@
                elseifs: [],
                stmts: [
                   { '@type': "Stmt_Echo",
-                     '@role': [Call, Statement],
+                     '@role': [Body, Call, If, Statement, Then],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
                            offset: 407,
@@ -1220,7 +1220,7 @@
                      ],
                   },
                   { '@type': "Expr_PostInc",
-                     '@role': [Expression, Increment, Postfix, Unary],
+                     '@role': [Body, Expression, If, Increment, Postfix, Then, Unary],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
                            offset: 427,

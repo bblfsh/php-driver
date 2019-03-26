@@ -594,7 +594,7 @@
                   elseifs: [],
                   stmts: [
                      { '@type': "Stmt_Echo",
-                        '@role': [Call, Statement],
+                        '@role': [Body, Call, If, Statement, Then],
                         '@pos': { '@type': "uast:Positions",
                            start: { '@type': "uast:Position",
                               offset: 206,
@@ -951,7 +951,7 @@
                         elseifs: [],
                         stmts: [
                            { '@type': "Expr_AssignOp_Plus",
-                              '@role': [Add, Assignment, Expression, Operator],
+                              '@role': [Add, Assignment, Body, Expression, If, Operator, Then],
                               '@pos': { '@type': "uast:Positions",
                                  start: { '@type': "uast:Position",
                                     offset: 323,
@@ -1048,7 +1048,7 @@
                         elseifs: [],
                         stmts: [
                            { '@type': "Stmt_Echo",
-                              '@role': [Call, Statement],
+                              '@role': [Body, Call, If, Statement, Then],
                               '@pos': { '@type': "uast:Positions",
                                  start: { '@type': "uast:Position",
                                     offset: 361,

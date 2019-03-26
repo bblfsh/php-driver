@@ -313,13 +313,28 @@ var Annotations = []Mapping{
 		"cond": {role.If, role.Condition},
 	}, role.Expression, role.If),
 
+	// We use two separate annotations for If and the body because
+	// the "stmts" is an array in the native AST, but is a single node
+	// in the UAST. Having two separate annotations allows to handle both cases.
+
 	AnnotateType(php.If, ObjRoles{
 		"cond": {role.If, role.Condition},
 	}, role.Statement, role.If),
+	AnnotateType(php.If, FieldRoles{
+		"stmts": {Arr: true, Roles: role.Roles{role.If, role.Then, role.Body}},
+	}),
+
 	AnnotateType(php.ElseIf, ObjRoles{
 		"cond": {role.If, role.Condition},
 	}, role.Statement, role.If, role.Else),
+	AnnotateType(php.ElseIf, FieldRoles{
+		"stmts": {Arr: true, Roles: role.Roles{role.If, role.Then, role.Else, role.Body}},
+	}),
+
 	AnnotateType(php.Else, nil, role.Statement, role.Else),
+	AnnotateType(php.Else, FieldRoles{
+		"stmts": {Arr: true, Roles: role.Roles{role.If, role.Else, role.Body}},
+	}),
 
 	// Declare, we interpret it as an assignment-ish
 	AnnotateType(php.Declare, MapObj(Obj{

@@ -299,7 +299,7 @@
                            },
                            stmts: [
                               { '@type': "Stmt_If",
-                                 '@role': [If, Statement],
+                                 '@role': [Body, Else, If, Statement],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
                                        offset: 174,
@@ -441,7 +441,7 @@
                                  elseifs: [],
                                  stmts: [
                                     { '@type': "Expr_AssignOp_BitwiseOr",
-                                       '@role': [Unannotated],
+                                       '@role': [Body, If, Then],
                                        '@pos': { '@type': "uast:Positions",
                                           start: { '@type': "uast:Position",
                                              offset: 214,
@@ -672,7 +672,7 @@
                         elseifs: [],
                         stmts: [
                            { '@type': "Expr_AssignOp_BitwiseOr",
-                              '@role': [Unannotated],
+                              '@role': [Body, If, Then],
                               '@pos': { '@type': "uast:Positions",
                                  start: { '@type': "uast:Position",
                                     offset: 121,
