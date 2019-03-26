@@ -303,7 +303,7 @@
                   elseifs: [],
                   stmts: [
                      { '@type': "Stmt_Return",
-                        '@role': [Return, Statement],
+                        '@role': [Body, If, Return, Statement, Then],
                         '@pos': { '@type': "uast:Positions",
                            start: { '@type': "uast:Position",
                               offset: 73,
@@ -735,7 +735,7 @@
                         elseifs: [],
                         stmts: [
                            { '@type': "Stmt_Return",
-                              '@role': [Return, Statement],
+                              '@role': [Body, If, Return, Statement, Then],
                               '@pos': { '@type': "uast:Positions",
                                  start: { '@type': "uast:Position",
                                     offset: 171,
@@ -1044,7 +1044,7 @@
                elseifs: [],
                stmts: [
                   { '@type': "Stmt_Echo",
-                     '@role': [Call, Statement],
+                     '@role': [Body, Call, If, Statement, Then],
                      '@pos': { '@type': "uast:Positions",
                         start: { '@type': "uast:Position",
                            offset: 251,

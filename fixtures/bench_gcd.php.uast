@@ -202,7 +202,7 @@
                         elseifs: [],
                         stmts: [
                            { '@type': "Stmt_Return",
-                              '@role': [Return, Statement],
+                              '@role': [Body, If, Return, Statement, Then],
                               '@pos': { '@type': "uast:Positions",
                                  start: { '@type': "uast:Position",
                                     offset: 86,
@@ -326,7 +326,7 @@
                            },
                            stmts: [
                               { '@type': "Expr_AssignOp_Minus",
-                                 '@role': [Assignment, Expression, Operator, Substract],
+                                 '@role': [Assignment, Body, Else, Expression, If, Operator, Substract],
                                  '@pos': { '@type': "uast:Positions",
                                     start: { '@type': "uast:Position",
                                        offset: 180,
@@ -387,7 +387,7 @@
                         elseifs: [],
                         stmts: [
                            { '@type': "Expr_AssignOp_Minus",
-                              '@role': [Assignment, Expression, Operator, Substract],
+                              '@role': [Assignment, Body, Expression, If, Operator, Substract, Then],
                               '@pos': { '@type': "uast:Positions",
                                  start: { '@type': "uast:Position",
                                     offset: 141,
