@@ -1,9 +1,10 @@
 package normalizer
 
 import (
-	"gopkg.in/bblfsh/sdk.v2/uast"
-	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
-	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
+	"github.com/bblfsh/sdk/v3/uast"
+	"github.com/bblfsh/sdk/v3/uast/nodes"
+	. "github.com/bblfsh/sdk/v3/uast/transformer"
+	"github.com/bblfsh/sdk/v3/uast/transformer/positioner"
 )
 
 var Preprocess = Transformers([][]Transformer{
@@ -15,7 +16,9 @@ var Normalize = Transformers([][]Transformer{
 	{Mappings(Normalizers...)},
 }...)
 
-var PreprocessCode = []CodeTransformer{}
+var PreprocessCode = []CodeTransformer{
+	positioner.FromOffset(),
+}
 
 // Preprocessors is a block of AST preprocessing rules rules.
 var Preprocessors = []Mapping{
