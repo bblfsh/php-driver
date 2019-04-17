@@ -5,11 +5,10 @@ import (
 
 	php "github.com/bblfsh/php-driver/driver/normalizer/phpast"
 
-	"gopkg.in/bblfsh/sdk.v2/uast"
-	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
-	"gopkg.in/bblfsh/sdk.v2/uast/role"
-	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
-	"gopkg.in/bblfsh/sdk.v2/uast/transformer/positioner"
+	"github.com/bblfsh/sdk/v3/uast"
+	"github.com/bblfsh/sdk/v3/uast/nodes"
+	"github.com/bblfsh/sdk/v3/uast/role"
+	. "github.com/bblfsh/sdk/v3/uast/transformer"
 )
 
 func parts2str(arr nodes.Array) (nodes.String, error) {
@@ -66,10 +65,6 @@ var Native = Transformers([][]Transformer{
 	{Mappings(Annotations...)},
 	{RolesDedup()},
 }...)
-
-var Code = []CodeTransformer{
-	positioner.FromOffset(),
-}
 
 func mapInternalProperty(key string, roles ...role.Role) Mapping {
 	return Map(
