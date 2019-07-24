@@ -1,4 +1,4 @@
-# PHP driver for [Babelfish](https://github.com/bblfsh/bblfshd) ![Driver Status](https://img.shields.io/badge/status-beta-dbd25c.svg) [![Build Status](https://travis-ci.org/bblfsh/php-driver.svg?branch=master)](https://travis-ci.org/bblfsh/php-driver) ![Native Version](https://img.shields.io/badge/php%20version-7.1.17--r0-aa93ea.svg) ![Go Version](https://img.shields.io/badge/go%20version-1.12-63afbf.svg)
+# PHP driver for [Babelfish](https://github.com/bblfsh/bblfshd) ![Driver Status](https://img.shields.io/badge/status-beta-dbd25c.svg) [![Build Status](https://travis-ci.org/bblfsh/php-driver.svg?branch=master)](https://travis-ci.org/bblfsh/php-driver) ![Native Version](https://img.shields.io/badge/php%20version-7-aa93ea.svg) ![Go Version](https://img.shields.io/badge/go%20version-1.12-63afbf.svg)
 
 php driver for [babelfish](https://github.com/bblfsh/bblfshd).
 
