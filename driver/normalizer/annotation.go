@@ -446,7 +446,7 @@ var Annotations = []Mapping{
 	AnnotateType(php.Case, FieldRoles{
 		"cond":  {Opt: true, Roles: role.Roles{role.Case, role.Condition}},
 		"stmts": {Arr: true, Roles: role.Roles{role.Case, role.Body}},
-	}, role.Case),
+	}, role.Switch, role.Case),
 	AnnotateType(php.Case, FieldRoles{
 		"cond":  {Op: Is(nil)},
 		"stmts": {Arr: true, Roles: role.Roles{role.Case, role.Body}},
