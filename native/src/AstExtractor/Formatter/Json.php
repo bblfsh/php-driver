@@ -90,16 +90,20 @@ class Json extends BaseFormatter
         if (is_numeric($input)) {
             if (is_nan($input)) {
                 $input = "NaN";
-            } else if (is_infinite($input)) {
+                return;
+            }
+            if (is_infinite($input)) {
                 if ($input > 0) {
                     $input = "+Inf";
                 } else {
                     $input = "-Inf";
                 }
             }
+            return;
         }
         if (is_string($input)) {
             $input = utf8_encode($input);
+            return;
         }
 
         if (is_object($input)) {
@@ -107,6 +111,7 @@ class Json extends BaseFormatter
             foreach ($ovs as $k => $v)    {
                 self::utf8_encode_recursive($input->$k);
             }
+            return;
         }
 
         if (is_array($input)) {
