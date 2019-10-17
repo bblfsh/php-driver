@@ -30,7 +30,7 @@ class Json extends BaseFormatter
     public function encode(array $message)
     {
         $encode = json_encode($message, 0, self::MAX_DEPTH);
-        if (!$encode && json_last_error() === JSON_ERROR_UTF8) {
+        if (!$encode && (json_last_error() === JSON_ERROR_UTF8 || json_last_error() === JSON_ERROR_INF_OR_NAN)) {
             self::utf8_encode_recursive($message);
             $encode = json_encode($message, self::ENCODING_FALLBACK_OPTS, self::MAX_DEPTH);
         }
@@ -87,6 +87,17 @@ class Json extends BaseFormatter
      */
     private static function utf8_encode_recursive(&$input)
     {
+        if (is_numeric($input)) {
+            if (is_nan($input)) {
+                $input = "NaN";
+            } else if (is_infinite($input)) {
+                if ($input > 0) {
+                    $input = "+Inf";
+                } else {
+                    $input = "-Inf";
+                }
+            }
+        }
         if (is_string($input)) {
             $input = utf8_encode($input);
         }
